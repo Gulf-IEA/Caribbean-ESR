@@ -65,5 +65,5 @@ s
 #save(s, file = "Carib_SST.RData")
 
 plotIndicatorTimeSeries(s, coltoplot = 1:3, plotrownum = 3, dateformat = "%m-%Y", sublabel = T, 
-                        trendAnalysis = T, widadj = 0.8, anom = "mon", type = "allLines", outtype = "png")
+                        trendAnalysis = T, widadj = 0.5, anom = "mon", type = "allLines", outtype = "png", hgtadj = 0.8)
 

@@ -1,0 +1,341 @@
+SCIname,COMname,common,genera,subfam,famcode,PD,Lmax,borrowed,USVI
+Engraulidae,"ANCHOVIES,UNSPECIFIED",NA,NA,Engraulidae,anchovies,pelagic-neritic,16.75,1,NA
+Anchoa hepsetus,"ANCHOVY,STRIPED",Broad-striped anchovy,5863,Engraulinae,anchovies,pelagic-neritic,15.30000019,NA,NA
+Cetengraulis edentulus,"ANCHOVETA,ATLANTIC",Atlantic anchoveta,6317,Engraulinae,anchovies,pelagic-neritic,18.20000076,NA,NA
+Pomacanthus paru,"ANGELFISH,FRENCH",French angelfish,1144,NA,angelfishes,reef-associated,41.09999847,NA,1
+Holacanthus ciliaris,"ANGELFISH,QUEEN",Queen angelfish,2304,NA,angelfishes,reef-associated,45,NA,1
+Pomacanthus arcuatus,"ANGELFISH,GRAY",Gray angelfish,1144,NA,angelfishes,reef-associated,60,NA,1
+,"ANGELFISH,UNSPECIFIED",,,,angelfishes,reef-associated,48.7,1,1
+Sphyraena guachancho,"BARRACUDA,GUAGUANCHE",Guachanche barracuda,997,NA,barracudas,pelagic-neritic,200,NA,NA
+Sphyraena picudilla,"BARRACUDA,SOUTHERN SENNNET",Southern sennet,997,NA,barracudas,reef-associated,61,NA,NA
+Sphyraena barracuda,"BARRACUDA,GREAT",Great barracuda,997,NA,barracudas,reef-associated,200,NA,1
+Sphyraenidae,BARRACUDA,NA,NA,Sphyraenidae,barracudas,reef-associated,200,NA,1
+Ogcocephalus nasutus,"BATFISH,SHORTNOSE",Shortnose batfish,2857,NA,batfishes,reef-associated,38,NA,NA
+Ogcocephalidae,"BATFISH,UNSPECIFIED",NA,NA,Ogcocephalidae,batfishes,reef-associated,38,NA,NA
+Priacanthus arenatus,BIGEYE,Atlantic bigeye,5555,NA,bigeye,reef-associated,50,NA,1
+Heteropriacanthus cruentatus,GLASSEYE SNAPPER,Glasseye,10162,NA,bigeye,reef-associated,50.70000076,NA,NA
+Priacanthidae,BIGEYE,NA,NA,Priacanthidae,bigeye,reef-associated,50,1,1
+Istiophoridae,"MARLIN,UNSPECIFIED",NA,NA,Istiophoridae,billfishes,pelagic,300,1,1
+Tetrapturus albidus,"MARLIN,WHITE",Atlantic white marlin,NA,Istiophoridae,billfishes,pelagic,300,NA,NA
+Xiphias gladius,SWORDFISH,Swordfish,2618,NA,billfishes,pelagic-oceanic,455,NA,1
+Istiophorus platypterus,SAILFISH,Indo-Pacific sailfish,3516,NA,billfishes,pelagic-oceanic,348,NA,NA
+Makaira nigricans,BLUE MARLIN,,,,billfishes,pelagic-oceanic,500,NA,1
+Xiphiidae,SWORDFISH,Swordfish,NA,Xiphiidae,billfishes,pelagic,455,NA,1
+,,,,,,,,,NA
+Albulidae,BONEFISH,NA,NA,Albulidae,bonefish,reef-associated,104,1,NA
+Albula vulpes,BONEFISH,Bonefish,1008,Albulinae,bonefish,reef-associated,104,NA,NA
+Lactophrys,TRUNKFISH,Spotted trunkfish,NA,Lactophrys,boxfishes,reef-associated,48,1,1
+Ostraciidae,"BOXFISH,UNSPECIFIED",Honeycomb cowfish,NA,Ostraciidae,boxfishes,reef-associated,50,1,1
+Acanthostracion polygonius,"COWFISH,HONEYCOMBED",Honeycomb cowfish,4119,NA,boxfishes,reef-associated,50,NA,1
+,"COWFISH,SCRAWLED",,,,boxfishes,,,,1
+,"TRUNKFISH,SPOTTED",,,,boxfishes,,,,1
+,,,,,,,,,NA
+Chaetodontidae,"BUTTERFLYFISH,UNSPECIFIED",NA,NA,Chaetodontidae,butterflyfishes,reef-associated,17,1,NA
+Chaetodon capistratus,"BUTTERFLYFISH,FOUREYE",Foureye butterflyfish,364,NA,butterflyfishes,reef-associated,15,NA,NA
+Chaetodon striatus,"BUTTERFLYFISH,BANDED",Banded butterflyfish,364,NA,butterflyfishes,reef-associated,16,NA,NA
+Chaetodon ocellatus,"BUTTERFLYFISH,SPOTFIN",Spotfin butterflyfish,364,NA,butterflyfishes,reef-associated,20,NA,NA
+Apogonidae,CARDINALFISH,NA,NA,Apogonidae,cardinalfishes,reef-associated,11.10000038,1,NA
+Apogon maculatus,FLAMEFISH,Flamefish,3391,Apogoninae,cardinalfishes,reef-associated,11.10000038,NA,NA
+Kyphosidae,"CHUB,RUDDERFISH",NA,NA,Kyphosidae,chubs,reef-associated,76,NA,NA
+Kyphosus sectatrix,"CHUB,BERMUDA",Bermuda sea chub,6764,NA,chubs,reef-associated,76,NA,1
+Kyphosus incisor,"CHUB, YELLOW",Yellow sea chub,6764,NA,chubs,reef-associated,90,NA,1
+Bivalvia,"CLAM,UNSPECIFIED",NA,NA,Bivalvia,clams,invert,NA,NA,NA
+Rachycentron canadum,COBIA,Cobia,3309,NA,cobia,reef-associated,200,NA,NA
+Rachycentridae,COBIA,NA,NA,Rachycentridae,cobia,reef-associated,200,NA,NA
+Strombus gigas,"CONCH,QUEEN",NA,NA,NA,conch,invert,NA,NA,1
+Strombus gigas,CONCHS,,,,conch,invert,NA,NA,1
+Decapoda,"CRAB,UNSPECIFIED",NA,NA,Decapoda,crabs,invert,NA,NA,1
+Callinectes sapidus,"CRAB,BLUE",NA,NA,NA,crabs,invert,NA,NA,NA
+Cardisoma guanhumi,"CRAB,BLUE LAND",NA,NA,NA,crabs,invert,NA,NA,NA
+Carpilius corallinus,"CRAB,CORAL",NA,NA,NA,crabs,invert,NA,NA,1
+Calappa flammea,"CRAB,FLAME BOX",NA,NA,NA,crabs,invert,NA,NA,NA
+Arenaeus cribrarius,"CRAB,SPECKLED SWIMMING",NA,NA,NA,crabs,invert,NA,NA,NA
+Trichiurus lepturus,"CUTLASSFISH,ATLANTIC",Largehead hairtail,1874,Trichiurinae,cutlassfish,benthopelagic,234,NA,NA
+Trichiuridae,CUTLASSFISH,NA,NA,Trichiurinae,cutlassfish,benthopelagic,234,1,NA
+Pomacentridae,"DAMSELFISH,UNSPECIFIED",NA,NA,Pomacentridae,damselfishes,reef-associated,21.45,1,NA
+Chromis multilineata,"DAMSELFISH,BROWN CHROMIS",Brown chromis,2049,Pomacentrinae,damselfishes,reef-associated,20,NA,NA
+Abudefduf saxatilis,"DAMSELFISH,SERGEANT MAJOR",Sergeant-major,7803,Pomacentrinae,damselfishes,reef-associated,22.89999962,NA,NA
+Coryphaenidae,DOLPHINFISH,Coryphaena hippurus,NA,Coryphaenidae,dolphinfish,pelagic-oceanic,210,NA,1
+Coryphaena hippurus,DOLPHINFISH,Common dolphinfish,6651,NA,dolphinfish,pelagic-neritic,210,NA,1
+Coryphaena equiselis,"DOLPHINFISH,POMPANO",Pompano dolphinfish,6651,NA,dolphinfish,pelagic-oceanic,145.6999969,NA,NA
+Umbrina coroides,"DRUM,SAND",Sand drum,1644,NA,drums,demersal,35,NA,NA
+Bairdiella ronchus,"DRUMMER,GROUND",Ground croaker,3481,NA,drums,demersal,35,NA,NA
+Cynoscion jamaicensis,"DRUMMER,MONGOLAR",Jamaica weakfish,5172,NA,drums,demersal,50,NA,NA
+Micropogonias furnieri,"DRUMMER,WHITEMOUTH",Whitemouth croaker,124,NA,drums,demersal,60,NA,NA
+Equetus punctatus,"DRUM,SPOTTED",Spotted drum,3517,NA,drums,reef-associated,27,NA,NA
+Odontoscion dentex,"DRUM,REEF CROAKER",Reef croaker,5824,NA,drums,reef-associated,30,NA,NA
+Equetus lanceolatus,"DRUM,JACKKNIFE-FISH",Jack-knifefish,NA,Sciaenidae,drums,reef-associated,25,NA,NA
+Sciaenidae,"DRUM,UNSPECIFIED",NA,NA,Sciaenidae,drums,reef-associated,25,1,NA
+Conger,"EEL,CONGER",NA,NA,Conger,eels,reef-associated,100,1,NA
+Conger triporiceps,"EEL,CONGER,MANYTOOTH",Manytooth conger,8995,Congrinae,eels,reef-associated,100,NA,NA
+Muraenidae,"EEL,MORAYS,UNSPECIFIED",NA,NA,Muraenidae,eels,reef-associated,146.67,1,NA
+Gymnothorax ocellatus,"EEL,MORAY",Ocellated moray,3758,Muraeninae,eels,reef-associated,90,NA,NA
+Enchelycore nigricans,"EEL,MORAY,VIPER",Viper moray,1716,Muraeninae,eels,reef-associated,100,NA,NA
+Gymnothorax funebris,"EEL,MORAY,GREEN",Green moray,3758,Muraeninae,eels,reef-associated,250,NA,1
+Anguilla rostrata,"EEL,AMERICAN",American eel,9424,NA,eels,demersal,152,NA,NA
+Monacanthus setifer,"FILEFISH,PYGMY",Pygmy filefish,NA,Monacanthidae,filefishes,reef-associated,20,NA,NA
+Aluterus schoepfi,"FILEFISH,ORANGE",Orange filefish,NA,Monacanthidae,filefishes,reef-associated,61,NA,NA
+Cantherhines pullus,"FILEFISH,ORANGESPOTTED",Orangespotted filefish,508,NA,filefishes,reef-associated,20,NA,NA
+Cypselurus melanurus,"FLYINGFISH, ATLANTIC",NA,NA,Exocoetidae,flyingfish,pelagic,32,NA,NA
+Exocoetidae,"FLYINGFISH,UNSPECIFIED",NA,NA,Exocoetidae,flyingfish,pelagic,32,NA,1
+Mullidae,"GOATFISH,UNSPECIFIED",NA,NA,Mullidae,goatfishes,reef-associated,37.4,NA,1
+Pseudupeneus maculatus,"GOATFISH,SPOTTED",Spotted goatfish,2722,NA,goatfishes,reef-associated,30,NA,1
+Mulloidichthys martinicus,"GOATFISH,YELLOW",Yellow goatfish,10232,NA,goatfishes,reef-associated,44.79999924,NA,1
+Gonioplectrus hispanus,SPANISH FLAG,Spanish flag,4428,Epinephelinae,groupers,demersal,30,NA,NA
+Epinephelus adscensionis,"GROUPER,ROCK HIND",Rock hind,7755,Epinephelinae,groupers,demersal,65,NA,NA
+Paranthias furcifer,CREOLE-FISH,Creole-fish,3721,Epinephelinae,groupers,reef-associated,30,NA,NA
+Alphestes afer,"HAMLET,MUTTON",Mutton hamlet,8032,Epinephelinae,groupers,reef-associated,33,NA,NA
+Cephalopholis fulva,"GROUPER,CONEY",Coney,6535,Epinephelinae,groupers,reef-associated,44,NA,1
+Epinephelus guttatus,"GROUPER,RED HIND",Red hind,7755,Epinephelinae,groupers,reef-associated,76,NA,1
+Mycteroperca interstitialis,"GROUPER,YELLOWMOUTH",Yellowmouth grouper,4738,Epinephelinae,groupers,reef-associated,84,NA,1
+Mycteroperca venenosa,"GROUPER,YELLOWFIN",Yellowfin grouper,4738,Epinephelinae,groupers,reef-associated,100,NA,1
+Mycteroperca tigris,"GROUPER,TIGER",Tiger grouper,4738,Epinephelinae,groupers,reef-associated,101,NA,1
+Epinephelus striatus,"GROUPER,NASSAU",Nassau grouper,7755,Epinephelinae,groupers,reef-associated,122,NA,NA
+Epinephelus morio,"GROUPER,RED",Red grouper,7755,Epinephelinae,groupers,reef-associated,125,NA,1
+Mycteroperca bonaci,"GROUPER,BLACK",Black grouper,4738,Epinephelinae,groupers,reef-associated,150,NA,NA
+Epinephelus itajara,"GROUPER,GOLIATH",Atlantic goliath grouper,7755,Epinephelinae,groupers,reef-associated,250,NA,NA
+Epinephelus cruentatus,"GROUPER,GRAYSBY",Graysby,NA,Epinephelinae,groupers,reef-associated,42.6,NA,1
+Epinephelus flavolimbatus,"GROUPER,YELLOWEDGE",Yellowedge grouper,NA,Epinephelinae,groupers,reef-associated,115,NA,1
+Grammistidae,SOAPFISH,NA,NA,Grammistidae,groupers,reef-associated,35,1,NA
+Rypticus saponaceus,"SOAPFISH,GREATER",Greater soapfish,816,Grammistinae,groupers,reef-associated,35,NA,NA
+Epinephelus inermis,"GROUPER,MARBLED",Marbled grouper,NA,Serranidae,groupers,reef-associated,91,NA,NA
+Serranidae,"GROUPER,UNSPECIFIED",NA,NA,Serranidae,groupers,reef-associated,108.97,1,1
+Epinephelus mystacinus,"GROUPER,MISTY",Misty grouper,NA,Serranidae,groupers,reef-associated,160,NA,1
+Serranus tortugarum,"BASS,CHALK",Chalk bass,5359,Serraninae,groupers,reef-associated,8,NA,NA
+Hypoplectrus nigricans,"HAMLET,BLACK",Black hamlet,1363,Serraninae,groupers,reef-associated,15.23999977,NA,NA
+Serranus phoebe,TATTLER,Tattler,5359,Serraninae,groupers,reef-associated,20,NA,NA
+Serranus tabacarius,TOBACCOFISH,Tobaccofish,5359,Serraninae,groupers,reef-associated,22,NA,NA
+Diplectrum bivittatum,"SAND PERCH,DWARF",Dwarf sand perch,10490,Serraninae,groupers,reef-associated,25,NA,NA
+Mycteroperca bonaci,"GROUPER, BLACK",,,,groupers,reef-associated,150,,1
+Epinephelus adscensionis ,"HIND, ROCK",,,,groupers,reef-associated,65,,1
+Epinephelus striatus,NASSAU GROUPER,,,,groupers,reef-associated,122,,1
+Haemulidae,"GRUNT,UNSPECIFIED",NA,NA,Haemulidae,grunts,demersal,41.785,1,1
+Haemulon plumieri,"GRUNT,WHITE",NA,NA,Haemulidae,grunts,reef-associated,53,NA,1
+Conodon nobilis,"GRUNT,BARRED",Barred grunt,4477,Haemulinae,grunts,demersal,33.59999847,NA,NA
+Pomadasys crocro,"GRUNT,BURRO",Burro grunt,3076,Haemulinae,grunts,demersal,38,NA,NA
+Haemulon chrysargyreum,"GRUNT,SMALLMOUTH",Smallmouth grunt,1239,Haemulinae,grunts,reef-associated,23,NA,NA
+Haemulon aurolineatum,"GRUNT,TOMTATE",Tomtate grunt,1239,Haemulinae,grunts,reef-associated,25,NA,1
+Haemulon flavolineatum,"GRUNT,FRENCH",French grunt,1239,Haemulinae,grunts,reef-associated,30,NA,1
+Haemulon melanurum,"GRUNT,COTTONWICK",Cottonwick grunt,1239,Haemulinae,grunts,reef-associated,33,NA,1
+Haemulon carbonarium,"GRUNT,CAESAR",Caesar grunt,1239,Haemulinae,grunts,reef-associated,36,NA,1
+Haemulon bonariense,"GRUNT,BLACK",Black grunt,1239,Haemulinae,grunts,reef-associated,40,NA,NA
+Anisotremus virginicus,"GRUNT,PORKFISH",Porkfish,1849,Haemulinae,grunts,reef-associated,40.59999847,NA,NA
+Haemulon macrostomum,"GRUNT,SPANISH",Spanish grunt,1239,Haemulinae,grunts,reef-associated,43,NA,NA
+Haemulon sciurus,"GRUNT,BLUESTRIPED",Bluestriped grunt,1239,Haemulinae,grunts,reef-associated,46,NA,1
+Anisotremus surinamensis,"GRUNT,BLACK MARGATE",Black margate,1849,Haemulinae,grunts,reef-associated,76,NA,NA
+Haemulon album,"GRUNT,MARGATE",White margate,1239,Haemulinae,grunts,reef-associated,79,NA,1
+Haemulon macrostomum,"GRUNT, SPANISH",,,,grunts,reef-associated,43,,1
+Anisotremus virginicus,PORKFISH,,,,grunts,reef-associated,40.6,,1
+Dactylopteridae,FLYING GUNARD,NA,NA,Dactylopteridae,gurnard,reef-associated,50,NA,NA
+Dactylopterus volitans,FLYING GUNARD,Flying gurnard,1858,NA,gurnard,reef-associated,50,NA,NA
+Hyporhamphus unifasciatus,"HALFBEAK,SILVERSTRIPE",Common halfbeak,2029,NA,halfbeaks,reef-associated,30,NA,NA
+Hemiramphus brasiliensis,BALLYHOO,Ballyhoo halfbeak,5247,NA,halfbeaks,reef-associated,55,NA,1
+Harengula jaguana,"SARDINE,SCALED",Scaled herring,6654,Dorosomatinae,herrings,reef-associated,21.20000076,NA,NA
+Harengula humeralis,"SARDINE,REDEAR",Redear herring,6654,Dorosomatinae,herrings,reef-associated,22,NA,NA
+Opisthonema oglinum,"HERRING,ATLANTIC THREAD",Atlantic thread herring,5705,Dorosomatinae,herrings,reef-associated,38,NA,NA
+Chirocentrodon bleekerianus,"HERRING,DOGTOOTH",Dogtooth herring,4436,NA,herrings,pelagic-neritic,16.10000038,NA,NA
+Jenkinsia lamprotaenia,"HERRING,DWARF",Dwarf round herring,7908,NA,herrings,reef-associated,7.5,NA,NA
+Sardinella,"HERRING,SARDINELLA",NA,NA,Sardinella,herrings,reef-associated,20.5,1,1
+Sardinella,HERRINGS,,,,herrings,reef-associated,20.5,,1
+Carangidae,JACKS,NA,NA,Carangidae,jacks,reef-associated,82.4,1,1
+Selene setapinnis,"MOONFISH,ATLANTIC",Atlantic moonfish,3554,Caranginae,jacks,benthopelagic,60,NA,NA
+Caranx lugubris,"JACK,BLACK",Black jack,3864,Caranginae,jacks,benthopelagic,100,NA,NA
+Chloroscombrus chrysurus,"BUMPER,ATLANTIC",Atlantic bumper,4797,Caranginae,jacks,pelagic-neritic,65,NA,NA
+Decapterus macarellus,"SCAD,MACKEREL",Mackerel scad,10590,Caranginae,jacks,pelagic-oceanic,46,NA,1
+Decapterus punctatus,"SCAD,ROUND",Round scad,10590,Caranginae,jacks,reef-associated,30,NA,NA
+Caranx crysos,BLUE RUNNER,Blue runner,3864,Caranginae,jacks,reef-associated,70,NA,1
+Selar crumenophthalmus,"SCAD,BIGEYE",Bigeye scad,3942,Caranginae,jacks,reef-associated,70,NA,1
+Caranx ruber,"JACK,BAR",Bar jack,3864,Caranginae,jacks,reef-associated,73,NA,1
+Caranx bartholomaei,"JACK,YELLOW",Yellow jack,3864,Caranginae,jacks,reef-associated,100,NA,NA
+Caranx latus,"JACK,HORSE-EYE",Horse-eye jack,3864,Caranginae,jacks,reef-associated,101,NA,1
+Caranx hippos,"JACK,CREVALLE",Crevalle jack,3864,Caranginae,jacks,reef-associated,124,NA,1
+Alectis ciliaris,"POMPANO,AFRICAN",African pompano,2433,Caranginae,jacks,reef-associated,150,NA,1
+Seriola rivoliana,"JACK, ALMACO",Longfin yellowtail,7464,Naucratinae,jacks,reef-associated,160,NA,1
+Elagatis bipinnulata,RAINBOW RUNNER,Rainbow runner,1900,Naucratinae,jacks,reef-associated,180,NA,1
+Seriola dumerili,"AMBERJACK,GREATER",Greater amberjack,7464,Naucratinae,jacks,reef-associated,190,NA,1
+Oligoplites saurus,LEATHERJACK,Leatherjacket,4180,Scomberoidinae,jacks,reef-associated,35,NA,NA
+Trachinotus carolinus,"POMPANO,FLORIDA",Florida pompano,2819,Trachinotinae,jacks,benthopelagic,64,NA,1
+Trachinotus goodei,PALOMETA,Great pompano,2819,Trachinotinae,jacks,reef-associated,50,NA,1
+Trachinotus falcatus,PERMIT,Permit,2819,Trachinotinae,jacks,reef-associated,122,NA,1
+Pterois,LIONFISH,NA,NA,Pterois,lionfish,reef-associated,45.7,NA,1
+Synodus intermedius,"LIZARDFISH,SAND DIVER",Sand diver,3034,Synodontinae,lizardfish,reef-associated,46,NA,NA
+Synodontidae,"LIZARDFISH,UNSPECIFIED",NA,NA,Synodontinae,lizardfish,reef-associated,46,1,NA
+Scyllarides nodifer,"LOBSTER,RIDGED SLIPPER",NA,NA,NA,lobsters,invert,NA,NA,NA
+Scyllarides aequinoctialis,"LOBSTER,SPANISH SLIPPER",NA,NA,NA,lobsters,invert,NA,NA,1
+Panulirus guttatus,"LOBSTER, SPOTTED SPINY",,,,lobsters,invert,NA,NA,1
+Panulirus argus,"LOBSTERS,SPINY",NA,NA,NA,lobsters,invert,NA,NA,1
+Gerres cinereus,"MOJARRA,YELLOWFIN",Yellow fin mojarra,2344,Gerreidae,mojarras,reef-associated,41,NA,NA
+Gerreidae,"MOJARRAS,UNSPECIFIED",NA,NA,Gerreidae,mojarras,reef-associated,36.6,NA,NA
+Diapterus plumieri,"MOJARRA,STRIPED",Striped mojarra,NA,Gerreidae,mojarras,reef-associated,40,NA,NA
+Diapterus rhombeus,"MOJARRA,RHOMBOID",Caitipa mojarra,6023,NA,mojarras,demersal,40,NA,NA
+Eucinostomus gula,"MOJARRA,SILVER JENNY",Jenny mojarra,722,NA,mojarras,reef-associated,25.5,NA,NA
+Agonostomus monticola,"MULLET,MOUNTAIN",Mountain mullet,NA,Mugilidae,mullets,reef-associated,36,NA,NA
+Mugilidae,MULLETS,,,,mullets,reef-associated,67,NA,1
+Mugil liza,"MULLET,LIZA",Lebranche mullet,3595,NA,mullets,demersal,80,NA,NA
+Joturus pichardi,"MULLET,HOG",Bobo mullet,1658,NA,mullets,pelagic-neritic,61,NA,NA
+Mugil curema,"MULLET,WHITE",White mullet,3595,NA,mullets,reef-associated,91,NA,1
+,,,,,,,,,NA
+,"FISHES, RAY-FINNED",,,,NA,,,,1
+,OTHER SPECIES,,,,NA,,,,1
+Belonidae,"NEEDLEFISH,UNSPECIFIED",NA,NA,Belonidae,needlefishes,reef-associated,140,1,1
+Ablennes hians,"NEEDLEFISH,FLAT",Flat needlefish,4864,NA,needlefishes,reef-associated,140,NA,NA
+Tylosurus crocodilus,HOUNDFISH,Hound needlefish,1044,NA,needlefishes,reef-associated,150,NA,NA
+Octopus,"OCTOPUS,UNSPECIFIED",NA,NA,Octopus,octopus,invert,NA,NA,1
+Polydactylus virginicus,BARBU,Barbu,5203,NA,other,demersal,33,NA,NA
+Polymixia lowei,BEARDFISH,Beardfish,2622,NA,other,bathydemersal,20,NA,NA
+Brotula barbata,"BROTULA,BEARDED",Bearded brotula,2662,Brotulinae,other,reef-associated,94,NA,NA
+Ophidiidae,"CUSK-EELS,UNSPECIFIED",Marbled cusk eel,NA,Ophidiidae,other,demersal,22,1,NA
+Antennariidae,FROGFISHES,NA,NA,Antennariidae,other,reef-associated,20,1,NA
+Sicydium plumieri,"GOBY,SIRAJO",Sirajo,5237,Sicydiinae,other,benthopelagic,11,NA,NA
+Elops saurus,LADYFISH,Ladyfish,565,NA,other,reef-associated,100,NA,NA
+Neoscombrops atlanticus,"SCOMBROPS,ATLANTIC",NA,NA,Malakichthyidae,other,demersal,24.5,NA,NA
+Megalopidae,TARPON,NA,NA,Megalopidae,other,reef-associated,250,NA,NA
+Nomeus gronovii,MAN-OF-WAR FISH,Man-of-war fish,4085,NA,other,demersal,39,NA,NA
+Peprilus paru,"HARVESTFISH,NORTHERN",American harvestfish,2567,NA,other,benthopelagic,30,NA,NA
+Polymixiidae,BEARDFISH,NA,NA,Polymixiidae,other,bathydemersal,20,NA,NA
+Polynemidae,THREADFIN,Barbu,NA,Polynemidae,other,demersal,33,NA,NA
+Stromateidae,"BUTTERFISH,UNSPECIFIED",Atlantic butterfish,NA,Stromateidae,other,pelagic,30,NA,NA
+Megalops atlanticus,TARPON,Tarpon,5018,NA,other,reef-associated,250,NA,NA
+Cynoglossidae,"SOLES,TONGUE",NA,NA,Cynoglossidae,other,demersal,15,1,NA
+Crassostrea rhizophorae,MANGROVE OYSTER,NA,NA,NA,oyster,invert,NA,NA,NA
+Scaridae,"PARROTFISHES,UNSPECIFIED",NA,NA,Scaridae,parrotfishes,reef-associated,105.67,1,1
+Scarus coelestinus,"PARROTFISH,MIDNIGHT",Midnight parrotfish,4784,Scarinae,parrotfishes,reef-associated,77,NA,NA
+Scarus coeruleus,"PARROTFISH,BLUE",Blue parrotfish,4784,Scarinae,parrotfishes,reef-associated,120,NA,NA
+Scarus guacamaia,"PARROTFISH,RAINBOW",Rainbow parrotfish,4784,Scarinae,parrotfishes,reef-associated,120,NA,NA
+Sparisoma chrysopterum,"PARROTFISH,REDTAIL",Redtail parrotfish,4306,Sparisomatinae,parrotfishes,reef-associated,46,NA,1
+Sparisoma viride,"PARROTFISH,STOPLIGHT",Stoplight parrotfish,4306,Sparisomatinae,parrotfishes,reef-associated,64,NA,1
+Scarus vetula,"PARROTFISH,QUEEN",,,,parrotfishes,reef-associated,61,,1
+Scarus taeniopterus,"PARROTFISH,PRINCESS",,,,parrotfishes,reef-associated,35,,1
+Sparisoma rubripinne,"PARROTFISH,REDFIN",,,,parrotfishes,reef-associated,47.8,,1
+Sparisoma aurofrenatum,"PARROTFISH,REDBAND",,,,parrotfishes,reef-associated,28,,1
+Calamus,PORGY (CALAMUS),NA,NA,Calamus,porgies,reef-associated,49.6,1,NA
+Archosargus rhomboidalis,"PORGY,SEA BREAM",Western Atlantic seabream,9352,NA,porgies,reef-associated,33,NA,NA
+Calamus pennatula,"PORGY,PLUMA",Pluma porgy,2964,NA,porgies,reef-associated,37,NA,NA
+Calamus penna,"PORGY,SHEEPSHEAD (CALAMUS)",Sheepshead porgy,2964,NA,porgies,reef-associated,46,NA,1
+Calamus calamus,"PORGY,SAUCEREYE",Saucereye porgy,2964,NA,porgies,reef-associated,56,NA,1
+Calamus bajonado,"PORGY,JOLTHEAD",Jolthead porgy,2964,NA,porgies,reef-associated,76,NA,1
+Sparidae,"PORGY,UNSPECIFIED",NA,NA,Sparidae,porgies,reef-associated,49.6,1,1
+Archosargus rhomboidalis,"BREAM,SEA",,,,porgies,reef-associated,33,,1
+Diodontidae,"BURRFISHES,UNSPECIFIED",Longspined porcupinefish,NA,Diodontidae,pufferfishes,reef-associated,50,1,NA
+Diodon hystrix,PORCUPINEFISH,Spot-fin porcupinefish,822,NA,pufferfishes,reef-associated,91,NA,NA
+Tetraodontidae,"PUFFERS,UNSPECIFIED",NA,NA,Tetraodontidae,pufferfishes,reef-associated,65,1,NA
+Lagocephalus laevigatus,"PUFFER,SMOOTH",Smooth puffer,3142,Tetraodontinae,pufferfishes,pelagic-neritic,100,NA,NA
+Sphoeroides spengleri,"PUFFER,BANDTAIL",Bandtail puffer,4586,Tetraodontinae,pufferfishes,reef-associated,30,NA,NA
+Dasyatis americana,"STINGRAY,SOUTHERN",Southern stingray,NA,Dasyatidae,rays,demersal,200,NA,NA
+Dasyatidae,"STINGRAYS,UNSPECIFIED",NA,NA,Dasyatidae,rays,demersal,200,1,NA
+Mobulidae,"RAYS,MANTA",NA,NA,Mobulidae,rays,pelagic,910,NA,NA
+Manta birostris,"RAYS,MANTA",Giant manta,NA,Mobulidae,rays,pelagic,910,NA,NA
+Myliobatidae,"RAYS,EAGLE",NA,NA,Myliobatidae,rays,demersal,230,NA,NA
+Aetobatus narinari,"RAY,SPOTTED EAGLE",Whitespotted eagle ray,3987,NA,rays,benthopelagic,230,NA,NA
+Echeneidae,REMORA,NA,NA,Echeneidae,remora,reef-associated,86.4,NA,NA
+Remora remora,"REMORA, OTHER",,,,remora,reef-associated,86.40000153,NA,1
+Echeneis naucrates,"REMORA,SHARKSUCKER",Live sharksucker,5569,NA,remora,reef-associated,110,NA,NA
+,,,,,,,,,NA
+Histrio histrio,SARGASSUMFISH,Sargassumfish,3872,Antennariinae,sargassumfish,reef-associated,20,NA,NA
+Hippocampus reidi,"SEAHORSE,LONGSNOUT",Longsnout seahorse,5566,Syngnathinae,seahorse,reef-associated,17.5,NA,NA
+Carcharhinidae,"SHARKS,REQUIEM,UNSPECIFIED",NA,NA,Carcharhinidae,sharks,reef-associated,300,1,1
+Hexanchus vitulus,"SHARK,BIGEYED SIXGILL",Bigeyed sixgill shark,NA,Hexanchidae,sharks,demersal,180,NA,NA
+Hexanchidae,"SHARK,COW",NA,NA,Hexanchidae,sharks,demersal,482,1,NA
+Lamnidae,"SHARK,MACKEREL",NA,NA,Lamnidae,sharks,pelagic-oceanic,445,1,NA
+Heptranchias perlo,"SHARK,SHARPNOSE SEVENGILL",Sharpnose sevengill shark,2342,NA,sharks,bathydemersal,137,NA,NA
+Rhincodon typus,"SHARK,WHALE",Whale shark,2283,NA,sharks,pelagic-oceanic,1700,NA,NA
+Isurus oxyrinchus,"SHARK,MAKO,SHORTFIN",Shortfin mako,6652,NA,sharks,pelagic-oceanic,445,NA,NA
+Galeocerdo cuvier,"SHARK,TIGER",Tiger shark,3620,NA,sharks,benthopelagic,750,NA,1
+Prionace glauca,"SHARK,BLUE",Blue shark,2875,NA,sharks,pelagic-oceanic,400,NA,NA
+Carcharhinus limbatus,"SHARK,BLACKTIP",Blacktip shark,1358,NA,sharks,reef-associated,275,NA,NA
+Carcharhinus perezii,"SHARK,REEF",Caribbean reef shark,1358,NA,sharks,reef-associated,300,NA,1
+Negaprion brevirostris,"SHARK,LEMON",Lemon shark,5927,NA,sharks,reef-associated,340,NA,1
+Carcharhinus obscurus,"SHARK,DUSKY",Dusky shark,1358,NA,sharks,reef-associated,420,NA,NA
+Sphyrna lewini,"SHARK,HAMMERHEAD,SCALLOPED",Scalloped hammerhead,30,NA,sharks,pelagic-oceanic,430,NA,NA
+Sphyrna mokarran,"SHARK,HAMMERHEAD,GREAT",Great hammerhead,30,NA,sharks,pelagic-oceanic,610,NA,1
+Ginglymostoma cirratum,"SHARK,NURSE",Nurse shark,1797,NA,sharks,reef-associated,430,NA,NA
+Orectolobidae,"SHARK,WOBBEGONGS",NA,NA,Orectolobidae,sharks,NA,NA,NA,NA
+Rhincodontidae,"SHARK,WHALE",NA,NA,Rhincodontidae,sharks,pelagic,1700,NA,NA
+Sphyrnidae,"SHARK,HAMMERHEAD,UNSPECIFIED",NA,NA,Sphyrnidae,sharks,pelagic-oceanic,520,1,NA
+Mustelus norrisi,"SHARK,SMOOTHHOUND,NARROWFIN",Narrowfin smooth-hound,6505,Triakinae,sharks,demersal,110,NA,NA
+Mustelus canis,"SHARK,DOGFISH,SMOOTH",Dusky smooth-hound,6505,Triakinae,sharks,demersal,150,NA,NA
+,"SHARK,UNSPECIFIED",,,,sharks,demersal,377,,1
+Crustacea,"SHELLFISH,UNSPECIFIED",NA,NA,Crustacea,shellfish,invert,NA,NA,1
+Cittarium pica,"TOPSNAIL,WEST INDIAN",NA,NA,NA,shellfish,invert,NA,NA,1
+,SEA CUCUMBERS,,,,shellfish,invert,NA,NA,1
+,SEA URCHINS,,,,shellfish,invert,NA,NA,1
+Penaeus,"SHRIMP,PENAEUS,UNSPECIFIED",NA,NA,Penaeus,shrimp,invert,NA,NA,NA
+Atherinidae,SILVERSIDE,NA,NA,Atherinidae,silversides,reef-associated,10,1,NA
+Atherinomorus stipes,"SILVERSIDE,HARDHEAD",Hardhead silverside,2758,Atherinomorinae,silversides,reef-associated,10,NA,NA
+Eleotridae,SLEEPERS,NA,NA,Eleotridae,sleepers,demersal,57.5,1,NA
+Eleotris pisonis,"SLEEPER,SPINYCHEEK",Spinycheek sleeper,5744,Eleotrinae,sleepers,demersal,25,NA,NA
+Gobiomorus dormitor,"SLEEPER,BIGMOUTH",Bigmouth sleeper,2078,Eleotrinae,sleepers,demersal,90,NA,NA
+Gempylidae,SNAKE MACKERELS,NA,NA,Gempylidae,snake mackerels,pelagic-oceanic,100,1,NA
+Promethichthys prometheus,"SNAKE MACKEREL,PURPLE",Roudi escolar,2379,NA,snake mackerels,benthopelagic,100,NA,NA
+Ruvettus pretiosus,ESCOLAR,Oilfish,1045,NA,snake mackerels,benthopelagic,300,NA,NA
+Gempylus serpens,SNAKE MACKERELS,Snake mackerel,1960,NA,snake mackerels,pelagic-oceanic,100,NA,NA
+Apsilus dentatus,"SNAPPER,BLACK",Black snapper,1343,Apsilinae,snappers,reef-associated,65,NA,1
+Etelis oculatus,"SNAPPER,QUEEN",Queen snapper,9802,Etelinae,snappers,bathydemersal,100,NA,1
+Pristipomoides macropthalmus,"SNAPPER,CARDINAL",Cardinal snapper,NA,Lutjanidae,snappers,demersal,50,NA,NA
+Lutjanidae,"SNAPPER,UNSPECIFIED",NA,NA,Lutjanidae,snappers,demersal,88.53,1,1
+Rhomboplites aurorubens,"SNAPPER,VERMILION",Vermilion snapper,6165,Lutjaninae,snappers,demersal,60,NA,1
+Lutjanus purpureus,"SNAPPER,CARIBBEAN RED",Southern red snapper,1202,Lutjaninae,snappers,demersal,100,NA,NA
+Lutjanus mahogoni,"SNAPPER,MAHOGANY",Mahogany snapper,1202,Lutjaninae,snappers,reef-associated,48,NA,1
+Lutjanus synagris,"SNAPPER,LANE",Lane snapper,1202,Lutjaninae,snappers,reef-associated,60,NA,1
+Lutjanus buccanella,"SNAPPER,BLACKFIN",Blackfin snapper,1202,Lutjaninae,snappers,reef-associated,75,NA,1
+Lutjanus apodus,"SNAPPER,SCHOOLMASTER",Schoolmaster snapper,1202,Lutjaninae,snappers,reef-associated,79.09999847,NA,NA
+Lutjanus vivanus,"SNAPPER,SILK",Silk snapper,1202,Lutjaninae,snappers,reef-associated,83,NA,1
+Ocyurus chrysurus,"SNAPPER,YELLOWTAIL",Yellowtail snapper,6197,Lutjaninae,snappers,reef-associated,86.30000305,NA,1
+Lutjanus griseus,"SNAPPER,GRAY",Grey snapper,1202,Lutjaninae,snappers,reef-associated,89,NA,1
+Lutjanus analis,"SNAPPER,MUTTON",Mutton snapper,1202,Lutjaninae,snappers,reef-associated,94,NA,1
+Lutjanus jocu,"SNAPPER, DOG",,,,snappers,reef-associated,128,NA,1
+Lutjanus cyanopterus,"SNAPPER,CUBERA",Cubera snapper,1202,Lutjaninae,snappers,reef-associated,160,NA,1
+Lutjanus apodus,SCHOOLMASTER,,,,snappers,reef-associated,79.1,NA,1
+Pristipomoides aquilonaris,"SNAPPER,WENCHMAN",,,,snappers,reef-associated,56,NA,1
+,,,,,,,,,NA
+Centropomidae,"SNOOK,UNSPECIFIED",Common snook,NA,Centropomidae,snook,demersal,140,NA,1
+Centropomus ensiferus,"SNOOK,SWORDSPINE",Swordspine snook,549,NA,snook,benthopelagic,36.19499969,NA,NA
+Centropomus pectinatus,"SNOOK,TARPON",Tarpon snook,549,NA,snook,benthopelagic,56,NA,NA
+Centropomus parallelus,"SNOOK,FAT",Fat snook,549,NA,snook,demersal,72,NA,NA
+Centropomus undecimalis,"SNOOK,COMMON",Common snook,549,NA,snook,reef-associated,140,NA,NA
+Ephippididae,SPADEFISH,,,,spadefish,demersal,91,NA,1
+Chaetodipterus faber,"SPADEFISH, ATLANTIC",,,,spadefish,reef-associated,91,NA,1
+,,,,,,,,,NA
+,,,,,,,,,NA
+Theuthoidea,"SQUIDS,UNSPECIFIED",NA,NA,Theuthoidea,squid,invert,NA,NA,NA
+Holocentridae,SQUIRRELFISH,NA,NA,Holocentridae,squirrelfishes,reef-associated,61,1,1
+Holocentrus adscensionis,SQUIRRELFISH,Squirrelfish,1088,Holocentrinae,squirrelfishes,reef-associated,61,NA,1
+Myripristis jacobus,"SOLDIERFISH,BLACKBAR",Blackbar soldierfish,5158,Myripristinae,squirrelfishes,reef-associated,25,NA,NA
+Holocentrus rufus,"SQUIRRELFISH,LONGSPINE",Squirrelfish,1088,Holocentrinae,squirrelfishes,reef-associated,35,,1
+Acanthuridae,"SURGEONFISH,UNSPECIFIED",NA,NA,Acanthuridae,surgeonfishes,reef-associated,39,1,1
+Acanthurus chirurgus,"SURGEONFISH,DOCTORFISH",Doctorfish,9710,Acanthurinae,surgeonfishes,reef-associated,39,NA,1
+Acanthurus bahianus,"SURGEONFISH,OCEAN",Barber surgeonfish,9710,Acanthurinae,surgeonfishes,reef-associated,39,1,1
+Acanthurus coeruleus,"SURGEONFISH,BLUE TANG",,,,surgeonfishes,reef-associated,39,,1
+Malacanthidae,"TILEFISH,UNSPECIFIED",NA,NA,Malacanthidae,tilefishes,demersal,65,NA,NA
+Malacanthus plumieri,"TILEFISH,SAND",Sand tilefish,497,NA,tilefishes,reef-associated,70,NA,NA
+Caulolatilus cyanops,"TILEFISH,BLACKLINE",Blackline tilefish,1615,NA,tilefishes,demersal,60,NA,NA
+Balistidae,"TRIGGERFISH,UNSPECIFIED",NA,NA,Balistidae,triggerfishes,reef-associated,52.5,1,1
+Xanthichthys ringens,"TRIGGERFISH,SARGASSUM",Sargassum triggerfish,5217,NA,triggerfishes,reef-associated,25,NA,NA
+Melichthys niger,"DURGON,BLACK",Black triggerfish,3393,NA,triggerfishes,reef-associated,50,NA,NA
+Balistes capriscus,"TRIGGERFISH,GRAY",Grey triggerfish,4755,NA,triggerfishes,reef-associated,60,NA,NA
+Balistes vetula,"TRIGGERFISH,QUEEN",Queen triggerfish,4755,NA,triggerfishes,reef-associated,60,NA,1
+Canthidermis sufflamen,"TRIGGERFISH,OCEAN",Ocean triggerfish,4372,NA,triggerfishes,reef-associated,65,NA,1
+Lobotidae,FLASHERS,NA,NA,Lobotidae,tripletail,benthopelagic,110,1,NA
+Lobotes surinamensis,TRIPLETAIL,Tripletail,165,NA,tripletail,benthopelagic,110,NA,1
+Fistulariidae,CORNETFISH,NA,NA,Fistulariidae,trumpetfishes,reef-associated,200,NA,NA
+Aulostomus maculatus,TRUMPETFISH,Trumpetfish,4704,NA,trumpetfishes,reef-associated,100,NA,NA
+Fistularia tabacaria,"CORNETFISH,BLUESPOTTED",Cornetfish,1424,NA,trumpetfishes,reef-associated,200,NA,NA
+Scombridae,"TUNA AND MACKERELS,UNSPECIFI",NA,NA,Scombridae,tunas and mackerels,pelagic-neritic,163.6,1,1
+Auxis rochei,"MACKEREL,BULLET",Bullet tuna,220,Scombrinae,tunas and mackerels,pelagic-neritic,50,NA,NA
+Scomberomorus cavalla,"MACKEREL,KING",King mackerel,2960,Scombrinae,tunas and mackerels,pelagic-neritic,184,NA,1
+Thunnus atlanticus,"TUNA,BLACKFIN",Blackfin tuna,8961,Scombrinae,tunas and mackerels,pelagic-oceanic,107.9499969,NA,1
+Katsuwonus pelamis,"TUNA,SKIPJACK",Skipjack tuna,4643,Scombrinae,tunas and mackerels,pelagic-oceanic,110,NA,1
+Euthynnus alletteratus,"TUNNY,LITTLE",Little tunny,7010,Scombrinae,tunas and mackerels,pelagic-oceanic,122,NA,1
+Thunnus alalunga,"TUNA,ALBACORE",Albacore,8961,Scombrinae,tunas and mackerels,pelagic-oceanic,140,NA,NA
+Thunnus albacares,"TUNA,YELLOWFIN",Yellowfin tuna,8961,Scombrinae,tunas and mackerels,pelagic-oceanic,239,NA,1
+Thunnus obesus,"TUNA,BIGEYE",Bigeye tuna,8961,Scombrinae,tunas and mackerels,pelagic-oceanic,250,NA,1
+Acanthocybium solandri,WAHOO,Wahoo,369,Scombrinae,tunas and mackerels,pelagic-oceanic,250,NA,1
+Scomberomorus regalis,"MACKEREL,CERO",Cero,2960,Scombrinae,tunas and mackerels,reef-associated,183,NA,1
+,"TUNA,UNSPECIFIED",,,,tunas and mackerels,pelagic,161.5,NA,1
+Scomberomorus,"MACKEREL,KING AND CERO,UNSPE",,,,tunas and mackerels,pelagic-neritic,184,NA,1
+Osteichthyes,"FISHES,BONY,UNSPECIFIED",NA,NA,Osteichthyes,UNID,NA,NA,NA,1
+Bodianus rufus,"WRASSE,SPANISH HOGFISH",Spanish hogfish,1995,Bodianinae,wrasses,reef-associated,40,NA,NA
+Halichoeres radiatus,"WRASSE,PUDDINGWIFE",Puddingwife wrasse,1901,Corinae,wrasses,reef-associated,51,NA,NA
+Labridae,"WRASSES,UNSPECIFIED",NA,NA,Labridae,wrasses,reef-associated,45.5,1,NA
+Lachnolaimus maximus,HOGFISH,Hogfish,219,NA,wrasses,reef-associated,91,NA,NA
+Halichoeres radiatus,PUDDINGWIFE,,,,wrasses,reef-associated,51,NA,1
