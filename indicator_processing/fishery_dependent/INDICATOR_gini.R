@@ -14,7 +14,7 @@ calcGini <- function(vec) {
 
 # input data for Puerto Rico ---------------------------
 setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/")
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/PR_landings_83_20.csv")
+dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20.csv")
 
 # define start and end years ---------------------------
 styear <- 2012
@@ -46,7 +46,8 @@ max(d$PRICE_PER_LB[(which(d$ITIS_COMMON_NAME == "CRAB,BLUE LAND"))])
 
 # calculate revenue, sum by permit and year ------------
 
-d$REV <- d$POUNDS_LANDED * d$PRICE_PER_LB
+#d$REV <- d$POUNDS_LANDED * d$PRICE_PER_LB
+d$REV <- d$ADJUSTED_POUNDS * d$PRICE_PER_LB
 totrev <- tapply(d$REV, list(d$PR_ID_CODE_ED, d$YEAR_LANDED), sum, na.rm = T)
 dim(totrev)
 totrev[is.na(totrev)] <- 0
@@ -69,12 +70,12 @@ dim(totland)
 
 # calculate gini index --------------------------------
 
+par(mfrow = c(2, 1), mar = c(3, 5, 1, 1))
 gini_rev_pr <- apply(totrev, 2, calcGini)
-plot(names(gini_rev_pr), gini_rev_pr, type = "b", ylim = c(0.8, 1))
+plot(names(gini_rev_pr), gini_rev_pr, type = "b")
 
 gini_land_pr <- apply(totland, 2, calcGini)
-lines(names(gini_land_pr), gini_land_pr, col = 2)
-
+plot(names(gini_land_pr), gini_land_pr, type = "b", col = 2)
 
 # calculate for STT and STX --------------------------------------
 
@@ -135,12 +136,15 @@ ls()[grep("gini", ls())]
 
 datdata <- styear:enyear
 inddata <- data.frame(gini_rev_pr, gini_rev_vi)
-labs <- c("Level of inequality" , "Gini index", "Puerto Rico", "Level of inequality" , "Gini index", "USVI")
+labs <- c("Inequality in revenues" , "Gini index", "Puerto Rico", 
+          "Inequality in revenues" , "Gini index", "St. Thomas and St. John")
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
 class(s) <- "indicatordata"
 
-plotIndicatorTimeSeries(s, coltoplot = 1:2, plotrownum = 2, sublabel = T, sameYscale = T)
+setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/")
+plotIndicatorTimeSeries(s, coltoplot = 1:2, plotrownum = 2, sublabel = T, sameYscale = T, 
+                        widadj = 1.3, hgtadj = 1, outtype = "png")
 
 inddata <- s
 save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/gini.RData")

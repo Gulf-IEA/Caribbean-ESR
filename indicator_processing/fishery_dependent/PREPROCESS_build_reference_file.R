@@ -3,10 +3,11 @@ rm(list = ls())
 
 library(rfishbase)
 
-setwd("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData")
+setwd("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/")
 
 # concatenate landings data files -----------------------
-lis <- dir()[grep("PR", dir())]
+lis <- dir()[grep("PR_landings", dir())]
+lis
 d1 <- read.csv(lis[1])
 d2 <- read.csv(lis[2])
 d3 <- read.csv(lis[3])
@@ -48,6 +49,9 @@ table(d$ITIS_SCIENTIFIC_NAME, useNA = "always")
 hist(d$POUNDS_LANDED)
 hist(d$VALUE_IN_DOLLARS)
 hist(d$PRICE_PER_LB)
+table(d$CORRECTION_FACTOR, useNA = "always")
+table(d$CORRECTION_FACTOR, d$YEAR_LANDED)
+hist(d$ADJUSTED_POUNDS)
 table(d$DISTANCE, useNA = "always")
 table(d$DISTANCE_DESCRIBE, useNA = "always")
 table(d$TRIP_TICKET_NUMBER_ED, useNA = "always")
@@ -184,7 +188,7 @@ sp[-which(sp %in% ref$COMname)]
 rm(list = ls())
 library(rfishbase)
 
-setwd("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData")
+setwd("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/")
 
 d <- read.csv("STX_072011_present_LANDINGS_trip_2021-03-11.csv")
 

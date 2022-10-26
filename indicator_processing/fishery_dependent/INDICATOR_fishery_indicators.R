@@ -4,7 +4,7 @@ rm(list = ls())
 library(pals)
 setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/")
 
-d <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/PR_landings_83_20.csv")
+d <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20.csv")
 
 # take a look at data fields ----------------------------
 table(d$VESSEL, useNA = "always")
@@ -57,13 +57,13 @@ numtrap <- colSums(tab[2:4, ]) / (10^6)
 pertrap <- 1 - tab2[1, ]
 
 # format into indicator object --------------------------------------
-datdata <- 1983:2020
-inddata <- data.frame(cbind(numtrap, pertrap))
-labs <- c("Number of traps", "millions of traps" , "Puerto Rico", "Proportion of effort from traps", "proportion", "Puerto Rico")
-indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
+#datdata <- 1983:2020
+#inddata <- data.frame(cbind(numtrap, pertrap))
+#labs <- c("Number of traps", "millions of traps" , "Puerto Rico", "Proportion of effort from traps", "proportion", "Puerto Rico")
+#indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 
-s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
-class(s) <- "indicatordata"
+#s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
+#class(s) <- "indicatordata"
 
 #plotIndicatorTimeSeries(s, coltoplot = 1:2, plotrownum = 2, sublabel = T, outtype = "png")
 
@@ -128,11 +128,13 @@ for (i in 1:ncol(tab2)) {  tab3[, i] <- tab2[, i] / sum(tab2[, i], na.rm = T)   
 cols[which(rownames(tab3) == "UNID")] <- "white"
 barplot(tab3, col = cols, xlim = c(0, 56), legend.text = rownames(tab2), args.legend = c(x = "right"), las = 2)
 
-png(filename="PR_proportion_landings.png", units="in", width=8, height=5, pointsize=12, res=72*10)
+#png(filename="PR_proportion_landings.png", units="in", width=8, height=5, pointsize=12, res=72*10)
+
 barplot(tab3[, 23:38], col = cols, xlim = c(0, 23), legend.text = rownames(tab2), args.legend = c(x = "right", bty = "n"), las = 2, space = 0, border = NA, 
         xlab = "", ylab = "proportion of catch", main = "Puerto Rico landings composition by year                                ")
 abline(h = 0)
-dev.off()
+
+#dev.off()
 
 table(db$ITIS_COMMON_NAME == db$COMname)
 length(which(db$ITIS_COMMON_NAME == "FISHES,BONY,UNSPECIFIED"))
@@ -156,8 +158,8 @@ pd <- tapply(dbf$POUNDS_LANDED, list(dbf$YEAR_LANDED, dbf$PD2), sum, na.rm = T)
 pdrat <- pd[, 2] / pd[, 1]
 plot(1983:2020, pdrat, type = "b")
 
-pd2 <- pd[18:38, ]
-pdrat2 <- pd2[, 2] / pd2[, 1]
+pdrat2 <- pdrat[18:38]
+save(pdrat2, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/PDRatioPR.RData")
 
 # make indicator object and plot P:D ratio ------------------
 datdata <- 2000:2020
@@ -170,8 +172,8 @@ indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
 class(s) <- "indicatordata"
 
-#plotIndicatorTimeSeries(s, coltoplot = 1:3, plotrownum = 3, sublabel = T, outtype = "png")
-
+setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/")
+plotIndicatorTimeSeries(s, coltoplot = 3, plotrownum = 1, sublabel = T, widadj = 1.2, outtype = "png")
 
 # Lmax calculations -----------------------------------------
 
@@ -260,7 +262,7 @@ indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
 class(s) <- "indicatordata"
  
-plotIndicatorTimeSeries(s, coltoplot = 1, sublabel = T, outtype = "png")
+plotIndicatorTimeSeries(s, coltoplot = 1, sublabel = T) #, outtype = "png")
 
 # figure out what is going on in 2018 with spike in pelagics -------------------
 

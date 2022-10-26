@@ -49,15 +49,15 @@ numtrap <- tab[2,] / (10^6)
 pertrap <- 1 - tab2[1, ]
 
 # format into indicator object --------------------------------------
-datdata <- 1974:2021
-inddata <- data.frame(cbind(numtrap, pertrap))
-labs <- c("Number of traps", "millions of traps" , "St. Thomas", "Proportion of effort from traps", "proportion", "St. Thomas")
-indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
+#datdata <- 1974:2021
+#inddata <- data.frame(cbind(numtrap, pertrap))
+#labs <- c("Number of traps", "millions of traps" , "St. Thomas", "Proportion of effort from traps", "proportion", "St. Thomas")
+#indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 
-s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
-class(s) <- "indicatordata"
+#s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
+#class(s) <- "indicatordata"
 
-plotIndicatorTimeSeries(s, coltoplot = 1:2, plotrownum = 2, sublabel = T) # outtype = "png")
+#plotIndicatorTimeSeries(s, coltoplot = 1:2, plotrownum = 2, sublabel = T) # outtype = "png")
 
 # look at main species landed --------------------------------
 tab <- sort(tapply(d$POUNDS_LANDED, d$SPECIES_NM, sum, na.rm = T), decreasing = T)
@@ -126,9 +126,9 @@ cols[which(rownames(tab3) == "UNID")] <- "white"
 barplot(tab3, col = cols, xlim = c(0, 18), legend.text = rownames(tab2), args.legend = c(x = "right"), las = 2)
 
 #png(filename="PR_proportion_landings.png", units="in", width=8, height=5, pointsize=12, res=72*10)
-barplot(tab3[, 23:38], col = cols, xlim = c(0, 23), legend.text = rownames(tab2), args.legend = c(x = "right", bty = "n"), las = 2, space = 0, border = NA, 
-        xlab = "", ylab = "proportion of catch", main = "Puerto Rico landings composition by year                                ")
-abline(h = 0)
+#barplot(tab3[, 23:38], col = cols, xlim = c(0, 23), legend.text = rownames(tab2), args.legend = c(x = "right", bty = "n"), las = 2, space = 0, border = NA, 
+#        xlab = "", ylab = "proportion of catch", main = "Puerto Rico landings composition by year                                ")
+#abline(h = 0)
 dev.off()
 
 #table(db$SPECIES_NM == db$COMname)
@@ -170,7 +170,30 @@ indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
 class(s) <- "indicatordata"
 
-plotIndicatorTimeSeries(s, coltoplot = 1:3, plotrownum = 3, sublabel = T) #, outtype = "png")
+plotIndicatorTimeSeries(s, coltoplot = 1:3, plotrownum = 3, sublabel = T, trendAnalysis = F) #, outtype = "png")
+
+# combine with PR ------------------------
+
+load("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/PDRatioPR.RData")
+pdrat
+pdrat2
+
+pdrat <- c(rep(NA, 10), pdrat)
+pdrat2 <- c(pdrat2, NA)
+
+datdata <- 2000:2021
+inddata <- data.frame(cbind(pdrat2, pdrat))
+labs <- c("Pelagic to demersal ratio", "ratio of landings", "Puerto Rico", 
+          "Pelagic to demersal ratio", "ratio of landings", "St. Thomas and St. John")
+indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
+
+s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
+class(s) <- "indicatordata"
+
+setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/")
+plotIndicatorTimeSeries(s, coltoplot = 1:2, plotrownum = 2, sublabel = T, sameYscale = T)
+plotIndicatorTimeSeries(s, coltoplot = 1:2, plotrownum = 2, sublabel = T, sameYscale = T, hgtadj = 0.8, outtype = "png")
+
 
 # Lmax calculations -----------------------------------------
 
