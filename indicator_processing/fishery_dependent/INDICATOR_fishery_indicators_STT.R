@@ -176,12 +176,14 @@ plotIndicatorTimeSeries(s, coltoplot = 1:3, plotrownum = 3, sublabel = T, trendA
 
 load("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/PDRatioPR.RData")
 pdrat
+length(pdrat)
+pdrat[1:11]
 pdrat2
 
-pdrat <- c(rep(NA, 10), pdrat)
-pdrat2 <- c(pdrat2, NA)
+pdrat <- c(rep(NA, 10), pdrat[1:11])
+#pdrat2 <- c(pdrat2, NA)
 
-datdata <- 2000:2021
+datdata <- 2000:2020
 inddata <- data.frame(cbind(pdrat2, pdrat))
 labs <- c("Pelagic to demersal ratio", "ratio of landings", "Puerto Rico", 
           "Pelagic to demersal ratio", "ratio of landings", "St. Thomas and St. John")

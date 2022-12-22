@@ -30,6 +30,7 @@ table(d$SPECIES_ITIS, useNA = "always")
 table(d$ITIS_COMMON_NAME, useNA = "always")
 table(d$ITIS_SCIENTIFIC_NAME, useNA = "always")
 hist(d$POUNDS_LANDED)
+hist(d$ADJUSTED_POUNDS)
 hist(d$VALUE_IN_DOLLARS)
 hist(d$PRICE_PER_LB)
 table(d$DISTANCE, useNA = "always")
@@ -37,15 +38,15 @@ table(d$DISTANCE_DESCRIBE, useNA = "always")
 #table(d$TRIP_TICKET_NUMBER_ED, useNA = "always")
 
 # look at gear trends ---------------------------------
-tapply(d$POUNDS_LANDED, d$FIN_GEAR_NAME, sum, na.rm = T)
+tapply(d$ADJUSTED_POUNDS, d$FIN_GEAR_NAME, sum, na.rm = T)
 par(mar = c(5, 15, 2, 2))
-barplot(tapply(d$POUNDS_LANDED, d$FIN_GEAR_NAME, sum, na.rm = T), horiz = T, las = 2)
+barplot(tapply(d$ADJUSTED_POUNDS, d$FIN_GEAR_NAME, sum, na.rm = T), horiz = T, las = 2)
 
 d$gear <- "other" 
 d$gear[grep("POTS", d$FIN_GEAR_NAME)] <- d$FIN_GEAR_NAME[grep("POTS", d$FIN_GEAR_NAME)]
 
 par(mar = c(4, 4, 1, 1))
-tab <- tapply(d$POUNDS_LANDED, list(d$gear, d$YEAR_LANDED), sum, na.rm = T)
+tab <- tapply(d$ADJUSTED_POUNDS, list(d$gear, d$YEAR_LANDED), sum, na.rm = T)
 barplot(tab, col = c(2, gray(0.1), gray(0.5), gray(0.8)), args.legend = c(x = "topright"), legend.text = rownames(tab))
 
 tab2 <- tab
@@ -68,13 +69,13 @@ pertrap <- 1 - tab2[1, ]
 #plotIndicatorTimeSeries(s, coltoplot = 1:2, plotrownum = 2, sublabel = T, outtype = "png")
 
 # look at main species landed --------------------------------
-tab <- sort(tapply(d$POUNDS_LANDED, d$ITIS_COMMON_NAME, sum, na.rm = T), decreasing = T)
+tab <- sort(tapply(d$ADJUSTED_POUNDS, d$ITIS_COMMON_NAME, sum, na.rm = T), decreasing = T)
 par(mar = c(15, 5, 2, 2))
 barplot(tab, las = 2)
 barplot(tab[1:100], las = 2)
 barplot(tab[1:50], las = 2)
 
-tab <- tapply(d$POUNDS_LANDED, list(d$ITIS_COMMON_NAME, d$YEAR_LANDED), sum, na.rm = T)
+tab <- tapply(d$ADJUSTED_POUNDS, list(d$ITIS_COMMON_NAME, d$YEAR_LANDED), sum, na.rm = T)
 tab <- tab[order(rowSums(tab, na.rm = T), decreasing = T), ]
 
 par(mar = c(4, 4, 1, 1)+1)
@@ -107,7 +108,7 @@ db <- merge(d, ref, by.x = "ITIS_SCIENTIFIC_NAME", by.y = "SCIname", all.x = TRU
 dim(d)
 dim(db)
 
-tab <- tapply(db$POUNDS_LANDED, list(db$famcode, db$YEAR_LANDED), sum, na.rm = T)
+tab <- tapply(db$ADJUSTED_POUNDS, list(db$famcode, db$YEAR_LANDED), sum, na.rm = T)
 tab <- tab[order(rowSums(tab, na.rm = T), decreasing = T), ]
 head(tab, 15)
 
@@ -154,7 +155,8 @@ dbf$PD2 <- "demersal"
 dbf$PD2[grep("pelagic", dbf$PD)] <- "pelagic"
 table(dbf$PD, dbf$PD2)
 
-pd <- tapply(dbf$POUNDS_LANDED, list(dbf$YEAR_LANDED, dbf$PD2), sum, na.rm = T)
+pd <- tapply(dbf$ADJUSTED_POUNDS, list(dbf$YEAR_LANDED, dbf$PD2), sum, na.rm = T)
+pd2 <- pd[18:38, ]
 pdrat <- pd[, 2] / pd[, 1]
 plot(1983:2020, pdrat, type = "b")
 
@@ -177,7 +179,7 @@ plotIndicatorTimeSeries(s, coltoplot = 3, plotrownum = 1, sublabel = T, widadj =
 
 # Lmax calculations -----------------------------------------
 
-tab <- tapply(dbf$POUNDS_LANDED, list(dbf$ITIS_SCIENTIFIC_NAME, dbf$YEAR_LANDED), sum, na.rm = T)
+tab <- tapply(dbf$ADJUSTED_POUNDS, list(dbf$ITIS_SCIENTIFIC_NAME, dbf$YEAR_LANDED), sum, na.rm = T)
 tab[is.na(tab)] <- 0
 
 splis <- data.frame(rownames(tab))
@@ -273,13 +275,13 @@ axis(1, at = 1983:2020, las = 2)
 tabp <- tab[grep("pelagic", splisref$PD), ]
 tabp <- tabp[order(rowSums(tabp), decreasing = T), ]
 
-matplot(1983:2020, t(tabp[1:20, ]), type = "l", col = glasbey(10), lwd = 2, lty = 1)
-legend("topright", rownames(tabp)[1:20], col = glasbey(10), lwd = 2, lty = 1)
+matplot(1983:2020, t(tabp[1:10, ]), type = "l", col = glasbey(10), lwd = 2, lty = 1)
+legend("topright", rownames(tabp)[1:10], col = glasbey(10), lwd = 2, lty = 1)
 
 tabd <- tab[-grep("pelagic", splisref$PD), ]
 tabd <- tabd[order(rowSums(tabd), decreasing = T), ]
 
-matplot(1983:2020, t(tabd[1:20, ]), type = "b", col = glasbey(10), lwd = 2, lty = 1, pch = 19, las = 2)
-legend("topright", rownames(tabd)[1:20], col = glasbey(10), lwd = 2, lty = 1)
+matplot(1983:2020, t(tabd[1:10, ]), type = "b", col = glasbey(10), lwd = 2, lty = 1, pch = 19, las = 2)
+legend("topright", rownames(tabd)[1:10], col = glasbey(10), lwd = 2, lty = 1)
 
 

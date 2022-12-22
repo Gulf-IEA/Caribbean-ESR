@@ -11,21 +11,26 @@
 # data source: https://www.ncdc.noaa.gov/ibtracs/index.php?name=ib-v4-access 
 # (download .csv file for N. Atlantic basin)
 
-# download data directly from site -----------------------------
+# specification file and libraries -----------------------------
 rm(list = ls())
-options(download.file.method="libcurl")
 library(maps)
+library(plotTimeSeries)
+
+load("spec_file.RData")
+
+# download data directly from site -----------------------------
+options(download.file.method="libcurl")
 
 url <- "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/ibtracs.NA.list.v04r00.csv"
 
-download.file(url = url, destfile = "C:/Users/mandy.karnauskas/Downloads/ibtracs.csv")
-dat <- read.csv("C:/Users/mandy.karnauskas/Downloads/ibtracs.csv", skip = 2, header = F)
-datn <- read.csv("C:/Users/mandy.karnauskas/Downloads/ibtracs.csv", skip = 0, header = T)
+download.file(url = url, destfile = "../indicator_data/ibtracs.csv")
+dat <- read.csv( "../indicator_data/ibtracs.csv", skip = 2, header = F)
+datn <- read.csv( "../indicator_data/ibtracs.csv", skip = 0, header = T)
 names(dat) <- names(datn)
 
 # define years and cut columns --------------------------------
 styear <- 1961
-enyear <- 2021
+enyear <- terminal_year
 
 head(dat)
 dat <- dat[, 1:17]
@@ -37,7 +42,8 @@ points(dat$LON, dat$LAT, pch=19, cex=0.5, col = 1)
 
 # subset Caribbean ONLY ---------------------------------------
 dat$incl <- NA
-dat$incl[which(dat$LON < (-63.5) & dat$LON > (-68.9) & dat$LAT < 19.6 & dat$LAT > 16.7)] <- 1
+dat$incl[which(dat$LON < (max_lon + 1) & dat$LON > (min_lon - 1) & 
+               dat$LAT < (max_lat + 1) & dat$LAT > (min_lat - 1))] <- 1
 
 # check study domain ------------------------------------------
 points(dat$LON, dat$LAT, pch=19, col=dat$incl+1, cex=0.1)

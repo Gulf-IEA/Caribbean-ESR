@@ -59,7 +59,7 @@ dim(totrev)
 
 # sum landings by permit and year ----------------------
 
-totland <- tapply(d$POUNDS_LANDED, list(d$PR_ID_CODE_ED, d$YEAR_LANDED), sum, na.rm = T)
+totland <- tapply(d$ADJUSTED_POUNDS, list(d$PR_ID_CODE_ED, d$YEAR_LANDED), sum, na.rm = T)
 dim(totland)
 totland[is.na(totland)] <- 0
 totland
