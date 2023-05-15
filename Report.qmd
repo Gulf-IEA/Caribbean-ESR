@@ -6,6 +6,7 @@ editor: visual
 
 ```{r setup, include = FALSE}
 library(plotTimeSeries)
+library(spam)
 ```
 
 # Introduction
@@ -18,10 +19,18 @@ This report is for ....
 
 This is the structure of the report....
 
-```{r, include = FALSE}
-load("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/gini.RData")
+## Cool indicators
+
+Wow, look at that aragonite saturation state...
+
+```{r, include = T}
+load("indicator_objects/OA.RData")
+plotIndicatorTimeSeries(inddata)
 ```
 
-```{r, include = FALSE}
-plotIndicatorTimeSeries(inddata, coltoplot = 1:2, trendAnalysis = F, sublabel = T)
+Here is the gini index showing equality in distribution of revenues....
+
+```{r}
+load("indicator_objects/gini.RData")
+plotIndicatorTimeSeries(inddata, coltoplot = 1:2, plotrownum = 2, trendAnalysis = T, sublabel = T)
 ```
