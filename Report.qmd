@@ -1,0 +1,24 @@
+---
+title: "Caribbean ESR"
+format: html
+editor: visual
+---
+
+```{r setup, include = FALSE}
+library(plotTimeSeries)
+```
+
+# Introduction
+
+## About This Report
+
+This report is for ....
+
+## Report structure
+
+This is the structure of the report....
+
+```{r, include = FALSE}
+load("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/gini.RData")
+plotIndicatorTimeSeries(inddata, coltoplot = 1:2, trendAnalysis = F, sublabel = T)
+```
