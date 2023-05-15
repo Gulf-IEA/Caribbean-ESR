@@ -20,5 +20,8 @@ This is the structure of the report....
 
 ```{r, include = FALSE}
 load("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/gini.RData")
+```
+
+```{r, include = FALSE}
 plotIndicatorTimeSeries(inddata, coltoplot = 1:2, trendAnalysis = F, sublabel = T)
 ```
