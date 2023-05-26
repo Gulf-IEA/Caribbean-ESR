@@ -2,9 +2,11 @@
 title: "Caribbean ESR"
 format: html
 editor: visual
+execute:
+  echo: false
 ---
 
-```{r setup, include = FALSE}
+```{r setup, message = FALSE, warnings = FALSE}
 library(plotTimeSeries)
 library(spam)
 ```
@@ -23,14 +25,14 @@ This is the structure of the report....
 
 Wow, look at that aragonite saturation state...
 
-```{r, include = T}
+```{r, message = FALSE, warnings = FALSE}
 load("indicator_objects/OA.RData")
-plotIndicatorTimeSeries(inddata)
+plotIndicatorTimeSeries(inddata, trendAnalysis = F)
 ```
 
 Here is the gini index showing equality in distribution of revenues....
 
 ```{r}
 load("indicator_objects/gini.RData")
-plotIndicatorTimeSeries(inddata, coltoplot = 1:2, plotrownum = 2, trendAnalysis = T, sublabel = T)
+plotIndicatorTimeSeries(inddata, coltoplot = 1:2, plotrownum = 2, trendAnalysis = F, sublabel = T)
 ```
