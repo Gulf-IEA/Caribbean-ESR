@@ -5,18 +5,17 @@ rm(list = ls())
 
 # input data for Puerto Rico ---------------------------
 setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/")
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20.csv")
+dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20_wSC.csv")
 
 table(dat$YEAR_LANDED)
 
 # check multiplier adjustments -------------------------
 
 dat$xADJ <- dat$POUNDS_LANDED * 1/dat$CORRECTION_FACTOR
-table(round(dat$xADJ) == round(dat$ADJUSTED_POUNDS))
-#plot(dat$xADJ, dat$ADJUSTED_POUNDS)
-table(round(dat$xADJ) == round(dat$ADJUSTED_POUNDS), dat$YEAR_LANDED)
-
-dat$ADJUSTED_POUNDS <- dat$xADJ
+hist(dat$ADJUSTED_POUNDS - dat$xADJ)
+max(abs(dat$ADJUSTED_POUNDS - dat$xADJ), na.rm = T)
+table(round(dat$ADJUSTED_POUNDS) - round(dat$xADJ))
+#dat$ADJUSTED_POUNDS <- dat$xADJ
 
 # define start and end years ---------------------------
 styear <- 1990
@@ -47,7 +46,7 @@ table(d$ITIS_COMMON_NAME, d$sppgrp)
 totland_pr <- tapply(d$ADJUSTED_POUNDS, list(d$YEAR_LANDED, d$sppgrp), sum, na.rm = T) / 10^3
 dim(totland_pr)
 totland_pr
-matplot(totland_pr, type = "l")
+matplot(totland_pr, type = "l", lty = 1, lwd = 2)
 
 ls()
 
@@ -107,10 +106,9 @@ class(s) <- "indicatordata"
 setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/")
 
 plotIndicatorTimeSeries(s, coltoplot = 1:6, plotrownum = 2, sublabel = T, sameYscale = F, 
-                        widadj = 0.8, hgtadj = 0.7,
-                        outtype = "png")
+                        widadj = 0.8, hgtadj = 0.7, trendAnalysis = F)   # outtype = "png")
 
-inddata <- s
-save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/landings.RData")
+#inddata <- s
+#save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/landings.RData")
 
 

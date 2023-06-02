@@ -5,13 +5,15 @@ library(rfishbase)
 
 setwd("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/")
 
-# concatenate landings data files -----------------------
+# concatenate PR logbook data files  -----------------------
+# ONLY NEED TO DO THIS ONCE! 
+
 lis <- dir()[grep("PR_landings", dir())]
 lis
-d1 <- read.csv(lis[1])
-d2 <- read.csv(lis[2])
-d3 <- read.csv(lis[3])
-d4 <- read.csv(lis[4])
+#d1 <- read.csv(lis[1])
+#d2 <- read.csv(lis[2])
+#d3 <- read.csv(lis[3])
+#d4 <- read.csv(lis[4])
 
 table(names(d1) == names(d2))
 table(names(d1) == names(d3))
@@ -21,7 +23,150 @@ d <- rbind(d3, d4, d1, d2)
 names(d)
 head(d)
 
-write.table(d, file = "PR_landings_83_20.csv", sep = ",", col.names = T, row.names = F)
+#write.table(d, file = "PR_landings_83_20.csv", sep = ",", col.names = T, row.names = F)
+
+
+
+# create file to match names in logbook and shellcatch ---------------
+# DONE 06/02/2023 - don't redo until new shellcatch pull 
+
+sc <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/shellcatch_pr_data_req_02152023_C.csv")   # original shellcatch data
+apply(sc[1:4], 2, table)
+
+dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20.csv")
+
+head(sc)
+head(dat)
+names(sc) %in% names(dat)
+d <- data.frame(as.matrix(table(dat$ITIS_COMMON_NAME)))  # data frame for matching
+names(d) <- "N"
+d$V2 <- rownames(d)
+d$V3 <- NA
+d$V4 <- NA
+head(d)
+
+for (i in 1:nrow(d)) {    # reverse names for matching
+  b <- unlist(strsplit(d$V2[i], ","))
+    if (length(b) == 1) { b1 <- paste(b[1])         }  
+    if (length(b) == 2) { b1 <- paste(b[2], b[1])   }     
+    if (length(b) == 3) { b1 <- paste(b[3], b[2], b[1]) } 
+  d$V3[i] <- b1           }
+
+sclis <- as.character(unique(sc$SPECIES_NM))
+head(d)
+dim(d)
+length(unique(d$V2))
+length(sclis)
+
+d$V4 <- sclis[match(d$V3, sclis)]  # matching
+sort(d$V4)
+length(sclis[-which(sclis %in% d$V4)])
+mis <- sclis[-which(sclis %in% d$V4)]
+
+for (i in 1:length(mis)) {      # matching
+  d$V4[grep(mis[i], d$V3)] <- mis[i]  } 
+
+summary(is.na(d$V4))
+length(sclis)
+sclis[-which(sclis %in% d$V4)]
+length(sclis[-which(sclis %in% d$V4)])
+
+d$V5 <- c(sclis[-which(sclis %in% d$V4)], rep(NA, nrow(d) - length(sclis[-which(sclis %in% d$V4)])))
+names(d) <- c("N", "logbook", "adj", "shellcatch", "unmatched")
+
+# csv file for manual edits to match names ------------------
+#write.table(d, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/name_matches.csv", 
+#            sep = ",", col.names = T, row.names = F)
+
+# output and then manually match up remaining names - this takes time
+# any species not in logbook, need to look up and insert into spp_ref file
+
+
+# merge shellcatch with logbook -----------------------
+# DONE 06/02/2023
+
+rm(list = ls())
+setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent")
+
+sc <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/shellcatch_pr_data_req_02152023_C.csv")   # original shellcatch data
+sc$POUNDS_LANDED2 <- as.numeric(as.vector(sc$POUNDS_LANDED))
+sc$ADJUSTED_POUNDS2 <- as.numeric(as.vector(sc$ADJUSTED_POUNDS))
+sc$CORRECTION_FACTOR <- as.numeric(as.vector(sc$CORRECTION_FACTOR))
+sc$PRICE <- as.numeric(as.vector(sc$PRICE))
+summary(sc$POUNDS_LANDED == sc$POUNDS_LANDED2)
+summary(sc$ADJUSTED_POUNDS == sc$ADJUSTED_POUNDS2)
+
+apply(sc[1:4], 2, table, useNA = "always")
+table(sc$LANDING_AREA_COUNTY_OR_MUNICIPALITY)
+table(sc$COAST)
+table(sc$GEAR_NAME)
+hist(sc$POUNDS_LANDED2)
+hist(sc$ADJUSTED_POUNDS2)
+table(sc$CORRECTION_FACTOR)
+co <- sc$POUNDS_LANDED2 / sc$CORRECTION_FACTOR
+table(round(co- sc$ADJUSTED_POUNDS2))
+hist(sc$PRICE)
+table(sc$AREA_CD1)
+
+sc$SPECIES_NM <- as.character(sc$SPECIES_NM)
+
+# replace duplicate names -----------------------
+sc$SPECIES_NM[which(sc$SPECIES_NM == "CROAKERS")] <- "CROAKER"
+sc$SPECIES_NM[which(sc$SPECIES_NM == "HERRING")] <- "THREAD HERRING"
+sc$SPECIES_NM[which(sc$SPECIES_NM == "SMOOTHTAIL SPINY LOBSTER")] <- "SPINY LOBSTER"
+sc$SPECIES_NM[which(sc$SPECIES_NM == "KING MACKAREL, KINGFISH")] <- "KINGFISH MACKEREL"
+sc$SPECIES_NM[which(sc$SPECIES_NM == "WENCHMAN")] <- "CARDINAL"
+sc$SPECIES_NM[which(sc$SPECIES_NM == "SPOTTED TRUNKFISH")] <- "TRUNKFISH"
+sc$SPECIES_NM[which(sc$SPECIES_NM == "SMOOTH TRUNKFISH")] <- "TRUNKFISH"
+sc$SPECIES_NM[which(sc$SPECIES_NM == "SEA BASSES")] <- "GROUPERS"
+
+nam <- read.csv("name_matches_edited.csv")
+
+dim(sc)
+summary(sc$SPECIES_NM %in% nam$shellcatch)
+sc[which((sc$SPECIES_NM %in% nam$shellcatch) == "FALSE"), ]
+sc <- sc[-which(sc$SPECIES_NM  == "SELECT TO MANUALLY INPUT"), ]
+summary(sc$SPECIES_NM %in% nam$shellcatch)
+
+sc[which(sc$SPECIES_NM == "WARMOUTH BASS"),]
+sc <- sc[-which(sc$SPECIES_NM == "WARMOUTH BASS"),]
+dim(sc)
+
+match(sc$SPECIES_NM, nam$shellcatch)
+table(match(sc$SPECIES_NM, nam$shellcatch))
+sc$logname <- as.character(nam$logbook[match(sc$SPECIES_NM, nam$shellcatch)])
+cbind(sc$logname, sc$SPECIES_NM)
+
+# merge with logbook -------------------------------
+dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20.csv")
+
+head(dat)
+head(sc)
+
+#                   VESSEL     YEAR_LANDED  MONTH_LANDED    DAY_LANDED FISHING_CENTER_ED   FISHING_CENTER_NAME       MUNICIPALITY  
+sclog <- data.frame(sc$ISLAND, sc$TRIP_YEAR, sc$TRIP_MONTH, sc$TRIP_DAY, NA, sc$LANDING_AREA_COUNTY_OR_MUNICIPALITY, sc$LANDING_AREA_COUNTY_OR_MUNICIPALITY, 
+#AREA_FISHED1 AREA_FISHED2 AREA_FISHED3 AREA_FISHED4 FIN_GEAR_CODE  FIN_GEAR_NAME PR_ID_CODE_ED        
+ sc$AREA_CD1, sc$AREA_CD1, sc$AREA_CD1, sc$AREA_CD1, NA,            sc$GEAR_NAME, sc$LICENSE, 
+#NUMBER_OF_TRIPS_ED   GEAR_QTY_ED   GEAR_HOURS_ED   MINIMUM_DEPTH_ED   MAXIMUM_DEPTH_ED  SPECIES_ITIS  ITIS_COMMON_NAME
+NA, NA, NA, NA, NA, NA, sc$logname, 
+#ITIS_SCIENTIFIC_NAME  POUNDS_LANDED      VALUE_IN_DOLLARS  CORRECTION_FACTOR     ADJUSTED_POUNDS PRICE_PER_LB  DISTANCE DISTANCE_DESCRIBE TRIP_TICKET_NUMBER_ED            
+              NA,      sc$POUNDS_LANDED2, sc$PRICE,         sc$CORRECTION_FACTOR, sc$ADJUSTED_POUNDS2, sc$PRICE/sc$ADJUSTED_POUNDS2, NA, NA, sc$FISHING_TRIP_ID)
+
+dim(dat)
+dim(sclog)
+
+cbind(names(dat), names(sclog))
+names(sclog) <- names(dat)
+
+dat2 <- rbind(dat, sclog)
+head(dat2)
+dim(sclog) + dim(dat)
+dim(dat2)
+
+#write.table(dat2, file = "C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20_wSC.csv", 
+#            sep = ",", col.names = T, row.names = F)
+
+d <- dat2
 
 # take a look at data fields ----------------------------
 table(d$VESSEL, useNA = "always")

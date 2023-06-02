@@ -14,11 +14,11 @@ calcGini <- function(vec) {
 
 # input data for Puerto Rico ---------------------------
 setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/")
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20.csv")
+dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20_wSC.csv")
 
 # define start and end years ---------------------------
 styear <- 2012
-enyear <- 2020
+enyear <- 2021
 
 d <- dat[which(dat$YEAR_LANDED >= styear & dat$YEAR_LANDED <= enyear), ]
 

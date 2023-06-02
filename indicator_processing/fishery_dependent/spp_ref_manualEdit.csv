@@ -27,6 +27,7 @@ Albula vulpes,BONEFISH,Bonefish,1008,Albulinae,bonefish,reef-associated,104,
 Lactophrys,"TRUNKFISH,UNSPECIFIED",Spotted trunkfish,NA,Lactophrys,boxfishes,reef-associated,48,1
 Ostraciidae,"BOXFISH,UNSPECIFIED",Honeycomb cowfish,NA,Ostraciidae,boxfishes,reef-associated,50,1
 Acanthostracion polygonius,"COWFISH,HONEYCOMBED",Honeycomb cowfish,4119,NA,boxfishes,reef-associated,50,
+Acanthostracion quadricornis,SCRAWLED COWFISH,Scrawled cowfish,4119,NA,boxfishes,reef-associated,55,
 Brotula barbata,"BROTULA,BEARDED",Bearded brotula,2662,Brotulinae,other,reef-associated,94,
 Chaetodontidae,"BUTTERFLYFISH,UNSPECIFIED",NA,NA,Chaetodontidae,butterflyfishes,reef-associated,17,1
 Chaetodon capistratus,"BUTTERFLYFISH,FOUREYE",Foureye butterflyfish,364,NA,butterflyfishes,reef-associated,15,
@@ -127,6 +128,7 @@ Hyporhamphus unifasciatus,"HALFBEAK,SILVERSTRIPE",Common halfbeak,2029,NA,halfbe
 Hemiramphus brasiliensis,BALLYHOO,Ballyhoo halfbeak,5247,NA,halfbeaks,reef-associated,55,
 Harengula jaguana,"SARDINE,SCALED",Scaled herring,6654,Dorosomatinae,herrings,reef-associated,21.20000076,
 Harengula humeralis,"SARDINE,REDEAR",Redear herring,6654,Dorosomatinae,herrings,reef-associated,22,
+Harengula clupeola,FALSE PLICHARD,False herring,6654,Dorosomatinae,herrings,reef-associated,22.5,
 Opisthonema oglinum,"HERRING,ATLANTIC THREAD",Atlantic thread herring,5705,Dorosomatinae,herrings,reef-associated,38,
 Chirocentrodon bleekerianus,"HERRING,DOGTOOTH",Dogtooth herring,4436,NA,herrings,pelagic-neritic,16.10000038,
 Jenkinsia lamprotaenia,"HERRING,DWARF",Dwarf round herring,7908,NA,herrings,reef-associated,7.5,
@@ -147,6 +149,7 @@ Alectis ciliaris,"POMPANO,AFRICAN",African pompano,2433,Caranginae,jacks,reef-as
 Seriola rivoliana,"JACK,ALMACO",Longfin yellowtail,7464,Naucratinae,jacks,reef-associated,160,
 Elagatis bipinnulata,RAINBOW RUNNER,Rainbow runner,1900,Naucratinae,jacks,reef-associated,180,
 Seriola dumerili,"AMBERJACK,GREATER",Greater amberjack,7464,Naucratinae,jacks,reef-associated,190,
+Seriola fasciata,FALSE AMBERJACK,Lesser amberjack,7464,Naucratinae,jacks,reef-associated,67.5,
 Oligoplites saurus,LEATHERJACK,Leatherjacket,4180,Scomberoidinae,jacks,reef-associated,35,
 Trachinotus carolinus,"POMPANO,FLORIDA",Florida pompano,2819,Trachinotinae,jacks,benthopelagic,64,
 Trachinotus goodei,PALOMETA,Great pompano,2819,Trachinotinae,jacks,reef-associated,50,
@@ -189,6 +192,8 @@ Scarus coeruleus,"PARROTFISH,BLUE",Blue parrotfish,4784,Scarinae,parrotfishes,re
 Scarus guacamaia,"PARROTFISH,RAINBOW",Rainbow parrotfish,4784,Scarinae,parrotfishes,reef-associated,120,
 Sparisoma chrysopterum,"PARROTFISH,REDTAIL",Redtail parrotfish,4306,Sparisomatinae,parrotfishes,reef-associated,46,
 Sparisoma viride,"PARROTFISH,STOPLIGHT",Stoplight parrotfish,4306,Sparisomatinae,parrotfishes,reef-associated,64,
+Scarus taeniopterus,PRINCESS PARROTFISH,Princess parrotfish,4784,Scarinae,parrotfishes,reef-associated,35,
+Sparisoma rubripinne,REDFIN PARROTFISH,Redfin parrotfish,4306,Sparisomatinae,parrotfishes,reef-associated,47.8,
 Calamus,PORGY (CALAMUS),NA,NA,Calamus,porgies,reef-associated,49.6,1
 Archosargus rhomboidalis,"PORGY,SEA BREAM",Western Atlantic seabream,9352,NA,porgies,reef-associated,33,
 Calamus pennatula,"PORGY,PLUMA",Pluma porgy,2964,NA,porgies,reef-associated,37,
