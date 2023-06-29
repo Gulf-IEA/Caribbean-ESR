@@ -1,0 +1,489 @@
+Family,ScientificName,CommonNameUVI,CommonNameNOAA,SppCodeUVI,SppCodeNOAA,PrimTrophicUVI,PrimTrophicNOAA,SecTrophicNOAA,PrimTrophicSLH,Commercial,MinSize,MaxSize,MaxNum
+Acanthuridae,Acanthurus bahianus,ocean surgeonfish,ocean surgeon,ACBA,ACA BAHI,herb,herb,NA,herb,N,2,38,50
+Acanthuridae,Acanthurus chirurgus,doctorfish,doctorfish,ACCH,ACA CHIR,herb,herb,inv,herb,N,2,36,50
+Acanthuridae,Acanthurus coeruleus,blue tang,blue tang,ACCO,ACA COER,herb,herb,inv,herb,N,2,38,50
+Acanthuridae,Acanthurus sp.,surgeonfish species,surgeonfish species,ACSP,ACA SPE.,unk,unk,unk,herb,NA,2,38,50
+Albulidae,Albula vulpes,bonefish,bonefish,ALVU,ALB VULP,NA,inv,herb,inv,NA,10,50,2
+Antennariidae,Fowlerichthys ocellatus,ocellated frogfish,ocellated frogfish,FOOC,ANT OCEL,unk,unk,unk,pisc,NA,1,38,5
+Apogonidae,Apogon aurolineatus,bridle cardinalfish,bridle cardinalfish,APAU,APO AURO,NA,plank,NA,plank,NA,1,7,5
+Apogonidae,Apogon binotatus,barred cardinalfish,barred cardinalfish,APBI,APO BINO,NA,plank,NA,plank,NA,1,12,5
+Apogonidae,Apogon lachneri,whitestar cardinalfish,whitestar cardinalfish,APLA,APO LACH,NA,inv,plank,plank,NA,1,12,5
+Apogonidae,Apogon maculatus,flamefish,flamefish,APMA,APO MACU,NA,inv,plank,plank,NA,1,12,5
+Apogonidae,Apogon phenax,mimic cardinalfish,mimic cardinalfish,APPH,APO PHEN,unk,unk,unk,plank,NA,1,12,5
+Apogonidae,Apogon pseudomaculatus,twospot cardinalfish,twospot cardinalfish,APPS,APO PSEU,NA,plank,NA,plank,NA,1,12,5
+Apogonidae,Apogon quadrisquamatus,sawcheek cardinalfish,sawcheek cardinalfish,APQU,APO QUAD,NA,plank,NA,plank,NA,1,7,5
+Apogonidae,Apogon sp.,cardinalfish species Apogon,cardinalfish species,NA,APO SPE.,unk,unk,unk,unk,NA,1,12,5
+Apogonidae,Apogon townsendi,belted cardinalfish,belted cardinalfish,APTO,APO TOWN,inv,inv,plank,plank,N,1,7,5
+Apogonidae,Astrapogon puncticulatus,blackfin cardinalfish,blackfin cardinalfish,ASPU,AST PUNC,NA,inv,NA,plank,NA,1,12,5
+Apogonidae,Astrapogon sp.,cardinalfish species Astrapogon,cardinalfish species,ASSP,AST SPE.,unk,unk,unk,plank,NA,1,12,5
+Apogonidae,Astrapogon stellatus,conchfish,conchfish,ASST,AST STEL,NA,inv,NA,plank,NA,1,8,5
+Apogonidae,Astroscopus guttatus,northern stargazer,northern stargazer,ASGU,AST GUTT,unk,unk,unk,pisc,NA,1,50,20
+Apogonidae,Astroscopus y-graecum,southern stargazer,southern stargazer,ASYG,AST Y-GR,unk,unk,unk,pisc,NA,1,44,20
+Apogonidae,Phaeoptyx xenus,sponge cardinalfish,sponge cardinalfish,PHXE,PHA XENU,unk,unk,unk,plank,NA,2,10,5
+Atherinidae,Atherinomorus sp.,silverside species Atherinomorus,silverside species,ATSP,ATH SPE.,unk,unk,unk,plank,N,1,10,1000
+Atherinidae,Atherinomorus stipes,hardhead silverside,hardhead silverside,ATST,ATH STIP,unk,unk,unk,plank,N,1,10,1000
+Atherinidae,Hypoatherina harringtonensis,reef silverside,reef silverside,HYHA,HYP HARR,unk,unk,unk,plank,NA,1,10,1000
+Atherinopsidae,Menidia sp.,silverside species Menidia,silverside species,MESP,MEN SPE.,unk,unk,unk,plank,NA,3,15,500
+Aulostomidae,Aulostomus maculatus,Atlantic trumpetfish,Atlantic trumpetfish,AUMA,AUL MACU,pisc,pisc,inv,inv,N,15,91,5
+Balistidae,Balistes capriscus,gray triggerfish,gray triggerfish,BACA,BAL CAPR,NA,inv,herb,inv,NA,15,30,10
+Balistidae,Balistes sp.,triggerfish species,triggerfish species,BASP,BAL SPE.,unk,unk,unk,inv,NA,5,60,50
+Balistidae,Balistes vetula,queen triggerfish,queen triggerfish,BAVE,BAL VETU,inv,inv,NA,inv,Y,15,61,10
+Balistidae,Canthidermis sufflamen,ocean triggerfish,ocean triggerfish,CASU,CAN SUFF,plank,inv,plank,plank,N,20,61,20
+Balistidae,Melichthys niger,black durgon,black durgon,MENI,MEL NIGE,plank,herb,inv,plank,N,5,41,50
+Balistidae,Xanthichthys ringens,sargassum triggerfish,sargassum triggerfish,XARI,XAN RING,plank,zoo,NA,inv,N,2,8,5
+Batrachoididae,Opsanus tau,oyster toadfish,oyster toadfish,OPTA,OPS TAU_,unk,unk,unk,inv,NA,5,38,5
+Belonidae,Ablennes hians,flat needlefish,flat needlefish,ABHI,ABL HIAN,pisc,pisc,NA,pisc,N,20,70,50
+Belonidae,Belonidae sp.,needlefish species,needlefish species,BESP,BEL SPE.,unk,unk,unk,pisc,NA,5,61,25
+Belonidae,Platybelone argalus,keeltail needlefish,keeltail needlefish,PLAR,PLA ARGA,NA,pisc,inv,pisc,NA,10,43,15
+Belonidae,Strongylura notata,redfin needlefish,redfin needlefish,STNO,STR NOTA,unk,unk,unk,pisc,NA,5,61,5
+Belonidae,Strongylura timucu,timucu,timucu,STTI,STR TIMU,unk,unk,unk,pisc,NA,5,61,5
+Belonidae,Tylosurus crocodilus,houndfish,houndfish,TYCR,TYL CROC,pisc,NA,NA,pisc,N,30,150,5
+Blenniidae,Entomacrodus nigricans,pearl blenny,pearl blenny,EMNI,ENT NIGR,NA,herb,inv,inv,NA,1,5,5
+Blenniidae,Hypleurochilus bermudensis,barred blenny,barred blenny,HYBE,HYP BERM,unk,unk,unk,inv,NA,1,10,5
+Blenniidae,Ophioblennius macclurei,redlip blenny,redlip blenny,OPMC,OPH MACC,herb,herb,omni,plank,N,1,13,5
+Blenniidae,Parablennius marmoreus,seaweed blenny,seaweed blenny,PAMA,PAR MARM,NA,plank,inv,inv,NA,1,9,5
+Blenniidae,Scartella cristata,molly miller,molly miller,SCCR,SCA CRIS,NA,herb,inv,herb,NA,1,10,5
+Bothidae,Bothus lunatus,peacock flounder,peacock flounder,BOLU,BOT LUNA,pisc,pisc,inv,pisc,N,10,45,5
+Bothidae,Bothus ocellatus,eyed flounder,eyed flounder,BOOC,BOT OCEL,NA,inv,pisc,pisc,NA,10,15,5
+Bothidae,Bothus sp.,left-eyed flounder,lefteye flounders,BOSP,BOT SPE.,NA,inv,pisc,pisc,NA,10,45,5
+Bythitidae,Stygnobrotula latebricola,black brotula,black brotula,STLA,STY LATE,unk,unk,unk,inv,NA,2,8,5
+Callionymidae,Callionymus bairdi,lancer dragonet,lancer dragonet,CABA,PAR BAIR,NA,inv,pisc,inv,NA,1,12,10
+Carangidae,Alectis ciliaris,African pompano,African pompano,ALCI,ALE CILI,inv,inv,NA,inv,N,10,110,5
+Carangidae,Carangoides bartholomaei,yellow jack,yellow jack,CABR,CAR BART,pisc,pisc,NA,pisc,N,20,100,10
+Carangidae,Caranx crysos,blue runner,blue runner,CACR,CAR CRYS,pisc,pisc,inv,inv,N,5,50,100
+Carangidae,Caranx hippos,crevalle jack,crevalle jack,CAHI,CAR HIPP,pisc,pisc,inv,pisc,N,25,150,100
+Carangidae,Caranx latus,horse-eye jack,horse-eye jack,CALA,CAR LATU,pisc,pisc,inv,pisc,N,25,75,100
+Carangidae,Caranx lugubris,black jack,black jack,CALU,CAR LUGU,plank,pisc,NA,pisc,N,25,100,100
+Carangidae,Caranx ruber,bar jack,bar jack,CARU,CAR RUBE,pisc,NA,NA,inv,N,5,60,100
+Carangidae,Caranx sp.,jack species,jack species,CASP,CAR SPE.,unk,unk,unk,inv,NA,1,100,100
+Carangidae,Chloroscombrus chrysurus,Atlantic bumper,Atlantic bumper,CHCH,CHL CHRY,unk,unk,unk,plank,NA,5,30,100
+Carangidae,Decapterus macarellus,mackerel scad,mackerel scad,DEMA,DEC MACA,plank,plank,inv,plank,N,5,30,100
+Carangidae,Decapterus punctatus,round scad,round scad,DEPU,DEC PUNC,unk,unk,unk,plank,NA,5,23,100
+Carangidae,Decapterus sp.,scad species,scad species,DESP,DEC SPE.,unk,unk,unk,plank,NA,5,30,100
+Carangidae,Elagatis bipinnulata,rainbow runner,rainbow runner,ELBI,ELA BIPI,plank,NA,NA,plank,N,30,110,100
+Carangidae,Oligoplites saurus,leatherjack,leatherjack,OLSA,OLI SAUR,unk,unk,unk,pisc,NA,10,35,50
+Carangidae,Selar crumenophthalmus,Atlantic bigeye,bigeye scad,SECR,SEL CRUM,NA,pisc,plank,pisc,NA,20,60,100
+Carangidae,Selene vomer,lookdown,lookdown,SEVO,SEL VOME,unk,unk,unk,pisc,NA,5,30,5
+Carangidae,Seriola dumerili,greater amberjack,greater amberjack,SEDU,SER DUME,pisc,pisc,inv,pisc,N,30,150,10
+Carangidae,Seriola rivoliana,almaco jack,almaco jack,SERI,SER RIVO,pisc,pisc,NA,pisc,N,20,80,10
+Carangidae,Seriola zonata,banded rudderfish,banded rudderfish,SEZO,SER ZONA,unk,unk,unk,pisc,NA,20,75,15
+Carangidae,Trachinotus blochii,permit,permit,TRBL,TRA FALC,inv,inv,NA,inv,N,30,114,50
+Carangidae,Trachinotus goodei,palometa,palometa,TRGO,TRA GOOD,inv,pisc,inv,inv,N,20,50,25
+Carangidae,Trachurus lathami,rough scad,rough scad,TRLA,TRA LATH,unk,unk,unk,inv,NA,10,40,200
+Carcharhinidae,Carcharhinidae sp.,shark species,shark species,CASP,ELA SPE.,unk,unk,unk,pisc,N,100,420,3
+Carcharhinidae,Carcharhinus falciformis,silky shark,silky shark,CAFA,CAR FALC,unk,unk,unk,pisc,NA,100,350,3
+Carcharhinidae,Carcharhinus leucas,bull shark,bull shark,CALC,CAR LEUC,unk,unk,unk,pisc,NA,100,350,3
+Carcharhinidae,Carcharhinus limbatus,blacktip shark,blacktip shark,CALI,CAR LIMB,pisc,pisc,inv,pisc,N,100,250,3
+Carcharhinidae,Carcharhinus obscurus,dusky shark,dusky shark,CAOB,CAR OBSC,unk,unk,unk,pisc,NA,100,420,3
+Carcharhinidae,Carcharhinus perezii,Caribbean reef shark,reef shark,CAPE,CAR PERE,pisc,NA,NA,pisc,N,100,300,3
+Carcharhinidae,Carcharhinus plumbeus,sandbar shark,sandbar shark,CAPL,CAR PLUM,NA,pisc,inv,pisc,NA,100,240,3
+Carcharhinidae,Galeocerdo cuvier,tiger shark,tiger shark,GACU,GAL CUVI,NA,pisc,omni,pisc,NA,100,732,1
+Carcharhinidae,Negaprion brevirostris,lemon shark,lemon shark,NEBR,NEG BREV,unk,unk,unk,pisc,NA,50,250,1
+Carcharhinidae,Rhizoprionodon terraenovae,Atlantic sharpnose shark,Atlantic sharpnose shark,RHTE,RHI TERR,unk,unk,unk,pisc,N,60,110,1
+Centropomidae,Centropomus undecimalis,common snook,common snook,CEUN,CEN UNDE,unk,unk,unk,pisc,NA,30,120,5
+Chaenopsidae,Acanthemblemaria aspera,roughhead blenny,roughhead blenny,AMAS,ACA ASPE,NA,plank,NA,inv,NA,1,4,20
+Chaenopsidae,Acanthemblemaria chaplini,papillose blenny,papillose blenny,AMCH,ACA CHAP,unk,unk,unk,inv,NA,1,5,20
+Chaenopsidae,Acanthemblemaria maria,secretary blenny,secretary blenny,AMMA,ACA MARI,NA,plank,NA,inv,NA,1,5,5
+Chaenopsidae,Acanthemblemaria sp.,tube blenny Acanthemblemaria,tube blenny Acanthemblemaria,AMSP,ACN SPE.,NA,plank,NA,inv,NA,1,5,5
+Chaenopsidae,Acanthemblemaria spinosa,spinyhead blenny,spinyhead blenny,AMSI,ACA SPIN,NA,plank,NA,inv,NA,1,5,5
+Chaenopsidae,blenny sp.,blenny species,blenny species,BLSP,BLE SPE.,unk,unk,unk,inv,NA,1,10,50
+Chaenopsidae,Chaenopsis limbaughi,yellowface pikeblenny,yellowface pikeblenny,CHLI,CHA LIMB,NA,inv,NA,inv,NA,1,9,20
+Chaenopsidae,Chaenopsis ocellata,bluethroat pikeblenny,bluethroat pikeblenny,CHOL,CHA OCLL,NA,inv,NA,inv,NA,2,12,5
+Chaenopsidae,Chaenopsis sp.,pikeblenny species,pikeblenny species,CHSP,CHA SPE.,NA,inv,NA,inv,NA,2,12,5
+Chaenopsidae,Emblemaria pandionis,sailfin blenny,sailfin blenny,EMPA,EMB PAND,NA,plank,NA,inv,NA,1,7,20
+Chaenopsidae,Emblemaria sp.,tube blenny Emblemaria,tube blenny Emblemaria,EMSP,EMB SPE.,NA,plank,NA,inv,NA,1,5,5
+Chaenopsidae,Emblemariopsis bahamensis,blackhead blenny,blackhead blenny,ESBA,EMB BAHA,unk,unk,unk,inv,NA,1,3,20
+Chaenopsidae,Emblemariopsis diaphana,glass blenny,glass blenny,ESDI,EMB DIAP,unk,unk,unk,inv,NA,1,5,20
+Chaenopsidae,Emblemariopsis sp.,tube blenny Emblemariopsis,tube blenny Emblemariopsis,ESSP,EMP SPE.,NA,plank,NA,inv,NA,1,5,5
+Chaenopsidae,Hemiemblemaria simulus,wrasse blenny,wrasse blenny,HESI,HEM SIMU,unk,unk,unk,inv,NA,1,10,20
+Chaetodontidae,Chaetodon capistratus,foureye butterflyfish,foureye butterflyfish,CHCA,CHA CAPI,omni,inv,omni,inv,N,2,15,10
+Chaetodontidae,Chaetodon ocellatus,spotfin butterflyfish,spotfin butterflyfish,CHOC,CHA OCEL,omni,inv,NA,inv,N,2,20,10
+Chaetodontidae,Chaetodon sedentarius,reef butterflyfish,reef butterflyfish,CHSE,CHA SEDE,omni,inv,omni,inv,N,3,15,10
+Chaetodontidae,Chaetodon striatus,banded butterflyfish,banded butterflyfish,CHST,CHA STRI,omni,inv,NA,inv,N,2,15,10
+Chaetodontidae,Prognathodes aculeatus,longsnout butterflyfish,longsnout butterflyfish,CHAC,PRO ACUL,inv,inv,omni,inv,N,2,9,10
+Chaetodontidae,Prognathodes aya,bank butterflyfish,bank butterflyfish,PRAY,PRO AYA_,unk,unk,unk,inv,NA,2,15,10
+Cirrhitidae,Amblycirrhitus pinos,redspotted hawkfish,redspotted hawkfish,AMPI,AMB PINO,pisc,inv,plank,inv,N,2,10,5
+Clupeidae,Harengula humeralis,redear sardine,redear sardine,HAHU,HAR HUME,plank,NA,NA,plank,N,1,18,1000
+Clupeidae,Harengula jaguana,scaled sardine,scaled sardine,HAJA,HAR JAGU,unk,unk,unk,plank,NA,1,18,1000
+Clupeidae,Jenkinsia sp.,herring species,herring species,JESP,JEN SPE.,unk,unk,unk,plank,NA,1,10,1000
+Clupeidae,Sardinella aurita,Spanish sardine,Spanish sardine,SAAU,SAR AURI,unk,unk,unk,plank,NA,1,25,1000
+Congridae,Ariosoma balearicum,bandtooth conger,bandtooth conger,ARBA,ARI BALE,NA,inv,NA,inv,NA,10,30,10
+Congridae,Conger triporiceps,manytooth conger,manytooth conger,COTR,CON TRIP,NA,pisc,omni,pisc,NA,10,30,10
+Congridae,Heteroconger longissimus,brown garden eel,brown garden eel,HELO,HET LONG,inv,plank,inv,plank,N,5,50,100
+Dactylopteridae,Dactylopterus volitans,flying gurnard,flying gurnard,DAVO,DAC VOLI,inv,inv,pisc,inv,N,5,46,5
+Dasyatidae,Hypanus americanus,southern stingray,southern stingray,DAAM,DAS AMER,inv,inv,pisc,inv,N,30,180,5
+Diodontidae,Chilomycterus antennatus,bridled burrfish,bridled burrfish,CHAN,CHI ANTE,inv,inv,NA,inv,N,5,23,10
+Diodontidae,Chilomycterus antillarum,web burrfish,web burrfish,NA,CHI ANTI,inv,NA,NA,inv,N,5,36,10
+Diodontidae,Chilomycterus reticulatus,spotted burrfish,spotted burrfish,CHRE,CHI ATIN,unk,unk,unk,inv,NA,5,36,10
+Diodontidae,Chilomycterus schoepfii,striped burrfish,striped burrfish,CHSC,CHI SCHO,unk,unk,unk,inv,NA,5,25,10
+Diodontidae,Diodon holocanthus,balloonfish,balloonfish,DIHO,DIO HOLO,inv,inv,NA,inv,N,5,50,10
+Diodontidae,Diodon hystrix,porcupinefish,porcupinefish,DIHY,DIO HYST,inv,inv,omni,inv,N,5,91,10
+Echeneidae,Echeneis naucrates,sharksucker,sharksucker,ECNA,ECH NAUC,inv,plank,omni,inv,N,10,90,2
+Echeneidae,Echeneis neucratoides,whitefin sharksucker,whitefin sharksucker,ECNE,ECH NEUC,NA,plank,omni,inv,NA,20,75,5
+Echeneidae,Remora remora,remora,remora,RERE,REM REMO,inv,plank,inv,inv,N,20,78,5
+Elopidae,Elops saurus,ladyfish,ladyfish,ELSA,ELO SAUR,unk,unk,unk,inv,NA,50,91,10
+Engraulidae,Anchoa lyolepis,dusky anchovy,dusky anchovy,ANLY,ANC LYOL,unk,unk,unk,plank,NA,1,9,1000
+Engraulidae,Engraulidae sp.,anchovy species,anchovy species,EGSP,ENG SPE.,NA,herb,NA,plank,NA,2,30,1000
+Ephippidae,Chaetodipterus faber,Atlantic spadefish,Atlantic spadefish,CHFA,CHA FABE,plank,inv,herb,inv,N,20,91,30
+Ephippidae,Platax orbicularis,orbicular batfish,orbicular batfish,PLOR,PLA ORBI,unk,unk,unk,inv,NA,10,60,5
+Fistulariidae,Fistularia tabacaria,bluespotted cornetfish,bluespotted cornetfish,FITA,FIS TABA,pisc,pisc,NA,pisc,N,30,180,5
+Gerreidae,Eucinostomus argenteus,spotfin mojarra,spotfin mojarra,EUAR,EUC ARGE,unk,unk,unk,inv,NA,5,20,50
+Gerreidae,Eucinostomus gula,silver jenny,silver jenny,EUGU,EUC GULA,NA,inv,NA,inv,NA,5,18,50
+Gerreidae,Eucinostomus jonesii,slender mojarra,slender mojarra,EUJO,EUC JONE,NA,inv,NA,inv,NA,5,20,10
+Gerreidae,Eucinostomus lefroyi,mottled mojarra,mottled mojarra,EULE,EUC LEFR,unk,unk,unk,inv,NA,5,23,10
+Gerreidae,Eucinostomus melanopterus,flagfin mojarra,flagfin mojarra,EUME,EUC MELA,inv,inv,NA,inv,N,2,25,10
+Gerreidae,Eucinostomus sp.,mojarra species Eucinostomus,NA,EUSP,NA,inv,NA,NA,inv,N,5,20,50
+Gerreidae,Gerres cinereus,yellowfin mojarra,yellowfin mojarra,GECI,GER CINE,inv,inv,omni,inv,N,5,41,50
+Gerreidae,Gerres sp.,mojarra species Gerres,mojarra species,GESP,GER SPE.,unk,unk,unk,inv,N,5,41,50
+Ginglymostomatidae,Ginglymostoma cirratum,nurse shark,nurse shark,GICI,GIN CIRR,pisc,inv,pisc,pisc,N,30,425,3
+Gobiidae,Bathygobius soporator,frillfin goby,frillfin goby,BASO,BAT SOPO,NA,inv,NA,inv,NA,1,5,5
+Gobiidae,Bollmannia boqueronensis,white-eye goby,white-eye goby,BOBO,BOL BOQU,NA,herb,plank,inv,NA,1,5,5
+Gobiidae,Coryphopterus dicrus,colon goby,colon goby,CODI,COR DICR,omni,inv,herb,inv,N,1,5,5
+Gobiidae,Coryphopterus eidolon,pallid goby,pallid goby,COEI,COR EIDO,NA,herb,NA,inv,NA,1,5,5
+Gobiidae,Coryphopterus glaucofraenum,bridled goby,bridled goby,COGL,COR GLAU,herb,inv,herb,inv,N,2,8,100
+Gobiidae,Coryphopterus lipernes,peppermint goby,peppermint goby,COLI,COR LIPE,inv,inv,herb,inv,N,1,3,5
+Gobiidae,Coryphopterus personatus,masked goby,masked goby,COPE,COR PERS,omni,NA,NA,inv,N,1,4,500
+Gobiidae,Coryphopterus punctipectophorus,spotted goby,spotted goby,COPU,COR PUNC,unk,unk,unk,inv,NA,1,5,5
+Gobiidae,Coryphopterus sp.,goby species Coryphopterus,goby species,COSP,COR SPE.,unk,unk,unk,inv,NA,1,5,50
+Gobiidae,Coryphopterus tortugae,patch-reef goby,patch-reef goby,COTO,COR TORT,herb,NA,NA,inv,N,1,5,5
+Gobiidae,Coryphopterus venezuelae,sand-canyon goby,sand-canyon goby,COVE,COR VENE,unk,unk,unk,inv,NA,1,5,5
+Gobiidae,Ctenogobius saepepallens,dash goby,dash goby,CTSA,CTE SAEP,NA,inv,herb,inv,NA,1,5,5
+Gobiidae,Ctenogobius stigmaticus,marked goby,marked goby,CTST,CTE STIG,NA,inv,herb,inv,NA,1,5,5
+Gobiidae,Elacatinus chancei,shortstripe goby,shortstripe goby,ELCH,ELA CHAN,NA,inv,NA,inv,NA,1,5,5
+Gobiidae,Elacatinus dilepis,orangesided goby,orangeside gody,ELDI,GOB DILE,unk,unk,unk,inv,NA,1,5,5
+Gobiidae,Elacatinus evelynae,sharknose goby,sharknose goby,ELEV,ELA EVEL,inv,inv,NA,inv,N,1,5,5
+Gobiidae,Elacatinus genie,cleaning goby,NA,ELGE,NA,inv,NA,NA,inv,N,1,5,5
+Gobiidae,Elacatinus horsti,yellowline goby,yellowline goby,ELHO,ELA HORS,inv,NA,NA,inv,N,1,5,5
+Gobiidae,Elacatinus louisae,spotlight goby,spotlight goby,ELLO,ELA LOUI,NA,inv,NA,inv,NA,1,5,5
+Gobiidae,Elacatinus macrodon,tiger goby,tiger goby,ELMA,ELA MACR,unk,unk,unk,inv,NA,1,5,5
+Gobiidae,Elacatinus oceanops,neon goby,neon goby,ELOC,ELA OCEA,NA,inv,NA,inv,NA,1,5,20
+Gobiidae,Elacatinus prochilos,broadstripe goby,broadstripe goby,ELPR,ELA PROC,NA,inv,NA,inv,NA,1,5,5
+Gobiidae,Elacatinus randalli,yellownose goby,yellownose goby,ELRA,ELA RAND,inv,NA,NA,inv,N,1,5,5
+Gobiidae,Elacatinus saucrus,leopard goby,leopard goby,ELSA,ELA SAUC,unk,unk,unk,inv,NA,1,5,5
+Gobiidae,Elacatinus xanthiprora,yellowprow goby,yellowprow goby,ELXA,ELA XANT,unk,unk,unk,inv,NA,1,4,5
+Gobiidae,Gnatholepis cauerensis,eyebar goby,NA,GNCA,NA,herb,NA,NA,herb,N,1,8,5
+Gobiidae,Gnatholepis thompsoni,goldspot goby,goldspot goby,GNTH,GNA THOM,herb,herb,plank,herb,N,1,8,5
+Gobiidae,Gobiosoma grosvenori,rockcut goby,rockcut goby,GOGR,GOB GROS,NA,inv,herb,inv,NA,1,5,5
+Gobiidae,Gobiosoma sp.,goby species Gobiosoma,NA,GOSP,NA,unk,unk,unk,inv,NA,1,5,5
+Gobiidae,Lophogobius cyprinoides,crested goby,crested goby,LOCY,LOP CYPR,NA,herb,plank,inv,NA,1,5,5
+Gobiidae,Microgobius carri,Seminole goby,Seminole goby,MICA,MIC CARR,NA,herb,plank,inv,NA,1,13,50
+Gobiidae,Microgobius microlepis,banner goby,banner goby,MIMI,MIC MICR,unk,unk,unk,inv,NA,1,5,5
+Gobiidae,Microgobius signatus,dashback goby,dashback goby,MISI,MIC SIGN,NA,herb,plank,inv,NA,1,5,5
+Gobiidae,Microgobius sp.,goby Microgobius,goby Microgobius,MISP,MIC SPE.,NA,herb,plank,inv,NA,1,5,5
+Gobiidae,Nes longus,orangespotted goby,orangespotted goby,NELO,NES LONG,NA,herb,plank,inv,NA,1,10,5
+Gobiidae,Oxyurichthys stigmalophius,spotfin goby,spotfin goby,OXST,OXY STIG,NA,inv,pisc,inv,NA,1,16,5
+Gobiidae,Priolepis hipoliti,rusty goby,rusty goby,PRHI,PRI HIPO,NA,inv,NA,inv,NA,1,4,5
+Gobiidae,Risor ruber,tusked goby,tusked goby,RIRU,RIS RUBE,NA,inv,herb,inv,NA,1,5,5
+Gobiidae,Tigrigobius multifasciatus,greenbanded goby,greenbanded goby,TIMU,ELA MULT,NA,inv,NA,inv,NA,1,5,5
+Grammatidae,Gramma loreto,fairy basslet,fairy basslet,GRLO,GRA LORE,inv,inv,NA,inv,N,1,8,20
+Haemulidae,Anisotremus surinamensis,black margate,black margate,ANSU,ANI SURI,inv,inv,pisc,inv,N,15,60,5
+Haemulidae,Anisotremus virginicus,porkfish,porkfish,ANVI,ANI VIRG,inv,inv,plank,inv,N,3,36,30
+Haemulidae,Emmelichthyops atlanticus,bonnetmouth,bonnetmouth,EMAT,EMM ATLA,NA,pisc,NA,plank,NA,2,25,100
+Haemulidae,Haemulon album,white margate,margate,HAAL,HAE ALBU,inv,inv,pisc,inv,N,25,69,10
+Haemulidae,Haemulon aurolineatum,tomtate,tomtate,HAAU,HAE AURO,inv,inv,plank,inv,N,3,25,250
+Haemulidae,Haemulon carbonarium,Caesar grunt,caesar grunt,HACA,HAE CARB,inv,inv,pisc,inv,N,3,38,30
+Haemulidae,Haemulon chrysargyreum,smallmouth grunt,smallmouth grunt,HACH,HAE CHRY,inv,inv,pisc,inv,N,3,25,50
+Haemulidae,Haemulon flavolineatum,French grunt,French grunt,HAFL,HAE FLAV,inv,inv,NA,inv,N,3,30,100
+Haemulidae,Haemulon macrostomum,Spanish grunt,Spanish grunt,HAMA,HAE MACR,inv,inv,NA,inv,N,3,43,10
+Haemulidae,Haemulon melanurum,cottonwick,cottonwick,HAME,HAE MELA,inv,inv,NA,inv,N,3,33,50
+Haemulidae,Haemulon parra,sailors choice,sailors choice,HAPA,HAE PARR,inv,inv,NA,inv,N,3,43,25
+Haemulidae,Haemulon plumierii,white grunt,white grunt,HAPL,HAE PLUM,inv,inv,pisc,inv,N,3,46,100
+Haemulidae,Haemulon sciurus,bluestriped grunt,bluestriped grunt,HASC,HAE SCIU,inv,inv,pisc,inv,N,3,46,100
+Haemulidae,Haemulon sp.,grunt species,grunt species,HASP,HAE SPE.,inv,NA,NA,inv,N,3,40,250
+Haemulidae,Haemulon striatum,striped grunt,striped grunt,HAST,HAE STRI,inv,inv,herb,inv,N,5,28,100
+Haemulidae,Haemulon vittatum,boga,boga,INVI,INE VITT,plank,plank,pisc,plank,N,5,23,100
+Haemulidae,Orthopristis chrysoptera,pigfish,pigfish,ORCH,ORT CHRY,unk,unk,unk,inv,NA,10,45,10
+Hemiramphidae,Chriodorus atherinoides,hardhead halfbeak,hardhead halfbeak,CHAT,CHR ATHE,unk,unk,unk,plank,NA,5,25,5
+Hemiramphidae,Hemiramphus brasiliensis,ballyhoo,ballyhoo,HEBR,HEM BRAS,plank,NA,NA,plank,N,5,40,1000
+Holocentridae,Holocentrus adscensionis,squirrelfish,squirrelfish,HOAD,HOL ADSC,inv,inv,NA,inv,N,5,41,10
+Holocentridae,Holocentrus rufus,longspine squirrelfish,longspine squirrelfish,HORU,HOL RUFU,inv,inv,pisc,inv,N,5,32,10
+Holocentridae,Myripristis jacobus,blackbar soldierfish,blackbar soldierfish,MYJA,MYR JACO,inv,inv,pisc,plank,N,5,22,10
+Holocentridae,Neoniphon marianus,longjaw squirrelfish,longjaw squirrelfish,NEMA,NEO MARI,omni,inv,plank,plank,N,5,18,10
+Holocentridae,Sargocentron bullisi,deepwater squirrelfish,deepwater squirrelfish,SABU,SAR BULL,NA,inv,NA,inv,NA,5,13,5
+Holocentridae,Sargocentron coruscum,reef squirrelfish,reef squirrelfish,SACO,SAR CORU,omni,inv,NA,inv,N,5,14,10
+Holocentridae,Sargocentron vexillarium,dusky squirrelfish,dusky squirrelfish,SAVE,SAR VEXI,inv,inv,pisc,inv,N,5,18,10
+Istiophoridae,Istiophorus platypterus,sailfish,sailfish,ISPL,IST PLAT,unk,unk,unk,pisc,NA,100,250,1
+Kyphosidae,Kyphosus incisor,yellow sea chub,NA,KYIN,NA,herb,NA,NA,herb,N,15,76,50
+Kyphosidae,Kyphosus sectatrix,Bermuda chub,Bermuda chub,KYSE,KYP SECT,herb,NA,NA,herb,N,15,76,50
+Kyphosidae,Kyphosus sp.,chub species,chub species,NA,NA,herb,NA,NA,herb,N,15,76,50
+Labridae,Bodianus pulchellus,spotfin hogfish,spotfin hogfish,BOPU,BOD PULC,NA,inv,NA,inv,NA,3,23,25
+Labridae,Bodianus rufus,Spanish hogfish,Spanish hogfish,BORU,BOD RUFU,inv,inv,NA,inv,N,3,60,5
+Labridae,Clepticus parrae,creole wrasse,creole wrasse,CLPA,CLE PARR,plank,plank,inv,plank,N,2,30,100
+Labridae,Doratonotus megalepis,dwarf wrasse,dwarf wrasse,DOME,DOR MEGA,NA,inv,pisc,inv,NA,3,8,25
+Labridae,Halichoeres bivittatus,slippery dick,slippery dick,HABI,HAL BIVI,inv,inv,pisc,inv,N,2,23,50
+Labridae,Halichoeres burekae,mardi gras wrasse,mardi gras wrasse,HABU,HAL BURE,NA,inv,pisc,inv,NA,2,20,25
+Labridae,Halichoeres caudalis,painted wrasse,painted wrasse,HACA,HAL CAUD,NA,inv,pisc,inv,NA,3,21,25
+Labridae,Halichoeres cyanocephalus,yellowcheek wrasse,yellowcheek wrasse,HACY,HAL CYAN,inv,pisc,NA,inv,N,3,25,25
+Labridae,Halichoeres garnoti,yellowhead wrasse,yellowhead wrasse,HAGA,HAL GARN,inv,inv,pisc,inv,N,2,20,25
+Labridae,Halichoeres maculipinna,clown wrasse,clown wrasse,HAMU,HAL MACU,inv,inv,plank,inv,N,2,17,25
+Labridae,Halichoeres pictus,rainbow wrasse,rainbow wrasse,HAPI,HAL PICT,inv,inv,NA,inv,N,3,18,25
+Labridae,Halichoeres poeyi,blackear wrasse,blackear wrasse,HAPO,HAL POEY,inv,inv,pisc,inv,N,2,20,10
+Labridae,Halichoeres radiatus,puddingwife,puddingwife,HARA,HAL RADI,inv,inv,NA,inv,N,3,46,5
+Labridae,Halichoeres sp.,wrasse species,wrasse species,HCSP,HAL SPE.,NA,inv,pisc,inv,NA,2,40,50
+Labridae,Lachnolaimus maximus,hogfish,hogfish,LAMA,LAC MAXI,inv,inv,NA,inv,Y,10,91,10
+Labridae,Thalassoma bifasciatum,bluehead wrasse,bluehead,THBI,THA BIFA,omni,inv,pisc,plank,N,2,15,100
+Labridae,Xyrichtys martinicensis,rosy razorfish,rosy razorfish,XYMA,XYR MART,inv,inv,NA,inv,N,3,15,25
+Labridae,Xyrichtys novacula,pearly razorfish,pearly razorfish,XYNO,XYR NOVA,inv,inv,NA,inv,N,3,38,25
+Labridae,Xyrichtys sp.,razorfish species,razorfish species,XYSP,XYR SPE.,unk,unk,unk,inv,NA,3,14,25
+Labridae,Xyrichtys splendens,green razorfish,green razorfish,XYSL,XYR SPLE,inv,inv,plank,inv,N,3,15,25
+Labrisomidae,Brockius nigricinctus,spotcheek blenny,spotcheek blenny,BRNI,LAB NIGR,unk,unk,unk,inv,NA,1,6,10
+Labrisomidae,Gobioclinus bucciferus,puffcheek blenny,puffcheek blenny,GOBU,LAB BUCC,unk,unk,unk,inv,NA,1,6,10
+Labrisomidae,Gobioclinus gobio,palehead blenny,palehead blenny,GOGO,LAB GOBI,unk,unk,unk,inv,NA,1,6,10
+Labrisomidae,Labrisomus filamentosus,quillfin blenny,quillfin blenny,LAFI,LAB FILA,NA,inv,pisc,inv,NA,1,6,10
+Labrisomidae,Labrisomus kalisherae,downy blenny,downy blenny,LAKA,LAB KALI,unk,unk,unk,inv,NA,1,6,10
+Labrisomidae,Labrisomus nuchipinnis,hairy blenny,hairy blenny,LANU,LAB NUCH,NA,inv,pisc,inv,NA,1,23,10
+Labrisomidae,Labrisomus sp.,labrisomid blenny species,labrisomid blenny species,LASP,LAB SPE.,unk,unk,unk,inv,NA,1,6,10
+Labrisomidae,Malacoctenus aurolineatus,goldline blenny,goldline blenny,MAAU,MAL AURO,NA,inv,NA,inv,NA,1,6,10
+Labrisomidae,Malacoctenus boehlkei,diamond blenny,diamond blenny,MABO,MAL BOEH,NA,inv,NA,inv,NA,1,6,10
+Labrisomidae,Malacoctenus gilli,dusky blenny,dusky blenny,MAGI,MAL GILL,NA,inv,NA,inv,NA,1,8,10
+Labrisomidae,Malacoctenus macropus,rosy blenny,rosy blenny,MAMA,MAL MACR,NA,inv,NA,inv,NA,1,6,10
+Labrisomidae,Malacoctenus sp.,blenny species Malacoctenus,blenny species,MASP,MAL SPE.,unk,unk,unk,inv,N,1,8,10
+Labrisomidae,Malacoctenus triangulatus,saddled blenny,saddled blenny,MATR,MAL TRIA,inv,inv,NA,inv,N,1,6,10
+Labrisomidae,Malacoctenus versicolor,barfin blenny,barfin blenny,MAVE,MAL VERS,NA,inv,NA,inv,NA,1,6,10
+Labrisomidae,Mobula birostris,giant manta,giant manta,MABI,MAN BIRO,NA,plank,NA,inv,NA,100,670,5
+Labrisomidae,Paraclinus marmoratus,marbled blenny,marbled blenny,PCMA,PAR MARN,unk,unk,unk,inv,NA,1,5,5
+Labrisomidae,Paraclinus nigripinnis,blackfin blenny,blackfin blenny,PCNI,PAR NIGR,unk,unk,unk,inv,NA,1,5,5
+Lutjanidae,Lutjanus analis,mutton snapper,mutton snapper,LUAN,LUT ANAL,inv,inv,pisc,inv,Y,30,76,5
+Lutjanidae,Lutjanus apodus,schoolmaster,schoolmaster,LUAP,LUT APOD,pisc,pisc,inv,inv,Y,10,60,30
+Lutjanidae,Lutjanus buccanella,blackfin snapper,blackfin snapper,LUBU,LUT BUCC,pisc,pisc,inv,pisc,N,5,76,20
+Lutjanidae,Lutjanus campechanus,red snapper,red snapper,LUCA,LUT CAMP,unk,unk,unk,pisc,NA,40,91,5
+Lutjanidae,Lutjanus cyanopterus,cubera snapper,cubera snapper,LUCY,LUT CYAN,pisc,pisc,NA,pisc,Y,50,152,5
+Lutjanidae,Lutjanus griseus,gray snapper,gray snapper,LUGR,LUT GRIS,pisc,inv,pisc,inv,Y,10,60,100
+Lutjanidae,Lutjanus jocu,dog snapper,dog snapper,LUJO,LUT JOCU,pisc,pisc,inv,pisc,Y,30,91,3
+Lutjanidae,Lutjanus mahogoni,mahogany snapper,mahogany snapper,LUMA,LUT MAHO,pisc,pisc,inv,inv,N,15,38,15
+Lutjanidae,Lutjanus sp.,snapper species,snapper species,LUSP,LUT SPE.,unk,unk,unk,inv,N,10,152,100
+Lutjanidae,Lutjanus synagris,lane snapper,lane snapper,LUSY,LUT SYNA,inv,inv,pisc,inv,Y,10,38,50
+Lutjanidae,Ocyurus chrysurus,yellowtail snapper,yellowtail snapper,OCCH,OCY CHRY,plank,plank,inv,plank,Y,4,76,100
+Lutjanidae,Pristipomoides aquilonaris,wenchman,wenchman,PRAQ,PRI AQUI,unk,unk,unk,pisc,NA,5,30,100
+Lutjanidae,Rhomboplites aurorubens,vermilion snapper,vermilion snapper,RHAU,RHO AURO,unk,unk,unk,pisc,NA,5,76,100
+Malacanthidae,Malacanthus plumieri,sand tilefish,sand tilefish,MAPL,MAL PLUM,inv,inv,pisc,inv,N,10,60,5
+Megalopidae,Megalops atlanticus,tarpon,tarpon,MEAT,MEG ATLA,inv,pisc,NA,pisc,N,50,240,10
+Microdesmidae,Ptereleotris calliura,blue dartfish,blue dartfish,PTCA,PTE CALL,NA,zoo,NA,inv,NA,1,13,20
+Microdesmidae,Ptereleotris helenae,hovering dartfish,hovering dartfish,PTHE,PTE HELE,NA,plank,NA,inv,NA,1,13,20
+Monacanthidae,Aluterus monoceros,unicorn filefish,unicorn filefish,ALMO,ALU MONO,NA,inv,NA,inv,NA,1,60,5
+Monacanthidae,Aluterus schoepfii,orange filefish,orange filefish,ALSH,ALU SCHO,unk,unk,unk,inv,NA,10,51,5
+Monacanthidae,Aluterus scriptus,scrawled filefish,scrawled filefish,ALSC,ALU SCRI,omni,inv,herb,inv,N,30,91,5
+Monacanthidae,Aluterus sp.,filefish species Aluterus,filefish species,ALSP,ALU SPE.,unk,unk,unk,inv,NA,1,60,5
+Monacanthidae,Cantherhines macrocerus,whitespotted filefish,whitespotted filefish,CAMA,CAN MACR,herb,inv,herb,herb,N,10,46,5
+Monacanthidae,Cantherhines pullus,orangespotted filefish,orangespotted filefish,CAPU,CAN PULL,herb,inv,herb,herb,N,10,22,5
+Monacanthidae,Monacanthus ciliatus,fringed filefish,fringed filefish,MOCI,MON CILI,NA,herb,plank,inv,NA,1,20,5
+Monacanthidae,Monacanthus sp.,filefish species Monacanthus,filefish species,MOSP,MON SPE.,unk,unk,unk,inv,N,1,20,5
+Monacanthidae,Monacanthus tuckeri,slender filefish,slender filefish,MOTU,MON TUCK,omni,plank,inv,inv,N,1,9,5
+Monacanthidae,Stephanolepis hispidus,planehead filefish,planehead filefish,STHI,STE HISP,unk,unk,unk,inv,NA,1,25,5
+Monacanthidae,Stephanolepis setifer,pygmy filefish,pygmy filefish,STSE,STE SETI,NA,herb,NA,inv,NA,2,8,5
+Mugilidae,Mugil cephalus,striped mullet,striped mullet,MUCE,MUG CEPH,NA,herb,inv,plank,NA,20,75,100
+Mullidae,Mulloidichthys martinicus,yellow goatfish,yellow goatfish,MUMA,MUL MART,inv,inv,plank,inv,N,3,40,50
+Mullidae,Pseudupeneus maculatus,spotted goatfish,spotted goatfish,PSMA,PSE MACU,inv,inv,pisc,inv,N,5,28,10
+Mullidae,Upeneus parvus,dwarf goatfish,dwarf goatfish,UPPA,UPE PARV,unk,unk,unk,inv,NA,5,20,5
+Muraenidae,Echidna catenata,chain moray,chain moray,ECCA,ECH CATE,pisc,inv,NA,pisc,N,20,60,3
+Muraenidae,Enchelycore carychroa,chestnut moray,chestnut moray,ENCA,ENC CARY,unk,unk,unk,pisc,NA,5,33,5
+Muraenidae,Enchelycore nigricans,viper moray,viper moray,ENNI,ENC NIGR,inv,pisc,NA,pisc,N,20,80,5
+Muraenidae,Gymnothorax funebris,green moray,green moray,GYFU,GYM FUNE,pisc,pisc,NA,pisc,N,20,244,5
+Muraenidae,Gymnothorax miliaris,goldentail moray,goldentail moray,GYMI,GYM MILI,pisc,inv,NA,pisc,N,20,60,5
+Muraenidae,Gymnothorax moringa,spotted moray,spotted moray,GYMO,GYM MORI,pisc,pisc,NA,pisc,N,20,122,5
+Muraenidae,Gymnothorax nigromarginatus,blackedge moray,blackedge moray,GYNI,GYM NIGR,unk,unk,unk,pisc,NA,20,122,5
+Muraenidae,Gymnothorax saxicola,honeycomb moray,honeycomb moray,GYSA,GYM SAXI,unk,unk,unk,pisc,NA,20,60,5
+Muraenidae,Gymnothorax sp.,moray eel Gymnothorax,moray eel Gymnothorax,GYSP,GYM SPE.,NA,pisc,inv,pisc,NA,20,120,5
+Muraenidae,Gymnothorax vicinus,purplemouth moray,purplemouth moray,GYVI,GYM VICI,plank,pisc,inv,pisc,N,20,122,5
+Muraenidae,Muraena retifera,reticulate moray,reticulate moray,MURE,MUR RETI,unk,unk,unk,pisc,NA,20,60,5
+Muraenidae,Muraenidae sp.,moray species,moray species,MUSP,MUR SPE.,unk,unk,unk,pisc,N,20,100,5
+Myliobatidae,Aetobatus narinari,spotted eagle ray,spotted eagle ray,AENA,AET NARI,inv,inv,NA,inv,N,50,244,10
+Myliobatidae,Rhinoptera bonasus,cownose ray,cownose ray,RHBO,RHI BONA,unk,unk,unk,inv,NA,20,213,2
+NA,Holocentridae sp.,NA,squirrelfish species,NA,HOL SPE.,unk,unk,unk,unk,NA,5,41,10
+NA,Lucayablennius zingaro,NA,NA,NA,NA,pisc,NA,NA,NA,N,1,5,5
+Narcinidae,Narcine bancroftii,lesser electric ray,lesser electric ray,NABA,NAR BANC,unk,unk,unk,inv,NA,10,50,1
+Ogcocephalidae,Ogcocephalus nasutus,shortnose batfish,shortnose batfish,OGNA,OGC NASU,NA,inv,herb,inv,NA,10,38,10
+Ogcocephalidae,Ogcocephalus sp.,batfish species,batfish species,OGSP,OGC SPE.,unk,unk,unk,inv,NA,10,38,10
+Ophichthidae,Ahlia egmontis,key worm eel,key worm eel,AHEG,AHL EGMO,unk,unk,unk,pisc,NA,20,38,2
+Ophichthidae,Myrichthys breviceps,sharptail eel,sharptail eel,MYBR,MYR BREV,inv,inv,NA,inv,N,50,107,2
+Ophichthidae,Myrichthys ocellatus,goldspotted eel,goldspotted eel,MYOC,MYR OCEL,inv,inv,pisc,inv,N,50,107,2
+Ophichthidae,Myrichthys sp.,snake eel Myrichthys,snake eel Myrichthys,MYSP,MYR SPE.,NA,inv,NA,inv,NA,40,100,2
+Ophichthidae,Ophichthidae sp.,snake eel species,snake eel species,OPSP,OPH SPE.,NA,inv,NA,pisc,NA,20,100,5
+Ophichthidae,Ophichthus ophis,spotted snake eel,spotted snake eel,OPOP,OPH OPHI,NA,inv,NA,pisc,NA,20,100,5
+Ophidiidae,Brotula barbata,Atlantic bearded brotula,Atlantic bearded brotula,BRBA,BRO BARB,unk,unk,unk,inv,NA,10,70,1
+Opistognathidae,Lonchopisthus micrognathus,swordtail jawfish,swordtail jawfish,LOMI,LON MICR,NA,pisc,NA,inv,NA,2,10,10
+Opistognathidae,Opistognathus aurifrons,yellowhead jawfish,yellowhead jawfish,OPAU,OPI AURI,inv,plank,inv,plank,N,3,10,15
+Opistognathidae,Opistognathus macrognathus,banded jawfish,banded jawfish,OPMA,OPI MACR,inv,pisc,NA,plank,N,3,20,15
+Opistognathidae,Opistognathus maxillosus,mottled jawfish,mottled jawfish,OPMX,OPI MAXI,unk,unk,unk,plank,NA,2,18,15
+Opistognathidae,Opistognathus sp.,jawfish species,jawfish species,OGSP,OPI SPE.,unk,unk,unk,plank,NA,3,20,15
+Opistognathidae,Opistognathus whitehursti,dusky jawfish,dusky jawfish,OPWH,OPI WHIT,NA,pisc,inv,plank,NA,3,10,15
+Ostraciidae,Acanthostracion polygonius,honeycomb cowfish,honeycomb cowfish,ACPO,ACA POLY,omni,NA,NA,inv,N,5,46,5
+Ostraciidae,Acanthostracion quadricornis,scrawled cowfish,scrawled cowfish,ACQU,ACA QUAD,omni,inv,herb,inv,N,5,46,5
+Ostraciidae,Lactophrys bicaudalis,spotted trunkfish,spotted trunkfish,LABI,LAC BICA,omni,inv,herb,inv,N,5,41,5
+Ostraciidae,Lactophrys sp.,trunkfish species,trunkfish species,LCSP,LAC SPE.,NA,inv,omni,inv,NA,2,50,5
+Ostraciidae,Lactophrys trigonus,trunkfish,trunkfish,LATG,LAC TRIG,inv,inv,herb,inv,N,5,48,5
+Ostraciidae,Lactophrys triqueter,smooth trunkfish,smooth trunkfish,LATQ,LAC TRIQ,omni,inv,omni,inv,N,10,30,5
+Paralichthyidae,Paralichthys albigutta,Gulf flounder,Gulf flounder,PAAL,PAR ALBI,unk,unk,unk,pisc,NA,10,38,5
+Paralichthyidae,Syacium micrurum,channel flounder,channel flounder,SYMI,SYA MICR,unk,unk,unk,inv,NA,10,45,2
+Paralichthyidae,Syacium sp.,sand flounder species,sand flounder species,SYSP,SYA SPE.,NA,inv,NA,inv,NA,10,45,5
+Pempheridae,Pempheris schomburgkii,glassy sweeper,glassy sweeper,PESC,PEM SCHO,plank,inv,NA,plank,N,3,15,100
+Pomacanthidae,Centropyge argi,cherubfish,cherubfish,CEAR,CEN ARGI,herb,herb,NA,herb,N,1,8,10
+Pomacanthidae,Centropyge aurantonotus,flameback angelfish,flameback angelfish,CEAU,CEN AURA,NA,inv,NA,herb,NA,1,8,10
+Pomacanthidae,Holacanthus bermudensis,blue angelfish,blue angelfish,HOBE,HOL BERM,NA,inv,herb,inv,NA,3,46,10
+Pomacanthidae,Holacanthus ciliaris,queen angelfish,queen angelfish,HOCI,HOL CILI,spng,inv,herb,inv,N,4,46,10
+Pomacanthidae,Holacanthus sp.,angelfish species,angelfish Holacanthus,HOSP,HOA SPE.,NA,inv,herb,inv,NA,3,45,10
+Pomacanthidae,Holacanthus townsendi,townsend angelfish,townsend angelfish,HOTO,HOL TOWN,unk,unk,unk,inv,N,3,45,10
+Pomacanthidae,Holacanthus tricolor,rock beauty,rock beauty,HOTR,HOL TRIC,spng,inv,herb,inv,N,3,30,10
+Pomacanthidae,Pomacanthus arcuatus,gray angelfish,gray angelfish,POAR,POM ARCU,spng,inv,herb,inv,N,3,60,10
+Pomacanthidae,Pomacanthus paru,French angelfish,French angelfish,POPA,POM PARU,spng,inv,herb,inv,N,3,50,10
+Pomacanthidae,Pomacanthus sp.,angelfish Pomacanthus,angelfish Pomacanthus,POSP,POM SPE.,NA,inv,herb,inv,NA,3,45,10
+Pomacentridae,Abudefduf saxatilis,sergeant major,sergeant major,ABSA,ABU SAXA,plank,inv,plank,plank,N,2,18,100
+Pomacentridae,Abudefduf taurus,night sergeant,night sergeant,ABTA,ABU TAUR,plank,herb,inv,plank,N,2,18,100
+Pomacentridae,Chromis cyanea,blue chromis,blue chromis,CHCY,CHR CYAN,plank,plank,inv,plank,N,2,13,75
+Pomacentridae,Chromis enchrysura,yellowtail reeffish,yellowtail reeffish,CHEN,CHR ENCH,unk,unk,unk,plank,NA,1,10,25
+Pomacentridae,Chromis insolata,sunshinefish,sunshinefish,CHIN,CHR INSO,plank,plank,NA,plank,N,1,10,20
+Pomacentridae,Chromis multilineata,brown chromis,brown chromis,CHMU,CHR MULT,plank,inv,plank,plank,N,2,17,75
+Pomacentridae,Chromis scotti,purple reeffish,purple reeffish,CHSO,CHR SCOT,NA,plank,NA,plank,NA,2,10,50
+Pomacentridae,Microspathodon chrysurus,yellowtail damselfish,yellowtail damselfish,MICH,MIC CHRY,herb,herb,inv,herb,N,2,19,10
+Pomacentridae,Pomacentridae sp.,damselfish species,damselfish species,STSP,STE SPE.,unk,unk,unk,inv,NA,2,13,10
+Pomacentridae,Stegastes adustus,dusky damselfish,dusky damselfish,STAD,STE ADUS,herb,herb,inv,herb,N,2,15,10
+Pomacentridae,Stegastes diencaeus,longfin damselfish,longfin damselfish,STDI,STE DIEN,herb,herb,NA,herb,N,2,13,10
+Pomacentridae,Stegastes leucostictus,beaugregory,beaugregory,STLE,STE LEUC,herb,inv,plank,herb,N,2,10,10
+Pomacentridae,Stegastes partitus,bicolor damselfish,bicolor damselfish,STPA,STE PART,plank,herb,NA,herb,N,2,10,50
+Pomacentridae,Stegastes planifrons,threespot damselfish,threespot damselfish,STPL,STE PLAN,herb,inv,herb,herb,N,2,13,10
+Pomacentridae,Stegastes sp.,damselfish species,NA,STSP,NA,unk,unk,unk,herb,NA,2,13,10
+Pomacentridae,Stegastes variabilis,cocoa damselfish,cocoa damselfish,STVA,STE VARI,herb,herb,inv,herb,N,2,13,15
+Priacanthidae,Heteropriacanthus cruentatus,glasseye snapper,glasseye snapper,HECR,HET CRUE,pisc,plank,inv,inv,N,5,34,50
+Priacanthidae,Priacanthus arenatus,Atlantic bigeye,bigeye,PRAR,PRI AREN,pisc,plank,inv,inv,N,5,30,50
+Pristidae,Pristis pectinata,smalltooth sawfish,smalltooth sawfish,PRPE,PRI PECT,unk,unk,unk,pisc,NA,100,500,1
+Rachycentridae,Rachycentron canadum,cobia,cobia,RACA,RAC CANA,unk,unk,unk,inv,NA,30,150,1
+Rhinobatidae,Pseudobatos lentiginosus,Atlantic guitarfish,Atlantic guitarfish,PSLE,RHI LENT,unk,unk,unk,inv,NA,20,76,2
+Scaridae,Cryptotomus roseus,bluelip parrotfish,bluelip parrotfish,CRRO,CRY ROSE,NA,herb,NA,herb,NA,3,13,20
+Scaridae,Nicholsina usta,emerald parrotfish,emerald parrotfish,NIUS,NIC USTA,NA,herb,NA,herb,NA,2,30,15
+Scaridae,Scarus coelestinus,midnight parrotfish,midnight parrotfish,SCCE,SCA COEL,herb,herb,inv,herb,N,15,91,25
+Scaridae,Scarus coeruleus,blue parrotfish,blue parrotfish,SCCU,SCA COER,herb,herb,NA,herb,N,15,122,25
+Scaridae,Scarus guacamaia,rainbow parrotfish,rainbow parrotfish,SCGU,SCA GUAC,herb,herb,NA,herb,N,25,168,25
+Scaridae,Scarus iseri,striped parrotfish,striped parrotfish,SCIS,SCA ISER,herb,herb,NA,herb,N,2,25,50
+Scaridae,Scarus sp.,parrotfish species,parrotfish species,SCSP,SCA SPE.,unk,unk,unk,herb,NA,2,50,50
+Scaridae,Scarus taeniopterus,princess parrotfish,princess parrotfish,SCTA,SCA TAEN,herb,herb,inv,herb,N,5,33,20
+Scaridae,Scarus vetula,queen parrotfish,queen parrotfish,SCVE,SCA VETU,herb,herb,inv,herb,N,10,60,10
+Scaridae,Sparisoma atomarium,greenblotch parrotfish,greenblotch parrotfish,SPAT,SPA ATOM,herb,herb,NA,herb,N,2,11,20
+Scaridae,Sparisoma aurofrenatum,redband parrotfish,redband parrotfish,SPAU,SPA AURO,herb,herb,inv,herb,N,2,28,25
+Scaridae,Sparisoma chrysopterum,redtail parrotfish,redtail parrotfish,SPCH,SPA CHRY,herb,herb,NA,herb,N,10,46,20
+Scaridae,Sparisoma radians,bucktooth parrotfish,bucktooth parrotfish,SPRA,SPA RADI,herb,herb,NA,herb,N,2,19,15
+Scaridae,Sparisoma rubripinne,yellowtail parrotfish,yellowtail parrotfish,SPRU,SPA RUBR,herb,herb,inv,herb,N,10,46,10
+Scaridae,Sparisoma sp.,parrotfish species,parrotfish species,SPSP,SPA SPE.,unk,unk,unk,herb,NA,2,30,50
+Scaridae,Sparisoma viride,stoplight parrotfish,stoplight parrotfish,SPVI,SPA VIRI,herb,herb,inv,herb,N,2,60,25
+Sciaenidae,Equetus lanceolatus,jackknife-fish,jackknife-fish,EQLA,EQU LANC,inv,inv,NA,inv,N,3,23,10
+Sciaenidae,Equetus punctatus,spotted drum,spotted drum,EQPU,EQU PUNC,inv,inv,pisc,inv,N,3,28,10
+Sciaenidae,Odontoscion dentex,reef croaker,reef croaker,ODDE,ODO DENT,inv,plank,inv,inv,N,5,30,10
+Sciaenidae,Pareques acuminatus,high-hat,high-hat,PAAC,PAR ACUM,inv,herb,plank,inv,N,3,23,10
+Sciaenidae,Pareques umbrosus,cubbyu,cubbyu,PAUM,PAR UMBR,inv,NA,NA,inv,N,3,25,10
+Sciaenidae,Sciaenidae sp.,drum species,drum species,SCSP,SCI SPE.,unk,unk,unk,inv,NA,10,30,5
+Sciaenidae,Umbrina coroides,sand drum,sand drum,UMCO,UMB CORO,unk,unk,unk,inv,NA,5,30,5
+Scombridae,Acanthocybium solandri,wahoo,wahoo,AMSO,ACA SOLA,unk,unk,unk,pisc,NA,50,210,3
+Scombridae,Euthynnus alletteratus,little tunny,little tunny,EUAL,EUT ALLE,NA,pisc,inv,pisc,NA,25,100,5
+Scombridae,Sarda sarda,Atlantic bonito,Atlantic bonito,SASA,SAR SARD,NA,pisc,inv,pisc,NA,30,75,30
+Scombridae,Scomberomorus cavalla,king mackerel,king mackerel,SCCA,SCO CAVA,pisc,NA,NA,pisc,N,25,170,5
+Scombridae,Scomberomorus maculatus,Spanish mackerel,Spanish mackerel,SCMA,SCO MACU,unk,unk,unk,pisc,NA,25,83,5
+Scombridae,Scomberomorus regalis,cero,cero,SCRE,SCO REGA,pisc,pisc,inv,pisc,N,25,86,5
+Scorpaenidae,Pterois volitans,red lionfish,red lionfish,PTVO,PTE VOLI,pisc,pisc,inv,pisc,N,2,40,10
+Scorpaenidae,Scorpaena plumieri,spotted scorpionfish,spotted scorpionfish,SCPL,SCO PLUM,pisc,inv,plank,pisc,N,5,30,10
+Scorpaenidae,Scorpaena sp.,scorpionfish species,scorpionfish species,SPSP,SCR SPE.,NA,inv,plank,pisc,NA,5,30,10
+Scorpaenidae,Scorpaenodes caribbaeus,reef scorpionfish,reef scorpionfish,SPCA,SCO CARI,unk,unk,unk,pisc,NA,5,10,10
+Serranidae,Alphestes afer,mutton hamlet,mutton hamlet,ALAF,ALP AFER,inv,inv,pisc,inv,N,10,30,10
+Serranidae,Centropristis ocyurus,bank sea bass,bank sea bass,CEOC,CEN OCYU,unk,unk,unk,pisc,NA,5,35,10
+Serranidae,Centropristis striata,black sea bass,black sea bass,CEST,CEN STRI,unk,unk,unk,pisc,NA,5,60,10
+Serranidae,Cephalopholis cruentata,graysby,graysby,CECR,CEP CRUE,pisc,pisc,inv,pisc,N,8,30,5
+Serranidae,Cephalopholis fulva,coney,coney,CEFU,CEP FULV,pisc,inv,pisc,pisc,Y,10,41,5
+Serranidae,Dermatolepis inermis,marbled grouper,marbled grouper,DEIN,DER INER,NA,pisc,NA,pisc,NA,50,91,2
+Serranidae,Diplectrum bivittatum,dwarf sand perch,dwarf sand perch,DIBI,DIP BIVI,NA,pisc,plank,inv,NA,3,25,5
+Serranidae,Diplectrum formosum,sand perch,sand perch,DIFO,DIP FORM,NA,pisc,plank,inv,NA,3,30,5
+Serranidae,Epinephelus adscensionis,rock hind,rock hind,EPAD,EPI ADSC,inv,inv,pisc,inv,N,20,60,5
+Serranidae,Epinephelus drummondhayi,speckled hind,speckled hind,EPDR,EPI DRUM,unk,unk,unk,inv,NA,20,60,6
+Serranidae,Epinephelus guttatus,red hind,red hind,EPGU,EPI GUTT,inv,inv,pisc,inv,Y,20,60,5
+Serranidae,Epinephelus itajara,goliath grouper,goliath grouper,EPIT,EPI ITAJ,unk,unk,unk,pisc,NA,75,244,5
+Serranidae,Epinephelus morio,red grouper,red grouper,EPMO,EPI MORI,pisc,inv,pisc,pisc,N,30,91,5
+Serranidae,Epinephelus striatus,Nassau grouper,Nassau grouper,EPST,EPI STRI,inv,pisc,inv,pisc,Y,30,122,2
+Serranidae,Hypoplectrus aberrans,yellowbelly hamlet,yellowbelly hamlet,HYAB,HYP ABER,inv,inv,NA,inv,N,3,13,5
+Serranidae,Hypoplectrus chlorurus,yellowtail hamlet,yellowtail hamlet,HYCH,HYP CHLO,inv,inv,pisc,inv,N,3,13,5
+Serranidae,Hypoplectrus gemma,blue hamlet,blue hamlet,HYGE,HYP GEMM,omni,NA,NA,inv,N,3,13,5
+Serranidae,Hypoplectrus gummigutta,golden hamlet,golden hamlet,HYGG,HYP GUMM,unk,unk,unk,inv,NA,3,12,5
+Serranidae,Hypoplectrus guttavarius,shy hamlet,shy hamlet,HYGU,HYP GUTT,inv,inv,pisc,inv,N,3,13,5
+Serranidae,Hypoplectrus hybrid,hybrid hamlet,hybrid hamlet,HYHY,HYP HYBR,unk,unk,unk,inv,NA,3,13,5
+Serranidae,Hypoplectrus indigo,indigo hamlet,indigo hamlet,HYIN,HYP INDI,inv,inv,pisc,inv,N,3,14,5
+Serranidae,Hypoplectrus nigricans,black hamlet,black hamlet,HYNI,HYP NIGR,pisc,inv,pisc,inv,N,3,15,5
+Serranidae,Hypoplectrus puella,barred hamlet,barred hamlet,HYPU,HYP PUEL,omni,inv,pisc,inv,N,3,15,5
+Serranidae,Hypoplectrus randallorum,tan hamlet,tan hamlet,HYTA,HYP TANN,unk,unk,unk,inv,NA,3,13,5
+Serranidae,Hypoplectrus sp.,hamlet species,hamlet species,HYSP,HYP SPE.,inv,NA,NA,inv,N,3,13,5
+Serranidae,Hypoplectrus unicolor,butter hamlet,butter hamlet,HYUN,HYP UNIC,inv,inv,pisc,inv,N,3,13,10
+Serranidae,Hyporthodus flavolimbatus,yellowedge grouper,yellowedge grouper,HTFL,EPI FLAV,unk,unk,unk,pisc,NA,30,75,2
+Serranidae,Hyporthodus niveatus,snowy grouper,Snowy grouper,HTNI,EPI NIVE,unk,unk,unk,pisc,NA,10,100,1
+Serranidae,Liopropoma carmabi,candy basslet,NA,LICA,NA,omni,NA,NA,inv,N,1,13,10
+Serranidae,Liopropoma eukrines,wrasse basslet,wrasse basslet,LIEU,LIO EUKR,unk,unk,unk,inv,NA,1,13,10
+Serranidae,Liopropoma mowbrayi,cave basslet,cave basslet,LIMO,LIO MOWB,omni,NA,NA,inv,N,1,13,10
+Serranidae,Liopropoma rubre,peppermint bass,peppermint basslet,LIRU,LIO RUBE,omni,pisc,NA,inv,N,1,9,10
+Serranidae,Mycteroperca acutirostris,western comb grouper,western comb grouper,MYAC,MYC ACUT,unk,unk,unk,pisc,NA,10,75,1
+Serranidae,Mycteroperca bonaci,black grouper,black grouper,MYBO,MYC BONA,pisc,pisc,NA,pisc,Y,30,122,5
+Serranidae,Mycteroperca interstitialis,yellowmouth grouper,yellowmouth grouper,MYIN,MYC INTE,pisc,pisc,NA,pisc,Y,30,76,5
+Serranidae,Mycteroperca microlepis,gag,gag,MYMII,MYC MICR,unk,unk,unk,pisc,NA,30,91,5
+Serranidae,Mycteroperca phenax,scamp,scamp,MYPH,MYC PHEN,NA,pisc,inv,pisc,NA,20,60,10
+Serranidae,Mycteroperca sp.,grouper species,grouper species,MYSP,MYC SPE.,unk,unk,unk,pisc,Y,20,122,5
+Serranidae,Mycteroperca tigris,tiger grouper,tiger grouper,MYTI,MYC TIGR,pisc,pisc,NA,pisc,Y,30,107,5
+Serranidae,Mycteroperca venenosa,yellowfin grouper,yellowfin grouper,MYVE,MYC VENE,pisc,pisc,inv,pisc,Y,30,91,5
+Serranidae,Paranthias furcifer,creolefish,Atlantic creolefish,PAFU,PAR FURC,plank,inv,omni,plank,N,5,27,50
+Serranidae,Parasphyraenops incisus,bantam bass,splitfin bass,PAIN,PAR INCI,omni,NA,NA,inv,N,1,4,5
+Serranidae,Rypticus bistrispinus,freckled soapfish,freckled soapfish,RYBI,RYP BIST,pisc,inv,pisc,inv,N,5,15,2
+Serranidae,Rypticus maculatus,whitespotted soapfish,whitespotted soapfish,RYMA,RYP MACU,unk,unk,unk,inv,NA,10,33,2
+Serranidae,Rypticus saponaceus,greater soapfish,greater soapfish,RYSA,RYP SAPO,pisc,inv,pisc,inv,N,10,33,2
+Serranidae,Rypticus subbifrenatus,spotted soapfish,NA,RYSU,NA,pisc,NA,NA,inv,N,10,20,2
+Serranidae,Schultzea beta,school bass,school bass,SCBE,SCH BETA,NA,zoo,NA,plank,NA,1,8,250
+Serranidae,Serraniculus pumilio,pygmy sea bass,pygmy sea bass,SEPU,SER PUMI,NA,pisc,NA,inv,NA,2,10,5
+Serranidae,Serranidae sp.,grouper-seabass species,NA,SDSP,NA,unk,unk,unk,pisc,NA,5,100,5
+Serranidae,Serranus annularis,orangeback bass,orangeback bass,SEAN,SER ANNU,NA,pisc,NA,inv,NA,3,6,5
+Serranidae,Serranus baldwini,lantern bass,lantern bass,SEBA,SER BALD,inv,pisc,NA,inv,N,3,6,5
+Serranidae,Serranus flaviventris,twinspot bass,twinspot bass,SEFL,SER FLAV,NA,pisc,NA,inv,NA,3,10,10
+Serranidae,Serranus phoebe,tattler,tattler,SEPH,SER PHOE,unk,unk,unk,inv,NA,3,10,5
+Serranidae,Serranus sp.,seabass species,Seabass species,SESP,SER SPE.,NA,pisc,NA,inv,NA,20,80,10
+Serranidae,Serranus subligarius,belted sandfish,belted sandfish,SESU,SER SUBL,unk,unk,unk,inv,NA,1,10,5
+Serranidae,Serranus tabacarius,tobaccofish,tobaccofish,SETA,SER TABA,plank,pisc,NA,inv,N,5,18,5
+Serranidae,Serranus tigrinus,harlequin bass,harlequin bass,SETI,SER TIGR,inv,inv,pisc,inv,N,3,10,10
+Serranidae,Serranus tortugarum,chalk bass,chalk bass,SETO,SER TORT,plank,plank,NA,plank,N,1,9,10
+Sparidae,Archosargus probatocephalus,sheepshead,sheepshead,ARPR,ARC PROB,unk,unk,unk,inv,NA,5,91,10
+Sparidae,Archosargus rhomboidalis,sea bream,sea bream,ARRH,ARC RHOM,NA,herb,inv,inv,NA,5,33,10
+Sparidae,Calamus bajonado,jolthead porgy,jolthead porgy,CABJ,CAL BAJO,inv,inv,NA,inv,N,5,60,10
+Sparidae,Calamus calamus,saucereye porgy,saucereye porgy,CACA,CAL CALA,inv,inv,NA,inv,N,3,41,10
+Sparidae,Calamus leucosteus,whitebone porgy,whitebone porgy,CALE,CAL LEUC,unk,unk,unk,inv,NA,5,46,10
+Sparidae,Calamus nodosus,knobbed porgy,knobbed porgy,CANO,CAL NODO,NA,inv,NA,inv,NA,5,50,10
+Sparidae,Calamus penna,sheepshead porgy,sheepshead porgy,CAPN,CAL PENN,NA,inv,NA,inv,NA,5,46,10
+Sparidae,Calamus pennatula,pluma porgy,pluma porgy,CAPT,CAL PENA,inv,inv,NA,inv,N,5,50,10
+Sparidae,Calamus proridens,littlehead porgy,littlehead porgy,CAPR,CAL PROR,unk,unk,unk,inv,NA,5,46,10
+Sparidae,Diplodus argenteus,silver porgy,silver porgy,DIAR,DIP ARGE,unk,unk,unk,inv,NA,5,30,10
+Sparidae,Diplodus holbrookii,spottail pinfish,spottail pinfish,DIHB,DIP HOLB,unk,unk,unk,inv,NA,5,46,10
+Sparidae,Lagodon rhomboides,pinfish,pinfish,LARH,LAG RHOM,unk,unk,unk,inv,NA,5,35,10
+Sparidae,Pagrus pagrus,red porgy,red porgy,PAPA,PAG PAGR,unk,unk,unk,inv,NA,5,91,10
+Sparidae,Sparidae sp.,porgy species,porgy species,SPSP,CAL SPE.,unk,unk,unk,inv,N,5,90,10
+Sphyraenidae,Sphyraena barracuda,great barracuda,great barracuda,SPBA,SPH BARR,pisc,pisc,inv,pisc,N,30,200,20
+Sphyraenidae,Sphyraena guachancho,guaguanche,guaguanche,SPGU,SPH GUAC,unk,unk,unk,pisc,NA,10,60,20
+Sphyraenidae,Sphyraena picudilla,southern sennet,southern sennet,SPPI,SPH PICU,plank,pisc,inv,plank,N,10,46,20
+Sphyrnidae,Sphyrna lewini,scalloped hammerhead,scalloped hammerhead,SPLE,SPH LEWI,unk,unk,unk,pisc,NA,100,420,2
+Sphyrnidae,Sphyrna mokarran,great hammerhead,great hammerhead,SPMO,SPH MOKA,unk,unk,unk,pisc,NA,100,610,2
+Sphyrnidae,Sphyrna tiburo,bonnethead,bonnethead,SPTI,SPH TIBU,unk,unk,unk,pisc,NA,30,150,5
+Stromateidae,Peprilus triacanthus,American butterfish,American butterfish,PETR,PEP TRIA,NA,plank,inv,inv,NA,10,30,100
+Stromateidae,Stromateidae sp.,butterfish species,butterfish species,SMSP,STR SPE.,NA,inv,omni,inv,NA,1,30,30
+Sygnathidae,Syngnathus dawsoni,dashback goby,dashback goby,SGDA,SYN DAWS,NA,inv,NA,inv,NA,1,5,10
+Sygnathidae,Syngnathus scovelli,gulf pipefish,gulf pipefish,SGSC,SYN SCOV,unk,unk,unk,inv,NA,5,15,2
+Sygnathidae,Syngnathus sp.,pipefish species,pipefish species,SGSP,SYG SPE.,unk,unk,unk,inv,NA,2,8,5
+Syngnathidae,Amphelikturus dendriticus,pipehorse,pipehorse,AMDE,ACE DEND,NA,inv,NA,inv,NA,1,8,5
+Syngnathidae,Cosmocampus elucens,shortfin pipefish,shortfin pipefish,COEL,COS ELUC,inv,plank,NA,inv,N,1,12,5
+Syngnathidae,Hippocampus erectus,lined seahorse,lined seahorse,HIER,HIP EREC,unk,unk,unk,inv,NA,5,15,1
+Syngnathidae,Hippocampus reidi,longsnout seahorse,longsnout seahorse,HIRE,HIP REID,NA,inv,NA,inv,NA,5,15,1
+Syngnathidae,Hippocampus sp.,seahorse/pipefish species,seahorse/pipefish species,HISP,HIP SPE.,NA,inv,NA,inv,NA,1,8,2
+Synodontidae,Synodus foetens,inshore lizardfish,inshore lizardfish,SYFO,SYN FOET,NA,pisc,NA,pisc,NA,5,45,10
+Synodontidae,Synodus intermedius,sand diver,sand diver,SYIN,SYN INTE,pisc,pisc,inv,pisc,N,5,45,10
+Synodontidae,Synodus saurus,bluestriped lizardfish,bluestriped lizardfish,SYSA,SYN SAUR,pisc,pisc,inv,pisc,N,2,25,2
+Synodontidae,Synodus synodus,red lizardfish,red lizardfish,SYSY,SYN SYNO,unk,unk,unk,pisc,NA,5,25,2
+Tetraodontidae,Canthigaster jamestyleri,goldface toby,goldface toby,CAJA,CAN JAME,NA,inv,herb,inv,NA,2,12,5
+Tetraodontidae,Canthigaster rostrata,sharpnose puffer,sharpnose puffer,CARO,CAN ROST,omni,inv,herb,inv,N,2,11,15
+Tetraodontidae,Canthigaster sp.,puffer species Canthigaster,puffers,CGSP,CAN SPE.,NA,inv,herb,inv,NA,2,12,15
+Tetraodontidae,Sphoeroides nephelus,southern puffer,southern puffer,SPNE,SPH NEPH,unk,unk,unk,inv,NA,5,30,5
+Tetraodontidae,Sphoeroides spengleri,bandtail puffer,bandtail puffer,SPSG,SPH SPEN,inv,inv,omni,inv,N,2,18,10
+Tetraodontidae,Sphoeroides testudineus,checkered puffer,checkered puffer,SPTE,SPH TEST,inv,inv,NA,inv,N,2,30,10
+Triglidae,Prionotus ophryas,bandtail searobin,bandtail searobin,PROP,PRI OPHR,unk,unk,unk,inv,NA,5,20,1
+Triglidae,Prionotus rubio,blackwing searobin,blackwing searobin,PRRU,PRI RUBI,unk,unk,unk,inv,NA,5,30,2
+Triglidae,Triglidae sp.,sea robin species,sea robin species,TRSP,TRI SPE.,NA,plank,NA,inv,NA,10,30,5
+Tripterygiidae,Enneanectes altivelis,lofty triplefin,lofty triplefin,ENAL,ENN ALTI,unk,unk,unk,inv,NA,1,5,5
+Tripterygiidae,Enneanectes boehlkei,roughhead triplefin,roughhead triplefin,ENBO,ENN BOEH,unk,unk,unk,inv,NA,1,4,10
+Tripterygiidae,Enneanectes sp.,triplefin species,triplefin species,ENSP,ENN SPE.,NA,inv,NA,inv,NA,1,5,10
+Unknown,unknown sp.,unknown species,unknown species,UKSP,UNK SPE.,unk,unk,unk,unk,NA,1,100,1000
+Urotrygonidae,Urobatis jamaicensis,yellow stingray,yellow stingray,URJA,URO JAMA,unk,unk,unk,inv,NA,10,35,3

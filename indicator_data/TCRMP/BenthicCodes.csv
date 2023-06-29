@@ -1,0 +1,137 @@
+Code,Group,Category,Meaning
+CALG,Benthic Cover,Calcareous,Crustose coralline algae
+RO,Benthic Cover,Calcareous,Rhodolith
+AA,Benthic Cover,Coral,Agaricia agaricites
+AC,Benthic Cover,Coral,Acropora cervicornis
+AF,Benthic Cover,Coral,Agaricia fragilis
+AG,Benthic Cover,Coral,Agaricia grahamae
+AGSP,Benthic Cover,Coral,Agaricia spp.
+AH,Benthic Cover,Coral,Agaricia humilis
+AL,Benthic Cover,Coral,Agaricia lamarcki
+AP,Benthic Cover,Coral,Acropora palmata
+APR,Benthic Cover,Coral,Acropora prolifera
+AT,Benthic Cover,Coral,Agaricia tenuifolia
+AU,Benthic Cover,Coral,Agaricia undata
+CN,Benthic Cover,Coral,Colpophyllia natans
+CORAL,Benthic Cover,Coral,Coral spp.
+CORJU,Benthic Cover,Coral,Juvenile coral spp.
+DCY,Benthic Cover,Coral,Dendrogyra cylindrus
+DL,Benthic Cover,Coral,Diploria labyrinthiformis
+DSO,Benthic Cover,Coral,Dichocoenia stokesii
+EF,Benthic Cover,Coral,Eusmilia fastigiata
+FF,Benthic Cover,Coral,Favia fragum
+HC,Benthic Cover,Coral,Helioseris cucullata
+IR,Benthic Cover,Coral,Isopyhyllastrea rigida
+IS,Benthic Cover,Coral,Isophyllia sinuosa
+MAFO,Benthic Cover,Coral,Madracis formosa
+MAL,Benthic Cover,Coral,Mycetophyllia aliciae
+MAN,Benthic Cover,Coral,Mussa angulosa
+MAR,Benthic Cover,Coral,Manicina areolata
+MC,Benthic Cover,Coral,Montastraea cavernosa
+MD,Benthic Cover,Coral,Madracis decactis
+MDA,Benthic Cover,Coral,Mycetophyllia daniana
+MF,Benthic Cover,Coral,Mycetophyllia ferox
+MILA,Benthic Cover,Coral,Millepora alcicornis
+MILC,Benthic Cover,Coral,Millepora complanata
+MILS,Benthic Cover,Coral,Millepora squarrosa
+ML,Benthic Cover,Coral,Mycetophyllia lamarckiana
+MM,Benthic Cover,Coral,Madracis mirabilis
+MME,Benthic Cover,Coral,Meandrina meandrites
+MSPP,Benthic Cover,Coral,Montastraea spp.
+MYSP,Benthic Cover,Coral,Mycetophyllia spp.
+OA,Benthic Cover,Coral,Orbicella annularis
+OD,Benthic Cover,Coral,Oculina diffusa
+OFAV,Benthic Cover,Coral,Orbicella faveolata
+OFRA,Benthic Cover,Coral,Orbicella franksii
+OX,Benthic Cover,Coral,Orbicella species complex
+PA,Benthic Cover,Coral,Porites astreoides
+PB,Benthic Cover,Coral,Porites branneri
+PBSP,Benthic Cover,Coral,Branching Porites spp.
+PCL,Benthic Cover,Coral,Pseudodiploria clivosa
+PD,Benthic Cover,Coral,Porites divaricata
+PF,Benthic Cover,Coral,Porites furcata
+PP,Benthic Cover,Coral,Porites porites
+PS,Benthic Cover,Coral,Pseudodiploria strigosa
+SB,Benthic Cover,Coral,Solenastrea bournoni
+SC,Benthic Cover,Coral,Scolymia cubensis
+SCSP,Benthic Cover,Coral,Scolymia spp.
+SH,Benthic Cover,Coral,Solenastrea hyades
+SI,Benthic Cover,Coral,Stephanocoenia intercepta
+SL,Benthic Cover,Coral,Scolymia lacera
+SR,Benthic Cover,Coral,Siderastrea radians
+SS,Benthic Cover,Coral,Siderastrea siderea
+SSPP,Benthic Cover,Coral,Siderastrea spp.
+TC,Benthic Cover,Coral,Tubastraea coccinea
+BBD,Benthic Cover,Coral Condition,Black band disease
+BL,Benthic Cover,Coral Condition,Bleached coral
+DCOR,Benthic Cover,Coral Condition,Diseased coral
+DSD,Benthic Cover,Coral Condition,Dark spot disease
+PLA,Benthic Cover,Coral Condition,White plague
+SCTLD,Benthic Cover,Coral Condition,Stony coral tissue loss disease
+WBD,Benthic Cover,Coral Condition,White band disease
+YBD,Benthic Cover,Coral Condition,Yellow band disease
+FLCY,Benthic Cover,Cyanobacteria,Filamentous cyanobacteria
+LYNG,Benthic Cover,Cyanobacteria,Lyngbia spp.
+SCHIZ,Benthic Cover,Cyanobacteria,Schizothrix spp.
+BRIA,Benthic Cover,Gorgonian,Briareum asbestinum
+ENGO,Benthic Cover,Gorgonian,Encrusting Gorgonian
+ERYTH,Benthic Cover,Gorgonian,Erythropodium caribaeorum
+FAN,Benthic Cover,Gorgonian,Sea fan
+GO,Benthic Cover,Gorgonian,Gorgonian
+PLUME,Benthic Cover,Gorgonian,Sea plume
+ROD,Benthic Cover,Gorgonian,Sea rod
+WHIP,Benthic Cover,Gorgonian,Sea whip
+AMPH,Benthic Cover,Macroalgae,Amphiroa spp.
+CLAD,Benthic Cover,Macroalgae,Cladophora spp.
+DICT,Benthic Cover,Macroalgae,Dictyota spp.
+HALI,Benthic Cover,Macroalgae,Halimeda spp.
+LIAG,Benthic Cover,Macroalgae,Liagora spp.
+LOBO,Benthic Cover,Macroalgae,Lobophora spp.
+MACA,Benthic Cover,Macroalgae,Macroalgae
+MICRO,Benthic Cover,Macroalgae,Microdictyon spp.
+PEY,Benthic Cover,Macroalgae,Peyssonellia spp.
+RAMI,Benthic Cover,Macroalgae,Ramicrusta spp.
+SARG,Benthic Cover,Macroalgae,Sargassum spp.
+B,Benthic Cover,Non-living,Boulder
+P,Benthic Cover,Non-living,Pavement
+R,Benthic Cover,Non-living,Rubble
+S,Benthic Cover,Non-living,Sand
+TWS,Benthic Cover,Non-living,"Transect tape, weighted line, or shadow"
+UNK,Benthic Cover,Non-living,Unknown
+ANEM,Benthic Cover,"Other, Living",Anemone
+CMOR,Benthic Cover,"Other, Living",Corallimorpharians
+O,Benthic Cover,"Other, Living",Other
+BALL,Benthic Cover,Sponge,Ball sponge
+BASP,Benthic Cover,Sponge,Barrel/Vase sponge
+BOSP,Benthic Cover,Sponge,Boring sponge
+CLIO,Benthic Cover,Sponge,Clionia delitrix
+CLSP,Benthic Cover,Sponge,Cliona spp.
+ENSP,Benthic Cover,Sponge,Encrusting sponge
+ROPE,Benthic Cover,Sponge,Rope sponge
+SPO,Benthic Cover,Sponge,Sponge
+TUBE,Benthic Cover,Sponge,Tube sponge
+EAC,Benthic Cover,Turf,Epilithic algae community
+PALY,Benthic Cover,Zoanthid,Palythoa caribaeorum
+ZO,Benthic Cover,Zoanthid,Zoanthids
+ZOSO,Benthic Cover,Zoanthid,Zoanthus sociatus
+%BBD,Caclulation,Percent Cover,Black band disease (as % of substrate)
+%BL,Caclulation,Percent Cover,Bleached coral (as % of substrate)
+%CALG,Caclulation,Percent Cover,Crustose coralline algae cover
+%CORAL,Caclulation,Percent Cover,Coral cover
+%CYAN,Caclulation,Percent Cover,Cyanobacteria cover
+%DCOR,Caclulation,Percent Cover,Diseased coral (as % of substrate)
+%DIS,Caclulation,Percent Cover,Total coral disease (as % of substrate)
+%DSD,Caclulation,Percent Cover,Dark spot disease (as % of substrate)
+%EAC,Caclulation,Percent Cover,Turf algae cover
+%GO,Caclulation,Percent Cover,Gorgonian cover
+%MACA,Caclulation,Percent Cover,Macroalgae cover
+%NON-LIVING,Caclulation,Percent Cover,Non-living cover
+%OTHER,Caclulation,Percent Cover,Other live cover
+%PLA,Caclulation,Percent Cover,White plague (as % of substrate)
+%SCTLD,Caclulation,Percent Cover,Stony coral tissue loss disease (as % of substrate)
+%SPO,Caclulation,Percent Cover,Sponge cover
+%UNK,Caclulation,Percent Cover,Unknown cover
+%WBD,Caclulation,Percent Cover,White band disease (as % of substrate)
+%YBD,Caclulation,Percent Cover,Yellow band disease (as % of substrate)
+%ZOAN,Caclulation,Percent Cover,Zoanthid cover
+TOT-TWS,Calculation,Points,"Total points minus tape, wand, and shadow"
