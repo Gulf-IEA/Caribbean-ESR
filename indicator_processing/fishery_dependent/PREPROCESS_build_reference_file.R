@@ -166,7 +166,76 @@ dim(dat2)
 #write.table(dat2, file = "C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20_wSC.csv", 
 #            sep = ",", col.names = T, row.names = F)
 
-d <- dat2
+# fix error with 2005 correction factor ----------------
+
+rm(list = ls())
+dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20_wSC.csv")
+
+table(dat$YEAR_LANDED)
+
+# check multiplier adjustments -------------------------
+
+dat$xADJ <- dat$POUNDS_LANDED * 1/dat$CORRECTION_FACTOR
+hist(dat$ADJUSTED_POUNDS - dat$xADJ)
+max(abs(dat$ADJUSTED_POUNDS - dat$xADJ), na.rm = T)
+table(round(dat$ADJUSTED_POUNDS) - round(dat$xADJ))
+#dat$ADJUSTED_POUNDS <- dat$xADJ
+
+# fix 2005 correction factor ---------------------------
+
+d5 <- dat[which(dat$YEAR_LANDED == 2005), ]
+table(d5$CORRECTION_FACTOR, d5$MUNICIPALITY)
+plot(d5$CORRECTION_FACTOR ~ d5$MUNICIPALITY)
+tapply(d5$CORRECTION_FACTOR, d5$MUNICIPALITY, sd)
+
+d4 <- dat[which(dat$YEAR_LANDED == 2004), ]
+d6 <- dat[which(dat$YEAR_LANDED == 2006), ]
+
+tapply(d4$CORRECTION_FACTOR, d4$MUNICIPALITY, sd, na.rm = T)
+tapply(d6$CORRECTION_FACTOR, d6$MUNICIPALITY, sd, na.rm = T)
+
+c4 <- tapply(d4$CORRECTION_FACTOR, d4$MUNICIPALITY, mean, na.rm = T)
+c6 <- tapply(d6$CORRECTION_FACTOR, d6$MUNICIPALITY, mean, na.rm = T)
+summary(names(c4) == names(c6))
+
+c5 <- (c4 + c6) / 2
+c5[10]
+c6[10]
+table(c4)
+table(c6)
+table(c5)
+
+table(d5$CORRECTION_FACTOR)
+lis265 <- names(which(c5 == 0.265))
+lis465 <- names(which(c5 == 0.465))
+lis475 <- names(which(c5 == 0.475))
+lis835 <- names(which(c5 == 0.835))
+
+dat$CORRECTION_FACTOR[which(dat$YEAR_LANDED == 2005 & dat$MUNICIPALITY %in% lis265)] <- 0.265
+dat$CORRECTION_FACTOR[which(dat$YEAR_LANDED == 2005 & dat$MUNICIPALITY %in% lis465)] <- 0.465
+dat$CORRECTION_FACTOR[which(dat$YEAR_LANDED == 2005 & dat$MUNICIPALITY %in% lis475)] <- 0.475
+dat$CORRECTION_FACTOR[which(dat$YEAR_LANDED == 2005 & dat$MUNICIPALITY %in% lis835)] <- 0.835
+
+table(dat$CORRECTION_FACTOR[which(dat$YEAR_LANDED == 2005)])
+dat[which(dat$CORRECTION_FACTOR > 0.9 & dat$YEAR_LANDED == 2005), ]
+c6[10]
+dat$CORRECTION_FACTOR[which(dat$CORRECTION_FACTOR > 0.9 & dat$YEAR_LANDED == 2005)] <- c6[10]
+table(dat$CORRECTION_FACTOR[which(dat$YEAR_LANDED == 2005)])
+
+
+# check  
+dat$xADJ <- dat$POUNDS_LANDED * 1/dat$CORRECTION_FACTOR
+hist(dat$ADJUSTED_POUNDS - dat$xADJ)
+max(abs(dat$ADJUSTED_POUNDS - dat$xADJ), na.rm = T)
+table(round(dat$ADJUSTED_POUNDS) - round(dat$xADJ))
+dat$ADJUSTED_POUNDS <- dat$xADJ
+
+#write.table(dat, file = "C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20_wSC_2005cor.csv", 
+#            sep = ",", col.names = T, row.names = F)
+
+#################################################################
+
+d <- dat
 
 # take a look at data fields ----------------------------
 table(d$VESSEL, useNA = "always")
