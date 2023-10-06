@@ -15,7 +15,7 @@ summary(dat$xADJ == dat$POUNDS_LANDED * 1/dat$CORRECTION_FACTOR)
 
 # define start and end years ---------------------------
 styear <- 1990
-enyear <- 2020
+enyear <- 2021
 
 d <- dat[which(dat$YEAR_LANDED >= styear & dat$YEAR_LANDED <= enyear), ]
 

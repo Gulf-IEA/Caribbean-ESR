@@ -1,31 +1,40 @@
+#
+# code for calculating "disturbance indicator" based on changes in seasonality of landings
+# uses logbook data for PR and USVI 
 
 rm(list = ls())
 setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/")
 
+styear <- 1985 
+enyear <- 2020
+
 # for PUERTO RICO -----------------------------------------------
-d <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/PR_landings_83_20.csv")
+
+dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20_wSC_2005cor.csv")
+
+d <- dat[which(dat$YEAR_LANDED >= styear & dat$YEAR_LANDED <= enyear), ]
 
 # look at seasonal cycles ---------------------------------------
 
-an <- tapply(d$POUNDS_LANDED, list(d$MONTH_LANDED, d$YEAR_LANDED), sum, na.rm = T)
+an <- tapply(d$ADJUSTED_POUNDS, list(d$MONTH_LANDED, d$YEAR_LANDED), sum, na.rm = T)
 dim(an)
-matplot(an, type = "l", col = rainbow(38))
-yrs <- as.numeric(colnames(an))
+matplot(an, type = "l", col = rainbow(dim(an)[2]))
 
 an2 <- an
 for (i in 1:ncol(an)) { an2[, i] <- an[, i] / sum(an[, i]) }
 pc <- c(letters[1:26], LETTERS[1:12])
-matplot(an2, col = rainbow(38), type = "b", pch = pc)
+matplot(an2, col = rainbow(dim(an)[2]), type = "b", pch = pc)
+an2
 
-av <- apply(an2, 1, mean)
-er <- apply(an2, 1, sd)*1.96
+av <- apply(an2, 1, mean, na.rm = T)
+er <- apply(an2, 1, sd, na.rm = T)*1.96
 
 # identify anomalous years and highlight -----------------------
 anomlis <- c(2017, 2020)
-cols <- rep("#00000060", 38)
+cols <- rep("#00000060", dim(an)[2])
 cols[which(colnames(an2) == 2017)] <- 3
 cols[which(colnames(an2) == 2020)] <- 4
-lwds <- rep(1, 38)
+lwds <- rep(1, dim(an)[2])
 lwds[which(colnames(an2) == 2017)] <- 3
 lwds[which(colnames(an2) == 2020)] <- 3
 
@@ -33,7 +42,7 @@ matplot(an2, col = cols, type = "l", lty = 1, lwd = lwds, axes = F, ylab = "prop
         main = "Distribution of landings throughout the year")
 axis(1, at = 1:12, lab = month.abb, las = 2)
 axis(2, las = 2); box()
-text(3, 0.15, col = 4, "2020", cex = 1.2, font = 2)
+text(3, 0.065, col = 4, "2020", cex = 1.2, font = 2)
 text(8, 0.025, col = 3, "2017", cex = 1.2, font = 2)
 lines(1:12, av, lwd = 3)
 #polygon(c(1:12, 12:1), c((av + er), (av - er)[12:1]), col = "#00000020", border = NA)
@@ -44,11 +53,11 @@ legend("topright", c("average seasonality", "individual years"), lwd = c(3, 1), 
 
 dst <- rep(NA, ncol(an2))
 for (i in 1:ncol(an2)) {  dst[i] <- sum((an2[, i] - apply(an2, 1, mean, na.rm = T))^2)   }
-plot(yrs, dst, type = "b")
+plot(styear:enyear, dst, type = "b")
 
 # now for separate species ----------------------------------
 
-tab <- sort(tapply(d$POUNDS_LANDED, d$ITIS_COMMON_NAME, sum, na.rm = T), decreasing = T)
+tab <- sort(tapply(d$ADJUSTED_POUNDS, d$ITIS_COMMON_NAME, sum, na.rm = T), decreasing = T)
 par(mar = c(15, 5, 2, 2))
 barplot(tab[1:20], las = 2)
 lis <- names(tab)[1:9]
@@ -60,7 +69,8 @@ par(mfrow = c(2, 4), mex = 0.5)
 
 for (j in 1:8) {
   d1 <- d[which(d$ITIS_COMMON_NAME == lis[j]), ]
-  an <- tapply(d1$POUNDS_LANDED, list(d1$MONTH_LANDED, d1$YEAR_LANDED), sum, na.rm = T)
+  d1$YEAR_LANDED <- factor(d1$YEAR_LANDED, levels = styear:enyear)
+  an <- tapply(d1$ADJUSTED_POUNDS, list(d1$MONTH_LANDED, d1$YEAR_LANDED), sum, na.rm = T)
   an2 <- an
   for (i in 1:ncol(an)) { an2[, i] <- an[, i] / sum(an[, i]) }
   matplot(an2, type = "b", pch = pc, main = lis[j])
@@ -70,22 +80,27 @@ for (j in 1:8) {
   dstfin <- cbind(dstfin, dst) 
 }
 
+selec <- c(1, 4, 5, 6)
+lis[selec]
+
 # look at correlations across spp --------------------
 
 dstfin[which(is.na(dstfin))] <- 0
 colnames(dstfin) <- lis
 cor(dstfin)
 plot(data.frame(dstfin))
-matplot(yrs, dstfin, type = "b")
+dev.off()
 
-selec <- c(1, 4, 5, 6)
-lis[selec]
+matplot(styear: enyear, dstfin, type = "b")
+rownames(dstfin) <- styear: enyear
+dstfin
+
 avdst <- rowMeans(dstfin[, selec])   # snappers, groupers subject to seasonal closure
 sddst <- apply(dstfin[, selec], 1, sd)
-plot(yrs, avdst, type = "b")
+plot(styear: enyear, avdst, type = "b")
 
-# format as indicator object and plot -----------------
-datdata <- min(yrs): max(yrs)
+# save data for PR -----------------
+datdata <- styear: enyear
 inddata <- data.frame(avdst)
 llidata <- data.frame(avdst - sddst)
 ulidata <- data.frame(avdst + sddst)
@@ -95,38 +110,42 @@ names(final_PR) <- c("year", "ind", "lli", "uli")
 
 
 # for STT --------------------------------------------------------
-rm(list = ls()[which(ls() != "final_PR")])
-d <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STT_landings.csv")
+
+rm(list = ls()[-match(c("final_PR", "styear", "enyear"), ls())])
+
+# load data --------------------------------
+
+dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STT_landings.csv")
+
+d <- dat[which(dat$TRIP_YEAR >= styear & dat$TRIP_YEAR <= enyear), ]
+
+table(d$TRIP_YEAR)
 
 names(d)[which(names(d) == "TRIP_YEAR")] <- "YEAR_LANDED"
 names(d)[which(names(d) == "TRIP_MONTH")] <- "MONTH_LANDED"
 names(d)[which(names(d) == "SPECIES_NM")] <- "ITIS_COMMON_NAME"
 table(d$YEAR_LANDED)
 
-d <- d[which(d$YEAR_LANDED >= 2000), ]
-d <- d[which(d$YEAR_LANDED <= 2020), ]
-
 # look at seasonal cycles ---------------------------------------
 
 an <- tapply(d$POUNDS_LANDED, list(d$MONTH_LANDED, d$YEAR_LANDED), sum, na.rm = T)
 dim(an)
-matplot(an, type = "l", col = rainbow(38))
-yrs <- as.numeric(colnames(an))
+matplot(an, type = "l", col = rainbow(dim(an)[2]))
 
 an2 <- an
 for (i in 1:ncol(an)) { an2[, i] <- an[, i] / sum(an[, i]) }
 pc <- c(letters[1:26], LETTERS[1:12])
-matplot(an2, col = rainbow(38), type = "b", pch = pc)
+matplot(an2, col = rainbow(dim(an)[2]), type = "b", pch = pc)
 
-av <- apply(an2, 1, mean)
-er <- apply(an2, 1, sd)*1.96
+av <- apply(an2, 1, mean, na.rm = T)
+er <- apply(an2, 1, sd, na.rm = T)*1.96
 
 # identify anomalous years and highlight -----------------------
 anomlis <- c(2017, 2020)
-cols <- rep("#00000060", 38)
+cols <- rep("#00000060", dim(an)[2])
 cols[which(colnames(an2) == 2017)] <- 3
 cols[which(colnames(an2) == 2020)] <- 4
-lwds <- rep(1, 38)
+lwds <- rep(1, dim(an)[2])
 lwds[which(colnames(an2) == 2017)] <- 3
 lwds[which(colnames(an2) == 2020)] <- 3
 
@@ -134,7 +153,7 @@ matplot(an2, col = cols, type = "l", lty = 1, lwd = lwds, axes = F, ylab = "prop
         main = "Distribution of landings throughout the year")
 axis(1, at = 1:12, lab = month.abb)
 axis(2, las = 2); box()
-text(3, 0.15, col = 4, "2020", cex = 1.2, font = 2)
+text(2, 0.11, col = 4, "2020", cex = 1.2, font = 2)
 text(8, 0.025, col = 3, "2017", cex = 1.2, font = 2)
 #lines(1:12, av, lwd = 3)
 #polygon(c(1:12, 12:1), c((av + er), (av - er)[12:1]), col = "#00000020", border = NA)
@@ -145,7 +164,7 @@ text(8, 0.025, col = 3, "2017", cex = 1.2, font = 2)
 
 dst <- rep(NA, ncol(an2))
 for (i in 1:ncol(an2)) {  dst[i] <- sum((an2[, i] - apply(an2, 1, mean, na.rm = T))^2)   }
-plot(yrs, dst, type = "b")
+plot(styear: enyear, dst, type = "b")
 
 # now for separate species ----------------------------------
 
@@ -156,12 +175,17 @@ head(d)
 db <- merge(d, ref, by.x = "ITIS_COMMON_NAME", by.y = "COMname", all.x = TRUE)
 dim(d)
 dim(db)
+head(db)
 
+which(is.na(db$famcode))
+table(db$famcode, useNA = "always")
+
+#tab <- sort(tapply(d$POUNDS_LANDED, d$ITIS_COMMON_NAME, sum, na.rm = T), decreasing = T)
 tab <- sort(tapply(db$POUNDS_LANDED, db$famcode, sum, na.rm = T), decreasing = T)
 par(mar = c(15, 5, 2, 2))
 barplot(tab[1:20], las = 2)
-lis <- names(tab)[1:8]
-#lis <- lis[-which(lis == "FISHES,BONY,UNSPECIFIED")]
+lis <- names(tab)[1:9]
+lis <- lis[-which(lis == "UNID")]
 
 # recalculate index for individual spp --------------
 dstfin <- c()
@@ -169,6 +193,7 @@ par(mfrow = c(2, 4), mex = 0.5)
 
 for (j in 1:8) {
   d1 <- db[which(db$famcode == lis[j]), ]
+  d1$YEAR_LANDED <- factor(d1$YEAR_LANDED, levels = styear:enyear)
   an <- tapply(d1$POUNDS_LANDED, list(d1$MONTH_LANDED, d1$YEAR_LANDED), sum, na.rm = T)
   an2 <- an
   for (i in 1:ncol(an)) { an2[, i] <- an[, i] / sum(an[, i]) }
@@ -179,42 +204,176 @@ for (j in 1:8) {
   dstfin <- cbind(dstfin, dst) 
 }
 
+selec <- c(1, 3, 5, 6)
+lis[selec]
+
 # look at correlations across spp --------------------
 
 dstfin[which(is.na(dstfin))] <- 0
 colnames(dstfin) <- lis
 cor(dstfin)
 plot(data.frame(dstfin))
-matplot(yrs, dstfin, type = "b")
+dev.off()
 
-selec <- c(1, 3, 5, 6)
-lis[selec]
+matplot(styear: enyear, dstfin, type = "b")
+rownames(dstfin) <- styear:enyear
+dstfin   # looks only reasonable starting in 2000
+
+dstfin[which(styear: enyear < 2000), ] <- NA
+dstfin 
+
 avdst <- rowMeans(dstfin[, selec])   # snappers, groupers subject to seasonal closure
 sddst <- apply(dstfin[, selec], 1, sd)
-plot(yrs, avdst, type = "b")
+plot(styear: enyear, avdst, type = "b")
+
+# save data for STT -----------------
+inddata <- data.frame(avdst)
+llidata <- data.frame(avdst - sddst)
+ulidata <- data.frame(avdst + sddst)
+
+final_ST <- data.frame(inddata, llidata, ulidata)
+names(final_ST) <- c("ind", "lli", "uli")
+
+
+# for STX --------------------------------------------------------
+
+rm(list = ls()[-match(c("final_PR", "final_ST", "styear", "enyear"), ls())])
+
+# load data --------------------------------
+
+dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STX_072011_present_LANDINGS_trip_2021-03-11.csv")
+head(dat)
+
+d <- dat[which(dat$TRIP_YEAR >= styear & dat$TRIP_YEAR <= enyear), ]
+
+table(d$TRIP_YEAR)
+
+names(d)[which(names(d) == "TRIP_YEAR")] <- "YEAR_LANDED"
+names(d)[which(names(d) == "TRIP_MONTH")] <- "MONTH_LANDED"
+names(d)[which(names(d) == "SPECIES_NM")] <- "ITIS_COMMON_NAME"
+table(d$YEAR_LANDED)
+
+# look at seasonal cycles ---------------------------------------
+
+an <- tapply(d$POUNDS_LANDED, list(d$MONTH_LANDED, d$YEAR_LANDED), sum, na.rm = T)
+dim(an)
+matplot(an, type = "l", col = rainbow(dim(an)[2]))
+
+an2 <- an
+for (i in 1:ncol(an)) { an2[, i] <- an[, i] / sum(an[, i]) }
+pc <- c(letters[1:26], LETTERS[1:12])
+matplot(an2, col = rainbow(dim(an)[2]), type = "b", pch = pc)
+
+av <- apply(an2, 1, mean, na.rm = T)
+er <- apply(an2, 1, sd, na.rm = T)*1.96
+
+# identify anomalous years and highlight -----------------------
+anomlis <- c(2017, 2020)
+cols <- rep("#00000060", dim(an)[2])
+cols[which(colnames(an2) == 2017)] <- 3
+cols[which(colnames(an2) == 2020)] <- 4
+lwds <- rep(1, dim(an)[2])
+lwds[which(colnames(an2) == 2017)] <- 3
+lwds[which(colnames(an2) == 2020)] <- 3
+
+matplot(an2, col = cols, type = "l", lty = 1, lwd = lwds, axes = F, ylab = "proportion of landings", 
+        main = "Distribution of landings throughout the year")
+axis(1, at = 1:12, lab = month.abb)
+axis(2, las = 2); box()
+text(2, 0.11, col = 4, "2020", cex = 1.2, font = 2)
+text(8, 0.025, col = 3, "2017", cex = 1.2, font = 2)
+
+# calculate disturbance indicator ---------------------------
+
+dst <- rep(NA, ncol(an2))
+for (i in 1:ncol(an2)) {  dst[i] <- sum((an2[, i] - apply(an2, 1, mean, na.rm = T))^2)   }
+plot(styear: enyear, dst, type = "b")
+
+# now for separate species ----------------------------------
+
+ref <- read.csv("spp_ref_STX_manualEdit.csv")
+head(ref)
+head(d)
+
+db <- merge(d, ref, by.x = "ITIS_COMMON_NAME", by.y = "COMname", all.x = TRUE)
+dim(d)
+dim(db)
+head(db)
+which(is.na(db$famcode))
+table(db$famcode, useNA = "always")
+
+#tab <- sort(tapply(d$POUNDS_LANDED, d$ITIS_COMMON_NAME, sum, na.rm = T), decreasing = T)
+tab <- sort(tapply(db$POUNDS_LANDED, db$famcode, sum, na.rm = T), decreasing = T)
+par(mar = c(15, 5, 2, 2))
+barplot(tab[1:20], las = 2)
+lis <- names(tab)[1:8]
+#lis <- lis[-which(lis == "UNID")]
+
+# recalculate index for individual spp --------------
+dstfin <- c()
+par(mfrow = c(2, 4), mex = 0.5)
+
+for (j in 1:8) {
+  d1 <- db[which(db$famcode == lis[j]), ]
+  d1$YEAR_LANDED <- factor(d1$YEAR_LANDED, levels = styear:enyear)
+  an <- tapply(d1$POUNDS_LANDED, list(d1$MONTH_LANDED, d1$YEAR_LANDED), sum, na.rm = T)
+  an2 <- an
+  for (i in 1:ncol(an)) { an2[, i] <- an[, i] / sum(an[, i]) }
+  matplot(an2, type = "b", pch = pc, main = lis[j])
+  
+  dst <- rep(NA, ncol(an2))
+  for (i in 1:ncol(an2)) {  dst[i] <- sum((an2[, i] - apply(an2, 1, mean, na.rm = T))^2)   }
+  dstfin <- cbind(dstfin, dst) 
+}
+
+selec <- c(1, 2, 4, 5)
+lis[selec]
+
+# look at correlations across spp --------------------
+
+dstfin[which(is.na(dstfin))] <- 0
+colnames(dstfin) <- lis
+cor(dstfin)
+plot(data.frame(dstfin))
+dev.off()
+
+matplot(styear:enyear, dstfin, type = "b")
+rownames(dstfin) <- styear:enyear
+dstfin   # only have data starting in 2012
+
+dstfin[which(styear:enyear < 2012), ] <- NA
+
+avdst <- rowMeans(dstfin[, selec])   #
+sddst <- apply(dstfin[, selec], 1, sd)
+plot(styear: enyear, avdst, type = "b")
+
 
 # format as indicator object ---------------------
-
-yrind <- which(final_PR$year %in% yrs)
 
 datdata <- final_PR$year
 inddata <- data.frame(final_PR$ind)
 llidata <- data.frame(final_PR$lli)
 ulidata <- data.frame(final_PR$uli)
 
-inddata[yrind, 2] <- avdst
-llidata[yrind, 2] <- avdst - sddst
-ulidata[yrind, 2] <- avdst + sddst
+inddata[, 2] <- final_ST$ind
+llidata[, 2] <- final_ST$lli
+ulidata[, 2] <- final_ST$uli
+
+inddata[, 3] <- avdst
+llidata[, 3] <- avdst - sddst
+ulidata[, 3] <- avdst + sddst
 
 labs <- c("Disturbance indicator", "difference from mean landings", "Puerto Rico", 
-          "Disturbance indicator", "difference from mean landings", "St. Thomas and St. John")
+          "Disturbance indicator", "difference from mean landings", "St. Thomas and St. John", 
+          "Disturbance indicator", "difference from mean landings", "St. Croix")
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 
 s <- list(labels = indnames, indicators = inddata, datelist = datdata, ulim = ulidata, llim = llidata)
 class(s) <- "indicatordata"
 
 # plot and save -------------------------------------
-plotIndicatorTimeSeries(s, sublabel = T, coltoplot = 1:2, plotrownum = 2, yposadj = 1.2, type = "allLines")
+plotIndicatorTimeSeries(s, sublabel = T, coltoplot = 1:3, plotrownum = 3, yposadj = 1.2, type = "allLines", 
+                        sameYscale = T, trendAnalysis = F)
 
 inddata <- s
 save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/disturbance.RData")
