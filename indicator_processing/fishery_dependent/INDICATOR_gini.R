@@ -14,11 +14,11 @@ calcGini <- function(vec) {
 
 # input data for Puerto Rico ---------------------------
 setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/")
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20_wSC.csv")
+dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20_wSC_2005cor.csv")
 
 # define start and end years ---------------------------
 styear <- 2012
-enyear <- 2021
+enyear <- 2020
 
 d <- dat[which(dat$YEAR_LANDED >= styear & dat$YEAR_LANDED <= enyear), ]
 
@@ -40,6 +40,7 @@ length(which(d$ITIS_COMMON_NAME != "CRAB,BLUE LAND" & d$PRICE_PER_LB > 15))
 d[(which(d$ITIS_COMMON_NAME != "CRAB,BLUE LAND" & d$PRICE_PER_LB > 15)), ]
 table(d$ITIS_COMMON_NAME[(which(d$ITIS_COMMON_NAME != "CRAB,BLUE LAND" & d$PRICE_PER_LB > 15))])
 hist(d$PRICE_PER_LB[(which(d$ITIS_COMMON_NAME != "CRAB,BLUE LAND" & d$PRICE_PER_LB > 15))])
+
 d$PRICE_PER_LB[(which(d$ITIS_COMMON_NAME != "CRAB,BLUE LAND" & d$PRICE_PER_LB > 15))] <- NA
 hist(d$PRICE_PER_LB[(which(d$ITIS_COMMON_NAME == "CRAB,BLUE LAND"))])
 max(d$PRICE_PER_LB[(which(d$ITIS_COMMON_NAME == "CRAB,BLUE LAND"))])
@@ -77,10 +78,14 @@ plot(names(gini_rev_pr), gini_rev_pr, type = "b")
 gini_land_pr <- apply(totland, 2, calcGini)
 plot(names(gini_land_pr), gini_land_pr, type = "b", col = 2)
 
-# calculate for STT and STX --------------------------------------
+rm(list = ls()[-match(c("gini_land_pr", "gini_rev_pr", "styear", "enyear", "calcGini"), ls())])
+
+######################  END PR  ##############################
+
+# calculate for STT  --------------------------------------
 
 dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STT_landings.csv")
-d <- dat[which(dat$TRIP_YEAR >= 2012 & dat$TRIP_YEAR <= 2020), ]
+d <- dat[which(dat$TRIP_YEAR >= styear & dat$TRIP_YEAR <= enyear), ]
 
 # take a look at data fields ----------------------------
 
@@ -95,6 +100,7 @@ table(d$CHARTER_TRIP, useNA = "always")
 # remove bad price values ------------------------------
 
 hist(d$PRICE)
+which(d$PRICE > 15)
 d$SPECIES_NM[which(d$PRICE > 15)]
 hist(d$PRICE[which(d$PRICE > 15)])
 d$PRICE[which(d$PRICE > 15)] <- NA
@@ -124,27 +130,96 @@ dim(totland)
 
 # calculate gini index --------------------------------
 
-gini_rev_vi <- apply(totrev, 2, calcGini)
-plot(names(gini_rev_vi), gini_rev_vi, type = "b", ylim = c(0.7, 1))
+gini_rev_stt <- apply(totrev, 2, calcGini)
+plot(names(gini_rev_stt), gini_rev_stt, type = "b", ylim = c(0.7, 1))
 
-gini_land_vi <- apply(totland, 2, calcGini)
-lines(names(gini_land_vi), gini_land_vi, col = 2)
+gini_land_stt <- apply(totland, 2, calcGini)
+plot(names(gini_land_stt), gini_land_stt, col = 2)
+
+plot(gini_land_stt, gini_rev_stt)
+cor(gini_land_stt, gini_rev_stt)
+
+###########################  END STT  ############################
+
+rm(list = ls()[-match(c("gini_land_pr", "gini_rev_pr", "gini_land_stt", "gini_rev_stt", "styear", "enyear", "calcGini"), ls())])
+
+# calculate for STX  --------------------------------------
+
+dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STX_072011_present_LANDINGS_trip_2021-03-11.csv")
+d <- dat[which(dat$TRIP_YEAR >= styear & dat$TRIP_YEAR <= enyear), ]
+head(d)
+
+# take a look at data fields ----------------------------
+
+table(d$TRIP_ID, useNA = "always")
+table(d$TRIP_YEAR, useNA = "always")
+table(d$VESSEL_CD, useNA = "always")
+table(d$FISHER_PERMIT, useNA = "always")
+table(d$FISHER_FIRST_NAME, useNA = "always")
+table(d$FISHER_LAST_NAME, useNA = "always")
+table(d$CHARTER_TRIP, useNA = "always")
+
+#d <- d[which(d$CHARTER_TRIP == "Y"), ]
+
+# remove bad price values ------------------------------
+
+hist(d$PRICE)
+which(d$PRICE > 15)
+
+# calculate revenue, sum by permit and year ------------
+
+d$REV <- d$POUNDS_LANDED * d$PRICE
+totrev <- tapply(d$REV, list(d$FISHER_PERMIT, d$TRIP_YEAR), sum, na.rm = T)
+dim(totrev)
+totrev[is.na(totrev)] <- 0
+totrev
+rowSums(totrev, na.rm = T)
+which(rowSums(totrev, na.rm = T) == 0)
+totrev <- totrev[-which(rowSums(totrev, na.rm = T) == 0), ]
+dim(totrev)
+
+# sum landings by permit and year ----------------------
+
+totland <- tapply(d$POUNDS_LANDED, list(d$FISHER_PERMIT, d$TRIP_YEAR), sum, na.rm = T)
+dim(totland)
+totland[is.na(totland)] <- 0
+totland
+rowSums(totland, na.rm = T)
+which(rowSums(totland, na.rm = T) == 0)
+#totland <- totland[-which(rowSums(totland, na.rm = T) == 0), ]
+dim(totland)
+
+dev.off()
+
+# calculate gini index --------------------------------
+
+par(mfrow = c(2, 1))
+gini_rev_stx <- apply(totrev, 2, calcGini)
+plot(names(gini_rev_stx), gini_rev_stx, type = "b")
+
+gini_land_stx <- apply(totland, 2, calcGini)
+plot(names(gini_land_stx), gini_land_stx, col = 2, type = "b")
+
+plot(gini_land_stx, gini_rev_stx)
+cor(gini_land_stx, gini_rev_stx)
+
+###########################  END STX  ############################
 
 # format indicator object -----------------------------
 
 ls()[grep("gini", ls())]
 
 datdata <- styear:enyear
-inddata <- data.frame(gini_rev_pr, gini_rev_vi)
+inddata <- data.frame(gini_rev_pr, gini_rev_stt, gini_rev_stx)
 labs <- c("Inequality in revenues" , "Gini index", "Puerto Rico", 
-          "Inequality in revenues" , "Gini index", "St. Thomas and St. John")
+          "Inequality in revenues" , "Gini index", "St. Thomas and St. John",
+          "Inequality in revenues" , "Gini index", "St. Croix")
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
 class(s) <- "indicatordata"
 
-setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/")
-plotIndicatorTimeSeries(s, coltoplot = 1:2, plotrownum = 2, sublabel = T, sameYscale = T, 
-                        widadj = 1.3, hgtadj = 1, outtype = "png")
+plotIndicatorTimeSeries(s, coltoplot = 1:3, plotrownum = 3, sublabel = T, sameYscale = T, 
+                        widadj = 1.3, hgtadj = 1, trendAnalysis = F)
 
 inddata <- s
 save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/gini.RData")
