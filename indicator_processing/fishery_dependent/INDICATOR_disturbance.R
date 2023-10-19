@@ -373,7 +373,7 @@ class(s) <- "indicatordata"
 
 # plot and save -------------------------------------
 plotIndicatorTimeSeries(s, sublabel = T, coltoplot = 1:3, plotrownum = 3, yposadj = 1.2, type = "allLines", 
-                        sameYscale = T, trendAnalysis = F)
+                        sameYscale = F, trendAnalysis = F)
 
 inddata <- s
 save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/disturbance.RData")

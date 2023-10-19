@@ -7,10 +7,10 @@ library(pals)
 
 setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/")
 
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STT_landings.csv")
+dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STX_072011_present_LANDINGS_trip_2021-03-11.csv")
 
 # define start and end years ---------------------------
-styear <- 1990
+styear <- 2011
 enyear <- 2020
 table(dat$TRIP_YEAR)
 
@@ -66,11 +66,10 @@ tab <- tab[order(rowSums(tab, na.rm = T), decreasing = T), ]
 par(mar = c(4, 4, 1, 1)+1)
 matplot(styear:enyear, t(tab[1:10, ]), type = "l", col = 1:10, lty = c(1, 1, 1, 1, 1, 2, 2, 2, 2, 2), lwd = 2)
 legend("topright", rownames(tab)[1:10], col = 1:10, lty = c(1, 1, 1, 1, 1, 2, 2, 2, 2, 2), lwd = 2)
-abline(v = 1999)   # 2000 is data-rich period
+#abline(v = 1999)   
 
-styear <- 2010
-
-d <- d[which(d$TRIP_YEAR >= styear), ]  # cut out because very little data beforehand
+#styear <- 2010
+#d <- d[which(d$TRIP_YEAR >= styear), ]  # cut out because very little data beforehand
 
 yrs <- styear:enyear
 
@@ -159,9 +158,9 @@ plot(yrs, pdrat, type = "b")
 # make indicator object and plot P:D ratio ------------------
 datdata <- yrs
 inddata <- data.frame(cbind(pd[, 2]/10^6, pd[, 1]/10^6, pdrat))
-labs <- c("Total pelagic landings", "millions of pounds" , "St. Thomas", 
-          "Total demersal landings", "millions of pounds", "St. Thomas", 
-          "Pelagic:demersal ratio", "ratio of landings", "St. Thomas")
+labs <- c("Total pelagic landings", "millions of pounds" , "St. Croix", 
+          "Total demersal landings", "millions of pounds", "St. Croix", 
+          "Pelagic:demersal ratio", "ratio of landings", "St. Croix")
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 
 s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
@@ -170,6 +169,8 @@ class(s) <- "indicatordata"
 plotIndicatorTimeSeries(s, coltoplot = 1:3, plotrownum = 3, sublabel = T, trendAnalysis = F) #, outtype = "png")
 
 ############################  END PD ratio  #######################################
+
+dev.off()
 
 # Lmax calculations -----------------------------------------
 
@@ -224,19 +225,21 @@ plotIndicatorTimeSeries(s, coltoplot = 1:5, plotrownum = 5, sublabel = T, widadj
 
 # understand what is driving the trends -------------------------------------------
 
-splisref$COMname[which(splisref$Lmax_cat == "(60,100]")]
+splisref$COMname[which(splisref$Lmax_cat == "(0,40]")]
 splisref$COMname[which(splisref$Lmax_cat == "(100,200]")]
 
-sort(table(splisref$famcode[which(splisref$Lmax_cat == "(60,100]")]))
+sort(table(splisref$famcode[which(splisref$Lmax_cat == "(0,40]")]))
 sort(table(splisref$famcode[which(splisref$Lmax_cat == "(100,200]")]))
 
 splisref$recLand <- rowSums(tab)
 
-plate <- splisref[which(splisref$Lmax_cat == "(60,100]"), ]
-head(plate[order(plate$recLand, decreasing = T), ], 15)
+small <- splisref[which(splisref$Lmax_cat == "(0,40]"), ]
+head(small[order(small$recLand, decreasing = T), ], 15)
 
 big <- splisref[which(splisref$Lmax_cat == "(100,200]"), ]
 head(big[order(big$recLand, decreasing = T), ], 15)
+
+dev.off()
 
 # calculate average Lmax indicator -----------------------------------------------
 
@@ -252,7 +255,7 @@ abline(out)
 
 plot(yrs, tapply(dbf$Lmax, dbf$TRIP_YEAR, mean, na.rm = T), type = "l")
 
-# figure out what is going on in 2018 with spike in pelagics -------------------
+# look at what is driving PD ratio  -------------------
 
 plot(yrs, pdrat, type = "b", las = 2)
 matplot(yrs, pd, axes = F, type = "b")
@@ -261,8 +264,8 @@ axis(1, at = yrs, las = 2)
 tabp <- tab[grep("pelagic", splisref$PD), ]
 tabp <- tabp[order(rowSums(tabp), decreasing = T), ]
 
-matplot(yrs, t(tabp[1:20, ]), type = "l", col = glasbey(10), lwd = 2, lty = 1)
-legend("topleft", rownames(tabp)[1:20], col = glasbey(10), lwd = 2, lty = 1, cex = 0.7)
+matplot(yrs, t(tabp), type = "l", col = glasbey(10), lwd = 2, lty = 1)
+legend("topleft", rownames(tabp), col = glasbey(10), lwd = 2, lty = 1, cex = 0.7)
 
 tabd <- tab[-grep("pelagic", splisref$PD), ]
 tabd <- tabd[order(rowSums(tabd), decreasing = T), ]

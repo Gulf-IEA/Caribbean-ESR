@@ -1,7 +1,12 @@
+# M. Karnauskas 10/19/2023
 # code for calculating total landings or revenues
 # uses logbook data for PR and USVI 
 
 rm(list = ls())
+
+# define start and end years ---------------------------
+styear <- 1990
+enyear <- 2020
 
 # input data for Puerto Rico ---------------------------
 setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/")
@@ -13,18 +18,15 @@ table(dat$YEAR_LANDED)
 
 summary(dat$xADJ == dat$POUNDS_LANDED * 1/dat$CORRECTION_FACTOR)
 
-# define start and end years ---------------------------
-styear <- 1990
-enyear <- 2021
-
+# subset years------------------------------------------
 d <- dat[which(dat$YEAR_LANDED >= styear & dat$YEAR_LANDED <= enyear), ]
 
-# check field codes -----------------
+# check field codes ---------------------------------
 
 table(d$YEAR_LANDED, useNA = "always")
 table(d$CORRECTION_FACTOR, d$YEAR_LANDED)
 
-# look at top landings -----------------------
+# look at top landings -------------------------------
 
 sort(tapply(d$ADJUSTED_POUNDS, d$ITIS_COMMON_NAME, sum, na.rm = T))
 sort(table(d$ITIS_COMMON_NAME[grep("LOBSTER", d$ITIS_COMMON_NAME)]))
@@ -47,9 +49,11 @@ table(table(d$sppgrp, d$YEAR_LANDED) < 3)
 totland_pr <- tapply(d$ADJUSTED_POUNDS, list(d$YEAR_LANDED, d$sppgrp), sum, na.rm = T) / 10^3
 dim(totland_pr)
 totland_pr
-matplot(1990:2020, totland_pr, type = "l", lty = 1, lwd = 2)
+matplot(styear:enyear, totland_pr, type = "l", lty = 1, lwd = 2)
 
 rm(list = ls()[-match(c("totland_pr", "styear", "enyear"), ls())])
+
+#################     END PR    ########################
 
 # calculate for STT --------------------------------------
 
@@ -90,6 +94,8 @@ dim(totland_st)
 totland_st
 totland_st[is.na(totland_st)] <- 0
 matplot(totland_st, type = "l")
+
+#################     END STT    ########################
 
 # calculate for STX --------------------------------------
 
@@ -135,6 +141,9 @@ totland_sx
 #totland_sx[is.na(totland_sx)] <- 0
 matplot(totland_sx, type = "l")
 
+#################     END STX    ########################
+
+
 # summarize and plot ---------------------
 
 ls()[grep("totland", ls())]
@@ -162,7 +171,7 @@ setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/")
 plotIndicatorTimeSeries(s, coltoplot = 1:9, plotrownum = 3, plotcolnum = 3, sublabel = T, sameYscale = F, 
                         widadj = 0.8, hgtadj = 0.7, trendAnalysis = F)   # outtype = "png")
 
-#inddata <- s
-#save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/landings.RData")
+inddata <- s
+save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/total_landings.RData")
 
 
