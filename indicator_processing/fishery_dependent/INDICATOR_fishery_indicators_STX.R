@@ -14,44 +14,16 @@ styear <- 2011
 enyear <- 2020
 table(dat$TRIP_YEAR)
 
+# adjust year to fishing year (Jul 1 - Jun 30) -------------
+
+aa <- which(dat$TRIP_MONTH < 7)
+dat$TRIP_YEAR[aa] <- dat$TRIP_YEAR[aa] - 1
+dat$TRIP_MONTH[aa] <- dat$TRIP_MONTH[aa] + 12
+
 # subset years------------------------------------------
 
 d <- dat[which(dat$TRIP_YEAR >= styear & dat$TRIP_YEAR <= enyear), ]
 table(d$TRIP_YEAR)
-
-# take a look at data fields ----------------------------
-
-table(d$TRIP_ID, useNA = "always")
-table(d$TRIP_YEAR, useNA = "always")
-table(d$TRIP_MONTH, useNA = "always")
-table(d$TRIP_DAY, useNA = "always")
-table(d$VESSEL_CD, useNA = "always")
-table(d$FISHER_PERMIT, useNA = "always")
-table(d$FISHER_FIRST_NAME, useNA = "always")
-table(d$FISHER_LAST_NAME, useNA = "always")
-table(d$CHARTER_TRIP, useNA = "always")
-table(d$NUM_PARTNERS_OR_HELPERS, useNA = "always")
-table(d$IS_CATCH_SPLIT, useNA = "always")
-table(d$ISLAND, useNA = "always")
-table(d$TOTAL_TRAPS_IN_WATER, useNA = "always")
-table(d$FAD_CD, useNA = "always")
-table(d$GEAR_TYPE_NM, useNA = "always")
-table(d$GEAR1_NAME, useNA = "always")
-table(d$SPECIES_CD, useNA = "always")
-table(d$SPECIES_NM, useNA = "always")
-table(d$TRIP_MAY_BE_DUPLICATE, useNA = "always")
-
-# look at gear trends ---------------------------------
-tapply(d$POUNDS_LANDED, d$GEAR_TYPE_NM, sum, na.rm = T)
-par(mar = c(5, 15, 2, 2))
-barplot(tapply(d$POUNDS_LANDED, d$GEAR_TYPE_NM, sum, na.rm = T), horiz = T, las = 2)
-
-d$gear <- "other" 
-d$gear[which(d$GEAR_TYPE_NM == "TRAPS")] <- "traps"
-
-par(mar = c(4, 4, 1, 1))
-tab <- tapply(d$POUNDS_LANDED, list(d$gear, d$TRIP_YEAR), sum, na.rm = T)
-barplot(tab, col = c(2, gray(0.1), gray(0.5), gray(0.8)), args.legend = c(x = "topright"), legend.text = rownames(tab))
 
 # look at main species landed --------------------------------
 tab <- sort(tapply(d$POUNDS_LANDED, d$SPECIES_NM, sum, na.rm = T), decreasing = T)

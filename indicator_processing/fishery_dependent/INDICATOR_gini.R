@@ -14,6 +14,7 @@ calcGini <- function(vec) {
 
 # input data for Puerto Rico ---------------------------
 setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/")
+
 dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20_wSC_2005cor.csv")
 
 # define start and end years ---------------------------
@@ -85,6 +86,15 @@ rm(list = ls()[-match(c("gini_land_pr", "gini_rev_pr", "styear", "enyear", "calc
 # calculate for STT  --------------------------------------
 
 dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STT_landings.csv")
+table(dat$TRIP_YEAR, dat$TRIP_MONTH)
+
+# adjust year to fishing year (Jul 1 - Jun 30) -------------
+
+aa <- which(dat$TRIP_MONTH < 7)
+dat$TRIP_YEAR[aa] <- dat$TRIP_YEAR[aa] - 1
+dat$TRIP_MONTH[aa] <- dat$TRIP_MONTH[aa] + 12
+table(dat$TRIP_YEAR, dat$TRIP_MONTH)
+
 d <- dat[which(dat$TRIP_YEAR >= styear & dat$TRIP_YEAR <= enyear), ]
 
 # take a look at data fields ----------------------------
@@ -146,6 +156,15 @@ rm(list = ls()[-match(c("gini_land_pr", "gini_rev_pr", "gini_land_stt", "gini_re
 # calculate for STX  --------------------------------------
 
 dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STX_072011_present_LANDINGS_trip_2021-03-11.csv")
+table(dat$TRIP_YEAR, dat$TRIP_MONTH)
+
+# adjust year to fishing year (Jul 1 - Jun 30) -------------
+
+aa <- which(dat$TRIP_MONTH < 7)
+dat$TRIP_YEAR[aa] <- dat$TRIP_YEAR[aa] - 1
+dat$TRIP_MONTH[aa] <- dat$TRIP_MONTH[aa] + 12
+table(dat$TRIP_YEAR, dat$TRIP_MONTH)
+
 d <- dat[which(dat$TRIP_YEAR >= styear & dat$TRIP_YEAR <= enyear), ]
 head(d)
 

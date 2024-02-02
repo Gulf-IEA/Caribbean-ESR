@@ -117,6 +117,19 @@ rm(list = ls()[-match(c("final_PR", "styear", "enyear"), ls())])
 
 dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STT_landings.csv")
 
+dat$TRIP_YEARold <- dat$TRIP_YEAR
+dat$TRIP_MONTHold <- dat$TRIP_MONTH
+aa <- which(dat$TRIP_MONTH < 7)
+table(dat$TRIP_MONTH[aa])
+table(dat$TRIP_YEAR[aa])
+dat$TRIP_YEAR[aa] <- dat$TRIP_YEAR[aa] - 1
+dat$TRIP_MONTH[aa] <- dat$TRIP_MONTH[aa] + 12
+
+head(table(dat$TRIP_YEARold, dat$TRIP_MONTHold))
+head(table(dat$TRIP_YEAR, dat$TRIP_MONTH))
+tail(table(dat$TRIP_YEARold, dat$TRIP_MONTHold))
+tail(table(dat$TRIP_YEAR, dat$TRIP_MONTH))
+
 d <- dat[which(dat$TRIP_YEAR >= styear & dat$TRIP_YEAR <= enyear), ]
 
 table(d$TRIP_YEAR)
@@ -244,6 +257,19 @@ rm(list = ls()[-match(c("final_PR", "final_ST", "styear", "enyear"), ls())])
 dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STX_072011_present_LANDINGS_trip_2021-03-11.csv")
 head(dat)
 
+dat$TRIP_YEARold <- dat$TRIP_YEAR
+dat$TRIP_MONTHold <- dat$TRIP_MONTH
+aa <- which(dat$TRIP_MONTH < 7)
+table(dat$TRIP_MONTH[aa])
+table(dat$TRIP_YEAR[aa])
+dat$TRIP_YEAR[aa] <- dat$TRIP_YEAR[aa] - 1
+dat$TRIP_MONTH[aa] <- dat$TRIP_MONTH[aa] + 12
+
+head(table(dat$TRIP_YEARold, dat$TRIP_MONTHold))
+head(table(dat$TRIP_YEAR, dat$TRIP_MONTH))
+tail(table(dat$TRIP_YEARold, dat$TRIP_MONTHold))
+tail(table(dat$TRIP_YEAR, dat$TRIP_MONTH))
+
 d <- dat[which(dat$TRIP_YEAR >= styear & dat$TRIP_YEAR <= enyear), ]
 
 table(d$TRIP_YEAR)
@@ -341,7 +367,7 @@ matplot(styear:enyear, dstfin, type = "b")
 rownames(dstfin) <- styear:enyear
 dstfin   # only have data starting in 2012
 
-dstfin[which(styear:enyear < 2012), ] <- NA
+dstfin[which(styear:enyear < 2011), ] <- NA
 
 avdst <- rowMeans(dstfin[, selec])   #
 sddst <- apply(dstfin[, selec], 1, sd)

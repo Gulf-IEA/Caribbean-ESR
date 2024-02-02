@@ -10,6 +10,7 @@ enyear <- 2020
 
 # input data for Puerto Rico ---------------------------
 setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/")
+
 dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20_wSC_2005cor.csv")
 
 table(dat$YEAR_LANDED)
@@ -31,6 +32,8 @@ table(d$CORRECTION_FACTOR, d$YEAR_LANDED)
 sort(tapply(d$ADJUSTED_POUNDS, d$ITIS_COMMON_NAME, sum, na.rm = T))
 sort(table(d$ITIS_COMMON_NAME[grep("LOBSTER", d$ITIS_COMMON_NAME)]))
 sort(table(d$ITIS_COMMON_NAME[grep("CONCH", d$ITIS_COMMON_NAME)]))
+
+sort(table(d$ITIS_COMMON_NAME[grep("DOLPHIN", d$ITIS_COMMON_NAME)]))
 
 d$sppgrp <- "other"
 d$sppgrp[grep("LOBSTER", d$ITIS_COMMON_NAME)] <- "lobster"
@@ -59,6 +62,14 @@ rm(list = ls()[-match(c("totland_pr", "styear", "enyear"), ls())])
 
 dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STT_landings.csv")
 head(dat)
+table(dat$TRIP_YEAR, dat$TRIP_MONTH)
+
+# adjust year to fishing year (Jul 1 - Jun 30) -------------
+
+aa <- which(dat$TRIP_MONTH < 7)
+dat$TRIP_YEAR[aa] <- dat$TRIP_YEAR[aa] - 1
+dat$TRIP_MONTH[aa] <- dat$TRIP_MONTH[aa] + 12
+table(dat$TRIP_YEAR, dat$TRIP_MONTH)
 
 # take a look at data fields ----------------------------
 
@@ -103,6 +114,14 @@ rm(list = ls()[-match(c("totland_st", "totland_pr", "styear", "enyear"), ls())])
 
 dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STX_072011_present_LANDINGS_trip_2021-03-11.csv")
 head(dat)
+table(dat$TRIP_YEAR, dat$TRIP_MONTH)
+
+# adjust year to fishing year (Jul 1 - Jun 30) -------------
+
+aa <- which(dat$TRIP_MONTH < 7)
+dat$TRIP_YEAR[aa] <- dat$TRIP_YEAR[aa] - 1
+dat$TRIP_MONTH[aa] <- dat$TRIP_MONTH[aa] + 12
+table(dat$TRIP_YEAR, dat$TRIP_MONTH)
 
 # take a look at data fields ----------------------------
 
