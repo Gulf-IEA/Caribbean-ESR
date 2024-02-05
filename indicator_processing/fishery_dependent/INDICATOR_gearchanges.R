@@ -9,6 +9,8 @@
 rm(list = ls())
 library(pals)
 library(dplyr)
+library(vegan)
+
 
 setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/")
 
@@ -114,6 +116,9 @@ tab2 <- table(d$TRIP_ID, d$LANDING_AREA_NAME)
 co <- apply(tab2, 1, which.max)
 areas <- colnames(tab2)[co]
 
+head(tab2, 20)        # check to see if correct
+areas[1:20]
+
 table(rownames(tab) == names(years))
 table(rownames(tab) == rownames(tab2))
 
@@ -121,25 +126,38 @@ fin <- data.frame(rownames(tab), years, gears, areas)
 names(fin) <- c("id", "year", "gear", "area")
 head(fin)
 
-apply(fin, 2, table, useNA = "always")  # check no NAs
+fin$gear[which(fin$gear == "DIVING")] <- "SPEAR OR HAND"
+fin$gear <- droplevels(fin$gear)
 
+apply(fin, 2, table, useNA = "always")  # check no NAs
 
 # plot results -----------------------
 
 mat <- table(fin$year, fin$gear)
-barplot(t(mat), col = cols25(7), args.legend = c(x = "topright"), legend.text = colnames(tab))
+barplot(t(mat), col = cols25(7), args.legend = c(x = "topright"), legend.text = colnames(mat))
 
 matp <- t(apply(mat, 1, function(x) x/sum(x)))
-barplot(t(matp), col = cols25(7), args.legend = c(x = 34, y = 0.9), legend.text = colnames(tab))
+barplot(t(matp), col = cols25(7), args.legend = c(x = 34, y = 0.9), legend.text = colnames(mat))
 
-byc <- rowSums(mat[, c(4, 6)]) / rowSums(mat)   # proportion of trips with non-selective gears
+byc <- rowSums(mat[, c(3, 5)]) / rowSums(mat)   # proportion of trips with non-selective gears - nets and traps
 plot(names(byc), byc, type = "l")
 
-par(mfrow = c(2,1), mar = c(5, 4, 2, 1))
-barplot(t(mat), col = cols25(7), args.legend = c(x = "topright", bty = "n"), legend.text = colnames(tab), las = 2, 
-        main = "Number of trips per year by gear type")
-plot(as.numeric(names(byc)), byc, type = "l", las = 2, xlab = "year", ylab = "proportion", main = "Proportion of trips with nets and traps")
+
+# plot trips and percent bycatch gears -------------------
+
+png(filename = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/gearTypes_STT.png", 
+    units="in", width = 6, height = 6, pointsize=12, res=72*2)
+
+par(mfrow = c(2,1), mar = c(2.5, 4, 2, 1))
+barplot(t(mat), col = cols25(7), args.legend = list(x = "topright", bty = "n", y.intersp = 0.8), legend.text = colnames(mat), las = 2, 
+        main = "Number of trips per year by gear type\nSt. Thomas and St. John", ylim = c(0, 8000))
+abline(h=0)
+plot(as.numeric(names(byc)), byc, type = "l", las = 2, xlab = "", ylab = "proportion", main = "Proportion of trips with nets and traps", axes = F)
+axis(1); axis(2, las = 2); box()
 points(as.numeric(names(byc)), byc, pch = 20, cex = 1.2)
+
+dev.off()
+
 
 par(mfrow = c(2,2), mar = c(20, 3, 1, 0))
 barplot(table(fin$year), las = 2)
@@ -164,11 +182,76 @@ for (i in 3:6)  {
 }
 
 dev.off()
+
 pc <- prcomp(mat, scale = T)
 summary(pc)
 plot(pc)
 biplot(pc)
+plot(pc$x[, 1], pc$x[, 2], type = "l")
+text(pc$x[, 1], pc$x[, 2], rownames(pc$x))
 
+# trends by area -----------------
+
+fin <- fin[which(fin$year >= 2011), ]
+fin$area <- as.character(fin$area)
+
+table(fin$area, useNA = "always")
+
+fin$area[grep("CHARLOTTE AMALIE", fin$area)] <- "CHARLOTTE AMALIE"
+fin$area[grep("SAINT THOMAS HARBOR", fin$area)] <- "CHARLOTTE AMALIE"
+fin$area[grep("EAST END", fin$area)] <- "EAST END"
+fin$area[grep("WEST END", fin$area)] <- "WEST END"
+fin$area[grep("RED HOOK", fin$area)] <- "RED HOOK"
+fin$area[grep("SECRET HARBOR", fin$area)] <- "NAZARETH"
+fin$area[which(fin$area == "")] <- "UNK"
+
+table(fin$area, useNA = "always")
+
+table(fin$area, fin$year)
+
+fin$gear <- droplevels(fin$gear)
+
+mat <- table(fin$area, fin$gear)
+mat
+
+par(mar = c(20, 3, 1, 1))
+barplot(t(mat), col = cols25(7), args.legend = c(x = "topright"), legend.text = colnames(mat), las = 2)
+
+matp <- t(apply(mat, 1, function(x) x/sum(x)))
+barplot(t(matp), col = cols25(7), args.legend = c(x = "topright"), legend.text = colnames(mat), las = 2)
+
+dev.off()
+
+pc <- prcomp(matp, scale = T)
+summary(pc)
+plot(pc)
+biplot(pc)
+
+z <- metaMDS(comm = matp, autotransform = FALSE, distance = "bray",
+             engine = "monoMDS", k = 2, weakties = TRUE, model = "global",
+             maxit = 300, try = 40, trymax = 100)
+print(z)
+gof <- goodness(object = z)
+plot(z, display = "sites", type = "none")
+points(z, display = "sites", cex = 2*gof/mean(gof))
+plot(z$diss, z$dist)
+stressplot(object = z, lwd = 5)
+
+z$points[6, 2] <- z$points[6, 2]/3
+#adj <- which(z$points[, 2] > 0 & z$points[, 2] < 0.1)
+#z$points[adj, 2] <- z$points[adj, 2]*1.3
+
+png(filename = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/NMDSgear_STT.png", 
+    units="in", width = 5, height = 5, pointsize=12, res=72*2)
+par(mar = c(2, 2, 3, 2))
+
+plot(z$points[, 1], z$points[, 2], col = 0, axes = F, xlab = "", ylab = "", xlim = c(-1.3, 1.7), ylim= c(-0.4, 0.52), 
+     main = "Ordination of gear type usage by landing sites\nSt. Thomas and St. John")
+text(z$points[, 1], z$points[, 2], rownames(z$points), cex = 0.65, col = gray(0.7))
+box()
+text(z$species[, 1]/2.4, z$species[, 2]/2.4, rownames(z$species), col = 1, font = 2)
+
+dev.off()
 
 ############################  END STT #################################
 
@@ -280,6 +363,9 @@ tab2 <- table(d$TRIP_ID, d$LANDING_AREA_NAME)
 co <- apply(tab2, 1, which.max)
 areas <- colnames(tab2)[co]
 
+head(tab2, 20)        # check to see if correct
+areas[1:20]
+
 table(rownames(tab) == names(years))
 table(rownames(tab) == rownames(tab2))
 
@@ -289,24 +375,32 @@ head(fin)
 
 apply(fin, 2, table, useNA = "always")  # check no NAs
 
-
 # plot results -----------------------
 
 mat <- table(fin$year, fin$gear)
-barplot(t(mat), col = cols25(7), args.legend = c(x = "topright"), legend.text = colnames(tab))
+barplot(t(mat), col = cols25(7), args.legend = c(x = "topright"), legend.text = colnames(mat))
 
 matp <- t(apply(mat, 1, function(x) x/sum(x)))
-barplot(t(matp), col = cols25(7), args.legend = c(x = 10, y = 0.8), legend.text = colnames(tab))
+barplot(t(matp), col = cols25(4), args.legend = c(x = 10, y = 0.8), legend.text = colnames(mat))
 
-mat[, c(2, 4)]
-byc <- rowSums(mat[, c(2, 4)]) / rowSums(mat)   # proportion of trips with non-selective gears
+colnames(mat)
+byc <- rowSums(mat[, c(2, 4)]) / rowSums(mat)   # proportion of trips with non-selective gears - nets and traps
 plot(names(byc), byc, type = "l")
 
-par(mfrow = c(2,1), mar = c(5, 4, 2, 1))
-barplot(t(mat), col = cols25(7), args.legend = c(x = "topright", bty = "n"), legend.text = colnames(tab), las = 2, 
-        main = "Number of trips per year by gear type")
-plot(as.numeric(names(byc)), byc, type = "l", las = 2, xlab = "year", ylab = "proportion", main = "Proportion of trips with nets and traps")
+# plot trips and percent bycatch gears -------------------
+
+png(filename = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/gearTypes_STX.png", 
+    units="in", width = 6, height = 6, pointsize=12, res=72*2)
+
+par(mfrow = c(2,1), mar = c(2.5, 4, 2, 1))
+barplot(t(mat), col = cols25(7), args.legend = list(x = "topright", bty = "n", y.intersp = 0.9), legend.text = colnames(mat), las = 2, 
+        main = "Number of trips per year by gear type\nSt. Croix")
+abline(h=0)
+plot(as.numeric(names(byc)), byc, type = "l", las = 2, xlab = "", ylab = "proportion", main = "Proportion of trips with nets and traps", axes = F)
+axis(1); axis(2, las = 2); box()
 points(as.numeric(names(byc)), byc, pch = 20, cex = 1.2)
+
+dev.off()
 
 par(mfrow = c(2,2), mar = c(20, 3, 1, 0))
 barplot(table(fin$year), las = 2)
@@ -314,17 +408,94 @@ barplot(table(fin$gear), las = 2)
 barplot(table(fin$area), las = 2)
 
 spp <- tapply(d$POUNDS_LANDED, list(d$SPECIES_NM, d$GEAR_TYPE_NM), sum, na.rm = T)
-par(mfrow = c(2, 2), mar = c(15, 4, 1, 0))
+par(mfrow = c(3, 2), mar = c(15, 4, 1, 0))
 for (i in 1:6)  { 
   barplot(sort(spp[, i], decreasing = T)[1:10], las = 2, 
           main = colnames(spp)[i])
   legend("topright", legend = NA, title = paste("N species =", table(is.na(spp[, i]))[1], "    "), bty = "n")
 }
 
+spp <- tapply(d$POUNDS_LANDED[which(d$TRIP_YEAR > 2010)], 
+              list(d$SPECIES_NM[which(d$TRIP_YEAR > 2010)], d$GEAR_TYPE_NM[which(d$TRIP_YEAR > 2010)]), sum, na.rm = T)
+par(mfrow = c(2, 2), mar = c(15, 3, 1, 0))
+for (i in 3:6)  { 
+  barplot(sort(spp[, i], decreasing = T)[1:10], las = 2, 
+          main = colnames(spp)[i])
+  legend("topright", legend = NA, title = paste("N species =", table(is.na(spp[, i]))[1], "    "), bty = "n")
+}
+
+dev.off()
+
 pc <- prcomp(mat, scale = T)
 summary(pc)
 plot(pc)
 biplot(pc)
+plot(pc$x[, 1], pc$x[, 2], type = "l")
+text(pc$x[, 1], pc$x[, 2], rownames(pc$x))
+
+# trends by area -----------------
+
+fin$area <- as.character(fin$area)
+
+table(fin$area, useNA = "always")
+
+fin$area[grep("ALTONA", fin$area)] <- "ALTONA"
+fin$area[grep("CHRISTIANSTED", fin$area)] <- "CHRISTIANSTED"
+fin$area[grep("RICHMOND", fin$area)] <- "CHRISTIANSTED"
+fin$area[grep("EAST END", fin$area)] <- "EAST END"
+fin$area[grep("FREDERIKSTED", fin$area)] <- "FREDERIKSTED"
+fin$area[grep("GALLOWS BAY", fin$area)] <- "GALLOWS BAY"
+fin$area[grep("KRAUSE LAGOON", fin$area)] <- "KRAUSE LAGOON"
+fin$area[grep("SALT RIVER", fin$area)] <- "SALT RIVER"
+fin$area[grep("TAGUE", fin$area)] <- "TAGUE BAY"
+fin$area[grep("LONG POINT", fin$area)] <- "SANDY POINT"
+fin$area[grep("SAINT CROIX", fin$area)] <- "UNK"
+fin$area[which(fin$area == "")] <- "UNK"
+
+table(fin$area, useNA = "always")
+
+mat <- table(fin$area, fin$gear)
+mat
+
+par(mar = c(20, 3, 1, 1))
+barplot(t(mat), col = cols25(7), args.legend = c(x = "topright"), legend.text = colnames(mat), las = 2)
+
+matp <- t(apply(mat, 1, function(x) x/sum(x)))
+barplot(t(matp), col = cols25(7), args.legend = c(x = "topright"), legend.text = colnames(mat), las = 2)
+
+dev.off()
+
+pc <- prcomp(matp, scale = T)
+summary(pc)
+plot(pc)
+biplot(pc, xlim = c(-0.5, 0.5), ylim= c(-0.5, 0.5))
+
+# NMDS to group landing sites by gear ----------------------------------
+
+z <- metaMDS(comm = matp, autotransform = FALSE, distance = "bray",
+             engine = "monoMDS", k = 2, weakties = TRUE, model = "global",
+             maxit = 300, try = 40, trymax = 100)
+print(z)
+z$stress
+gof <- goodness(object = z)
+plot(z, display = "sites", type = "none")
+points(z, display = "sites", cex = 2*gof/mean(gof))
+plot(z$diss, z$dist)
+stressplot(object = z, lwd = 5)
+
+png(filename = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/NMDSgear_STX.png", 
+    units="in", width = 5, height = 5, pointsize=12, res=72*2)
+par(mar = c(2, 2, 3, 2))
+
+z$points[1, 2] <- z$points[1, 2] * 1.1
+z$points[9, 2] <- z$points[9, 2] * 0.95
+plot(z$points[, 1], z$points[, 2], col = 0, axes = F, xlab = "", ylab = "", xlim = c(-1.2, 1.3), 
+     main = "Ordination of gear type usage by landing sites\nSt. Croix")
+text(z$points[, 1], z$points[, 2], rownames(z$points), cex = 0.75, col = gray(0.8))
+box()
+text(z$species[, 1], z$species[, 2], rownames(z$species), col = 1, font = 2)
+
+dev.off()
 
 ############################  END STX #################################
 
@@ -378,7 +549,7 @@ table(d$TRIP_TICKET_NUMBER_ED, useNA = "always")
 table(d$YEAR_LANDED, is.na(d$TRIP_TICKET_NUMBER_ED))  # no NAs after 2000
 table(d$YEAR_LANDED, d$TRIP_TICKET_NUMBER_ED == "")   # no empties after 2002
 
-#d <- dat[which(dat$YEAR_LANDED >= 2003), ]
+d <- dat[which(dat$YEAR_LANDED >= 2003), ]
 table(d$YEAR_LANDED)
 table(is.na(d$TRIP_TICKET_NUMBER_ED))
 table(d$TRIP_TICKET_NUMBER_ED == "")
@@ -462,15 +633,24 @@ tab2 <- table(d$ID, d$REGION)
 co <- apply(tab2, 1, which.max)
 areas <- colnames(tab2)[co]
 
+head(tab2, 20)        # check to see if correct
+areas[1:20]
+
+tab3 <- table(d$ID, d$MUNICIPALITY)
+co <- apply(tab3, 1, which.max)
+areas2 <- colnames(tab3)[co]
+
+head(tab3, 20)        # check to see if correct
+areas2[1:20]
+
 table(rownames(tab) == names(years))
 table(rownames(tab) == rownames(tab2))
 
-fin <- data.frame(rownames(tab), years, gears, areas)
-names(fin) <- c("id", "year", "gear", "area")
+fin <- data.frame(rownames(tab), years, gears, areas, areas2)
+names(fin) <- c("id", "year", "gear", "area", "municipality")
 head(fin)
 
 apply(fin, 2, table, useNA = "always")  # check no NAs
-
 
 # plot results -----------------------
 
@@ -486,12 +666,21 @@ mat[, c(4, 5)]
 byc <- rowSums(mat[, c(4, 5)]) / rowSums(mat)   # proportion of trips with non-selective gears
 plot(names(byc), byc, type = "l")
 
-par(mfrow = c(2,1), mar = c(5, 4, 2, 1))
-barplot(t(mat), col = cols25(5), args.legend = c(x = "topright", bty = "n", pt.cex = 0.8), 
-        legend.text = colnames(mat), las = 2, 
-        main = "Number of trips per year by gear type", ylim = c(0, 50000))
-plot(as.numeric(names(byc)), byc, type = "l", las = 2, xlab = "year", ylab = "proportion", main = "Proportion of trips with nets and traps")
+
+# plot trips and percent bycatch gears -------------------
+
+png(filename = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/gearTypes_PR.png", 
+    units="in", width = 6, height = 6, pointsize=12, res=72*2)
+
+par(mfrow = c(2,1), mar = c(2.5, 4, 2, 1))
+barplot(t(mat), col = cols25(7), args.legend = list(x = "topright", bty = "n", y.intersp = 0.8, ncol = 2), legend.text = colnames(mat), las = 2, 
+        main = "Number of trips per year by gear type\nPuerto Rico", ylim = c(0, 40000))
+abline(h=0)
+plot(as.numeric(names(byc)), byc, type = "l", las = 2, xlab = "", ylab = "proportion", main = "Proportion of trips with nets and traps", axes = F)
+axis(1); axis(2, las = 2); box()
 points(as.numeric(names(byc)), byc, pch = 20, cex = 1.2)
+
+dev.off()
 
 par(mfrow = c(2,2), mar = c(20, 3, 1, 0))
 barplot(table(fin$year), las = 2)
@@ -512,31 +701,93 @@ summary(pc)
 plot(pc)
 biplot(pc)
 
-mata <- table(fin$area, fin$gear)
-barplot(t(mata), col = cols25(7), args.legend = c(x = "topleft"), legend.text = colnames(mata))
+# trends by area -----------------
 
-pc <- prcomp(mata, scale = T)
+fin$municipality <- as.character(fin$municipality)
+table(fin$municipality, useNA = "always")
+
+fin$municipality[grep("AIBONITO", fin$municipality)] <- "UNK"
+fin$municipality[grep("VILLALBA", fin$municipality)] <- "UNK"
+fin$municipality[grep("ISLAND OF PUERTO RICO", fin$municipality)] <- "UNK"
+fin$municipality[grep("MISSIN", fin$municipality)] <- "UNK"
+fin$municipality[grep("ISLAND OF PUERTO RICO", fin$municipality)] <- "UNK"
+fin$municipality[grep("GUAYNABO", fin$municipality)] <- "SAN JUAN"
+fin$municipality[grep("TOA BAJA", fin$municipality)] <- "SAN JUAN"
+fin$municipality[grep("HATILLO", fin$municipality)] <- "ARECIBO"
+fin$municipality[is.na(fin$municipality)] <- "UNK"
+
+table(fin$municipality, useNA = "always")
+
+fin2 <- fin  # [which(fin$year >= 2011), ]
+mat <- table(fin2$municipality, fin2$gear)
+mat
+
+par(mar = c(10, 3, 1, 1))
+barplot(t(mat), col = cols25(7), args.legend = c(x = "topright"), legend.text = colnames(mat), las = 2)
+
+matp <- t(apply(mat, 1, function(x) x/sum(x)))
+barplot(t(matp), col = cols25(7), args.legend = c(x = "topright"), legend.text = colnames(mat), las = 2)
+
+pc <- prcomp(matp, scale = T)
 summary(pc)
 plot(pc)
 biplot(pc)
 
-lis <- c("NORTH", "EAST", "SOUTH", "WEST")
-nams <- c("BLL", "DIVING", "LINE", "NETS", "TRAPS")
+windows()
 
-par(mfrow = c(4, 2), mar = c(3, 3, 1, 1) + 1)
-for(i in 1:4)  { 
-  fin1 <- fin[which(fin$area == lis[i]), ]
-  mat <- table(fin1$year, fin1$gear)
-  if (i == 2) { barplot(t(mat), col = cols25(7), args.legend = c(x = "topright", bty = "n"), legend.text = colnames(mat), main = lis[i]) }
-  if (i != 2) { barplot(t(mat), col = cols25(7), main = lis[i]) }
-  mat1 <- as.data.frame((cbind(as.numeric(rownames(mat)), mat)))
-  pc <- plotOrdScores(mat1, main = lis[i])
-  text(pc$rotation[, 1]*2, pc$rotation[, 2]*2, nams, col = gray(0.5))
-  print(pc$x)
-  }
+# NMDS to group landing sites by gear ----------------------------------
+
+z <- metaMDS(comm = matp, autotransform = FALSE, distance = "bray",
+             engine = "monoMDS", k = 3, weakties = TRUE, model = "global",
+             maxit = 300, try = 40, trymax = 100)
+print(z)
+z$stress
+gof <- goodness(object = z)
+plot(z, display = "sites", type = "none")
+points(z, display = "sites", cex = 2*gof/mean(gof))
+plot(z$diss, z$dist)
+stressplot(object = z, lwd = 5)
+
+lis <- rownames(z$points)
+lis[which(lis %in% WEST)] <- 4
+lis[which(lis %in% EAST)] <- 2
+lis[which(lis %in% NORTH)] <- 1
+lis[which(lis %in% SOUTH)]<- 3
+lis <- as.numeric(lis)
+lis[is.na(lis)] <- 7
+
+png(filename = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/NMDSgear_PR.png", 
+    units="in", width = 5, height = 5, pointsize=12, res=72*2)
+par(mar = c(2, 2, 3, 2))
+
+plot(z$points[, 1], z$points[, 2], col = 0, axes = F, xlab = "", ylab = "", xlim = c(-1.1, 1), 
+     main = "Ordination of gear type usage by landing sites\nPuerto Rico")
+text(z$points[, 1], z$points[, 2], rownames(z$points), cex = 0.75, col = lis + 1)
+box()
+z$species[1, 2] <- z$species[1, 2] * 0.95
+z$species[3, 2] <- z$species[3, 2] * 1.2
+text(z$species[, 1], z$species[, 2], rownames(z$species), col = 1, cex = 1.1, font = 2)
+legend("bottomleft", c("NORTH", "EAST", "SOUTH", "WEST"), text.col = 2:5, cex = 1.05, bty = "n")
+
+dev.off()
 
 ############################  END PR  #################################
 
+
+#lis <- c("NORTH", "EAST", "SOUTH", "WEST")
+#nams <- c("BLL", "DIVING", "LINE", "NETS", "TRAPS")
+
+#par(mfrow = c(4, 2), mar = c(3, 3, 1, 1) + 1)
+#for(i in 1:4)  { 
+#  fin1 <- fin[which(fin$area == lis[i]), ]
+#  mat <- table(fin1$year, fin1$gear)
+#  if (i == 2) { barplot(t(mat), col = cols25(7), args.legend = c(x = "topright", bty = "n"), legend.text = colnames(mat), main = lis[i]) }
+#  if (i != 2) { barplot(t(mat), col = cols25(7), main = lis[i]) }
+#  mat1 <- as.data.frame((cbind(as.numeric(rownames(mat)), mat)))
+#  pc <- plotOrdScores(mat1, main = lis[i])
+#  text(pc$rotation[, 1]*2, pc$rotation[, 2]*2, nams, col = gray(0.5))
+#  print(pc$x)
+#}
 
 
 

@@ -117,6 +117,9 @@ rm(list = ls()[-match(c("final_PR", "styear", "enyear"), ls())])
 
 dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STT_landings.csv")
 
+
+# adjust to fishing year ---------------------------------------
+
 dat$TRIP_YEARold <- dat$TRIP_YEAR
 dat$TRIP_MONTHold <- dat$TRIP_MONTH
 aa <- which(dat$TRIP_MONTH < 7)
@@ -256,6 +259,8 @@ rm(list = ls()[-match(c("final_PR", "final_ST", "styear", "enyear"), ls())])
 
 dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STX_072011_present_LANDINGS_trip_2021-03-11.csv")
 head(dat)
+
+# adjust to fishing year ---------------------------------------
 
 dat$TRIP_YEARold <- dat$TRIP_YEAR
 dat$TRIP_MONTHold <- dat$TRIP_MONTH
