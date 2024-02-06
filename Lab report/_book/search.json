@@ -16,8 +16,15 @@
   {
     "objectID": "OA.html",
     "href": "OA.html",
-    "title": "Ocean acificiation indicator",
+    "title": "Ocean acidification indicator",
     "section": "",
     "text": "Sent by F. Gomez on 02/19/2023\nNotes from Fabian:\nderived surface omega series from the MOM-Topaz hindcast 0.10deg resolution model *txt files have this structure: column1: year, column2=month, and column3=carbon system variable The mean magnitude of the simulated omega trends, around 9e-3 year-1, is consistent with observed trends in the Subtropical North Atlantic\nQuestion: What is causing the acceleration after 2008?\nAnswer: made a Taylor decomposition to figure out what was driving that acceleration in the simulated ??Ar anomaly. Interannual ??Ar changes were mostly driven by the balance between dic and alkalinity. There was a positive trend from the 1980s until mid 2000s, which contributed to moderate the ??Ar decline. But that trend vanished in the last 15 years or so, which probably has to do with this accelerated decline in ??Ar in the last decade.\n\nlibrary(plotTimeSeries)\nlibrary(spam)\n\n\nrm(list = ls())\n\ndat &lt;- read.table(\"../indicator_data/surface_omega_series.txt\", skip = 0, header = F)\nhead(dat)\ntail(dat)\ndat$dates &lt;- paste0(month.abb[dat$V2], dat$V1)\n\nFormat indicator object\n\ndatdata &lt;- dat$dates \ninddata &lt;- data.frame(dat$V3) \nlabs &lt;- c(\"Ocean acidification\", \"Surface aragonite saturation\", \"\") \nindnames &lt;- data.frame(matrix(labs, nrow = 3, byrow = F)) \ns &lt;- list(labels = indnames, indicators = inddata, datelist = datdata)\nclass(s) &lt;-\"indicatordata\"\n\nSave and plot\n\nplotIndicatorTimeSeries(s)\n\n\n\ninddata &lt;- s \nsave(inddata, file = \"OA_test.RData\")"
+  },
+  {
+    "objectID": "index.html#some-notes",
+    "href": "index.html#some-notes",
+    "title": "Caribbean ESR Lab Report",
+    "section": "Some notes",
+    "text": "Some notes\nThis lab report was created the following way:\n\nclone the Caribbean ESR repo into my R studio\ncreate a new folder in the repo called “Lab report”\ncreate 2 files, one called “index.qmd” and abother called “_quarto.txt” within the Lab report folder\nrename the “_quarto.txt” file to “_quarto.yml” in file explorer to change it into the book YAML\npopulate the YAML document\n\nNote: this works great for rendering the quarto book as an html file. I can’t figure out how to render it as a pdf though. This is not really necessary for the lab report but something to keep in mind."
   }
 ]

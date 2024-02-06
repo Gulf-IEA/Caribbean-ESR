@@ -16,7 +16,13 @@ book:
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme: flatly
     number-sections: false
     output: false
+  pdf:
+    documentclass: scrreprt
+    toc: true
+    number-sections: false
+    output: false
+
+editor: visual

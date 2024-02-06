@@ -1,7 +1,19 @@
 ## ESR Lab Reports
 
-ESR lab reports are quarto books that compile the R scripts for each indicator as well as any other descriptions of how the ESR will be put together. 
+ESR lab reports are quarto books that compile the R scripts for each indicator as well as any other descriptions of how the ESR will be put together.
 
 ## Caribbean ESR
 
 This lab report is for the Caribbean ESR that was compiled from 2023-2024. This is the first ESR for the Caribbean region. Here we can add more text about why this ESR is being compiled.
+
+## Some notes
+
+This lab report was created the following way:
+
+1.  clone the Caribbean ESR repo into my R studio
+2.  create a new folder in the repo called "Lab report"
+3.  create 2 files, one called "index.qmd" and abother called "_quarto.txt" within the Lab report folder
+4.  rename the "_quarto.txt" file to "_quarto.yml" in file explorer to change it into the book YAML
+5.  populate the YAML document 
+
+Note: this works great for rendering the quarto book as an html file. I can't figure out how to render it as a pdf though. This is not really necessary for the lab report but something to keep in mind. 
