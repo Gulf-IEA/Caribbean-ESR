@@ -13,14 +13,23 @@ book:
 format:
   html:
     theme: flatly
-    number-sections: false
     output: true
     echo: false
-  pdf:
-    documentclass: scrreprt
-    toc: true
+  titlepage-pdf:
+    documentclass: scrbook
+    classoption: ["oneside", "open=any"]
     number-sections: false
-    output: true
+    toc: true
+    lof: true
+    lot: true
+    titlepage: "bg-image"
+    titlepage-bg-image: "_extensions/nmfs-opensci/titlepage/images/corner-bg.png"
+    titlepage-logo: "_extensions/nmfs-opensci/titlepage/images/logo.png"
+    titlepage-header: "The Publisher"
+    titlepage-footer: |
+      NOAA Fisheries OpenSci\
+      Tools for Open Science\
+      [https://github.com/nmfs-opensci](https://github.com/nmfs-opensci)\
     echo: false
 
 editor: visual
