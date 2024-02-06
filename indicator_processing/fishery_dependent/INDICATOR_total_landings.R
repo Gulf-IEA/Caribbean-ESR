@@ -18,6 +18,8 @@ table(dat$YEAR_LANDED)
 # check multiplier adjustments -------------------------
 
 summary(dat$xADJ == dat$POUNDS_LANDED * 1/dat$CORRECTION_FACTOR)
+hist(dat$xADJ - (dat$POUNDS_LANDED * 1/dat$CORRECTION_FACTOR))
+max(abs(dat$xADJ - (dat$POUNDS_LANDED * 1/dat$CORRECTION_FACTOR)), na.rm = T)
 
 # subset years------------------------------------------
 d <- dat[which(dat$YEAR_LANDED >= styear & dat$YEAR_LANDED <= enyear), ]

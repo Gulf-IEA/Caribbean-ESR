@@ -43,7 +43,6 @@ legend("topright", rownames(tab)[1:10], col = 1:10, lty = c(1, 1, 1, 1, 1, 2, 2,
 abline(v = 1999)   # 2000 is data-rich period
 
 styear <- 2011
-
 d <- d[which(d$TRIP_YEAR >= styear), ]  # cut out because very little data beforehand
 
 yrs <- styear:enyear
@@ -55,10 +54,18 @@ par(mar = c(4, 4, 1, 1)+1)
 matplot(yrs, t(tab[1:10, ]), type = "l", col = 1:10, lty = c(1, 1, 1, 1, 1, 2, 2, 2, 2, 2), lwd = 2)
 legend("topright", rownames(tab)[1:10], col = 1:10, lty = c(1, 1, 1, 1, 1, 2, 2, 2, 2, 2), lwd = 2)
 
-tab2 <- tab[1:10, ]
-for (i in 1:ncol(tab)) {  tab2[, i] <- tab[1:10, i] / sum(tab[1:10, i], na.rm = T)   }
-barplot(tab2, col = glasbey(10), xlim = c(0, 56), legend.text = rownames(tab2), args.legend = c(x = "right"))
+tab2 <- apply(tab[1:10, ], 2, function(x) x/sum(x))
+barplot(tab2, col = glasbey(10), xlim = c(0, ncol(tab2)*2), legend.text = rownames(tab2), args.legend = c(x = "right"))
 
+# remove bad price values -----------------------
+
+hist(d$PRICE)
+which(d$PRICE > 15)
+d$SPECIES_NM[which(d$PRICE > 15)]
+hist(d$PRICE[which(d$PRICE > 15)])
+#d$PRICE[which(d$PRICE > 15)] <- NA
+
+table(is.na(d$PRICE), d$SPECIES_NM)
 
 # pull in reference file and merge ------------------------------------
 
@@ -74,33 +81,86 @@ db <- merge(d, ref, by.x = "SPECIES_NM", by.y = "COMname", all.x = TRUE)
 dim(d)
 dim(db)
 which(is.na(db$SPECIES_NM))
+head(db)
+
+# insert missing prices -------------------------------
+
+par(mar = c(8, 1, 1, 1)+2)
+barplot(sort(tapply(db$PRICE, db$famcode, mean, na.rm = T), decreasing = T), las = 2, 
+        main = "average price by family")
+
+table(is.na(db$PRICE), db$SPECIES_NM)
+table(is.na(db$PRICE), db$famcode)
+
+for (i in unique(db$famcode))  {
+  m <- mean(db$PRICE[which(db$famcode == i)], na.rm = T)
+  db$PRICE[which(db$famcode == i & is.na(db$PRICE))] <- m
+}
+
+table(is.na(db$PRICE), db$famcode)
+barplot(sort(tapply(db$PRICE, db$famcode, mean, na.rm = T), decreasing = T), las = 2, 
+        main = "average price by family")
+
+mean(db$PRICE[which(db$famcode == "lobsters")])  # lobster price: 7.026267 - for imputing into STX
+
+db$REV <- db$POUNDS_LANDED * db$PRICE
+
+# plot % landings and % revenue ----------------------
+
+nsp <- 10
+cols <- glasbey(nsp)
+
+# by landings 
 
 tab <- tapply(db$POUNDS_LANDED, list(db$famcode, db$TRIP_YEAR), sum, na.rm = T)
 tab <- tab[order(rowSums(tab, na.rm = T), decreasing = T), ]
-head(tab, 15)
-
-nsp <- 15
-cols <- glasbey(nsp)
 
 par(mar = c(4, 4, 1, 1)+1)
 matplot(yrs, t(tab[1:nsp, ]), type = "l", col = cols, lty = rep(1:3, (nsp/3)), lwd = 2)
 legend("topright", rownames(tab)[1:nsp], col = cols, lty = rep(1:3, (nsp/3)), lwd = 2)
 
-tab2 <- tab[1:(nsp-1), ]
+tab2 <- tab[1:(nsp - 1), ]
 tab2 <- rbind(tab2, colSums(tab[nsp:nrow(tab), ], na.rm = T))
 rownames(tab2)[nsp] <- "other"
 
-tab3 <- tab2
-for (i in 1:ncol(tab2)) {  tab3[, i] <- tab2[, i] / sum(tab2[, i], na.rm = T)   }
+tab3 <- apply(tab2, 2, function(x) x/sum(x))
+#cols[which(rownames(tab3) == "UNID")] <- "white"
+barplot(tab3, col = cols, xlim = c(0, 18), legend.text = rownames(tab3), args.legend = c(x = "right"), las = 2)
 
-cols[which(rownames(tab3) == "UNID")] <- "white"
-barplot(tab3, col = cols, xlim = c(0, 18), legend.text = rownames(tab2), args.legend = c(x = "right"), las = 2)
+# by revenue 
 
-#png(filename="PR_proportion_landings.png", units="in", width=8, height=5, pointsize=12, res=72*10)
-#barplot(tab3[, 23:38], col = cols, xlim = c(0, 23), legend.text = rownames(tab2), args.legend = c(x = "right", bty = "n"), las = 2, space = 0, border = NA, 
-#        xlab = "", ylab = "proportion of catch", main = "Puerto Rico landings composition by year                                ")
-#abline(h = 0)
+tab <- tapply(db$REV, list(db$famcode, db$TRIP_YEAR), sum, na.rm = T)
+tab <- tab[order(rowSums(tab, na.rm = T), decreasing = T), ]
+
+matplot(yrs, t(tab[1:nsp, ]), type = "l", col = cols, lty = rep(1:3, (nsp/3)), lwd = 2)
+legend("topright", rownames(tab)[1:nsp], col = cols, lty = rep(1:3, (nsp/3)), lwd = 2)
+
+tab2 <- tab[1:(nsp - 1), ]
+tab2 <- rbind(tab2, colSums(tab[nsp:nrow(tab), ], na.rm = T))
+rownames(tab2)[nsp] <- "other"
+
+tabr <- apply(tab2, 2, function(x) x/sum(x))
+
+colgd <- read.csv("cols.csv", header = F) 
+
+barplot(tabr, col = as.character(colgd$V2[match(rownames(tabr), colgd$V1)]), 
+        xlim = c(0, ncol(tabr)*1.8), legend.text = rownames(tabr), args.legend = c(x = "right"), las = 2)
+
+plot(tab3, tabr)
+
+png(filename="C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/per_landings_STT.png", 
+    units="in", width=7, height=4.5, pointsize=12, res=72*10)
+
+barplot(tabr, col = as.character(colgd$V2[match(rownames(tabr), colgd$V1)]), 
+        xlim = c(0, ncol(tabr)*1.9), legend.text = rownames(tabr), 
+        args.legend = c(x = "right", bty = "n", title = "St. Thomas and St. John", border = NA), 
+        las = 2, border = NA, axes = F, xlab = "", ylab = "percent of total revenue")
+axis(2, at = seq(0, 1, 0.2), lab = paste0(seq(0, 100, 20), "%"), las = 2)
+abline(h = 0)
+
 dev.off()
+
+# calcuate P:D ratio and Lmax  -----------------------------------
 
 #table(db$SPECIES_NM == db$COMname)
 table(db$SPECIES_NM[which(is.na(db$Lmax))])
