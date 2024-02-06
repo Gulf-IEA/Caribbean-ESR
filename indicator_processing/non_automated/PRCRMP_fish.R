@@ -4,7 +4,7 @@
 #
 # data access at: https://www.coris.noaa.gov/search/catalog/main/home.page
 # or direct access thru ncei: https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.nodc:0204647
-# automatic download via HTTP: https://www.nodc.noaa.gov/archive/arc0147/0204647/4.4/data/0-data/
+# automatic download via HTTP: https://www.nodc.noaa.gov/archive/arc0147/0204647/
 #
 # last data download: Feb 6, 2024
 ################################################################################
@@ -29,16 +29,35 @@
 
 rm(list = ls())
 
-urlf <- "https://www.nodc.noaa.gov/archive/arc0147/0204647/4.4/data/0-data/PRCRMP_Fish-Invert Abundance_data_1999-2021_(updated_12-6-2021).csv"
+# download data -------------------------------
+
+urlf <- "https://www.nodc.noaa.gov/archive/arc0147/0204647/5.5/data/0-data/PRCRMP_Fish-Invert_Abundance_data_1999-2023_(updated_11-30-2023).csv"
 fish <- read.csv(urlf, stringsAsFactors = F)
 
-urlfi <- "https://www.nodc.noaa.gov/archive/arc0147/0204647/4.4/data/0-data/PRCRMP_Fish-Invert Size-Freq_data_1999-2021_(updated_12-6-2021).csv"
+urlfi <- "https://www.nodc.noaa.gov/archive/arc0147/0204647/5.5/data/0-data/PRCRMP_Fish-Invert_Size-Freq._data_2004-2023_(updated_11-30-2023).csv"
 siz <- read.csv(urlfi, stringsAsFactors = F)
 
-tail(fish$YEAR, 20)
-fish <- fish[-which(is.na(fish$YEAR)), ]
 
-fish$LOCATION[which(fish$LOCATION == "Mayagüez")] <- "Mayaguez"
+fish <- read.csv("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/PRCRMP/PRCRMP_Fish-Invert_Abundance_data_1999-2023_(updated_11-30-2023).csv", 
+            stringsAsFactors = F)
+
+siz <- read.csv("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/PRCRMP/PRCRMP_Fish-Invert_Size-Freq._data_2004-2023_(updated_11-30-2023).csv", 
+            stringsAsFactors = F)
+
+met <- read.csv("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/PRCRMP/PRCRMP_Site_Classification_Database_(11-25-2023).csv", 
+                stringsAsFactors = F)
+sitelis <- met$Site.Name
+sitelis
+
+# start analysis -----------------------------
+
+tail(fish$YEAR, 20)
+#fish <- fish[-which(is.na(fish$YEAR)), ]
+
+table(fish$LOCATION)
+table(fish$DEPTH.ZONE)
+
+#fish$LOCATION[which(fish$LOCATION == "Mayagüez")] <- "Mayaguez"
 fish$DEPTH.ZONE[grep("mediate", fish$DEPTH.ZONE)] <- "intermediate"
 fish$DEPTH.ZONE[grep("photic", tolower(fish$DEPTH.ZONE))] <- "mesophotic"
 fish$DEPTH.ZONE[grep("ery", fish$DEPTH.ZONE)] <- "very shal"
@@ -49,30 +68,51 @@ apply(fish[1:10], 2, table)
 num <- NA
 for (i in 1:ncol(fish)) { num[i] <- length(which(fish[, i] == ""))  } 
 table(num)
-names(fish)[num > 12]  # these are all inverts - remove
-invlis <- names(fish)[num > 12] 
 
-fish <- fish[-which(names(fish) %in% invlis)]
+names(fish)[num > 12]  # these are all inverts - remove - only worked for v. 4.4 
+#invlis <- names(fish)[num > 12] 
 
-num <- NA
-for (i in 1:nrow(fish)) { num[i] <- length(which(fish[i, ] == ""))  }
-table(num)
-dim(fish); length(num)
-fish <- fish[which(num < 200), ]
+invlis <- c("Ancylomenes.pedersoni", "Anomura.spp.", "Astrophyton.muricatum", "Carpilius.corallinus", "Coralliophila.salebrosa",
+    "Coralliophila.spp.", "Ctenoides.scaber", "Cyphoma.gibbosum", "Maguimithrax.spinosissimus", "Diadema.antillarum", "Echinometra.lucunter",
+    "Echinometra.spp.", "Echinometra.viridis", "Eucidaris.tribuloides", "Gastropoda.spp.", "Grapsus.spp.", "Hermodice.carunculata", 
+    "Holothuria..Halodeima..mexicana", "Isostichopus.badionotus", "Aliger.gigas", "Octopus.vulgaris", "Ophioderma.spp.", "Ophiothrix..Acanthophiothrix..suensonii",
+    "Paguristes.spp.", "Pagurus.spp.", "Panulirus.argus", "Panulirus.guttatus", "Percnon.gibbesi", "Periclimenes.spp.", "Pteria.columbus",
+    "Scyllarides.spp.", "Stenopus.hispidus", "Stenorhynchus.seticornis", "Stramonita.rustica", "Tripneustes.ventricosus")
+
+which(names(fish) %in% invlis)
 dim(fish)
-fish <- fish[-which(names(fish) == "X")]
+fish <- fish[-which(names(fish) %in% invlis)]
+dim(fish)
 
-siz <- siz[-which(is.na(siz$YEAR)), ]
+# correction for data v.4.4 - no longer necessary? ------
 
+which(fish == "")
+#num <- NA
+#for (i in 1:nrow(fish)) { num[i] <- length(which(fish[i, ] == ""))  }
+#table(num)
+#dim(fish); length(num)
+#fish <- fish[which(num < 200), ]
+#dim(fish)
+#fish <- fish[-which(names(fish) == "X")]
+
+table(is.na(siz$YEAR))
+#siz <- siz[-which(is.na(siz$YEAR)), ]
+
+# check labels and correct ------------------------------------------
+table(siz$LOCATION)
+table(siz$DEPTH.ZONE)
 siz$LOCATION[which(siz$LOCATION == "Mayagüez")] <- "Mayaguez"
 siz$DEPTH.ZONE[grep("mediate", siz$DEPTH.ZONE)] <- "intermediate"
 siz$DEPTH.ZONE[grep("photic", tolower(siz$DEPTH.ZONE))] <- "mesophotic"
 siz$DEPTH.ZONE[grep("ery", siz$DEPTH.ZONE)] <- "very shal"
 siz$DEPTH.ZONE[grep("hallow", siz$DEPTH.ZONE)] <- "shallow"
+table(siz$DEPTH.ZONE, useNA = "always")
+table(siz$LOCATION, useNA = "always")
 
-apply(siz[1:10], 2, table)
+apply(siz[1:10], 2, table, useNA = "always")
 
-# get top landed species -----------------
+# get top landed species from logbook ------------------------------------
+
 d <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20.csv")
 d <- d[which(d$YEAR_LANDED >= 2003 & d$YEAR_LANDED <= 2020), ]
 table(d$YEAR_LANDED, useNA = "always")
@@ -85,21 +125,19 @@ quantile(tapply(d$ADJUSTED_POUNDS, d$ITIS_SCIENTIFIC_NAME, sum, na.rm = T), prob
 quantile(tapply(d$ADJUSTED_POUNDS, d$ITIS_SCIENTIFIC_NAME, sum, na.rm = T), probs = c(0.5))  
 
 splis <- names(which(sort(tapply(d$ADJUSTED_POUNDS, d$ITIS_SCIENTIFIC_NAME, sum, na.rm = T)) > 1068.57))
+splis[grep(" ", splis)]
 splis[-grep(" ", splis)]
 splis <- splis[grep(" ", splis)]
+splis
 splis <- splis[1:79]
 splis
-splis <- c(splis, "Carangoides bartholomaei", "Haemulon plumierii", "Trachinotus blochii", "Pristipomoides aquilonaris", "Mugil cephalus", "Epinephelus adscensionis",  "Epinephelus spp.")
+splis <- c(splis, "Carangoides bartholomaei", "Haemulon plumierii", "Trachinotus blochii", "Pristipomoides aquilonaris", 
+           "Mugil cephalus", "Epinephelus adscensionis",  "Epinephelus spp.")
 
 splis2 <- as.vector(sapply(splis, function(x) gsub(" ", ".", x)))
 
-splis2[which(splis2 %in% names(fish))]
-sort(splis2[-which(splis2 %in% names(fish))])
-
-# run separately for STX and STT/STJ
-#sitelis <- met$Location[which(met$YearAdded < 2005)]
-#sitelis <- met$Location[which(met$YearAdded < 2005 & met$Island == "STX")]; island <- "STX"  # for STX
-#sitelis <- met$Location[which(met$YearAdded < 2005 & met$Island != "STX")]; island <- "STT" # for STT/STJ
+splis2[which(splis2 %in% names(fish))]         # these species are in the PRCRMP database
+sort(splis2[-which(splis2 %in% names(fish))])  # these species are not in PRCRMP
 
 splis2 <- splis2[which(splis2 %in% names(fish))]
 splis2
@@ -108,26 +146,27 @@ yrs <- sort(unique(fish$YEAR))
 
 apply(fish[1:10], 2, table)
 
-#fish <- fish[which(fish$Location %in% sitelis), ]
+names(fish)
+names(fish)[which(names(fish) == "Abudefduf.saxatilis"): (ncol(fish))]
 
-# run separately for fished and not fished
-fish2 <- fish[which(names(fish) == "Abudefduf.saxatilis"): (ncol(fish)-1)];  grp <- "oth" # unfished
-#fish2 <- fish[which(names(fish) %in% splis2)]; grp <- "com"  # fished
+# run separately for fished and not fished -------------------------------
 
+#fish2 <- fish[which(names(fish) == "Abudefduf.saxatilis"): (ncol(fish))];  grp <- "oth" # unfished
+fish2 <- fish[which(names(fish) %in% splis2)]; grp <- "com"  # fished
+
+names(fish2)
+
+# calculate total fish density by site ---------------------------------
 fish$dens <- NA
 for (i in 1:nrow(fish2)) {  fish$dens[i] <- sum(as.numeric(fish2[i, ]))   }
 hist(fish$dens)
-table(fish$dens)
+table(fish$dens, useNA = "always")
 
 table(fish$SITE.NAME, fish$YEAR)
 
-# modular analysis - change variable here! 
+# analysis of average fish density ------------------------------------
 
-varint <- "density"
-#varint <- "percov"
-
-if (varint == "density")  {  fish$var <- log(fish$dens+0.001)  }
-#if (varint == "percov")  {  fish$var <-    }
+fish$var <- log(fish$dens+0.001)  
 
 hist(fish$var)
 
@@ -152,24 +191,27 @@ anova(out)
 out1 <- lmer(var ~ YEAR + (1 | SITE.NAME) + 0, data = fish)
 summary(out1)
 anova(out1)
-summary(out1)$coef[1: length(yrs), 1]
+summary(out1)$coef[, 1]
 
-mod <- summary(out1)$coef[1:length(yrs), 1]
-modse <- summary(out1)$coef[1:length(yrs), 2]
+mod <- summary(out1)$coef[, 1]
+modse <- summary(out1)$coef[, 2]
 
-plot(yrs, ind, ylim = c(min(ind) - 1, max(ind + 1)))
-lines(yrs, ind + indse, lty = 2, col = 1)
-lines(yrs, ind - indse, lty = 2, col = 1)
-
+plot(yrs, (ind), ylim = c(min(ind) - 1, max(ind + 1)))
+lines(yrs, (ind + indse), lty = 2, col = 1)
+lines(yrs, (ind - indse), lty = 2, col = 1)
 points(yrs, mod, col = 2)
 lines(yrs, mod + modse, col = 2, lty = 2)
 lines(yrs, mod - modse, col = 2, lty = 2)
 
 cor(ind, mod)
 
-#if (varint == "sprich")  {  save(out1, file = "coralspprich_PR.RData")  }
-#if (varint == "percov")  {  save(out1, file = "percoralcov_PR.RData")   }
+save(out1, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/PRCRMP/fish_density_PR.RData")
 
+############ NOT FINALIZED BELOW 
+############ COPIED OVER FROM TRCRMP BUT NEED TO MODIFY FOR PR DATA
+# size-based indicators -------------------------------------
+
+# set up empty matrix to put fish length data in ------------
 v1 <- rep(sitelis, length(yrs))
 v2 <- sort(rep(yrs, length(sitelis)))
 mat <- matrix(data = NA, nrow = length(v1), ncol = length(names(fish)[11:21]))
@@ -266,30 +308,4 @@ fin <- cbind(ind, indse)
 
 #filenam <- paste0("slopeSizeSpectrum_", grp, ".RData")
 #save(fin, file = filenam)
-
-metric <- log(mat$total)
-
-ind <- tapply(metric, mat$yr, mean, na.rm = T)
-indse <- tapply(metric, mat$yr, sd, na.rm = T)
-
-out <- lm(metric ~ mat$yr + mat$Island + mat$ReefComplex + mat$Depth)
-summary(out)
-anova(out)
-
-out <- lm(metric ~ mat$yr + mat$Island + mat$ReefComplex + mat$Depth + 0)
-summary(out)
-anova(out)
-
-stind <- summary(out)$coef[1:19, 1]
-stindse <- summary(out)$coef[1:19, 2]
-
-plot(as.numeric(names(ind)), ind, ylim = c(max(ind) + 1, min(ind)-1))
-lines(as.numeric(names(ind)), ind + indse, lty = 2)
-lines(as.numeric(names(ind)), ind - indse, lty = 2)
-
-points(as.numeric(names(ind)), stind, col = 2)
-lines(as.numeric(names(ind)), stind + stindse, lty = 2, col = 2)
-lines(as.numeric(names(ind)), stind - stindse, lty = 2, col = 2)
-
-cor(ind, stind)
 
