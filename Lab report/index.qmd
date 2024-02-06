@@ -1,9 +1,3 @@
----
-title: "index"
-format: html
-editor: visual
----
-
 ## ESR Lab Reports
 
 ESR lab reports are quarto books that compile the R scripts for each indicator as well as any other descriptions of how the ESR will be put together. 

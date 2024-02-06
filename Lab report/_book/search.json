@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html#esr-lab-reports",
+    "href": "index.html#esr-lab-reports",
+    "title": "Caribbean ESR Lab Report",
+    "section": "ESR Lab Reports",
+    "text": "ESR Lab Reports\nESR lab reports are quarto books that compile the R scripts for each indicator as well as any other descriptions of how the ESR will be put together."
+  },
+  {
+    "objectID": "index.html#caribbean-esr",
+    "href": "index.html#caribbean-esr",
+    "title": "Caribbean ESR Lab Report",
+    "section": "Caribbean ESR",
+    "text": "Caribbean ESR\nThis lab report is for the Caribbean ESR that was compiled from 2023-2024. This is the first ESR for the Caribbean region. Here we can add more text about why this ESR is being compiled."
+  },
+  {
+    "objectID": "OA.html",
+    "href": "OA.html",
+    "title": "Ocean acificiation indicator",
+    "section": "",
+    "text": "Sent by F. Gomez on 02/19/2023\nNotes from Fabian:\nderived surface omega series from the MOM-Topaz hindcast 0.10deg resolution model *txt files have this structure: column1: year, column2=month, and column3=carbon system variable The mean magnitude of the simulated omega trends, around 9e-3 year-1, is consistent with observed trends in the Subtropical North Atlantic\nQuestion: What is causing the acceleration after 2008?\nAnswer: made a Taylor decomposition to figure out what was driving that acceleration in the simulated ??Ar anomaly. Interannual ??Ar changes were mostly driven by the balance between dic and alkalinity. There was a positive trend from the 1980s until mid 2000s, which contributed to moderate the ??Ar decline. But that trend vanished in the last 15 years or so, which probably has to do with this accelerated decline in ??Ar in the last decade.\n\nlibrary(plotTimeSeries)\nlibrary(spam)\n\n\nrm(list = ls())\n\ndat &lt;- read.table(\"../indicator_data/surface_omega_series.txt\", skip = 0, header = F)\nhead(dat)\ntail(dat)\ndat$dates &lt;- paste0(month.abb[dat$V2], dat$V1)\n\nFormat indicator object\n\ndatdata &lt;- dat$dates \ninddata &lt;- data.frame(dat$V3) \nlabs &lt;- c(\"Ocean acidification\", \"Surface aragonite saturation\", \"\") \nindnames &lt;- data.frame(matrix(labs, nrow = 3, byrow = F)) \ns &lt;- list(labels = indnames, indicators = inddata, datelist = datdata)\nclass(s) &lt;-\"indicatordata\"\n\nSave and plot\n\nplotIndicatorTimeSeries(s)\n\n\n\ninddata &lt;- s \nsave(inddata, file = \"OA_test.RData\")"
+  }
+]

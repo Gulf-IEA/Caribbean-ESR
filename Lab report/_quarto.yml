@@ -5,24 +5,18 @@ book:
   title: "Caribbean ESR Lab Report"
   author: "Carissa Gervasi"
   date: "2/6/2024"
-  
 
   chapters:
-    - index.qmd
-    - part: "Part 1: Indicators"
+    - part: "Part 1: Intro"
+      chapters: 
+        - index.qmd
+    - part: "Part 2: Indicators"
       chapters:
-      - OA.qmd
-    - part: "Second Part"
-      chapters:
-      - Products/Products.qmd
-    - references.qmd
-
-bibliography: references.bib
+        - OA.qmd
 
 format:
   html:
-    theme: flatly
-  pdf:
-    documentclass: scrreprt
-
-editor: visual
+    theme: cosmo
+    css: styles.css
+    number-sections: false
+    output: false
