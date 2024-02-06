@@ -2,27 +2,25 @@ project:
   type: book
 
 book:
-  title: "Caribbean ESR Lab Report"
+  title: "Ecosystem Status Report - Caribbean"
   author: "Carissa Gervasi"
   date: "2/6/2024"
 
   chapters:
-    - part: "Part 1: Intro"
-      chapters: 
-        - index.qmd
-    - part: "Part 2: Indicators"
-      chapters:
-        - Report_book_files/OA.qmd
+    - index.qmd
+    - Report_book_files/Report4.qmd
 
 format:
   html:
     theme: flatly
     number-sections: false
-    output: false
+    output: true
+    echo: false
   pdf:
     documentclass: scrreprt
     toc: true
     number-sections: false
-    output: false
+    output: true
+    echo: false
 
 editor: visual
