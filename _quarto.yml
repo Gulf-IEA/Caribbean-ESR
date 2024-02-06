@@ -1,0 +1,26 @@
+project:
+  type: book
+
+book:
+  title: "Ecosystem Status Report - Caribbean"
+  author: "Carissa Gervasi"
+  date: "2/6/2024"
+
+  chapters:
+    - index.qmd
+    - Report_book_files/Report4.qmd
+
+format:
+  html:
+    theme: flatly
+    number-sections: false
+    output: true
+    echo: false
+  pdf:
+    documentclass: scrreprt
+    toc: true
+    number-sections: false
+    output: true
+    echo: false
+
+editor: visual
