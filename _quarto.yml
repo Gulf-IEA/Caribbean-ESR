@@ -12,7 +12,7 @@ book:
         - index.qmd
     - part: "Part 2: Indicators"
       chapters:
-        - OA.qmd
+        - Lab-report/OA.qmd
 
 format:
   html:
