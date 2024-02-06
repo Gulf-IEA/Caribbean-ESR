@@ -1,0 +1,14 @@
+{
+  "hash": "e689c5f9263022dd5ee70a83347bdcd8",
+  "result": {
+    "markdown": "## ESR Lab Reports\n\nESR lab reports are quarto books that compile the R scripts for each indicator as well as any other descriptions of how the ESR will be put together. \n\n## Caribbean ESR\n\nThis lab report is for the Caribbean ESR that was compiled from 2023-2024. This is the first ESR for the Caribbean region. Here we can add more text about why this ESR is being compiled.\n\n\n::: {.cell warnings='false'}\n\n```{.r .cell-code}\nlibrary(plotTimeSeries)\nlibrary(spam)\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

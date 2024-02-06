@@ -1,0 +1,20 @@
+{
+  "hash": "407aa892224c8ea61fd3098f89661ca0",
+  "result": {
+    "markdown": "## Ocean acidification indicator\n\nSent by F. Gomez on 02/19/2023\n\nNotes from Fabian:\n\nderived surface omega series from the MOM-Topaz hindcast 0.10deg resolution model \\*txt files have this structure: column1: year, column2=month, and column3=carbon system variable The mean magnitude of the simulated omega trends, around 9e-3 year-1, is consistent with observed trends in the Subtropical North Atlantic\n\nQuestion: What is causing the acceleration after 2008?\\\nAnswer: made a Taylor decomposition to figure out what was driving that acceleration in the simulated ??Ar anomaly. Interannual ??Ar changes were mostly driven by the balance between dic and alkalinity. There was a positive trend from the 1980s until mid 2000s, which contributed to moderate the ??Ar decline. But that trend vanished in the last 15 years or so, which probably has to do with this accelerated decline in ??Ar in the last decade.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(plotTimeSeries)\nlibrary(spam)\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nrm(list = ls())\n\ndat <- read.table(\"../indicator_data/surface_omega_series.txt\", skip = 0, header = F)\nhead(dat)\ntail(dat)\ndat$dates <- paste0(month.abb[dat$V2], dat$V1)\n```\n:::\n\n\n\nFormat indicator object\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndatdata <- dat$dates \ninddata <- data.frame(dat$V3) \nlabs <- c(\"Ocean acidification\", \"Surface aragonite saturation\", \"\") \nindnames <- data.frame(matrix(labs, nrow = 3, byrow = F)) \ns <- list(labels = indnames, indicators = inddata, datelist = datdata)\nclass(s) <-\"indicatordata\"\n```\n:::\n\n\n\nSave and plot\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nplotIndicatorTimeSeries(s)\n```\n\n::: {.cell-output-display}\n![](OA_files/figure-pdf/unnamed-chunk-4-1.pdf){fig-pos='H'}\n:::\n\n```{.r .cell-code}\ninddata <- s \nsave(inddata, file = \"OA_test.RData\")\n```\n:::\n",
+    "supporting": [
+      "OA_files\\figure-pdf"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}
