@@ -158,6 +158,9 @@ hist(ben$corspprich)
 # merge site reference info with database --------------------------
 
 ben2 <- merge(ben, met, by.x = "SITE.NAME", by.y = "Site.Name")
+dim(ben)
+dim(met)
+dim(ben2)
 table(ben2$SITE.NAME, ben2$YEAR)
 table(ben2$loc, ben2$YEAR)
 
@@ -208,7 +211,7 @@ mod <- summary(out1)$coef[1:length(yrs), 1]
 modse <- summary(out1)$coef[1:length(yrs), 2]
 
 par(mar = c(4, 4, 3, 1))
-plot(yrs, ind, ylim = c(min(ind) - 4, max(ind + 2)), main = varint)
+plot(yrs, ind, ylim = c(min(ind) * 0.6, max(ind) * 1.1), main = varint)
 lines(yrs, ind + indse, lty = 2, col = 1)
 lines(yrs, ind - indse, lty = 2, col = 1)
 

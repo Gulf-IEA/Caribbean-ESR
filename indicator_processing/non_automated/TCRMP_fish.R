@@ -22,7 +22,7 @@
 rm(list = ls())
 
 # get top landed species -----------------
-# with more time - use logbook data from STT and STX - but need scientific names
+# using PR data not USVI because need scientific names.  Also this is just a check for major species as TCRMP has its own list of commercial spp. 
 
 d <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20.csv")
 d <- d[which(d$YEAR_LANDED >= 2003 & d$YEAR_LANDED <= 2020), ]
@@ -50,8 +50,10 @@ spp <- read.csv("FishMetadata.csv", stringsAsFactors = F)
 head(spp)
 
 splis2 <- spp$ScientificName[which(spp$Commercial == "Y")]
+splis2
 
 # compare TRCRMP commercial spp list with logbook ---------
+
 splis2 %in% splis
 splis2 <- splis2[-which(splis2 %in% splis)]  # should be 5 species missing from landings list
 splis2
@@ -99,11 +101,13 @@ fish <- fish[which(fish$Metric == "Abundance"), ]  # use only abundance data
 fish <- fish[which(fish$Period == "Annual"), ]     # use only regular annual sampling
 
 # subset for selected sites ----------------------------------
+
 fish <- fish[which(fish$Location %in% sitelis), ]
 apply(fish[1:10], 2, table)
 dim(fish)
 
 # run separately for fished and not fished
+
 #fish <- fish[-which(fish$ScientificName %in% splis), ]; grp <- "oth" # unfished
 fish <- fish[which(fish$ScientificName %in% splis), ]; grp <- "com"  # fished
 
@@ -111,10 +115,12 @@ apply(fish[1:10], 2, table)
 dim(fish)
 
 # look at frequency of sampling across years -----------------
+
 table(fish$Location, fish$SampleYear)
 matplot(2003:2021, table(fish$SampleYear, fish$Location), type = "l")
 
 # reformat size data into different object --------------------
+
 names(fish)[11:21]
 
 v1 <- rep(sitelis, length(yrs))
@@ -125,7 +131,7 @@ names(mat) <- c("site", "yr", "X0.10", names(fish)[13:21], "total")
 head(mat)
 
 # summarize by site and year ----------------------------------
-# DOUBLE CHECK THIS 
+
 i <- 0
 for (j in sitelis) { 
   for (y in yrs)     {  
@@ -134,22 +140,26 @@ for (j in sitelis) {
     su2 <- su[1] + su[2]
     i <- i + 1
     mat[i, 3:12] <- c(su2, su[3:length(su)])
-    mat[i, 13] <- sum(f1$Total)  }
+    mat[i, 13] <- sum(f1$Total, na.rm = T)  }
 } 
 dim(mat)
 mat <- mat[-which(rowSums(mat[3:ncol(mat)]) == 0), ]
 dim(mat)
 which(rowSums(mat[3:ncol(mat)]) == 0)
 
+summary(rowSums(mat[4:ncol(mat)-1]) == mat$total)   # check totals
+
 # mat is new data object with one site per year ------------
+
 table(mat$site, mat$yr)
 
-#for (i in 1:nrow(mat)) {  mat[i, 3:ncol(mat)] <- mat[i, 3:ncol(mat)] / sum(mat[i, 3:ncol(mat)]/ 100)  }
+plot((colSums(mat[3:12])), type = "h", main = "count data")
+plot(log(colSums(mat[3:12])), type = "h", main = "count data")
 
 barplot(as.matrix(log(mat[3:12] + 1)), beside = T, col = rainbow(length(yrs)), names.arg = names(mat)[3:12])
 
-plot((colSums(mat[3:12])), type = "h")
-plot(log(colSums(mat[3:12])), type = "h")
+#for (i in 1:nrow(mat)) {       # converting to proportions results in exactly the same estimates
+#  mat[i, 3:(ncol(mat)-1)] <- mat[i, 3:(ncol(mat)-1)] / sum(mat[i, 3:(ncol(mat)-1)]) * 100  }
 
 # look at size spectra and subset classes that are selected for ------------------
 
@@ -163,9 +173,7 @@ head(mat[, classes + 2], 100)
 mat$slope <- NA
 mat$SE <- NA
 
-### CHECK IF NEED TO STANDARDIZE TO PROPORTIONS??
-
-par(mfrow = c(8, 5))
+par(mfrow = c(8, 5), mex = 0.5)
 for (i in 1:nrow(mat)) { 
   ve <- as.numeric(log(mat[i, classes + 2]))
   plot(ve, type = "h", axes = F)
@@ -180,106 +188,104 @@ for (i in 1:nrow(mat)) {
     mat$SE[i] <- summary(out)$coef[2, 2]   }
 }
 
+# merge slope estimates with data file and view ---------------------
+
 mat <- merge(mat, met, by.x = "site", by.y = "Location")
 mat
 mat$yr <- as.factor(mat$yr)
 
 dev.off()
 
-plot(log(mat$total) ~ mat$site)
-plot(log(mat$total) ~ mat$yr)
+par(mfrow = c(2, 2))
+plot(log(mat$total) ~ mat$site, main = "total density")
+plot(log(mat$total) ~ mat$yr, main = "total density")
 
-boxplot(mat$slope ~ mat$site)
-boxplot(mat$slope ~ mat$yr)
+boxplot(mat$slope ~ mat$site, main = "slope of the size spectrum")
+boxplot(mat$slope ~ mat$yr, main = "slope of the size spectrum")
 
-metric <- mat$slope
+# modular analysis - two variables -----------------------------------
+# slope and total density, using GLM to standardize for site random effect
 
-ind <- tapply(metric, mat$yr, mean, na.rm = T)
-indse <- tapply(metric, mat$yr, sd, na.rm = T)
+varint <- "dens"
+if (varint == "dens")   {  metric <- log(mat$total)  }
 
-out <- lmer(metric ~ (1 | mat$site) + mat$yr)
-out <- lm(metric ~ mat$yr + mat$site + 0)
+hist(metric)
+
+ind <- tapply(mat$total, mat$yr, mean, na.rm = T)  # raw scale 
+indse <- tapply(mat$total, mat$yr, sd, na.rm = T)  # raw scale
+
+out <- lmer(metric ~ (1 | mat$site) + mat$yr + 0)  # log scale
+out1 <- lm(metric ~ mat$yr + mat$site + 0)
 summary(out)
 anova(out)
+summary(out1)
+anova(out1)
 
-stind <- summary(out)$coef[1:19, 1]
-stindse <- summary(out)$coef[1:19, 2]
+stind   <- summary(out1)$coef[1:length(yrs), 1]
+stindse <- summary(out1)$coef[1:length(yrs), 2]
 
-par(mfrow = c(2, 1))
+cor(ind, stind)
 
-plot(as.numeric(names(ind)), ind, ylim = c(max(ind) + 1, min(ind)-1))
+# functions for converting lognormal mean and SE to normal space -------------
+lnorm.mean <- function(x1, x1e) {  exp(x1 + 0.5 * x1e^2)   }
+lnorm.se   <- function(x1, x1e) {  ((exp(x1e^2)-1)*exp(2 * x1 + x1e^2))^0.5  } 
+
+ind_norm   <- lnorm.mean(stind, stindse)                # convert lognormal mean and SE to normal space
+indse_norm <- lnorm.se(stind, stindse)
+
+plot(as.numeric(names(ind)), ind, ylim = c(min(ind) - 100, max(ind) + 100))
 lines(as.numeric(names(ind)), ind + indse, lty = 2)
 lines(as.numeric(names(ind)), ind - indse, lty = 2)
 
-points(as.numeric(names(ind)), stind, col = 2)
-lines(as.numeric(names(ind)), stind + stindse, lty = 2, col = 2)
-lines(as.numeric(names(ind)), stind - stindse, lty = 2, col = 2)
+points(yrs, (ind_norm), col = 2)
+lines(yrs, (ind_norm + indse_norm), lty = 2, col = 2)
+lines(yrs, (ind_norm - indse_norm), lty = 2, col = 2)
+
+cor(ind, ind_norm)
+
+findens <- data.frame(cbind(yrs, ind_norm, indse_norm))
+findens
+
+save(findens, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/TCRMP/fish_density_USVI.RData")  
+
+# now for slope of the size spectrum ------------------------
+
+varint <- "slope"
+
+if (varint == "slope")  {  mat <- mat[!is.na(mat$slope), ]    }
+if (varint == "slope")  {  metric <- mat$slope    }
+
+hist(metric)
+
+ind <- tapply(metric, mat$yr, mean, na.rm = T)  # raw scale 
+indse <- tapply(metric, mat$yr, sd, na.rm = T)  # raw scale
+
+out <- lmer(metric ~ (1 | mat$site) + mat$yr + 0)  
+out1 <- lm(metric ~ mat$yr + mat$site + 0)
+summary(out)
+anova(out)
+summary(out1)
+anova(out1)
+
+stind   <- summary(out1)$coef[1:length(yrs), 1]
+stindse <- summary(out1)$coef[1:length(yrs), 2]
 
 cor(ind, stind)
-fin <- data.frame(cbind(ind, indse))
 
-#filenam <- paste0("slopeSizeSpectrum_", grp, ".RData")
-#save(fin, file = filenam)
+plot(as.numeric(names(ind)), ind, ylim = c(min(ind) - 1, max(ind) + 1))
+lines(as.numeric(names(ind)), ind + indse, lty = 2)
+lines(as.numeric(names(ind)), ind - indse, lty = 2)
 
-fin$slope <- NA
-fin$SE <- NA
+points(yrs, (stind), col = 2)
+lines(yrs, (stind + stindse), lty = 2, col = 2)
+lines(yrs, (stind - stindse), lty = 2, col = 2)
 
-par(mfrow = c(5, 4))
-for (i in 1:length(yrs))   {
-  m2 <- mat[which(mat$yr == yrs[i]), ]
-  ve <- log(colSums(m2[, classes + 2]))
-  plot(ve, type = "h", axes = F, xlab = "", ylab = "")
-  axis(1, at = 1:10, lab = names(mat)[3:12], las = 2)
-  mtext(side = 3, text = yrs[i])
-  #  ve[which(ve == "-Inf")] <- NA
-  out <- lm(ve ~ classes)
-  
-  if (sum(!is.na(ve)) > 2) { abline(out, col = 2) 
-    fin$slope[i] <- summary(out)$coef[2, 1]
-    fin$SE[i] <- summary(out)$coef[2, 2]  }
-}
+cor(ind, stind)
 
+fin <- data.frame(cbind(yrs, stind, stindse))
 fin
-fin$year <- as.numeric(rownames(fin))
 
-plot(fin$ind, fin$slope)
-cor(fin$ind, fin$slope)
+save(fin, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/TCRMP/slopeSizeSpec_USVI.RData") 
 
-plot(fin$year, fin$ind, ylim = c(max(ind) + 1, min(ind)-1))
-lines(fin$year, fin$ind + fin$indse, lty = 2)
-lines(fin$year, fin$ind - fin$indse, lty = 2)
-
-points(fin$year, fin$slope, col = 2)
-lines(fin$year, fin$slope + fin$SE, lty = 2, col = 2)
-lines(fin$year, fin$slope - fin$SE, lty = 2, col = 2)
-
-
-
-# density ------------------------
-
-metric <- log(mat$total)
-
-ind <- tapply(metric, mat$yr, mean, na.rm = T)
-indse <- tapply(metric, mat$yr, sd, na.rm = T)
-
-out <- lm(metric ~ mat$yr + mat$Island + mat$ReefComplex + mat$Depth)
-summary(out)
-anova(out)
-
-out <- lm(metric ~ mat$yr + mat$Island + mat$ReefComplex + mat$Depth + 0)
-summary(out)
-anova(out)
-
-stind <- summary(out)$coef[1:19, 1]
-stindse <- summary(out)$coef[1:19, 2]
-
-plot(as.numeric(names(ind)), ind, ylim = c(max(ind) + 1, min(ind)-1))
-lines(as.numeric(names(ind)), ind + indse, lty = 2)
-lines(as.numeric(names(ind)), ind - indse, lty = 2)
-
-points(as.numeric(names(ind)), stind, col = 2)
-lines(as.numeric(names(ind)), stind + stindse, lty = 2, col = 2)
-lines(as.numeric(names(ind)), stind - stindse, lty = 2, col = 2)
-
-cor(ind, stind)
+#############################  END  ###############################
 

@@ -45,6 +45,8 @@ cds$Meaning[grep("spp.", cds$Meaning)]
 cds$Cat2[grep("spp.", cds$Meaning)] <- "X"
 
 # create list of coral species ---------------------------
+
+cds$Meaning
 cds$Meaning[which(cds$Cat2 == "Coral")]
 coralspplis <- cds$Code[which(cds$Cat2 == "Coral")]
 coralspplis
@@ -79,6 +81,7 @@ ben <- ben[which(ben$Period == "Annual"), ]
 bensum <- bensum[which(bensum$Period == "Annual"), ]
 
 # create unique sample ID, for merging databases ------------------------
+
 ben$ID <- paste0(ben$SampleYear, ben$SampleMonth, ben$Location, ben$Transect)
 bensum$ID <- paste0(bensum$SampleYear, bensum$SampleMonth, bensum$Location, bensum$Transect)
 length(unique(ben$ID))
@@ -155,7 +158,7 @@ summary(out1)$coef[, 1]
 mod <- summary(out1)$coef[, 1]
 modse <- summary(out1)$coef[, 2]
 
-plot(2001:2021, ind, ylim = c(min(ind) - 2, max(ind + 2)))
+plot(2001:2021, ind, ylim = c(min(ind) - 2, max(ind + 2)), main = varint)
 lines(2001:2021, ind + indse)
 lines(2001:2021, ind - indse)
 points(2001:2021, mod, col = 2)
@@ -164,8 +167,8 @@ lines(2001:2021, mod - modse, col = 2, lty = 2)
 
 cor(ind, mod)
 
-if (varint == "sprich")  {  save(out1, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/PRCRMP/coralspprich_USVI.RData")  }
-if (varint == "percov")  {  save(out1, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/PRCRMP/percoralcov_USVI.RData")   }
+if (varint == "sprich")  {  save(out1, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/TCRMP/coralspprich_USVI.RData")  }
+if (varint == "percov")  {  save(out1, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/TCRMP/percoralcov_USVI.RData")   }
 }
 
 
