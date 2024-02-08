@@ -7,11 +7,15 @@ rm(list = ls())
 #devtools::install_github("mdsumner/ncdf4")
 #library(ncdf4)
 
+# define years  --------------------------------
+styear <- 1982
+enyear <- 2023
+
 # empty data  -------------------------------------------------
 dat <- data.frame(row.names = c("year", "mon", "PR_mean", "PR_min", "PR_max", "VI_mean", "VI_min", "VI_max"))
 
 # download by year to avoid timeout errors --------------------
-for (yr in 1982:2021) { 
+for (yr in styear:enyear) { 
   
 # url from ERDDAP for OISST, download and read ----------------
   url <- paste0("https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg.csv?sst[(", yr, "-01-01T12:00:00Z):1:(", yr, "-12-31T12:00:00Z)][(0.0):1:(0.0)][(17):1:(19)][(292):1:(296)]")

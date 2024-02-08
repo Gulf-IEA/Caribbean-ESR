@@ -3,6 +3,9 @@
 rm(list = ls())
 options(download.file.method="libcurl")
 
+styear <- 2012
+enyear <- 2023
+
 # download data and calculate mean -------------------
 
 for (i in 1:2) {
@@ -13,7 +16,7 @@ for (i in 1:2) {
   download.file(url = url, destfile = "C:/Users/mandy.karnauskas/Downloads/dhw.txt")
   d <- read.table("C:/Users/mandy.karnauskas/Downloads/dhw.txt", skip = 21, header = T)
 
-  d <- d[which(d$YYYY >=1985 & d$YYYY <= 2021), ]
+  d <- d[which(d$YYYY >= styear & d$YYYY <= 2023), ]
   
   head(d)
   d$yrmon <- paste0(d$YYYY, sprintf("%02.f", d$MM))

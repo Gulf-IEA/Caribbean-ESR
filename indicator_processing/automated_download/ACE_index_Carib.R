@@ -8,7 +8,7 @@
 # ACE index calculations done according to methods from: 
 # GEOPHYSICAL RESEARCH LETTERS, VOL. 38, L19702, doi:10.1029/2011GL049265, 2011
 
-# data source: https://www.ncdc.noaa.gov/ibtracs/index.php?name=ib-v4-access 
+# data source: https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/ 
 # (download .csv file for N. Atlantic basin)
 
 # specification file and libraries -----------------------------
@@ -16,21 +16,24 @@ rm(list = ls())
 library(maps)
 library(plotTimeSeries)
 
-load("spec_file.RData")
+#load("spec_file.RData")
+
+# define years  --------------------------------
+styear <- 1961
+enyear <- 2023
 
 # download data directly from site -----------------------------
 options(download.file.method="libcurl")
 
 url <- "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/ibtracs.NA.list.v04r00.csv"
+url <- "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/ibtracs.NA.list.v04r00.csv"
 
-download.file(url = url, destfile = "../indicator_data/ibtracs.csv")
-dat <- read.csv( "../indicator_data/ibtracs.csv", skip = 2, header = F)
-datn <- read.csv( "../indicator_data/ibtracs.csv", skip = 0, header = T)
+download.file(url = url, destfile = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/ibtracs.csv")
+dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/ibtracs.csv", skip = 2, header = F)
+datn <- read.csv("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/ibtracs.csv", skip = 0, header = T)
 names(dat) <- names(datn)
 
-# define years and cut columns --------------------------------
-styear <- 1961
-enyear <- terminal_year
+# cut columns --------------------------------
 
 head(dat)
 dat <- dat[, 1:17]
@@ -111,7 +114,7 @@ nam <- unique(d2$uniq)
 length(nam)
 
 dev.off()
-par(mfrow = c(7, 8), mex = 0.3)
+par(mfrow = c(8, 8), mex = 0.3)
 for (i in 1:length(nam)) {
   map('world', add=F, fill=T, col=8,  xlim=c(-72, -62), ylim=c(15, 22))
   ptcol <- as.numeric(strftime(d2$tim[which(d2$uniq == nam[i])], format = "%j"))
@@ -149,7 +152,9 @@ indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
 class(s) <- "indicatordata"
 
-plotIndicatorTimeSeries(s)
+setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/")
+
+plotIndicatorTimeSeries(s, widadj = 0.5, outtype = "png")
 
 inddata <- s
 save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/ACEindex.RData")
