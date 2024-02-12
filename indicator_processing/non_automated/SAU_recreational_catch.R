@@ -1,52 +1,53 @@
+####################################################################
+#
+#  processing reconstructed recreational catch from Sea Around Us
+#  M. Karnauskas 2/8/2024
+#  
+#  Advanced data search at: https://www.seaaroundus.org/data/#/search
+#  select PR and USVI EEZs, Dimension == Fishing sector, Measure == Tonnage
+#  Download data and save locally
+# 
+####################################################################
+
 rm(list = ls())
 
 styear <- 1995
 
 # load data -------------------------------------
-dpr <- read.csv("../indicator_data/SAU_PR/SAU EEZ 630 v50-0.csv")
-head(dpr)
+d <- read.csv("../indicator_data/SAU/SAU EEZ 630,850 v50-1.csv")
+head(d)
 
 # look at fields ------------------------------
-apply(dpr[, 1:15], 2, table)
-dpr <- dpr[which(dpr$year >= styear), ]
+
+apply(d[, 1:15], 2, table, useNA = "always")
+d <- d[which(d$year >= styear), ]
 
 # calculate total rec catch for PR -------------
-table(dpr$fishing_sector)
-drec <- dpr[which(dpr$fishing_sector == "Recreational"), ]
-dim(drec)
 
-par(mar = c(5, 15, 1, 1))
-barplot(sort(tapply(drec$tonnes, drec$common_name, sum, na.rm = T)), las = 2, horiz = T)
+table(d$fishing_sector, useNA = "always")
+drec <- d[which(d$fishing_sector == "Recreational"), ]
+dim(drec)
+drec
+
+apply(drec, 2, table, useNA = "always")
+
+par(mar = c(15, 5, 1, 1))
+barplot(sort(tapply(drec$tonnes, drec$common_name, sum, na.rm = T)), las = 2, horiz = F)
 
 tapply(drec$uncertainty_score, drec$year, mean)
 boxplot(drec$uncertainty_score ~ drec$year)
 
-tot <- tapply(drec$tonnes, drec$year, sum, na.rm = T) * 2204.62
+barplot(tapply(drec$tonnes, list(drec$area_name, drec$reporting_status), sum, na.rm = T), beside = T)
+barplot(tapply(drec$tonnes, list(drec$area_name, drec$scientific_name), sum, na.rm = T), beside = T, las = 2)
+barplot(tapply(drec$tonnes, list(drec$area_name, drec$common_name), sum, na.rm = T), beside = T, las = 2)
+barplot(tapply(drec$tonnes, list(drec$area_name, drec$functional_group), sum, na.rm = T), beside = T, las = 2)
 
-# load data -------------------------------------
-dvi <- read.csv("../indicator_data/SAU_USVI/SAU EEZ 850 v50-0.csv")
-head(dvi)
-
-# look at fields ------------------------------
-apply(dvi[, 1:15], 2, table)
-dvi <- dvi[which(dvi$year >= styear), ]
-
-# calculate total rec catch for USVI -----------
-table(dvi$fishing_sector)
-drec_vi <- dvi[which(dvi$fishing_sector == "Recreational"), ]
-dim(drec_vi)
-
-par(mar = c(5, 10, 1, 1))
-barplot(sort(tapply(drec_vi$tonnes, drec_vi$common_name, sum, na.rm = T)), las = 2, horiz = T)
-
-boxplot(drec_vi$uncertainty_score ~ drec_vi$year)
-tot_vi <- tapply(drec_vi$tonnes, drec_vi$year, sum, na.rm = T) * 2204.62
-
-summary(names(tot) == names(tot_vi))
+tot <- tapply(drec$tonnes, list(drec$year, drec$area_name), sum, na.rm = T) * 2204.62
 
 # save as indicator object ----------------------
-datdata <- as.integer(names(tot))
-inddats <- data.frame(cbind(as.numeric(tot), as.numeric(tot_vi)))/ 10^6
+
+datdata <- as.integer(rownames(tot))
+inddats <- data.frame(tot/ 10^6)
 labs <- c("Total recreational catch", "millions of pounds", "Puerto Rico", 
           "Total recreational catch", "millions of pounds", "USVI")
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
@@ -54,7 +55,8 @@ indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 inddata <- list(labels = indnames, indicators = inddats, datelist = datdata) #, ulim = ulidata, llim = llidata)
 class(inddata) <- "indicatordata"
 
-plotIndicatorTimeSeries(inddata, coltoplot = 1:2, plotrownum = 2, sublabel = T, sameYscale = F)
+setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/") 
+plotIndicatorTimeSeries(inddata, coltoplot = 1:2, plotrownum = 2, sublabel = T, sameYscale = F, outtype = "png")
 
 # plot and save ----------------------------------
 save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/total_rec_catch.RData")

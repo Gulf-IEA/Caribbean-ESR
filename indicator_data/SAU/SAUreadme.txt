@@ -1,9 +1,9 @@
 
-Downloaded 22-December-2022
+Downloaded 08-February-2024
 
 CATCH DATA, STOCK STATUS, MARINE TROPHIC INDEX, MULTINATIONAL FOOTPRINT, AND ASSOCIATED METHODS
 
-Data version 50.0
+Data version 50.1
 
 Please note that the data (‘reconstructed data’) are a combination of official reported data and reconstructed estimates of unreported data (including major discards).
 
