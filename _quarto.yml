@@ -15,6 +15,7 @@ format:
     theme: flatly
     output: true
     echo: false
+    number-sections: false
   titlepage-pdf:
     documentclass: scrbook
     classoption: ["oneside", "open=any"]

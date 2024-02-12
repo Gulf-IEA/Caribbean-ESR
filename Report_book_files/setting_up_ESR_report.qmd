@@ -13,7 +13,7 @@ This report is for the Caribbean ESR that was compiled from 2023-2024. This is t
 The Caribbean ESR report was created the following way:
 
 1.  clone the Caribbean ESR repo into my R studio
-2.  create 2 files, one called "index.qmd" and another called "\_quarto.txt" in the main Caribbean ESR folder
-3.  rename the "\_quarto.txt" file to "\_quarto.yml" in file explorer to change it into the book YAML
+2.  create 2 files, one called "index.qmd" and another called "_quarto.txt" in the main Caribbean ESR folder
+3.  rename the "_quarto.txt" file to "_quarto.yml" in file explorer to change it into the book YAML
 4.  populate the YAML document
 5.  Now in order to be able to render the book as both an html and pdf (or whatever other format you want) you need to make sure all the appropriate files are in the main folder. You can't put them in sub-fold
