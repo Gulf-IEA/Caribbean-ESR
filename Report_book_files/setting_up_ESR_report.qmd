@@ -8,12 +8,16 @@ editor: visual
 
 This report is for the Caribbean ESR that was compiled from 2023-2024. This is the first ESR for the Caribbean region. Here we can add more text about why this ESR is being compiled.
 
-## Some notes
+## Getting started
 
 The Caribbean ESR report was created the following way:
 
 1.  clone the Caribbean ESR repo into my R studio
-2.  create 2 files, one called "index.qmd" and another called "_quarto.txt" in the main Caribbean ESR folder
-3.  rename the "_quarto.txt" file to "_quarto.yml" in file explorer to change it into the book YAML
+2.  create 2 files, one called "index.qmd" and another called "\_quarto.txt" in the main Caribbean ESR folder
+3.  rename the "\_quarto.txt" file to "\_quarto.yml" in file explorer to change it into the book YAML
 4.  populate the YAML document
-5.  Now in order to be able to render the book as both an html and pdf (or whatever other format you want) you need to make sure all the appropriate files are in the main folder. You can't put them in sub-fold
+5.  Now in order to be able to render the book as both an html and pdf (or whatever other format you want) you need to make sure all the appropriate files are in the main folder. You can't put them in sub-folder.
+
+## Report design
+
+First, we needed to add a cover page. We used the NMFS titlepages quarto extension, which can be found [here](https://nmfs-opensci.github.io/quarto_titlepages/03-titlepage-themes.html). First you need to install the extension using the terminal. Then the YAML code from the example titlepages can be added to your quarto book YAML. May need to terminate R and restart for changes to go into affect. To edit the title page, see the source code at the above link and revise as desired.

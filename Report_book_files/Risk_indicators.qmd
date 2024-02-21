@@ -1,0 +1,118 @@
+```{r, message = FALSE, warnings = FALSE}
+#devtools::install_github("https://github.com/MandyKarnauskas-NOAA/plotTimeSeries.git")
+
+library(plotTimeSeries)
+library(spam)
+```
+
+# 4. Risks to meeting fishery management objectives
+
+### Degree heating weeks
+
+Indicator 1
+
+### Ocean acidification via aragonite saturation state
+
+Indicator 2
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/OA.RData")
+plotIndicatorTimeSeries(inddata, trendAnalysis = F)
+```
+
+### Hurricane activity
+
+Indicator 3
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/ACEindex.RData")
+plotIndicatorTimeSeries(inddata, trendAnalysis = F)
+```
+
+### Turbidity
+
+Indicator 4
+
+turbidity.RData doesn't work
+
+### Sea surface temperature
+
+Indicator 5
+
+### Marine debris
+
+Indicator 6
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/beach_litter_un_carib.RData")
+plotIndicatorTimeSeries(inddata, trendAnalysis = F)
+```
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/marine_debris.RData")
+plotIndicatorTimeSeries(inddata, trendAnalysis = F)
+```
+
+### Identified point source pollution sites
+
+Indicator 7
+
+### Primary productivity via ocean color
+
+Indicator 8
+
+carib_Chl.RData doesn't work
+
+### Coastal development via land cover
+
+Indicator 9
+
+### Number of major earthquakes
+
+Indicator 10
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/earthquakes.RData")
+plotIndicatorTimeSeries(inddata, trendAnalysis = F)
+```
+
+### Fishery/market disturbance indicator (maybe belongs in socioeconomic health)
+
+Indicator 11
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/disturbance.RData")
+plotIndicatorTimeSeries(inddata, trendAnalysis = F)
+```
+
+### Sargassum inundation
+
+Indicator 12
+
+doesn't work
+
+load("indicator_objects/Sargassum.RData") 
+plotIndicatorTimeSeries(inddata, coltoplot = 1:2, plotrownum = 2, trendAnalysis = F, sublabel = T) 
+
+load("indicator_objects/sargassum_innundation_monthly_mean_hu.RData")
+plotIndicatorTimeSeries(inddata, coltoplot = 1:2, plotrownum = 2, trendAnalysis = F, sublabel = T)
+
+### Tourism via hotel occupancy
+
+Indicator 13
+
+doesn't work 
+
+load("indicator_objects/hotel_occupancy_rates_USVI_and_PR.RData")
+plotIndicatorTimeSeries(inddata, trendAnalysis = F) 
+
+load("indicator_objects/hotel_occupancy.RData") 
+plotIndicatorTimeSeries(inddata, trendAnalysis = F) 
+
+### Population density
+
+Indicator 14
+
+### Population change
+
+Indicator 15

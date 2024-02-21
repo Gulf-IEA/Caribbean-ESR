@@ -1,0 +1,113 @@
+```{r, message = FALSE, warnings = FALSE}
+#devtools::install_github("https://github.com/MandyKarnauskas-NOAA/plotTimeSeries.git")
+
+library(plotTimeSeries)
+library(spam)
+```
+
+# 5. Tracking performance toward fishery management objectives
+
+## 5.1 Food production
+
+### Fishery independent surveys of economically important species
+
+Indicator 16
+
+### Commercial landings
+
+Indicator 17
+
+### Maximum length and size structure
+
+Indicator 18
+
+### Changes in target species / landing composition
+
+Indicator 20
+
+## 5.2 Socioeconomic health
+
+### Total, lobster and conch revenues
+
+Indicator 21
+
+### Total, lobster and conch trips
+
+Indicator 22
+
+### Ocean economy employment and wages
+
+Indicator 23
+
+```{r}
+load("../indicator_objects/OceanNAICS.RData")
+plotIndicatorTimeSeries(inddata, coltoplot = 1:2, plotrownum = 2, trendAnalysis = F, sublabel = T)
+```
+
+### GDP
+
+Indicator 24
+
+### Unemployment
+
+Indicator 25
+
+## 5.3 Equity
+
+### Gini coefficient for distribution of landings and revenue
+
+Indicator 26
+
+```{r}
+load("../indicator_objects/gini.RData")
+plotIndicatorTimeSeries(inddata, coltoplot = 1:2, plotrownum = 2, trendAnalysis = F, sublabel = T)
+```
+
+### Commercial fishing community engegement and reliance
+
+Indicator 27
+
+## 5.4 Engagement and participation
+
+### Recreational fishing engagement and participation
+
+Indicator 28
+
+### Commercial fishing engagement and participation
+
+Indicator 29
+
+## 5.5 Bycatch reduction
+
+### Changes in gear type
+
+Indicator 30
+
+## 5.5 Governance
+
+### Number of seasonal closures implemented
+
+Indicator 31
+
+### Number of education and outreach events
+
+Indicator 32
+
+### Number of enforcement actions
+
+Indicator 33
+
+## 5.6 Protection of ecosystems
+
+### Percent coral cover and coral species richness
+
+Indicator 34
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/NCRMP_coral_cover_richness.RData")
+plotIndicatorTimeSeries(inddata, trendAnalysis = F)
+```
+
+### Coral species diversity
+
+Indicator 35
