@@ -11,6 +11,8 @@ library(spam)
 
 Indicator 1
 
+DegreeHeatingWeeks.RData doesn't work
+
 ### Ocean acidification via aragonite saturation state
 
 Indicator 2
@@ -38,6 +40,9 @@ turbidity.RData doesn't work
 ### Sea surface temperature
 
 Indicator 5
+
+No RData file for SST
+
 
 ### Marine debris
 

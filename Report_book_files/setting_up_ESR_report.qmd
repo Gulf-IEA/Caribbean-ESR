@@ -21,3 +21,15 @@ The Caribbean ESR report was created the following way:
 ## Report design
 
 First, we needed to add a cover page. We used the NMFS titlepages quarto extension, which can be found [here](https://nmfs-opensci.github.io/quarto_titlepages/03-titlepage-themes.html). First you need to install the extension using the terminal. Then the YAML code from the example titlepages can be added to your quarto book YAML. May need to terminate R and restart for changes to go into affect. To edit the title page, see the source code at the above link and revise as desired.
+
+## Indicators
+
+Meeting with Seann and Amy on 2/21/24:
+
+-   socioeconomic health. Seann had sent a csv. We should re-download from the website. It should be pretty easy. Seann will download and push to Github into the data folder. There is an API so it's possible to automate it (PR but not USVI).
+-   population. USVI the census bureau is the only official one, only collected every 10 years. Or we could use an independent survey, there are a lot of them. ESRI has a decent yearly estimate. Don't think a decadal estimate is very useful. Amy will look into ESRI, pull the data and add to github
+-   coastal development. Just leave as a map. The map is already in the report draft. Carissa can go poking around and see if there is anything of interest for temporal changes. change in impervious surfaces?
+-   population density. we don't need this one
+-   GDP. two issues. People in the region don't trust the GDP statistics. Lots of informal economy going on. We need to discuss this. Should still include it though because this is the official data. There is also an ocean GDP and an overall GDP. Probably should include both. Also GDP should probably be in a different category? Amy can take on regular GDP and unemployment. 
+-   identified point source pollution sites. We have the data but don't understand what the numbers really mean. The data are from when inspectors have the time to go document. Maybe we should present like a moving average or something? Maybe it's an indicator of political activity. Documentation is required for legal action and cleanup. Maybe should also include industrially zoned spaces (map). Not an accurate temporal indicator of pollution.
+-   socioeconomic health. wrapped up with GDP. Amy will take care of.

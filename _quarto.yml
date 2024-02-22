@@ -2,9 +2,24 @@ project:
   type: book
 
 book:
-  title: "Ecosystem Status Report - Caribbean"
-  author: "Carissa Gervasi"
-  date: "2/6/2024"
+  title: "Ecosystem Status Report for the U.S. Caribbean"
+  author: 
+    - name: Carissa Gervasi
+      affiliations:
+        - id: CIMAS
+          name: University of Miami 
+          department: Cooperative Institute for Marine and Atmospheric Studies
+          address: 4600 Rickenbacker Cswy, Miami, FL 33149
+    - name: Kelly Montenero
+      affiliations:
+        - ref: CIMAS
+    - name: Mandy Karnauskas
+      affiliations:
+        - id: SEFSC
+          name: NOAA Fisheries
+          department: Southeast Fisheries Science Center
+          address: 75 Virginia Beach Drive, Key Biscayne, FL 33149
+  date: "2/21/24"
 
   chapters:
     - index.qmd
@@ -28,13 +43,25 @@ format:
     lof: true
     lot: true
     titlepage: "bg-image"
+    titlepage-geometry: 
+     - top=3in
+     - bottom=1in
+     - right=1in
+     - left=1in
     titlepage-bg-image: "_extensions/nmfs-opensci/titlepage/images/corner-bg.png"
+    titlepage-theme:
+      bg-image-location: "ULCorner"
+      bg-image-size: 0.5
     titlepage-logo: "_extensions/nmfs-opensci/titlepage/images/logo.png"
     titlepage-header: "The Publisher"
     titlepage-footer: |
-      NOAA Fisheries OpenSci\
-      Tools for Open Science\
-      [https://github.com/nmfs-opensci](https://github.com/nmfs-opensci)\
+      U.S. DEPARTMENT OF COMMERCE\
+      National Oceanic and Atmospheric Administration\
+      National Marine Fisheries Service\
+      Southeast Fisheries Science Center\
+      75 Virginia Beach Drive\
+      Miami, Florida 33149\
+      February 2024
     echo: false
 
 editor: visual
