@@ -48,7 +48,7 @@ format:
      - bottom=1in
      - right=1in
      - left=1in
-    titlepage-bg-image: "Report_book_files/images/DOC_seal.png"
+    titlepage-bg-image: "Report_book_files/images/DOC_seal_aligned.png"
     titlepage-theme:
       bg-image-location: "ULCorner"
       bg-image-size: 2in
