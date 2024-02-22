@@ -48,10 +48,10 @@ format:
      - bottom=1in
      - right=1in
      - left=1in
-    titlepage-bg-image: "_extensions/nmfs-opensci/titlepage/images/corner-bg.png"
+    titlepage-bg-image: "Report_book_files/images/DOC_seal.png"
     titlepage-theme:
       bg-image-location: "ULCorner"
-      bg-image-size: 0.5
+      bg-image-size: 2in
     titlepage-logo: "_extensions/nmfs-opensci/titlepage/images/logo.png"
     titlepage-header: "The Publisher"
     titlepage-footer: |
