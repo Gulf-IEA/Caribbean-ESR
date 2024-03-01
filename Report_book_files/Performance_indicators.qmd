@@ -7,6 +7,8 @@ library(spam)
 
 # 5. Tracking performance toward fishery management objectives
 
+In this section, we examine indicators related to broad, ecosystem-level fishery management objectives. 
+
 ## 5.1 Food production
 
 ### Fishery independent surveys of economically important species
