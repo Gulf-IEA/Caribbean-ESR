@@ -16,7 +16,7 @@
 
 rm(list = ls())
 
-dat <- read.table("../../indicator_data/surface_omega_series.txt", skip = 0, header = F)
+dat <- read.table("indicator_data/surface_omega_series.txt", skip = 0, header = F)
 
 head(dat)
 tail(dat)
@@ -36,5 +36,5 @@ class(s) <- "indicatordata"
 plotIndicatorTimeSeries(s)
 
 inddata <- s
-save(inddata, file = "../../indicator_objects/OA.RData")
+save(inddata, file = "indicator_objects/OA.RData")
 

@@ -1,5 +1,5 @@
 ```{r, message = FALSE, warnings = FALSE}
-#devtools::install_github("https://github.com/MandyKarnauskas-NOAA/plotTimeSeries.git")
+devtools::install_github("https://github.com/MandyKarnauskas-NOAA/plotTimeSeries.git")
 
 library(plotTimeSeries)
 library(spam)
