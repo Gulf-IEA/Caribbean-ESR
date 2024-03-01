@@ -33,3 +33,75 @@ Meeting with Seann and Amy on 2/21/24:
 -   GDP. two issues. People in the region don't trust the GDP statistics. Lots of informal economy going on. We need to discuss this. Should still include it though because this is the official data. There is also an ocean GDP and an overall GDP. Probably should include both. Also GDP should probably be in a different category? Amy can take on regular GDP and unemployment. 
 -   identified point source pollution sites. We have the data but don't understand what the numbers really mean. The data are from when inspectors have the time to go document. Maybe we should present like a moving average or something? Maybe it's an indicator of political activity. Documentation is required for legal action and cleanup. Maybe should also include industrially zoned spaces (map). Not an accurate temporal indicator of pollution.
 -   socioeconomic health. wrapped up with GDP. Amy will take care of.
+
+
+## old YAML
+
+project:
+  type: book
+
+book:
+  title: "Ecosystem Status Report for the U.S. Caribbean"
+  author: 
+    - name: Carissa Gervasi
+      affiliations:
+        - id: CIMAS
+          name: University of Miami 
+          department: Cooperative Institute for Marine and Atmospheric Studies
+          address: 4600 Rickenbacker Cswy, Miami, FL 33149
+    - name: Kelly Montenero
+      affiliations:
+        - ref: CIMAS
+    - name: Mandy Karnauskas
+      affiliations:
+        - id: SEFSC
+          name: NOAA Fisheries
+          department: Southeast Fisheries Science Center
+          address: 75 Virginia Beach Drive, Key Biscayne, FL 33149
+  date: "2/21/24"
+
+  chapters:
+    - index.qmd
+    - Report_book_files/Intro_text.qmd
+    - Report_book_files/FMP_objectives.qmd
+    - Report_book_files/Performance_indicators.qmd
+    - Report_book_files/Risk_indicators.qmd
+    - Report_book_files/Discussion_material.qmd
+
+format:
+  html:
+    theme: flatly
+    output: true
+    echo: false
+    number-sections: false
+  titlepage-pdf:
+    documentclass: scrbook
+    classoption: ["oneside", "open=any"]
+    number-sections: false
+    toc: true
+    lof: true
+    lot: true
+    titlepage: "bg-image"
+    titlepage-geometry: 
+     - top=3in
+     - bottom=1in
+     - right=1in
+     - left=1in
+    titlepage-bg-image: "Report_book_files/images/DOC_seal_aligned.png"
+    titlepage-theme:
+      bg-image-location: "ULCorner"
+      bg-image-size: 2in
+    titlepage-logo: "_extensions/nmfs-opensci/titlepage/images/logo.png"
+    titlepage-header: "The Publisher"
+    titlepage-footer: |
+      U.S. DEPARTMENT OF COMMERCE\
+      National Oceanic and Atmospheric Administration\
+      National Marine Fisheries Service\
+      Southeast Fisheries Science Center\
+      75 Virginia Beach Drive\
+      Miami, Florida 33149\
+      February 2024
+    echo: false
+
+editor: visual
+

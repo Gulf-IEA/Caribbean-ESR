@@ -1,12 +1,18 @@
 # 6. Integrated ecosystem perspectives
 
-Stoplight plot
+Stoplight plot (maybe this should be in the beginning material)
 
 # 7. Research Recommendations
 
 ## Data gaps
 
 # 8. Acknowledgements
+
+# 9. Contributors
+
+**Editors** Mandy Karnauskas, Carissa Gervasi
+
+**Contributors** Kelly Montenero, Seann Regan, Amy Freitag, Andrea Chan, Chuanmin Hu, Erica K. Towle, Laura Jay Grove, Jeremiah Blondeau, Sarah Groves, Shay Viehman, Nicole Besemer, Juan Agar, Kevin McCarthy, Manoj Shivlani, Mike Jepson, Adyan Rios, Matt McPherson, Miguel Figuerola, Nicole Angeli, Sennai Habtes, Dione Swanson, Liajay Rivera
 
 # 9. References
 

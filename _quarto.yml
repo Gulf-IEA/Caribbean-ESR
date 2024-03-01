@@ -3,30 +3,14 @@ project:
 
 book:
   title: "Ecosystem Status Report for the U.S. Caribbean"
-  author: 
-    - name: Carissa Gervasi
-      affiliations:
-        - id: CIMAS
-          name: University of Miami 
-          department: Cooperative Institute for Marine and Atmospheric Studies
-          address: 4600 Rickenbacker Cswy, Miami, FL 33149
-    - name: Kelly Montenero
-      affiliations:
-        - ref: CIMAS
-    - name: Mandy Karnauskas
-      affiliations:
-        - id: SEFSC
-          name: NOAA Fisheries
-          department: Southeast Fisheries Science Center
-          address: 75 Virginia Beach Drive, Key Biscayne, FL 33149
   date: "2/21/24"
 
   chapters:
     - index.qmd
     - Report_book_files/Intro_text.qmd
     - Report_book_files/FMP_objectives.qmd
-    - Report_book_files/Risk_indicators.qmd
     - Report_book_files/Performance_indicators.qmd
+    - Report_book_files/Risk_indicators.qmd
     - Report_book_files/Discussion_material.qmd
 
 format:

@@ -1,0 +1,31 @@
+SPECIES_CD,FAMILY,SCINAME,COMNAME,LC,LM,WLEN_A,WLEN_B
+ACA BAHI,Acanthuridae,Acanthurus bahianus,Ocean Surgeon,,,0.000025,2.9752
+ACA CHIR,Acanthuridae,Acanthurus chirurgus,Doctorfish,,,0.0000012,3.532790894
+ACA COER,Acanthuridae,Acanthurus coeruleus,Blue Tang,,,0.0000618,2.834578168
+AUL MACU,Aulostomidae,Aulostomus maculatus,Atlantic Trumpetfish,,,0.000000418,3.3334
+BAL VETU,Balistidae,Balistes vetula,Queen Triggerfish,,,0.0000273,2.990264014
+CAN ROST,Tetraodontidae,Canthigaster rostrata,Sharpnose Puffer,,,0.0000251,2.9219
+CAR RUBE,Carangidae,Caranx ruber,Bar Jack,25,,0.00000429,3.236983681
+CEP CRUE,Serranidae,Cephalopholis cruentata,Graysby,21,16.4991,0.00001,3.082
+CEP FULV,Serranidae,Cephalopholis fulva,Coney,22,18.5084,0.0000174,3
+CHA CAPI,Chaetodontidae,Chaetodon capistratus,Foureye Butterflyfish,2.5,,0.00000129,3.19
+EPI GUTT,Serranidae,Epinephelus guttatus,Red Hind,25,34.1343,0.00000857,3.1124
+HAE FLAV,Haemulidae,Haemulon flavolineatum,French Grunt,16,17.7,0.00000903,3.1581
+HAE PLUM,Haemulidae,Haemulon plumierii,White Grunt,20,18,0.00000835,3.1612
+HAL GARN,Labridae,Halichoeres garnoti,Yellowhead Wrasse,,,0.00000219,3.375
+HAL MACU,Labridae,Halichoeres maculipinna,Clown Wrasse,,,0.000000568,3.693
+HOL ADSC,Holocentridae,Holocentrus adscensionis,Squirrelfish,,,0.0000198,3
+HOL RUFU,Holocentridae,Holocentrus rufus,Longspine Squirrelfish,,,0.0000131,3.0594
+LAC MAXI,Labridae,Lachnolaimus maximus,Hogfish,30,16.6,0.0000209,2.988
+LUT APOD,Lutjanidae,Lutjanus apodus,Schoolmaster,25,24.6,0.0000204,2.9779
+LUT MAHO,Lutjanidae,Lutjanus mahogoni,Mahogany Snapper,30,,0.0000817,2.719
+OCY CHRY,Lutjanidae,Ocyurus chrysurus,Yellowtail Snapper,26,19.8768,0.0000775,2.718
+PSE MACU,Mullidae,Pseudupeneus maculatus,Spotted Goatfish,,,0.000015,3.0257
+SCA ISER,Scaridae,Scarus iseri,Striped Parrotfish,,,0.0000159,3.02
+SCA TAEN,Scaridae,Scarus taeniopterus,Princess Parrotfish,,,0.0000177,3
+SPA AURO,Scaridae,Sparisoma aurofrenatum,Redband Parrotfish,,,0.00000175,3.429
+SPA VIRI,Scaridae,Sparisoma viride,Stoplight Parrotfish,,,0.00003,2.9214
+STE PART,Pomacentridae,Stegastes partitus,Bicolor Damselfish,,,0.0000128,3.1519
+STE PLAN,Pomacentridae,Stegastes planifrons,Threespot Damselfish,,,0.0000527,2.8569
+STE VARI,Pomacentridae,Stegastes variabilis,Cocoa Damselfish,,,0.0000472,2.8365
+THA BIFA,Labridae,Thalassoma bifasciatum,Bluehead,,,0.000013,2.9162

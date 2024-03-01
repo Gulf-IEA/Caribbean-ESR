@@ -1,11 +1,13 @@
 ```{r, message = FALSE, warnings = FALSE}
-#devtools::install_github("https://github.com/MandyKarnauskas-NOAA/plotTimeSeries.git")
+devtools::install_github("https://github.com/MandyKarnauskas-NOAA/plotTimeSeries.git")
 
 library(plotTimeSeries)
 library(spam)
 ```
 
 # 5. Tracking performance toward fishery management objectives
+
+In this section, we examine indicators related to broad, ecosystem-level fishery management objectives. 
 
 ## 5.1 Food production
 
