@@ -23,7 +23,7 @@ library(rvc)
 # STTSTJ  --> St. Thomas & St. John
 # STX  --> St. Croix
 
-# NOTE: as of 3/1/2024 calibrations have not been completed for all species. This means the data on the portal only go back to 2016. To get the full time series (2001 onward) we needed to get the calibrated data from Jeremiah. Species specific calibrations were done. The calibrated_species.csv file is a list of all the species that have thus far been calibrated. All species of interest have been calibrated except for mutton snapper. For mutton snapper we can only use data from 2017 onward.
+# NOTE: as of 3/1/2024 calibrations have not been completed for all species. This means the data on the portal only go back to 2016. To get the full time series (2001 onward) we needed to get the calibrated data from Jeremiah Blondeau (jeremiah.blondeau@noaa.gov). Species specific calibrations were done. The calibrated_species.csv file is a list of all the species that have thus far been calibrated. All species of interest have been calibrated except for mutton snapper. For mutton snapper we can only use data from 2017 onward.
 
 calibrated = read.csv("indicator_data/RVC/calibrated_species.csv")
 
@@ -82,4 +82,9 @@ for(j in regions) {
 }
 
 ####### SAVE FILES TO INDICATOR_OBJECTS ONCE ALL PROBLEMS ARE FIXED
+
+
+### Left to troubleshoot:
+
+# Year is not showing up in the plots. Need to figure out what to label the plots. Need to take out mutton snapper and do that one separately because the data are not calibrated.
 
