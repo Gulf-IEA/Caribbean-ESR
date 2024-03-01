@@ -3,13 +3,16 @@
 # https://stackoverflow.com/questions/68666187/internetopenurl-failed-a-connection-with-the-server-could-not-be-established
 
 rm(list = ls())
+dev.off()
 
-#devtools::install_github("mdsumner/ncdf4")
-#library(ncdf4)
+# devtools::install_github("mdsumner/ncdf4")
+# library(ncdf4)
+
+load("spec_file.RData")
 
 # define years  --------------------------------
 styear <- 1982
-enyear <- 2023
+enyear <- terminal_year
 
 # empty data  -------------------------------------------------
 dat <- data.frame(row.names = c("year", "mon", "PR_mean", "PR_min", "PR_max", "VI_mean", "VI_min", "VI_max"))
@@ -19,9 +22,11 @@ for (yr in styear:enyear) {
   
 # url from ERDDAP for OISST, download and read ----------------
   url <- paste0("https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg.csv?sst[(", yr, "-01-01T12:00:00Z):1:(", yr, "-12-31T12:00:00Z)][(0.0):1:(0.0)][(17):1:(19)][(292):1:(296)]")
-#  url_vi <- paste0("https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg.csv?sst[(", yr, "-01-01T12:00:00Z):1:(", yr, "-12-31T12:00:00Z)][(0.0):1:(0.0)][(17):1:(19)][(294.75):1:(296)]")
-#  url_pr <- paste0("https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg.csv?sst[(", yr, "-01-01T12:00:00Z):1:(", yr, "-12-31T12:00:00Z)][(0.0):1:(0.0)][(17):1:(19)][(292):1:(294.75)]")
-  download.file(url = url, destfile = "st.csv")
+
+  #  url_vi <- paste0("https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg.csv?sst[(", yr, "-01-01T12:00:00Z):1:(", yr, "-12-31T12:00:00Z)][(0.0):1:(0.0)][(17):1:(19)][(294.75):1:(296)]")
+  #  url_pr <- paste0("https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg.csv?sst[(", yr, "-01-01T12:00:00Z):1:(", yr, "-12-31T12:00:00Z)][(0.0):1:(0.0)][(17):1:(19)][(292):1:(294.75)]")
+  #  download for entire Caribbean because USVI and PR highly correlated. 
+    download.file(url = url, destfile = "st.csv")
 
   labs <- read.table("st.csv", sep = ",", header = T, skip = 0)
   sst_vi <- read.table("st.csv", sep = ",", header = T, skip = 1)
@@ -38,6 +43,8 @@ for (yr in styear:enyear) {
   tempdat <- data.frame(yr, unique(sst_vi$mon), ind_vi, min_vi, max_vi, stringsAsFactors = F)
   dat <- data.frame(rbind(dat, tempdat), stringsAsFactors = F)
 }
+
+file.remove("st.csv")
 
 # add row names and yearmonth column --------------------------
 names(dat) <- c("year", "mon", "mean", "min", "max")
@@ -58,6 +65,7 @@ plot(dat[3:5])
 labs <- c(rep("U.S. Caribbean sea surface temperature", 3), rep("degrees Celsius", 3), 
           "monthly mean", "monthly minimum", "monthly maximum")
           #          "Puerto Rico - mean", "USVI - mean", "Puerto Rico - monthly minimum", "USVI - monthly minimum", "Puerto Rico - monthly maximum", "USVI - monthly maximum")
+
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = T))
 inddata <- data.frame(dat[c(3:5)])
 datdata <- dat$yrmon
@@ -66,11 +74,12 @@ s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim =
 class(s) <- "indicatordata"
 s
 
-inddata <- s
+ind <- s
 
 # save and plot ---------------------------------------
-save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/Carib_SST.RData")
 
-plotIndicatorTimeSeries(s, coltoplot = 1:3, plotrownum = 3, dateformat = "%m-%Y", sublabel = T, 
+save(ind, file = "../../indicator_objects/Carib_SST.RData")
+
+plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, dateformat = "%m-%Y", sublabel = T, 
                         trendAnalysis = T, widadj = 0.5, anom = "mon", type = "allLines") #  outtype = "png", hgtadj = 0.8)
 

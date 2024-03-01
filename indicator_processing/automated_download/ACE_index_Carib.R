@@ -13,25 +13,28 @@
 
 # specification file and libraries -----------------------------
 rm(list = ls())
+dev.off()
+
 library(maps)
 library(plotTimeSeries)
 
-#load("spec_file.RData")
+load("spec_file.RData")
 
 # define years  --------------------------------
 styear <- 1961
-enyear <- 2023
+enyear <- terminal_year
 
 # download data directly from site -----------------------------
 options(download.file.method="libcurl")
 
 url <- "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/ibtracs.NA.list.v04r00.csv"
-url <- "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/ibtracs.NA.list.v04r00.csv"
 
-download.file(url = url, destfile = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/ibtracs.csv")
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/ibtracs.csv", skip = 2, header = F)
-datn <- read.csv("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/ibtracs.csv", skip = 0, header = T)
+download.file(url = url, destfile = "ibtracs.csv")
+dat <- read.csv("ibtracs.csv", skip = 2, header = F)
+datn <- read.csv("ibtracs.csv", skip = 0, header = T)
 names(dat) <- names(datn)
+
+file.remove("ibtracs.csv")
 
 # cut columns --------------------------------
 
@@ -152,12 +155,10 @@ indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
 class(s) <- "indicatordata"
 
-setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/")
+plotIndicatorTimeSeries(s, widadj = 0.5)
 
-plotIndicatorTimeSeries(s, widadj = 0.5, outtype = "png")
-
-inddata <- s
-save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/ACEindex.RData")
+ind <- s
+save(ind, file = "../../indicator_objects/ACEindex.RData")
 
 #################################################################################
 
