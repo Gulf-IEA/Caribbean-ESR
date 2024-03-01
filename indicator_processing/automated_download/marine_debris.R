@@ -1,8 +1,31 @@
+#
+# marine debris data from UN SDG TrackerGoal 14: Life below water
+# 
 
+# specification file and libraries -----------------------------
 rm(list = ls())
+dev.off()
+
+library(maps)
+library(plotTimeSeries)
+library(xml2)
+library(rvest)
+
+load("spec_file.RData")
+
+# download data directly from site -----------------------------
 
 #url <- "https://sdg-tracker.org/ca8b6a47-9731-4fd8-8369-1c69c25485d6"
-#download.file(url = url, destfile = "C:/Users/mandy.karnauskas/Downloads/litter.csv")
+
+
+url <- "https://ourworldindata.org/grapher/beach-litter?tab=table&time=2015..2020&country=~PRI"
+
+# this does not work -- need to fix 
+page <- read_html(url) #Creates an html document from URL
+
+table <- html_table(page, fill = TRUE) #Parses tables into data frames
+table
+# automated download does not work ############
 
 dat <- read.csv("C:/Users/mandy.karnauskas/Downloads/beach-litter.csv", skip = 0, header = T)
 

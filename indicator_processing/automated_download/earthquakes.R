@@ -1,26 +1,36 @@
 
 # IRIS Earthquake Browser
-# (download .csv file for N. Atlantic basin)
+# (automatically downloads table off of website)
 
 # specification file and libraries -----------------------------
 rm(list = ls())
+dev.off()
+
 library(maps)
 library(plotTimeSeries)
+library(xml2)
+library(rvest)
 
 load("spec_file.RData")
 
 # download data directly from site -----------------------------
 #options(download.file.method="libcurl")
 
-cat(paste0("https://ds.iris.edu/ieb/index.html?format=text&nodata=404&starttime=1970-01-01&endtime=2025-01-01&minmag=3.5&maxmag=10&mindepth=0&maxdepth=900&orderby=time-desc&src=usgs&limit=1000&maxlat=", 
-       max_lat, "&minlat=", min_lat, "&maxlon=", max_lon, "&minlon=", min_lon, "&sbl=1&zm=7&mt=ter"))
+#cat(paste0("https://ds.iris.edu/ieb/index.html?format=text&nodata=404&starttime=1970-01-01&endtime=2025-01-01&minmag=3.5&maxmag=10&mindepth=0&maxdepth=900&orderby=time-desc&src=usgs&limit=1000&maxlat=", 
+#       max_lat, "&minlat=", min_lat, "&maxlon=", max_lon, "&minlon=", min_lon, "&sbl=1&zm=7&mt=ter"))
 
-# copy link into browser
-# ensure all are visible (select 'Maximum earthquakes' if not all visible)
-# download as csv and save as "quakes.csv" 
 
-#download.file(url = url, destfile = "../indicator_data/quakes.csv")
-dat <- read.csv( "../indicator_data/quakes.csv", header = T)
+url <- paste0("https://ds.iris.edu/ieb/evtable.phtml?caller=IEB&st=1970-01-01&et=2025-01-01&minmag=3.5&maxmag=10&mindepth=0&xde=900&orderby=time-desc&src=usgs&limit=5000&", 
+        "maxlat=", max_lat, "&minlat=", min_lat, "&maxlon=", max_lon, "&minlon=", min_lon, 
+        "&sbl=1&zm=8&mt=ter&title=IEB%20export%3A%201033%20earthquakes%20as%20a%20sortable%20table.&stitle=from%", 
+        "201970-01-01%20to%202025-01-01%2C%20with%20magnitudes%20from%203.5%20to%2010%2C%20depths%20from%200%20to", 
+        "%20900%20km%2C%20with%20priority%20for%20most%20recent%2C%20limited%20to%205000%2C%20%20showing%20data%20from%20USGS%2C%20")
+
+page <- read_html(url) #Creates an html document from URL
+table <- html_table(page, fill = TRUE) #Parses tables into data frames
+table
+
+dat <- data.frame(table[[1]])
 head(dat)
 dim(dat)
 
@@ -54,13 +64,13 @@ datdata <- min(dat$Year):max(dat$Year)
 inddata <- data.frame(as.numeric(tot_num))
 labs <- c("Earthquake activity", "number of events per year", "")
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
-s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
-class(s) <- "indicatordata"
 
-plotIndicatorTimeSeries(s)
+ind <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
+class(ind) <- "indicatordata"
 
-inddata <- s
-save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/earthquakes.RData")
+plotIndicatorTimeSeries(ind)
+
+save(ind, file = "../../indicator_objects/earthquakes.RData")
 
 #################################################################################
 

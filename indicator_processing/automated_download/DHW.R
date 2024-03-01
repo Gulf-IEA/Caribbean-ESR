@@ -1,10 +1,15 @@
-# DHW indicators
+#
+# Degree Heating Weeks indicators
 
 rm(list = ls())
+dev.off()
+
+load("spec_file.RData")
+
 options(download.file.method="libcurl")
 
 styear <- 2012
-enyear <- 2023
+enyear <- terminal_year
 
 # download data and calculate mean -------------------
 
@@ -13,10 +18,12 @@ for (i in 1:2) {
   if (i == 1) {  url <- "https://coralreefwatch.noaa.gov/product/vs/data/puerto_rico.txt"  }
   if (i == 2) {  url <- "https://coralreefwatch.noaa.gov/product/vs/data/usvi.txt"  }
 
-  download.file(url = url, destfile = "C:/Users/mandy.karnauskas/Downloads/dhw.txt")
-  d <- read.table("C:/Users/mandy.karnauskas/Downloads/dhw.txt", skip = 21, header = T)
+  download.file(url = url, destfile = "dhw.txt")
+  d <- read.table("dhw.txt", skip = 21, header = T)
+  
+  file.remove("dhw.txt")
 
-  d <- d[which(d$YYYY >= styear & d$YYYY <= 2023), ]
+  d <- d[which(d$YYYY >= styear & d$YYYY <= enyear), ]
   
   head(d)
   d$yrmon <- paste0(d$YYYY, sprintf("%02.f", d$MM))
@@ -50,13 +57,16 @@ labs <- c(rep("Average monthly degree heating weeks", 2),
           "Puerto Rico", "USVI")
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = T))
 
-inddata <- list(labels = indnames, indicators = inddats, datelist = datdata) #, ulim = ulidata, llim = llidata)
-class(inddata) <- "indicatordata"
+ind <- list(labels = indnames, indicators = inddats, datelist = datdata) #, ulim = ulidata, llim = llidata)
+class(ind) <- "indicatordata"
 
 # save and plot -----------------------------------
-save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/DegreeHeatingWeeks.RData")
 
-plotIndicatorTimeSeries(inddata, coltoplot = 1:2, plotrownum = 2, sublabel = T, dateformat = "%Y%m", yposadj = 0.7,
+save(ind, file = "../../indicator_objects/DegreeHeatingWeeks.RData")
+
+plotIndicatorTimeSeries(ind, coltoplot = 1:2, plotrownum = 2, sublabel = T, dateformat = "%Y%m", yposadj = 0.7,
                         sameYscale = T, type = "allLines")
+
+# END ---------------
 
 
