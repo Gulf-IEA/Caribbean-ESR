@@ -11,7 +11,10 @@ library(spam)
 
 Indicator 1
 
-DegreeHeatingWeeks.RData doesn't work. Think it's an issue with the date column. Also called ind not inddata.
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/DegreeHeatingWeeks.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:2, trendAnalysis = T, sublabel = T, dateformat = "%Y%m", plotrownum = 2, plotcolnum = 1)
+```
 
 ### Ocean acidification via aragonite saturation state
 
@@ -35,18 +38,19 @@ plotIndicatorTimeSeries(ind, trendAnalysis = T)
 
 Indicator 4
 
-turbidity.RData doesn't work. Again looks like an issue with the date.
-
 ```{r, message = FALSE, warnings = FALSE}
 load("../indicator_objects/turbidity.RData")
-plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 2, trendAnalysis = T)
+plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 2, trendAnalysis = T, dateformat = "%m-%Y", sublabel = T)
 ```
 
 ### Sea surface temperature
 
 Indicator 5
 
-No RData file for SST
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/Carib_SST.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:3, trendAnalysis = T, sublabel = T, dateformat = "%m-%Y")
+```
 
 
 ### Marine debris
@@ -71,11 +75,9 @@ Indicator 7
 
 Indicator 8
 
-carib_Chl.RData doesn't work. Another issue with the date.
-
 ```{r, message = FALSE, warnings = FALSE}
 load("../indicator_objects/carib_Chl.RData")
-plotIndicatorTimeSeries(ind, trendAnalysis = F)
+plotIndicatorTimeSeries(ind, trendAnalysis = T, dateformat = "%m-%Y")
 ```
 
 ### Coastal development via land cover
@@ -104,25 +106,29 @@ plotIndicatorTimeSeries(inddata, coltoplot = 1:3, trendAnalysis = T, sublabel = 
 
 Indicator 12
 
-doesn't work
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/Sargassum.RData")
+plotIndicatorTimeSeries(inddata, trendAnalysis = T)
+```
 
-load("indicator_objects/Sargassum.RData") 
-plotIndicatorTimeSeries(inddata, coltoplot = 1:2, plotrownum = 2, trendAnalysis = F, sublabel = T) 
-
-load("indicator_objects/sargassum_innundation_monthly_mean_hu.RData")
-plotIndicatorTimeSeries(inddata, coltoplot = 1:2, plotrownum = 2, trendAnalysis = F, sublabel = T)
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/sargassum_innundation_monthly_mean_hu.RData")
+plotIndicatorTimeSeries(inddata, coltoplot = 1:3, sublabel = T, trendAnalysis = T, dateformat = "%Y%b")
+```
 
 ### Tourism via hotel occupancy
 
 Indicator 13
 
-doesn't work 
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/hotel_occupancy_rates_USVI_and_PR.RData")
+plotIndicatorTimeSeries(inddata, coltoplot = 1:2, sublabel = T, trendAnalysis = T, dateformat = "%Y%b")
+```
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/hotel_occupancy.RData")
+plotIndicatorTimeSeries(inddata, coltoplot = 1:2, sublabel = T, trendAnalysis = T, dateformat = "%Y%b")
+```
 
-load("indicator_objects/hotel_occupancy_rates_USVI_and_PR.RData")
-plotIndicatorTimeSeries(inddata, trendAnalysis = F) 
-
-load("indicator_objects/hotel_occupancy.RData") 
-plotIndicatorTimeSeries(inddata, trendAnalysis = F) 
 
 ### Population density
 
