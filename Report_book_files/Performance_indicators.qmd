@@ -26,7 +26,7 @@ plotIndicatorTimeSeries(inddata, coltoplot = 1:6, trendAnalysis = T, sublabel = 
 
 ```{r, message = FALSE, warnings = FALSE}
 load("../indicator_objects/total_landings.RData")
-plotIndicatorTimeSeries(inddata, coltoplot = 1:9, trendAnalysis = T, sublabel = T)
+plotIndicatorTimeSeries(inddata, coltoplot = 1:9, plotrownum = 3, plotcolnum = 3, trendAnalysis = T, sublabel = T)
 ```
 
 ```{r}
