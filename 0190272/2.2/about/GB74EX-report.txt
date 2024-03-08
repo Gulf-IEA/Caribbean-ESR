@@ -1,0 +1,31 @@
+The submitter provided the following profile information:
+Name: Mengqiu Wang
+Organization: University of South Florida (USF - USF)
+Phone: 7274593801
+DeliveryPoint: KRC 3124, 140 7th Avenue South,
+DeliveryPoint: Saint Petersburg,Florida
+City: Saint Petersburg
+AdministrativeArea: FL
+PostalCode: 33701
+
+Contributors:
+Name: Chuanmin Hu
+Role: principalInvestigator
+
+Name: Mengqiu Wang
+Organization: University of South Florida (USF - USF)
+Institutions_id: 1522
+Email: mengqiu@mail.usf.edu
+Role: pointOfContact
+
+The following non-ATDB metadata was provided:
+Suggested Author List: Wang, Mengqiu; Hu, Chuanmin; Barnes, Brian;
+Related Funding Agency: US DOC; National Oceanic and Atmospheric Administration (institutions_id 1452)
+Related Funding Agency: US National Aeronautic and Space Administration (institutions_id 208)
+datatypes-0: Sargassum density
+datatypes-1: Sargassum coverage
+datatypes-2: Sargassum mean biomass
+datatypes-3: Sargassum mean coverage
+projects-0: NOAA RESTORE Science Program (NA17NOS4510099)
+projects-1: NASA Ocean Biology and Biogeochemistry Program (NNX14AL98G, NNX16AR74G)
+projects-2: NASA Ecological Forecast Program (NNX17AE57G)

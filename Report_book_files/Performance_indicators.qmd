@@ -43,7 +43,7 @@ Indicator 23
 
 ```{r}
 load("../indicator_objects/OceanNAICS.RData")
-plotIndicatorTimeSeries(inddata, coltoplot = 1:2, plotrownum = 2, trendAnalysis = F, sublabel = T)
+plotIndicatorTimeSeries(inddata, coltoplot = 1:8, plotrownum = 2, trendAnalysis = T, sublabel = T)
 ```
 
 ### GDP
@@ -62,7 +62,7 @@ Indicator 26
 
 ```{r}
 load("../indicator_objects/gini.RData")
-plotIndicatorTimeSeries(inddata, coltoplot = 1:2, plotrownum = 2, trendAnalysis = F, sublabel = T)
+plotIndicatorTimeSeries(inddata, coltoplot = 1:2, plotrownum = 2, trendAnalysis = T, sublabel = T)
 ```
 
 ### Commercial fishing community engegement and reliance

@@ -1,0 +1,22 @@
+Subject: [Send2NCEI] data submission confirmation for Reference ID: GB74EX
+From: NODC.DataOfficer@noaa.gov
+To: mengqiu@mail.usf.edu
+
+Dear Mengqiu Wang,
+
+Thank you for submitting your data collection, titled "Sargassum density/coverage from 2001-01-01 to 2018-12-31", to the NOAA National Centers for Environmental Information (NCEI). Your submission package has been assigned Reference ID: GB74EX. After reviewing your data and metadata, NCEI will update you about the archival status of your submission package.
+
+You will be notified if NCEI creates an archival information package (accession) of your data, including the unique identifier for that archival information package (the NCEI Accession number).  When your data are archived, NCEI keeps an exact copy of the data and metadata you sent and will develop necessary tracking and discovery metadata. In addition, NCEI may create additional versions to ensure your data are preserved for long-term access. 
+
+Upon completion of these archival ingest actions, NCEI will publish your data online (including a copy of your original files). You will receive another email once your submission package (Reference ID: GB74EX) is published for global access. In addition, NCEI may include all or part of your data into one or more product databases, such as the World Ocean Database.
+
+If you have any questions about NCEI archival processes, please contact NODC.DataOfficer@noaa.gov. Also, if at any time you wish to update your submission package, please send an e-mail to NODC.DataOfficer@noaa.gov with your request. Please remember to include your submission package Reference ID.  
+
+Thank you again for choosing to archive your data with the National Centers for Environmental Information (NCEI).
+
+NCEI Data Officer Team
+NOAA National Centers for Environmental Information
+NOAA/NESDIS
+1315 East-West Highway
+Silver Spring, MD 20910
+USA

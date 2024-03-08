@@ -1,0 +1,343 @@
+*****************************************************************
+Journal for accession number:  0190272
+Created on:                    2019-09-24 13:14:23 UTC
+By:                            Madalyn Newman, National Centers for Environmental Information
+
+Source: Mengqiu Wang, University of South Florida (USF - USF), submitted
+data and metadata to NCEI in submission package GB74EX via Send2NCEI (S2N).
+Additional data files were sent via email to replace some of these data. 
+
+Actions: An automated procedure copied the files from the submission package
+into this accession. A metadata record in ISO 19115-2 XML format was also
+generated from the information provided by the submitter and was copied into
+this accession. A major revision of this accession was preformed to both include
+additional submitter data files and remove other data files.
+
+Version2.2:  The submitter requested that the "Sargassum_areal_coverage" data
+be removed and replace with the "Sargassum_areal_coverage_July" data instead. 
+
+Files:
+
+about/ 
+This directory contains files created by NCEI staff and processing, including
+'negotiable' information between NCEI staff and the data provider.
+
+0190272_lonlat.txt - 
+  Contains bounding box locations 
+  where these data were collected (longitude in the left column and
+  latitude in the right column, both in degrees).  NCEI may have corrected 
+  geographic positions that seemed to be in error when generating this file.  
+  However, NCEI did not change the original data files under the directory 
+  data/0-data/.
+
+0190272_map.jpg - 
+  Sample location map for these data.
+
+
+GB74EX-confirmation_email.txt -
+  Email from the Send2NCEI web application to Mengqiu Wang, University of
+  South Florida (USF - USF), confirming that NCEI has received the
+  submission information package.
+
+GB74EX-report.txt -
+  Automatically generated report containing information about the automated
+  processing of this accession and provider-specific metadata. This report
+  is intended for use by the Data Content Manager assigned to this
+  accession.
+  
+0-email.txt -
+   Email from submitter requesting that NCEI remove a data directory and 
+   and add an additional directory. 
+
+data/0-data/
+This directory contains files in their original format as downloaded to NCEI.
+
+The following is a summary of the differences between the data files in this
+revision of this accession and the previous revision:
+
+Removed files: 217
+Updated files: 1
+New files: 9
+
+Removed files:
+
+\data\0-data\Sargassum_areal_coverage\Sargassum_areal_coverage\:
+\Year-2012-09.S_coverage.tiff
+\Year-2016-02.S_coverage.tiff
+\Year-2009-11.S_coverage.tiff
+\Year-2015-09.S_coverage.tiff
+\Year-2001-02.S_coverage.tiff.ovr
+\Year-2011-12.S_coverage.tiff
+\Year-2012-01.S_coverage.tiff
+\Year-2002-03.S_coverage.tiff
+\Year-2004-07.S_coverage.tiff
+\Year-2010-12.S_coverage.tiff
+\Year-2006-07.S_coverage.tiff
+\Year-2015-06.S_coverage.tiff
+\Year-2007-05.S_coverage.tiff
+\Year-2013-05.S_coverage.tiff
+\Year-2008-11.S_coverage.tiff
+\Year-2003-11.S_coverage.tiff
+\Year-2007-02.S_coverage.tiff
+\Year-2010-11.S_coverage.tiff
+\Year-2018-05.S_coverage.tiff
+\Year-2002-08.S_coverage.tiff
+\Year-2018-07.S_coverage.tiff
+\Year-2001-12.S_coverage.tiff
+\Year-2012-05.S_coverage.tiff
+\Year-2002-12.S_coverage.tiff
+\Year-2008-05.S_coverage.tiff
+\Year-2007-03.S_coverage.tiff
+\Year-2015-07.S_coverage.tiff
+\Year-2017-04.S_coverage.tiff
+\colorbar_new_sargs_0.0_to_0.1.png
+\Year-2014-08.S_coverage.tiff
+\Year-2018-03.S_coverage.tiff
+\Year-2006-06.S_coverage.tiff
+\Year-2013-01.S_coverage.tiff
+\Year-2001-08.S_coverage.tiff
+\Year-2012-11.S_coverage.tiff
+\Year-2006-08.S_coverage.tiff
+\Year-2014-05.S_coverage.tiff
+\Year-2006-10.S_coverage.tiff
+\Year-2014-11.S_coverage.tiff
+\Year-2011-11.S_coverage.tiff
+\Year-2007-09.S_coverage.tiff
+\Year-2008-07.S_coverage.tiff
+\Year-2011-05.S_coverage.tiff
+\Year-2002-11.S_coverage.tiff
+\Year-2015-12.S_coverage.tiff
+\Year-2004-08.S_coverage.tiff
+\Year-2015-05.S_coverage.tiff
+\Year-2012-12.S_coverage.tiff
+\Year-2009-03.S_coverage.tiff
+\Year-2004-10.S_coverage.tiff
+\Year-2005-08.S_coverage.tiff
+\Year-2010-06.S_coverage.tiff
+\Year-2008-12.S_coverage.tiff
+\Year-2002-09.S_coverage.tiff
+\Year-2014-06.S_coverage.tiff
+\Year-2017-10.S_coverage.tiff
+\Year-2016-11.S_coverage.tiff
+\Year-2007-06.S_coverage.tiff
+\Year-2010-01.S_coverage.tiff
+\Year-2018-09.S_coverage.tiff
+\Year-2011-03.S_coverage.tiff
+\Year-2016-10.S_coverage.tiff
+\Year-2009-01.S_coverage.tiff
+\Year-2009-06.S_coverage.tiff
+\Year-2004-01.S_coverage.tiff
+\Year-2002-02.S_coverage.tiff
+\Year-2001-02.S_coverage.tiff
+\Year-2011-01.S_coverage.tiff
+\Year-2017-12.S_coverage.tiff
+\Year-2004-11.S_coverage.tiff
+\Year-2001-06.S_coverage.tiff
+\Year-2016-08.S_coverage.tiff
+\Year-2015-03.S_coverage.tiff
+\Year-2002-07.S_coverage.tiff
+\Year-2010-03.S_coverage.tiff
+\Year-2005-06.S_coverage.tiff
+\Year-2018-10.S_coverage.tiff
+\Year-2016-06.S_coverage.tiff
+\Year-2014-02.S_coverage.tiff
+\Year-2018-04.S_coverage.tiff
+\Year-2015-02.S_coverage.tiff
+\Year-2006-02.S_coverage.tiff
+\Year-2015-10.S_coverage.tiff
+\Year-2005-11.S_coverage.tiff
+\Year-2008-08.S_coverage.tiff
+\Year-2002-04.S_coverage.tiff
+\Year-2008-06.S_coverage.tiff
+\Year-2016-07.S_coverage.tiff
+\Year-2018-01.S_coverage.tiff
+\Year-2009-12.S_coverage.tiff
+\Year-2007-12.S_coverage.tiff
+\Year-2006-03.S_coverage.tiff
+\Year-2013-06.S_coverage.tiff
+\Year-2001-03.S_coverage.tiff
+\Year-2018-08.S_coverage.tiff
+\Year-2001-07.S_coverage.tiff
+\Year-2005-12.S_coverage.tiff
+\Year-2015-04.S_coverage.tiff
+\Year-2009-07.S_coverage.tiff
+\Year-2005-07.S_coverage.tiff
+\Year-2003-08.S_coverage.tiff
+\Year-2009-08.S_coverage.tiff
+\Year-2005-05.S_coverage.tiff
+\Year-2010-08.S_coverage.tiff
+\Year-2017-07.S_coverage.tiff
+\Year-2007-01.S_coverage.tiff
+\Year-2003-07.S_coverage.tiff
+\Year-2006-12.S_coverage.tiff
+\Year-2002-10.S_coverage.tiff
+\Year-2004-02.S_coverage.tiff
+\Year-2001-05.S_coverage.tiff
+\Year-2011-06.S_coverage.tiff
+\Year-2004-09.S_coverage.tiff
+\Year-2013-07.S_coverage.tiff
+\Year-2003-01.S_coverage.tiff
+\Year-2017-02.S_coverage.tiff
+\Year-2017-09.S_coverage.tiff
+\Year-2002-06.S_coverage.tiff
+\Year-2010-07.S_coverage.tiff
+\Year-2007-07.S_coverage.tiff
+\Year-2003-02.S_coverage.tiff
+\Year-2004-05.S_coverage.tiff
+\Year-2014-04.S_coverage.tiff
+\Year-2007-10.S_coverage.tiff
+\Year-2013-10.S_coverage.tiff
+\Year-2015-11.S_coverage.tiff
+\Year-2003-10.S_coverage.tiff
+\Year-2011-07.S_coverage.tiff
+\Year-2004-12.S_coverage.tiff
+\Year-2018-02.S_coverage.tiff
+\Year-2016-09.S_coverage.tiff
+\Year-2013-12.S_coverage.tiff
+\Year-2009-09.S_coverage.tiff
+\Year-2018-12.S_coverage.tiff
+\Year-2012-04.S_coverage.tiff
+\Year-2013-08.S_coverage.tiff
+\Year-2013-09.S_coverage.tiff
+\Year-2014-12.S_coverage.tiff
+\Year-2013-03.S_coverage.tiff
+\Year-2017-03.S_coverage.tiff
+\Year-2006-11.S_coverage.tiff
+\Year-2010-02.S_coverage.tiff
+\Year-2012-10.S_coverage.tiff
+\Year-2003-04.S_coverage.tiff
+\Year-2017-08.S_coverage.tiff
+\Year-2011-02.S_coverage.tiff
+\Year-2001-01.S_coverage.tiff
+\Year-2003-06.S_coverage.tiff
+\Year-2010-09.S_coverage.tiff
+\Year-2005-09.S_coverage.tiff
+\Year-2004-03.S_coverage.tiff
+\Year-2002-05.S_coverage.tiff
+\Year-2018-06.S_coverage.tiff
+\Year-2005-10.S_coverage.tiff
+\Year-2014-01.S_coverage.tiff
+\Year-2009-02.S_coverage.tiff
+\Year-2007-04.S_coverage.tiff
+\Year-2016-12.S_coverage.tiff
+\Year-2003-05.S_coverage.tiff
+\Year-2008-10.S_coverage.tiff
+\Year-2010-04.S_coverage.tiff
+\Year-2008-02.S_coverage.tiff
+\Year-2012-02.S_coverage.tiff
+\Year-2008-01.S_coverage.tiff
+\Year-2015-08.S_coverage.tiff
+\Year-2008-09.S_coverage.tiff
+\Year-2009-05.S_coverage.tiff
+\Year-2012-06.S_coverage.tiff
+\Year-2016-04.S_coverage.tiff
+\Year-2013-11.S_coverage.tiff
+\Year-2005-03.S_coverage.tiff
+\Year-2016-03.S_coverage.tiff
+\Year-2009-10.S_coverage.tiff
+\Year-2013-04.S_coverage.tiff
+\Year-2010-05.S_coverage.tiff
+\Year-2011-04.S_coverage.tiff
+\Year-2011-10.S_coverage.tiff
+\Year-2006-04.S_coverage.tiff
+\Year-2014-09.S_coverage.tiff
+\Year-2008-03.S_coverage.tiff
+\Year-2003-03.S_coverage.tiff
+\Year-2001-04.S_coverage.tiff
+\Year-2012-07.S_coverage.tiff
+\Year-2001-09.S_coverage.tiff
+\Year-2017-05.S_coverage.tiff
+\Year-2016-05.S_coverage.tiff
+\Year-2005-01.S_coverage.tiff
+\Year-2012-08.S_coverage.tiff
+\Year-2004-04.S_coverage.tiff
+\Year-2005-02.S_coverage.tiff
+\Year-2007-08.S_coverage.tiff
+\Year-2009-04.S_coverage.tiff
+\Year-2007-11.S_coverage.tiff
+\Year-2006-05.S_coverage.tiff
+\Year-2017-01.S_coverage.tiff
+\Year-2014-10.S_coverage.tiff
+\Year-2017-06.S_coverage.tiff
+\Year-2013-02.S_coverage.tiff
+\Year-2010-10.S_coverage.tiff
+\Year-2012-03.S_coverage.tiff
+\Year-2001-11.S_coverage.tiff
+\Year-2011-08.S_coverage.tiff
+\Year-2018-11.S_coverage.tiff
+\Year-2008-04.S_coverage.tiff
+\Year-2005-04.S_coverage.tiff
+\Year-2014-07.S_coverage.tiff
+\Year-2015-01.S_coverage.tiff
+\Year-2016-01.S_coverage.tiff
+\Year-2001-10.S_coverage.tiff
+\Year-2003-12.S_coverage.tiff
+\Year-2006-01.S_coverage.tiff
+\Year-2003-09.S_coverage.tiff
+\Year-2014-03.S_coverage.tiff
+\Year-2002-01.S_coverage.tiff
+\Year-2011-09.S_coverage.tiff
+\Year-2017-11.S_coverage.tiff
+\Year-2006-09.S_coverage.tiff
+\Year-2004-06.S_coverage.tiff
+
+Updated files:
+/about/journal.txt
+
+New files:
+\data\0-data\Sargassum_areal_coverage_July\Sargassum_areal_coverage_July:
+colorbar_new_sargs_0.0_to_0.1.png
+Year-2011-07.S_coverage.tiff
+Year-2012-07.S_coverage.tiff
+Year-2013-07.S_coverage.tiff
+Year-2014-07.S_coverage.tiff
+Year-2015-07.S_coverage.tiff
+Year-2016-07.S_coverage.tiff
+Year-2017-07.S_coverage.tiff
+Year-2018-07.S_coverage.tiff
+
+
+*****************************************************************
+Journal for accession number:  0190272
+Created on:                    2019-06-14 13:14:23 UTC
+By:                            Madalyn Newman, National Centers for Environmental Information
+
+Source: Mengqiu Wang, University of South Florida (USF - USF), submitted
+data and metadata to NCEI in submission package GB74EX via Send2NCEI (S2N).
+
+Actions: An automated procedure copied the files from the submission package
+into this accession. A metadata record in ISO 19115-2 XML format was also
+generated from the information provided by the submitter and was copied into
+this accession.
+
+Files:
+
+about/ 
+This directory contains files created by NCEI staff and processing, including
+'negotiable' information between NCEI staff and the data provider.
+
+0190272_lonlat.txt - 
+  Contains bounding box locations 
+  where these data were collected (longitude in the left column and
+  latitude in the right column, both in degrees).  NCEI may have corrected 
+  geographic positions that seemed to be in error when generating this file.  
+  However, NCEI did not change the original data files under the directory 
+  data/0-data/.
+
+0190272_map.jpg - 
+  Sample location map for these data.
+
+
+GB74EX-confirmation_email.txt -
+  Email from the Send2NCEI web application to Mengqiu Wang, University of
+  South Florida (USF - USF), confirming that NCEI has received the
+  submission information package.
+
+GB74EX-report.txt -
+  Automatically generated report containing information about the automated
+  processing of this accession and provider-specific metadata. This report
+  is intended for use by the Data Content Manager assigned to this
+  accession.
+
+data/0-data/
+This directory contains files in their original format as downloaded to NCEI.

@@ -1,0 +1,7 @@
+from:	Mengqiu Wang <mengqiu@mail.usf.edu>
+to:	Madalyn Newman - NOAA Affiliate <Madalyn.Newman@noaa.gov>
+date:	Sep 5, 2019, 11:36 AM
+subject:	Re: NCEI Accession 0190272
+
+Thanks very much for your reply!  I have discussed with my colleagues on this project and we want to remove the "Sargassum_areal_coverage" data folder.
+The attached "Sargassum_areal_coverage_July" folder can be added instead.

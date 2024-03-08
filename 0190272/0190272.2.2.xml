@@ -1,0 +1,3228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<accession manifest_version="2">
+  <head>
+    <id>0190272</id>
+    <version>2.2</version>
+    <timestamp>2019-10-05 07:49:02+00</timestamp>
+    <host>yams</host>
+    <directory>/nodc/archive/arc0139/0190272/2.2/</directory>
+    <file_count>146</file_count>
+    <byte_count>92881366</byte_count>
+  </head>
+  <body>
+    <files>
+      <file>
+        <path>NCEI-Readme.txt</path>
+        <digest algorithm="md5">e91932714ba31f21222c897c53a16b96</digest>
+        <digest algorithm="sha1">82edb6b02edde6773d1dbf60f0daa14dd0a2399a</digest>
+        <digest algorithm="sha256">8a28ff0cfd348380edf08df45dffd3af0f7b21e36693b33c2caacf099fc00e47</digest>
+        <digest algorithm="sha384">5f34016a6e2d1509b8a30b4831c1a216df54bb1e865cea0fb6a1ce6f94ac19c39f8abea4ce4fd1d2fc9dbbcc808a7158</digest>
+        <digest algorithm="sha512">3ef7e6ffc7c31d8f016ae4c3654e4476ffebdeef8984c1cca0da3cd3b8410e5b19b0d985d06ecd58609ddce2f39a6add62c08580e018351ab2827c4b06da39c2</digest>
+        <type_category>regular</type_category>
+        <type>text</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>1847</size>
+        <blksize>32768</blksize>
+        <blocks>8</blocks>
+        <modtime>2018-06-07 19:47:08+00</modtime>
+        <changetime>2019-10-05 07:48:51+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:02+00</sumtime>
+        <inode>51513937</inode>
+      </file>
+      <file>
+        <path>about</path>
+        <digest algorithm="md5">d41d8cd98f00b204e9800998ecf8427e</digest>
+        <digest algorithm="sha1">da39a3ee5e6b4b0d3255bfef95601890afd80709</digest>
+        <digest algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</digest>
+        <digest algorithm="sha384">38b060a751ac96384cd9327eb1b1e36a21fdb71114be07434c0cc7bf63f6e1da274edebfe76f65fbd51ad2f14898b95b</digest>
+        <digest algorithm="sha512">cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e</digest>
+        <type_category>irregular</type_category>
+        <type>directory</type>
+        <permissions>drwxrwxr-x</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>4096</size>
+        <blksize>32768</blksize>
+        <blocks>8</blocks>
+        <modtime>2019-09-24 15:37:24+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:02+00</sumtime>
+        <inode>51552263</inode>
+      </file>
+      <file>
+        <path>about/0-email.txt</path>
+        <digest algorithm="md5">ed618e4c7cac995b9b15899e9cdb35f5</digest>
+        <digest algorithm="sha1">e1dca7f8b1459144c9e7afcb759b132fb2b4c6f7</digest>
+        <digest algorithm="sha256">e7cf3b77ae74d2d2cd16883b26322571d001ca53160228768d5e84fb028dbbf1</digest>
+        <digest algorithm="sha384">38c0848026edef709bf7a70d61899822cd948184b5417121b85e22382e0f6b7aeca6243070b33e06fc3a0aac09db831a</digest>
+        <digest algorithm="sha512">1a4d8151e4a8f7ea05eef64d099f1fa33155f974925ea5dc39e31d74f69092e26f5acf0fc6272d1e51958673de552e2f23965a29e7809f23e40c3f11413f4c31</digest>
+        <type_category>regular</type_category>
+        <type>text</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>1</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>400</size>
+        <blksize>32768</blksize>
+        <blocks>8</blocks>
+        <modtime>2019-09-24 15:37:24+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:02+00</sumtime>
+        <inode>51546657</inode>
+      </file>
+      <file>
+        <path>about/0190272_lonlat.txt</path>
+        <digest algorithm="md5">e085ef89faf557bd8241e7a0ecc78663</digest>
+        <digest algorithm="sha1">4e97b08561972996ed1adfacab96460cd4956945</digest>
+        <digest algorithm="sha256">75247df624f556da059187a3afa300788097bd268bc0e8cb4201d2e5030d3ea5</digest>
+        <digest algorithm="sha384">9a6c5980bc0f7c08adfe760418dc22c7ac52196c950620d3c0c19d805e38966128236c29b42a8827bceeb2958a37c392</digest>
+        <digest algorithm="sha512">3fba0420295c1dad256bc107bfc364f1339933d0a3189bb35977141765b915654de910abb12a6f1f3ed49cc73a87b8df041a9c7fb2656642083add78c5355e97</digest>
+        <type_category>regular</type_category>
+        <type>text</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>30</size>
+        <blksize>32768</blksize>
+        <blocks>8</blocks>
+        <modtime>2019-06-06 18:07:32+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:02+00</sumtime>
+        <inode>51513938</inode>
+      </file>
+      <file>
+        <path>about/0190272_map.jpg</path>
+        <digest algorithm="md5">209ffebe12dd94a083451b1a767827f5</digest>
+        <digest algorithm="sha1">c6ac2f1bd94e6752978210214c0b024954cf2327</digest>
+        <digest algorithm="sha256">ab095cbe087e0f2ea65eb6e8c3fcdf6a2d5c62249a1821338591fcc29f058beb</digest>
+        <digest algorithm="sha384">962840fe1f370d138f3205b3fe3ea13059eb6f0b2345b921d539226fa8622ec24540de69bf70998f5c4a9536d580e0b1</digest>
+        <digest algorithm="sha512">1c087575c5eced9a79e6ede2d3c6df437bc3c4141fac1904f38af796d3b2ba1699a8a589d5a1de63363720ae81a7f1903a6f5331c9659e727497fec923e6cea9</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>265491</size>
+        <blksize>32768</blksize>
+        <blocks>520</blocks>
+        <modtime>2019-06-14 13:16:26+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:02+00</sumtime>
+        <inode>51513939</inode>
+      </file>
+      <file>
+        <path>about/GB74EX-confirmation_email.txt</path>
+        <digest algorithm="md5">1904c8126dd3159862ed5c119fafed05</digest>
+        <digest algorithm="sha1">01a8c8ce2951cae08fa225625f7cd0b3be904d6e</digest>
+        <digest algorithm="sha256">8a83d758c1e60f32fe22d841def1a811c075770f155d77a187f1155197656233</digest>
+        <digest algorithm="sha384">ef3adf464271679bfbbffb6f4818a8b9dd9c505364d9e030783e3a17f2ea030721244006c66f3c2c4e828fe9ec825739</digest>
+        <digest algorithm="sha512">749518354220d8de6329fd51b85730068dae1a567d5c5a1b2911b9804f421a2a90b50e416efbd3ed318170ad3ec28fdc1fb1ea3936b22e35bba35a65accbe6ca</digest>
+        <type_category>regular</type_category>
+        <type>text</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>1888</size>
+        <blksize>32768</blksize>
+        <blocks>8</blocks>
+        <modtime>2019-05-23 18:01:35+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:02+00</sumtime>
+        <inode>51513940</inode>
+      </file>
+      <file>
+        <path>about/GB74EX-report.txt</path>
+        <digest algorithm="md5">fc14bb23c6ebb5a675f20b1a468d59ed</digest>
+        <digest algorithm="sha1">80dd07907e85329f3e014d4a554b01518d744053</digest>
+        <digest algorithm="sha256">686d6300e5cef121a3724e36eb03493f2c76fd028f50dd48e4fe18722406b05b</digest>
+        <digest algorithm="sha384">a0338cddb89dd5ac58566bde3d0f593d0ab1857a579ef78799601d765e68b4a464b6ce8760b535aed1f3bc547527826a</digest>
+        <digest algorithm="sha512">c5e8961172dedfe36d873444ba28ffcbad9f6291c7633da7f2512a145dd5cd70e4c0fbaf2da4f00a70153bfa70f9609be001e750ef3640ad1981704e1ddd03dc</digest>
+        <type_category>regular</type_category>
+        <type>text</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>1153</size>
+        <blksize>32768</blksize>
+        <blocks>8</blocks>
+        <modtime>2019-06-14 13:14:23+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:02+00</sumtime>
+        <inode>51513941</inode>
+      </file>
+      <file>
+        <path>about/journal.txt</path>
+        <digest algorithm="md5">8bb00245bd55906e8b26111dd341ba4b</digest>
+        <digest algorithm="sha1">5e938aef4f5225c5d045d27b886fdf4171180529</digest>
+        <digest algorithm="sha256">53a391db8b744542f05dd943889a8cc2c1e681847cb022e6425423e8d79c0439</digest>
+        <digest algorithm="sha384">046f0d1e82275cc2868882f964424d2c4562381b49bcfe1a7d57840c7f57bcf2205043378a5aa225cfb3b2beb821a6cc</digest>
+        <digest algorithm="sha512">6cfc9d5336197f22cd246c264bf737be19b3049ab5c233c0153f65be20eddbba04b3a220da9227a2dcdad06a11694a351b1624b618ce597e653f460079558834</digest>
+        <type_category>regular</type_category>
+        <type>text</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>1</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>11277</size>
+        <blksize>32768</blksize>
+        <blocks>24</blocks>
+        <modtime>2019-09-24 16:12:07+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:02+00</sumtime>
+        <inode>51546658</inode>
+      </file>
+      <file>
+        <path>data</path>
+        <digest algorithm="md5">d41d8cd98f00b204e9800998ecf8427e</digest>
+        <digest algorithm="sha1">da39a3ee5e6b4b0d3255bfef95601890afd80709</digest>
+        <digest algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</digest>
+        <digest algorithm="sha384">38b060a751ac96384cd9327eb1b1e36a21fdb71114be07434c0cc7bf63f6e1da274edebfe76f65fbd51ad2f14898b95b</digest>
+        <digest algorithm="sha512">cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e</digest>
+        <type_category>irregular</type_category>
+        <type>directory</type>
+        <permissions>drwxrwxr-x</permissions>
+        <linkcount>3</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>4096</size>
+        <blksize>32768</blksize>
+        <blocks>8</blocks>
+        <modtime>2019-06-14 13:13:37+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:02+00</sumtime>
+        <inode>51552264</inode>
+      </file>
+      <file>
+        <path>data/0-data</path>
+        <digest algorithm="md5">d41d8cd98f00b204e9800998ecf8427e</digest>
+        <digest algorithm="sha1">da39a3ee5e6b4b0d3255bfef95601890afd80709</digest>
+        <digest algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</digest>
+        <digest algorithm="sha384">38b060a751ac96384cd9327eb1b1e36a21fdb71114be07434c0cc7bf63f6e1da274edebfe76f65fbd51ad2f14898b95b</digest>
+        <digest algorithm="sha512">cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e</digest>
+        <type_category>irregular</type_category>
+        <type>directory</type>
+        <permissions>drwxrwxr-x</permissions>
+        <linkcount>5</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>4096</size>
+        <blksize>32768</blksize>
+        <blocks>8</blocks>
+        <modtime>2019-09-24 16:07:13+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:02+00</sumtime>
+        <inode>51552265</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density</path>
+        <digest algorithm="md5">d41d8cd98f00b204e9800998ecf8427e</digest>
+        <digest algorithm="sha1">da39a3ee5e6b4b0d3255bfef95601890afd80709</digest>
+        <digest algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</digest>
+        <digest algorithm="sha384">38b060a751ac96384cd9327eb1b1e36a21fdb71114be07434c0cc7bf63f6e1da274edebfe76f65fbd51ad2f14898b95b</digest>
+        <digest algorithm="sha512">cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e</digest>
+        <type_category>irregular</type_category>
+        <type>directory</type>
+        <permissions>drwxrwxr-x</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>4096</size>
+        <blksize>32768</blksize>
+        <blocks>8</blocks>
+        <modtime>2019-06-14 13:14:18+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:02+00</sumtime>
+        <inode>51552266</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2001-01.S_density.nc</path>
+        <digest algorithm="md5">054bc0a911f0724b0a473a354fb1a40d</digest>
+        <digest algorithm="sha1">e73ffa998276a114055bd323b9ec0b0d18698d10</digest>
+        <digest algorithm="sha256">4f865b69158c6b89b4ac11245d71e2e279fe9c97071a38617cb6788d2f756d0a</digest>
+        <digest algorithm="sha384">479e07337ed490cfbda2e1afbf0d827b8f01bb2a3ba1a0940595f1e067e327fbc878657a4e18ed2b60775ce87eb38531</digest>
+        <digest algorithm="sha512">9908a5f8df9b52d842583d1d4708066334da696f3a904bdff43792b770b108d84d4307f29ac4b177492f95fdb5c6893b0651253d6dfe9b4795f6508b63e173fb</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513946</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2001-02.S_density.nc</path>
+        <digest algorithm="md5">eabee640c5b688bfdc3dd14623c26dff</digest>
+        <digest algorithm="sha1">7b4a2a70996123d2a16094d47e63c928b0e010ab</digest>
+        <digest algorithm="sha256">bbf2a2921894978d6dfe3e16ba324131632ccdcfbfbdc7e7b0279431c07db44c</digest>
+        <digest algorithm="sha384">2803a4a3a419e83b73761e13dd139d10483b1455093472c66994685b46e12cb65836431cbcc10c1166447d5c984b59eb</digest>
+        <digest algorithm="sha512">b18d61dcf80b66669a221a2351718fec9d6bf67585b1007f617d5ac63084a657864b4c9b01da37863f3925813564b62612d45986a185c3693b1e9d61c4ecefe7</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513947</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2001-03.S_density.nc</path>
+        <digest algorithm="md5">db1f6ad1cad18987b01caf2e3eef854f</digest>
+        <digest algorithm="sha1">1ee5cca7fb559356e74764d24538f7aabc65a774</digest>
+        <digest algorithm="sha256">594498810bb1b97b1bab2539e034b68d4e3234a6af3a2d66184340647266afd1</digest>
+        <digest algorithm="sha384">26ef629190e2cc61c7f78959d8428e5e2ae3731777d6a54a53eabe0f0e8614d6d807076515b95ee886b9467f800d1432</digest>
+        <digest algorithm="sha512">b79848fc6f2617c3f98432dc852bac0bc09b47e38c2f093ac588d6dd189e60bea79d0d4dc10b79d2647ae01ebed65f8d68fb1dbfd77c9e57c17284d0fa192c8f</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513948</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2001-04.S_density.nc</path>
+        <digest algorithm="md5">727ebea8b53539ba304d59dae2a0ad23</digest>
+        <digest algorithm="sha1">401ead412e2f12cad9f0896f17bf826414865e3c</digest>
+        <digest algorithm="sha256">b2c7b6e9a103fe6d8bf7e137f1b37f1a10ece580b402c0fda96aeb6c3146183f</digest>
+        <digest algorithm="sha384">690ab4b53aa7e2709501ab86ef9b2672cc1e3d1049090ed89541738692422c8db50f50e640632f996421bee1270a2ee8</digest>
+        <digest algorithm="sha512">6059c81be792bc18c101080eac5c1459bc76400f0962c4c79081951ce1f8dd0a026876704dadd71f35c9e51767903cab2702070929a17a5ae73388308561cbf3</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513949</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2001-05.S_density.nc</path>
+        <digest algorithm="md5">1b877f786870c2af3e23f91a51d5030a</digest>
+        <digest algorithm="sha1">91e6433bbfe325917196f5c8032a98487d9d1346</digest>
+        <digest algorithm="sha256">4faa99bbde6045d13516a82419b5a8bc4303304851d3ed9c3de096ebd4c414fc</digest>
+        <digest algorithm="sha384">a51865eff633f4f392212299ee52042f1b449979f8def1b9c10d0197da96a5c0032007d4dfbf9a13c58bd72a30e8f1b5</digest>
+        <digest algorithm="sha512">3677b4e09a5a28fccc01e9121b2068ae5a2af9a983785746be279503f1dde180579837a4b35b64f738db40098ab74a408112ec37753594655d932cb68077a6b2</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513950</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2001-06.S_density.nc</path>
+        <digest algorithm="md5">a1a748f1cdefe101cbae1d57bd74eba1</digest>
+        <digest algorithm="sha1">8d4c8fe73826d1edd7c9f127b6497a9c35716965</digest>
+        <digest algorithm="sha256">c55672ea29617dea9418adc5a551cf457e3fb4eb376801e7005b37a66550cbb5</digest>
+        <digest algorithm="sha384">bca3abb4686c80cd712e0018185497f313101569b9383946e424ea653caa9012a16019c5832d003db1da3f6c0bded901</digest>
+        <digest algorithm="sha512">923195f29bbf773974b6dc15ea0b03a7529f1432de84108468fbcc6553782992e6c02a5b2dd16421520c7acd15e109fa5b72d5ec032c6d6ee397c79da25374bf</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513951</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2001-07.S_density.nc</path>
+        <digest algorithm="md5">6ea2338c84bc7c5e1a686d5dde9332a5</digest>
+        <digest algorithm="sha1">be41672269e05d19000af8da87795d23953d0a63</digest>
+        <digest algorithm="sha256">813fb63cf97e6a0697185b740ed2c441020b9a203fd99d9ce9e048a082ab48e6</digest>
+        <digest algorithm="sha384">db09960c3c551b430b7da5e79cadcdd9e5c13da2ce1f2acbd239ec37266857f7a1a7c0ea43ad9f615367143bccf28e05</digest>
+        <digest algorithm="sha512">724eb47e077a1e05ce238c5bd30566cc74775135208cf1a9142978b4f18b952a19dac9371df1cdfe0db82555db9ba755bcc23edf21b886d72d2d6a395a090c68</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513952</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2001-08.S_density.nc</path>
+        <digest algorithm="md5">d90ac99ea81ee4dd0d1077028b5964b8</digest>
+        <digest algorithm="sha1">441d635a5eff6b636baa67e055fa893273f60913</digest>
+        <digest algorithm="sha256">0fae3b76e373d301a010f4c0a83a59b4c8ca899055c54b1d5389f90a6a32f6c6</digest>
+        <digest algorithm="sha384">232cb793a673f3a8412cac3c1c3921184fc7a4d2963e6ae3b4c2f91d2e19748dddef6ac4b914c85f6fff202bb35b8942</digest>
+        <digest algorithm="sha512">30f0ebd494b1d787cb540a168426c21d49bc2209f563cb9acf91214eaf71c88da6503ed7276692e6ad4259ea0526e5848c0403e4a1e82d0b6c6b9bc4b8fdcd15</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513953</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2001-09.S_density.nc</path>
+        <digest algorithm="md5">20861446b7d4b2573678b124dc5c3044</digest>
+        <digest algorithm="sha1">f8fcb61be3b5a2523fc261824f1801fb5305c8c4</digest>
+        <digest algorithm="sha256">03334f40638d701548ee35db4702717a04c7a3dc51b4edd0ea1f63023ff29392</digest>
+        <digest algorithm="sha384">bace05f41989e538f34941a638cd09a8621d3d68dffebe384cade3a3fe63903e790c935f0d64aee8a8cb401922f1dc37</digest>
+        <digest algorithm="sha512">91156ba2b87e4f5aca644837abc48baf75e87d37b590a8b1a6ae3f111860334103456f61e0414ac37c005ad892c9a62ecacd428bf7a5d0da8c12a266a4ad98ec</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513954</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2001-10.S_density.nc</path>
+        <digest algorithm="md5">fbed08c9d6598d82773bf3ab542bc83f</digest>
+        <digest algorithm="sha1">812212a12ded927372d547a826885d6a5fd4df86</digest>
+        <digest algorithm="sha256">0d3f109b6194dfa1155dd0f518c588e415ce88a6ba23ec8ad654776aee3509ca</digest>
+        <digest algorithm="sha384">f2e5c4b9a2345265a1b41df92333098c1f9dc6566c1270c21161bc368ccaba3131337293f0f67790c34e5e89a7e7e04e</digest>
+        <digest algorithm="sha512">fcfc8a26aaa446b6352449922bd64c8b0021c5d6154937795dd895f1c68c7bb1237a2490f397ad27265746a018b2197ab718b6a6ed94833514bf24c2fa02c354</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513955</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2001-11.S_density.nc</path>
+        <digest algorithm="md5">03a4c0f7ddfab9086a6b718280d8ee6f</digest>
+        <digest algorithm="sha1">88f457c51fe8d452062703c6317fe07f7d6414b8</digest>
+        <digest algorithm="sha256">1e654f5d60bd1f4924ba8511ddac6f1618db3b3fe8a8dc01568b341359f5364b</digest>
+        <digest algorithm="sha384">42c6d22990c69a41ea20ecf7fb196e68b8b28a2cc0a2ab58849b2fce02804b80e9d83ba6e603364ed98da87791adefb8</digest>
+        <digest algorithm="sha512">d7ce926fb77dda6f0ad78ee0714cdbfbca675f30e8117a802945a0982c9ff7090cba7e0b2049dd2840fbdd1cc9028a03e90439c1c9eb36eaf421a2ec1626b767</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513956</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2001-12.S_density.nc</path>
+        <digest algorithm="md5">4f371711254a64c5854e16b90a9397af</digest>
+        <digest algorithm="sha1">934dbded5a22d38e9ef2f3034df127037cf710aa</digest>
+        <digest algorithm="sha256">20b53a7dd8cda975ec0aef7814bf435c99d455f44400e2b165f1a65f554bcd9b</digest>
+        <digest algorithm="sha384">54e2a85e431209cfc1cbfd9fb8daeff7dc600c180632a5045b0ac03154dcccdc765f025e4d2bd4f228f463c3b6cf82cc</digest>
+        <digest algorithm="sha512">cce1b612b3b1804f801b796ea399c393797824c233421fb4fe7eb0c39b05847d5442aa1e7498e8cab83c44fef6c389c5f676e2e2a973914c23adbf423640376f</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513957</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2002-01.S_density.nc</path>
+        <digest algorithm="md5">29d83011867c13000219039044314924</digest>
+        <digest algorithm="sha1">50c3fb30cc26c860c090cbe3ee99d2d452097c19</digest>
+        <digest algorithm="sha256">a52ffd5df9497209cab52f9ed3d8dee26458ca55f584d9f3bc3f3b32ac18e341</digest>
+        <digest algorithm="sha384">ce339d302599cca747d11e2bf6bb71edb6fb20ad7ed8b9978c41794084aed9ac154b2dfc5ea63471149aed5e06a506b0</digest>
+        <digest algorithm="sha512">477a04f9ccd18386e519144c96f56445701756f5110e7abe3a5c18514c7718aa34796b81ce79676a20a5938d24796c4f374b19fed8545e83b4214be38afcbeea</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513958</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2002-02.S_density.nc</path>
+        <digest algorithm="md5">d3180e36197cc9c1c80a0c47247a00d8</digest>
+        <digest algorithm="sha1">e4650d9dde16e74bd5f1ac4163bcc081604b40d7</digest>
+        <digest algorithm="sha256">fb8bd1f11ffede4488801ae6ee82eed0c03e5f608b9cae3c7fcb6cb7af2f7bfa</digest>
+        <digest algorithm="sha384">a9d99aa300447d87f6f6133f4ab910a2f9069df5f71b1f5c3f42127f9b8bd9bbfca74cf93b450192ca4504ebbe38750e</digest>
+        <digest algorithm="sha512">3acb357c4e27aee8634047f85fe82d13d7ba5cce646723ba5faa1148d8a0a56000999ccf197f71622af26c766b5cd7d93fa0313906b5ab92f9948c6514154203</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513959</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2002-03.S_density.nc</path>
+        <digest algorithm="md5">2326495f91c29e8ad39b6d9a60f1b60b</digest>
+        <digest algorithm="sha1">dbdb76f5f8d7052653bbbd2c2e34cfb8344d9d2d</digest>
+        <digest algorithm="sha256">597bbf2c6b7cbfe60a0913c49d914be2864f6c3bb4630d38a4515bd4a2fbb582</digest>
+        <digest algorithm="sha384">d0bf1a02b9c61765b9ef5c05a5d20368652f622479b558942500b99bffe09f35abc49eccfafb60f0e19fce7a27065fb7</digest>
+        <digest algorithm="sha512">58946eef884d61fda430bf1bf57af6534b44adf9a5f562c5d4fa317cedc59a629c04446b3834fd517e8547beefc69b786b410e17acb4a50d9af3efc6d7e60269</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513960</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2002-04.S_density.nc</path>
+        <digest algorithm="md5">76d875800bdaae48666aa4dea8f42bf8</digest>
+        <digest algorithm="sha1">c985bc45822660f0c6df1e55bf7aefd5880f5a5f</digest>
+        <digest algorithm="sha256">e9bdb277cefc8c7ba1431b3fee363779e3bd05bd84b18936d2d3fbdb8dd55d64</digest>
+        <digest algorithm="sha384">d0cda1a79e431731c24e018d4a915b4502c68dcc51dd20e7e22897c3b9af5cd1c84c43c65336dbc7c2db2253c53e9dcf</digest>
+        <digest algorithm="sha512">6ad722623bf3f34529df1c9c2f7a26aa2bd1fa21339f3f61060536073541e6f3b0347babcb51911e6f7bd8b3e2ec3e413ab35dff1974d4a7f2d79aaff283bfc6</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513961</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2002-05.S_density.nc</path>
+        <digest algorithm="md5">0fc6fde21b3f04163eb14bd60f402381</digest>
+        <digest algorithm="sha1">331a918cbf04a435e6dd873fb502506f881561ba</digest>
+        <digest algorithm="sha256">c11b0177a00c279a271809e5992eee000a4b2967af1d8ca2a82fb54640e60fbe</digest>
+        <digest algorithm="sha384">e467b16c0e8013f94d52ab14900dd9bccde3fbed80a1ac05b9ce4ebf17d561ca62283c6e6c1c11772622a63793b1cdf1</digest>
+        <digest algorithm="sha512">29d50f5ec999abfee55a913ad1b1132c9492f568c101ceb302da1d071ed7924ef5659f91eaa634eba800841022117798292ca9d134c0b774a688e74029026c02</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:58+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513962</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2002-06.S_density.nc</path>
+        <digest algorithm="md5">7c8958e3eb16d014fac61f347497e917</digest>
+        <digest algorithm="sha1">2104803a0990f67a2fb0a04fe8cb2f9a81ab5f94</digest>
+        <digest algorithm="sha256">ac45dd646224940a4fcab01ffca37c5225d43061ad18e692ffd8d836f817a16e</digest>
+        <digest algorithm="sha384">e0cd6abef33de24631c6a7b3c77f14705c35a777f005da2b001e95c8fd034004c649e9b4b3a85762d95384962722021a</digest>
+        <digest algorithm="sha512">443985c3a187269dc4bef026ed8d3b96379b27ce0410baf20e5291c8d40133347b9df6366bc6f79f7c018663b9b42ec12c2670b07fbc562452d683c2c086469b</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513963</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2002-07.S_density.nc</path>
+        <digest algorithm="md5">678f9110c3a7074ab7b879ce69e09567</digest>
+        <digest algorithm="sha1">a8defa7f83acaa6a07fee8465bef99e2bfbafe6e</digest>
+        <digest algorithm="sha256">93ae7028a1febe3febecd425a766da69cf22d9e34e3a4fce91cd477b61395442</digest>
+        <digest algorithm="sha384">0cd5abdfe6325b03e5115c62ac29212a04e9c24a054ba2a8dda7fa2b6afc1d5cab68e4f1d4a986488e5ec97c46de1f97</digest>
+        <digest algorithm="sha512">3b2597e0640ba4bc295051a5a37612899e331efb4840f9bfdff3e166568280e4a5003aab2fcff1a3893c71e82d11cac9bfa31594b369a0ad67514feea1edca8d</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513964</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2002-08.S_density.nc</path>
+        <digest algorithm="md5">b8e73562c913a3f3407617454d5f4f33</digest>
+        <digest algorithm="sha1">0305ced061fc83368794e7ef0446c5f1a203863e</digest>
+        <digest algorithm="sha256">8e7f43e9a059a4b719003972932d95259049d8928aca04971e8061ac86e75da4</digest>
+        <digest algorithm="sha384">9c8a431d735b4a6bb1a4d55e623d6067079a9db05de680482b9df49a434b992dcd6efe0aa3b780546ede9e5ab9879c2b</digest>
+        <digest algorithm="sha512">6e58bc1c09c7efb3879ff763f88083ee7960fffd149a3f1bd9309d7f255b3cd4641ff845f1181a52a185e22fb7e48403490b63440132a24f3c5f6d8654ad2c3b</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513965</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2002-09.S_density.nc</path>
+        <digest algorithm="md5">e8cc954d4397c07ee02233b697473dc5</digest>
+        <digest algorithm="sha1">385ecebe76db488c6ffcfdc9490ce1c2547ff612</digest>
+        <digest algorithm="sha256">06f396721e9a46cb4340853a78e653d936c650c283169b6375c6ccebbac899ce</digest>
+        <digest algorithm="sha384">0a8b29bc7178d129f416de8ca92c03c768050737b88a748d1b165231d613d8822699bd06de4809edf94195729d503369</digest>
+        <digest algorithm="sha512">61a4e3d0307603e377ad3147ca7a063c4c4d88b61d3a97bc7870c762e892c7f2c800b214c2241893793cf4f2276c97482963219ddd972f82390eff88a03811e7</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:03+00</sumtime>
+        <inode>51513966</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2002-10.S_density.nc</path>
+        <digest algorithm="md5">926d6e1b6dead568e14a1e88088348bb</digest>
+        <digest algorithm="sha1">fd7aec996fafd0579a7b2fcd3d42abc04ef96e47</digest>
+        <digest algorithm="sha256">05197f0fa40448db01bd4f18f060afd015b96015c7c168efc50a673ca47badc9</digest>
+        <digest algorithm="sha384">5fd414664ec16ff9f6868ac3dd7c994e58c4bf97f1e952227cbf74fa67def3e22a1281d00c79f94ef634bea6e02ccbf6</digest>
+        <digest algorithm="sha512">e2bb3b4ed818375448577b471506b8824887684592bb2983595a3ffe3c3e1b6eb4ba208c51c8c617342bd2915f8252ea18f7cc60aedc9f2ea02cb56b4d0e7b75</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513967</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2002-11.S_density.nc</path>
+        <digest algorithm="md5">8b230d8027fa83afa03adbd2a0d4044d</digest>
+        <digest algorithm="sha1">76f1bf236b4f5c068a08361aba432b1d58504406</digest>
+        <digest algorithm="sha256">2dbf77eeeae4724124e64c23f980af23e823876a5fbf8339237a929424f81a67</digest>
+        <digest algorithm="sha384">ec5dd7fd074abc448cf1969ebae820b7d5992593daaa686fb471d14ccdd83f8d168623eeb65b0848cf81f59296898583</digest>
+        <digest algorithm="sha512">22be7ed5a37a088d6665363b260c9fc32945656fc2532f06cdc80cf3226a3b2a02ff9ac382e3d9905882fdcd07001356d78ca5aac1292e99a894b3a600d411bd</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513968</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2002-12.S_density.nc</path>
+        <digest algorithm="md5">dd4ce1ff02417a7f113559efab7995b2</digest>
+        <digest algorithm="sha1">18bc07777019e7a53a6d38af15c0d74e95aac68d</digest>
+        <digest algorithm="sha256">b691c79fc0425f907ce2904b18eb8efe8ad077bd8bc76aa3a5a3195d053c02dc</digest>
+        <digest algorithm="sha384">eb4ca2aedd7b03dcffc5772bc79e786f511f97e92f19be011f06c4439819f2b7a2a2a454bb3e08e76e441d5090c9aca8</digest>
+        <digest algorithm="sha512">71e9f596accdad251675948257dd4572b088cd8bec2b0c50ab4305a688956ad8ad47795ff7566c0d71a5802daf7e65b7f2cd5cb1e4335c692d69837129ad3f5e</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513969</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2003-01.S_density.nc</path>
+        <digest algorithm="md5">c4d70d179abc5df6a80d11ec1b747fdd</digest>
+        <digest algorithm="sha1">24ce27020f6c6c55263627b8e7ed4b505db5be8f</digest>
+        <digest algorithm="sha256">00aa585fa1559e39c4f6231ba717d44f88193b08651a56636585404cd5d4812c</digest>
+        <digest algorithm="sha384">949141fe0551f99c58e826d7823b1aeedd2bec0e45b13a47ccd06362daf85c4c8b1a5507925fa097fc2ae4e33f16629d</digest>
+        <digest algorithm="sha512">ebe3b2f0f1932b1a4545b342ec57063084a914c3a8eddc13b34d21330809bc5747ca3a7129b64f86be6b8c48b6d6e73492601c8a46d7088d1825fa3237218f0b</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513970</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2003-02.S_density.nc</path>
+        <digest algorithm="md5">d30cd8373365d9a875f5445bac4a9b33</digest>
+        <digest algorithm="sha1">37a9a831831c183ce5cd7b066e2216f20800b2dd</digest>
+        <digest algorithm="sha256">3d1b76d105b37c918df453194aa3dac8246978b09c4a167f37cb40f3bd10b496</digest>
+        <digest algorithm="sha384">a2140b2781d49aa7abc2ab63cb9a9166e43d17ee82a70af7ada0ce88a89935aee952ff3428c71ae2b562b332a40944db</digest>
+        <digest algorithm="sha512">8d9a793675d3e0b21bda80090beabcdecc111ddc3aefd4a98de10d1b38e297041708c6060ca37c82f23da3293ad3bb5939a4f9281ddb1d719cd017d3f66a6e5c</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513971</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2003-03.S_density.nc</path>
+        <digest algorithm="md5">bcdce332ed74270d6be17d767df8a60a</digest>
+        <digest algorithm="sha1">1e7c2593b6af7d04a502875926295485521a2265</digest>
+        <digest algorithm="sha256">6031f91af634fa0324a1de11edd5cd68891e2da37c86be91a8db870621c9982d</digest>
+        <digest algorithm="sha384">d34268539c68cbbd2bae608b4291d175370942dcb09ff1b7068036295ab00ff3c3b2321a725be5b6364a933bea2c5ed2</digest>
+        <digest algorithm="sha512">25d2b4610c4572c6a85d3eed82def21431f22daa85adfc37bec538711326a0a505e4884abce3f4a62d1139413ca3cce9d1bc57ab7760852dba0ff54fccf6eddf</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513972</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2003-04.S_density.nc</path>
+        <digest algorithm="md5">48d67292ab13ca3268c66754300b4b26</digest>
+        <digest algorithm="sha1">53fbf12f6eddc8b141bdc2032e82a06ab7d5a524</digest>
+        <digest algorithm="sha256">3cf3e3dace6227fef470e72371a44e8400956bf570510bb1015fbe0486698784</digest>
+        <digest algorithm="sha384">ac0cc98840a5f4ec992d3f784b7f5fcdfa4ba0edb5c9fa709e59d0c69a58761d9c8e143702df2684132e65edf06ea0dd</digest>
+        <digest algorithm="sha512">7f96c64461722ade6ff64d52369d6bf04190d7dc2c1882b81ff758f5ec3986bd6b32a1415da0024367775098768d683decafd58c46c93eff829744970e3ae2c8</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513973</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2003-05.S_density.nc</path>
+        <digest algorithm="md5">297e93f9752c74192eba928db5f4085f</digest>
+        <digest algorithm="sha1">077ca30e142e112a576b093667046b0349995073</digest>
+        <digest algorithm="sha256">8e93dd2031c15958af268591a1b0b659065648f49dc476f861d7a58cf89a9e7a</digest>
+        <digest algorithm="sha384">6b61fff5ebb1ff331eec35eb2efcb0ba3a7fb971fe773f4b350aef4df4ba81045fda6a0508c3f3d582b58cc9a8ef0042</digest>
+        <digest algorithm="sha512">58434116c98d1491a0171739aa44f8c2e043d06b0350242045c56e9f4f1d84675e07a01f690102d9c2f5f6722e9d774a703fd2dbbce4635669737beb0ecd1a2e</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513974</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2003-06.S_density.nc</path>
+        <digest algorithm="md5">4e68a6ed2c2df19cbd1c603ae45a0966</digest>
+        <digest algorithm="sha1">f808f2a80a379d78d714b701149d5a1d491385c4</digest>
+        <digest algorithm="sha256">22794af58d42d16a636e246fde2070bd5fbd531844ae83845a0b4e07b4a3b8f4</digest>
+        <digest algorithm="sha384">935ef9a14e6aab41569bfa20aa2448e2a82bc0c6a03ba48c6d48ac1410323e80141eff9bbd4a68d7dcd7c48acd026ac1</digest>
+        <digest algorithm="sha512">dcb1df78bd608b238a3eb6a05a1127e1c44dd46be91459bb6cd5928da6adf8e8962d10a775ad67856f51f63d29c906ae03cf34a9bf262e926e7a857b046df99d</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513975</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2003-07.S_density.nc</path>
+        <digest algorithm="md5">fafd88aae1366d57cfba7c703914137a</digest>
+        <digest algorithm="sha1">5f599bd066cbb997a2ad15ccd13c5028612cdfc0</digest>
+        <digest algorithm="sha256">4c2b44bb5c7c799c3bd98326e6c89d26f6aeeab6ef8a7c8098ee6eb5bfcf33fe</digest>
+        <digest algorithm="sha384">2310d3659cd8ec61492a07d5fa58599adeb31a978a5d46ddb79e9cb26acf23011abda50989f8cf85829560b9bd0ca0ea</digest>
+        <digest algorithm="sha512">b9ad165e2d7559a451dffcad728af8b8d1e5849fa6ad1c526e9090467ee00229a2ab7a99a8947f6742639f9279566fe1278c0788f7e69695b4ccc9d43e7034e7</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513976</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2003-08.S_density.nc</path>
+        <digest algorithm="md5">b32e6cdc08cd6abf30856c95ed069bbd</digest>
+        <digest algorithm="sha1">d37fb400af88d6e1290e1cb11f77483d336ead2a</digest>
+        <digest algorithm="sha256">069e4189d8710cf10be57d88e1706d4f7558b9cb748752e12a0feceeea464fd7</digest>
+        <digest algorithm="sha384">c89d211e590482f56cf628f012ca39124d266bbac5137ecbe779ad14e1d252f593fcfbcb60f56a14232aa2d78dc4c26c</digest>
+        <digest algorithm="sha512">f1aff295440aa378f13e655732f133b9061c5d37a44d80e8d0b3650a75477605f497529f4d1e84fa0ae6eee6a2b518a153de3a51172d1b2e26274d09c2ebabe3</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513977</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2003-09.S_density.nc</path>
+        <digest algorithm="md5">2795fdacb090ff7299c6d4a206279c06</digest>
+        <digest algorithm="sha1">8028710513a812cfbb340b348c61d219192eb892</digest>
+        <digest algorithm="sha256">729b7ad681755a8d84468cb931f32df947ef8ef92958feda33d090ecc3f74dfa</digest>
+        <digest algorithm="sha384">f647d89f8c7aa6bfdb14ace08b9e36387afd506e1af0aeac42bd71fe73971139f003efcf96420a78d9c3b59f067dbbf6</digest>
+        <digest algorithm="sha512">e6128e195e4baa15670457f6a48bf3adc095e461d9cbebb7f6c9427d4cdbc3b341d27db78fd95bf5613c51fbbc38ac05f311a00af6c9e354e0d9c603646d1b3e</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513978</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2003-10.S_density.nc</path>
+        <digest algorithm="md5">2aae72549eda59e2ee20fb2dd462d888</digest>
+        <digest algorithm="sha1">6d003da7f07386e588dd64413fc01638ff43af58</digest>
+        <digest algorithm="sha256">68acf73555e7b4769153ccc057c22ab04cd3a38978f1d7986572f56bb94c45ef</digest>
+        <digest algorithm="sha384">e06f4436a34289cc2ace94bf0287d89c1924f164872823194b1a6319419f07da4531762add8e54aeb17cbcec8e100a16</digest>
+        <digest algorithm="sha512">a8a439dc64aeb956c1dbe337691b47165d35501917ad6da8b4745d411b3e6ebb8b09ae7914eb6d98585ec5ae062dbe43240c8245470b3c92275fd6767649e35f</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513979</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2003-11.S_density.nc</path>
+        <digest algorithm="md5">75cf7b0888aac87131cf16061c7418db</digest>
+        <digest algorithm="sha1">8b881f140047aa2a94c892eb0ca95d19844d1b9b</digest>
+        <digest algorithm="sha256">250ee83c03ccfbbbb46349f4e507657a361f09b9192733e65067ec30909d3ff0</digest>
+        <digest algorithm="sha384">64d4efc16c2c7993cca0d3ec90f5b805be0d6e5fd535b69a73b320104c8ba28e78499e4675d1dd81b35afcaceaac71c1</digest>
+        <digest algorithm="sha512">9e322fb0d4b0627722832ba18d99f1efdb254a68ea342713d7e2e222a4a53d9280ca603b43059264aad2067db24b5d34690889047348ff36ce8d8a00d848ed9d</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513980</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2003-12.S_density.nc</path>
+        <digest algorithm="md5">b09ba030345cb06b2435f7b731b05f2e</digest>
+        <digest algorithm="sha1">e0d4625c8468fcd17c874be9f93f0457bb9ffe23</digest>
+        <digest algorithm="sha256">ab34f52cb802d0f315740ab06cc6c57974eb44bd2e05e97349a7ef947f6a1cd8</digest>
+        <digest algorithm="sha384">6b557a30a7657dcbc0fabef22611e0c45ed0ca85cbcc99dcf0d697353c8ac04c0cd63a03c656019d0b16a8baf6487cdb</digest>
+        <digest algorithm="sha512">3de2cf4f11c166cb7b59b4d085393572dc123f277f5ca525dd76c9e52e51a7081344d00d210916e03f2bc4bd4f4275b73a88832777dd7e1275253945b2bdd568</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513981</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2004-01.S_density.nc</path>
+        <digest algorithm="md5">723a6d0c54b871cab2d1fade7c109569</digest>
+        <digest algorithm="sha1">fbab144b1bc283600207a3a979a2b2b2524d095c</digest>
+        <digest algorithm="sha256">00d0f4d8fe211ae7148484e74415da68169f49518d772f95ea6ab193f3a36f7e</digest>
+        <digest algorithm="sha384">14137dacbfae7848351a43e448a3c964cccb4ca3c6ecd1e64f28f0bc2517c1f990b8016a74e2b6becb39983879384426</digest>
+        <digest algorithm="sha512">bc1f83421339f11d1ebf705b9398769425dd739d25fcb48cb731ae55ae76f30b1f59c372e8434a9b4f95007eb05f119b400cd92ce77f25f451ad814bfe522492</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513982</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2004-02.S_density.nc</path>
+        <digest algorithm="md5">d1d97a757bc1e05fe8e7862937178d97</digest>
+        <digest algorithm="sha1">54b168cd1d5a9e1e2c2b8f62124ef9598f1dba18</digest>
+        <digest algorithm="sha256">6ca260a38e14c9ee0217ce15b71e37c12bb37c9caf1ff03d07c4965a1d8f07ee</digest>
+        <digest algorithm="sha384">e1a2d901e4ff573ea3f7a49925d944640514abd2a7fbe7313c7d26cfcef8362cd19258527b41e7b9a0910be38a6eb5e2</digest>
+        <digest algorithm="sha512">6870b4b315c63d188d5f5ceb6f79ac0632bf84ba5d888769a22ea7261e0f1a3b6507dd32fbfb436bdfbe998d183ef8e7e8442aca35e82a9fed836d3409895394</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513983</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2004-03.S_density.nc</path>
+        <digest algorithm="md5">8e49f307312c1af8a5c78dde1ab7eb27</digest>
+        <digest algorithm="sha1">d9bd6cfcfbc254afd64e77c2598eda53e5f63f6d</digest>
+        <digest algorithm="sha256">f4acd47c3f69d27dd3766ba5dc7500ce6a2d13a2ea5e8435c8a95d13b7077655</digest>
+        <digest algorithm="sha384">1633e9dfc5f21b57226e83b6ac53c53ba784ef15837f1062c5228146d035541bcbaa8ba0a3144da9f66ac0343e40b10d</digest>
+        <digest algorithm="sha512">467c441b122c46d63366b062b34b51ffca13c05614d42841b94b562f87dc4f06bf88ecd4de1bc947c8e7ca7afaa04f3f4f425adb9029e1debb8a60fe08d19e5c</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513984</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2004-04.S_density.nc</path>
+        <digest algorithm="md5">c3d48885675d81c0814010a8f4777d82</digest>
+        <digest algorithm="sha1">0c6ae475472b7883d2d660b81462a770b00823a7</digest>
+        <digest algorithm="sha256">1f5fb847d588089655f1446fbe47fbb02178f1e89b364638f6eb91bb802d35df</digest>
+        <digest algorithm="sha384">cfbdc797076142063001fa890bccf90761f4621b7024f29ee72bc566c5309aa216d4d8482daa77d0189e2117cce839fc</digest>
+        <digest algorithm="sha512">b6380128dcac7da37fb017c0bb15e058cd1c2bd24240cc7804f0b4218f582805de71a45e20bb3ec85659e0874d5223f89d40a9f29b79e91a9219cb0627eb3739</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513985</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2004-05.S_density.nc</path>
+        <digest algorithm="md5">7b58aa8224c337f9783674e5d4a9c9ab</digest>
+        <digest algorithm="sha1">897a841f1e7169766d9bd15875ca76991e9dd76d</digest>
+        <digest algorithm="sha256">29991c8ebc6bc4f9908518a83529b20540570e90ca54763ca2d6c847f9fd9baa</digest>
+        <digest algorithm="sha384">5126a9082621f624d30749b87732799eb856732e2475d6996b53553032547c8b0b45c26bd91590ff65513411f5f44f99</digest>
+        <digest algorithm="sha512">f9bc59e3ce89f35a43324c3a8f7121f84b29996bdfc189fec52cc61b4e6f98df6a85ae8cfcde09f1efed809140dda6774d419f2ac6834480ba3f60c241e3c6fb</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513986</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2004-06.S_density.nc</path>
+        <digest algorithm="md5">e6f23bb35efb2e131f8b14e582503979</digest>
+        <digest algorithm="sha1">095c2a00bc9ffbf7286632b721d5cef069a34df0</digest>
+        <digest algorithm="sha256">ceecd8f7d10755c7e31343466b8726f67749565eccbbadc90c444140fc8cd555</digest>
+        <digest algorithm="sha384">ae259e5dc9ef012938aa4a714f558a1dd9d44da14c62a74429feb9ba4eec3f964f336ad4825814859805b07bc87190b7</digest>
+        <digest algorithm="sha512">1b3d0008c3667a6f7edaa5792a8a18b7407a634bdacc78e88d80b03ba7ea09480ab9b9312bbfa3ce59912d162822c6bf3215d1de2522a32ed5496f1026a1a0e3</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513987</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2004-07.S_density.nc</path>
+        <digest algorithm="md5">ffe1c2df0e1e06eb0256c5b24b31945c</digest>
+        <digest algorithm="sha1">8d817712d727a4be43b140288441f3a5aec13bee</digest>
+        <digest algorithm="sha256">dfc5d6cb3bfd04682d34438d6e5bef4ec6986f05c4d8f6386b9fd617f65b853e</digest>
+        <digest algorithm="sha384">1980a7237f29078034086c9f35913c3db95847e27fba719c195940a53ea24d3562105d18ad458e71ab054f2b3311ea99</digest>
+        <digest algorithm="sha512">39f4d6733b43b6bf559ff76ef8c53572947e8c6b6990b0a9c26c45a9dd064c1ec385c3e1c33cdf7dd58a880093d62bce717b3b9cd5565dbdac352b0a87b87ef7</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:52+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513988</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2004-08.S_density.nc</path>
+        <digest algorithm="md5">d0c9067f26f0a974bb840573b30639f0</digest>
+        <digest algorithm="sha1">8cf95512871d46b0e7f0e1b826b189c25110e6ad</digest>
+        <digest algorithm="sha256">2d3bdb3d378d8f9c0adb872cd1921b25f0e890ba41495ebe1621ee16a865d580</digest>
+        <digest algorithm="sha384">cf28a589643e56eb9b912ac8f7992be210713d31f32f6ca9c3cb0d12fdd82f1ba19e3fb7689deb9fe15856a651c7f2c0</digest>
+        <digest algorithm="sha512">5f29096a9b76999f74da484e5c738c3b6927e4e6187a187aaf119acfb43036bc2d3c37365d28b9ab0004216525bc9ede7ea1f16d25b0bbcae0fae124f022ebd7</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:04+00</sumtime>
+        <inode>51513989</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2004-09.S_density.nc</path>
+        <digest algorithm="md5">e86ce36221d548926b15b351843cd8f7</digest>
+        <digest algorithm="sha1">b8c83763d182012d6327cd4bd27ff6b0b87f9047</digest>
+        <digest algorithm="sha256">e8f4d0112754a77cb333f34d10399950e51a814504a31a052b3eb81071e596a9</digest>
+        <digest algorithm="sha384">e1bf441036d54ff6152e0c693360b26edfb13b7a0dc79b9c55e3ace097682c868e8022d8791a7196d7822a8032e72636</digest>
+        <digest algorithm="sha512">cde0c7c36ac5228ed80b233dfcea63448fe2807e37ec390ee4e2deef1395531c85f891df4ddf48502c6eb8517e095d75ddf5594fbcac9a35f6b03966db0c1c40</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51513990</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2004-10.S_density.nc</path>
+        <digest algorithm="md5">08dd102f651135cdf36db979fb84488a</digest>
+        <digest algorithm="sha1">6e64080e60f19b83d9cd241738d26a89e1b167a5</digest>
+        <digest algorithm="sha256">49fb0098a15b3561bd5c58397bd54fa42a4a006378c32f05d9dd2693e4416016</digest>
+        <digest algorithm="sha384">41aa42a82280cac9acd0b68da1d9b7fe98c276ad43cbd870402afb0bfc32eb7288c371c59a5970645b4fd9e63d920467</digest>
+        <digest algorithm="sha512">69b1a2dd49d65437111b2122f72de0d9badbac7bbc135cde958507e70c3e055eee432d625e343678ba12a3bc0b120b22d32267bb67505276b28f6ad1cbd431aa</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51513991</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2004-11.S_density.nc</path>
+        <digest algorithm="md5">0bdf64b0eec69c39b9bc1418f8588eb5</digest>
+        <digest algorithm="sha1">0a0210654eacb1302a1de19d675c4864ca9df334</digest>
+        <digest algorithm="sha256">f0594a02fb50de2d3efdf206aed0d8140156dfe64eaa2dd39b3fe6d13bac87fd</digest>
+        <digest algorithm="sha384">5d82259a7149d6401f066ca7c31e7daaad5536c5fe107a1768a84b293051efbabba8ac2b6eecd648bdd4c1b0ef871d3b</digest>
+        <digest algorithm="sha512">2366035023daae1f09673fac2849d721460cedcddc9291f3cbac9b2d725134e94538b938b65cf21b8c5918cca6feb0dace45c32063782ea0deaf0ec0ee004b90</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51513992</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2004-12.S_density.nc</path>
+        <digest algorithm="md5">58936a64feaa92dfee192576840968d7</digest>
+        <digest algorithm="sha1">f5eebd16ffad5f5f90ccf3154d5cffdc70b9f0cf</digest>
+        <digest algorithm="sha256">e211948b62198d53fac18dff8c1f97785a643c7310c712980f889659fa749286</digest>
+        <digest algorithm="sha384">afb34ea75de95abe140930d5f41dc15154f80eaaebaca45835f2dd753085c4ea1e61cf822d39dae3703fc01ebdf2359e</digest>
+        <digest algorithm="sha512">77534981e3fcf26da89c197f8c2e53887788100646e91f8c045aa6dfba8fb57a9148224f27c079a24e39d654f8722e02cf7ad19f1ce0c82f05571314426cc530</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51513993</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2005-01.S_density.nc</path>
+        <digest algorithm="md5">f6c7b9e61005af03dda64f7e253270ee</digest>
+        <digest algorithm="sha1">37878c049e394cb6ef07934d16ac72ac4b373918</digest>
+        <digest algorithm="sha256">efc0e5d8fcd70bc00603fd9cc9fcc697840e6c5290330505eeffeb77a930ae97</digest>
+        <digest algorithm="sha384">f9d43f3f02be3a9a7b5befd38657f4cce78e646952ebef4709d9684156919f0ade6d141fe28766eb7364b4c206c1abbf</digest>
+        <digest algorithm="sha512">3259eb39b7451f9658d2b770cf519c2131878b0f78ba803c1cced1ac6e853c6136ec41870fbde55f4d347b1937c0f4df928fb78fc55fea286879da8f0a294c34</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:48:59+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51513994</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2005-02.S_density.nc</path>
+        <digest algorithm="md5">e9d67a0adceb68c7e32372f39f55e27a</digest>
+        <digest algorithm="sha1">1087670c183069d017c7f6762d4ea5ca8204ef28</digest>
+        <digest algorithm="sha256">7c316e4093514ff2c74a9cfec4572e1f1c1bd10e289ec2372f45843bdcd52bd5</digest>
+        <digest algorithm="sha384">c5eb212c2b72460c99611360a2c0d531a6e4f35ff8dd8a9d19baa97cf70ecd33f306b91ad79252dd2a9b1ac1d7c8d2b9</digest>
+        <digest algorithm="sha512">8eca275b130a9ef302902833e85fda86899fa736d01f19b80a90e4a07b159b5f4a006dada8f07d042873bfc80e629fed1d2d0fa165cf20ab0bbaf31cda760a6c</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51513995</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2005-03.S_density.nc</path>
+        <digest algorithm="md5">4d3e3a51154f4293c439bed0d000c8a5</digest>
+        <digest algorithm="sha1">f6d2293f95735d54543827ecd130daddf0337670</digest>
+        <digest algorithm="sha256">fa0a03573f8de8402aa4f208869830a59065b58572ea2d773f0528213781e14c</digest>
+        <digest algorithm="sha384">5b89514d410fcbb90220dbbf6dde0e8b370e6542ed62c0f1d5f57f9f7ad84c80942cc5611c163e42df8e6bdcd93bfe97</digest>
+        <digest algorithm="sha512">791279e7372353e5d627d1d6285574ce28bb2a5c081135a1020c94508d2f5f5a4d2ff805f1c715ab55e5dfabb365a98276514a434e8a328ab67f0af0df7fb870</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51513996</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2005-04.S_density.nc</path>
+        <digest algorithm="md5">0608414ba20f3138d6c8c74365f34311</digest>
+        <digest algorithm="sha1">54051bbabade72d9a250c8cb49eaa81dfeb2d4d4</digest>
+        <digest algorithm="sha256">c1304ca747ad7035d69a32edf22026064dcca15430dda8e866a83c738f7ae1fc</digest>
+        <digest algorithm="sha384">ca3beceea314c20c561fab8eceea8f2b473a4d7302431d4c077e7c060c8d7934dd3efeb83adfb94851cf277fd3e0608d</digest>
+        <digest algorithm="sha512">d22058ff20d683958642b95ef0af1ffa9909791af7fbec0ed893f4bdf22cef0fb4791506056d12e869b72fdf6abe4c9aad06e40f0bad7ef432b64bd20532bab4</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51513997</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2005-05.S_density.nc</path>
+        <digest algorithm="md5">336619a82890f2c3be10383dbdab06c4</digest>
+        <digest algorithm="sha1">4b04a9cba7e95581a2099eb0f02d759c5a6ff1ad</digest>
+        <digest algorithm="sha256">f42dadda6f574f5fafd1aecc6f747e48d40146724a44a2c5536c66708856c9a5</digest>
+        <digest algorithm="sha384">6d6c9fc3ce3bdf1e0ae10ecda3565e146cddc74ca60bd229b4400ee7782a47bd1352c590d019539ac77db57f6d650001</digest>
+        <digest algorithm="sha512">8a05f0c07b8f1b2cf3a653b743c4551cff8a1b675aa0dbe1492135f67f958762264b3e05afd4d508ede065fc20651377370a47af29b0e51d16da821e6e688fd9</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51513998</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2005-06.S_density.nc</path>
+        <digest algorithm="md5">1e391db6e6f3de34183c907d0f5016ff</digest>
+        <digest algorithm="sha1">b3fefe30963e32eec604d8ed5601da276036a31b</digest>
+        <digest algorithm="sha256">52f461d19e26c33d03cbc24eec6c3883062b28ef0f44123c184f44c920476a54</digest>
+        <digest algorithm="sha384">fdf96a6edf1bdc17388832d46dc0991a06a90e17b466a8d315e7ada8ddf7a21d7695ce564a560bbf269a9438b8bf73be</digest>
+        <digest algorithm="sha512">7dd8beb9931002235a0360618e5695676592c50bfac22e551d5094dc8b1af6c3b616564b16f0faefd47903785c118b172aa29a410475e4d117a2ecaa7b7eaf43</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51513999</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2005-07.S_density.nc</path>
+        <digest algorithm="md5">aee0c4275e420e35305d6d081826f3eb</digest>
+        <digest algorithm="sha1">d828871b217c64051e35628eedf05c99fcecf304</digest>
+        <digest algorithm="sha256">eaf1168137dfebec4e5188700e14c8211ef500a9011c25e37906a5e4c0e64512</digest>
+        <digest algorithm="sha384">e3d7b61db06de95d950d4a920eb2499ee99355d7214abb26c1d08e6a6959473abaae524e8a8753505b49ef376775d63d</digest>
+        <digest algorithm="sha512">198d7ffd6494eb113fa3ce65cd684a13a8eb75fe4f6eb19547fe5862fa5d34c420ba14441880dc6035fd8ce83a76ac0d03bbbfb8f6ee0311faf8a7d6c42414e7</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51514000</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2005-08.S_density.nc</path>
+        <digest algorithm="md5">b88ef8d9106a8244ff0670d9d9efcccb</digest>
+        <digest algorithm="sha1">1ea628e25e8a10e9ca3cf7113c224d5f29c89567</digest>
+        <digest algorithm="sha256">c6f09da0edc4ee9670154325b8846cab1752823b18b764ce9bccfedf8bf4f958</digest>
+        <digest algorithm="sha384">7e8f51ef27a777e349d1f3dda438d1a39f5d3402e5bccbef639c481c1a0875a7ce8d322f62ca8185e78ee4ca5e656555</digest>
+        <digest algorithm="sha512">5bdf155090519a4a8d1050a9c7e97d1dae57b96fb79117b63db282ddb1e3cf7ae31ead28d3d752c804c0fea6926a7eddbcb62f81af6de594db856afe2c8143e8</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51514001</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2005-09.S_density.nc</path>
+        <digest algorithm="md5">834fb5d61bf2621e54b7d3417c05b2a3</digest>
+        <digest algorithm="sha1">b08b76674a849b1e9c92d74a8022eb2c6928a14c</digest>
+        <digest algorithm="sha256">87fb9bc1b4a8e986280749ce3bf4ca5c850ea4c910c32f02611f6b44acc8ad3b</digest>
+        <digest algorithm="sha384">81e3c585d2e9942cefde0ad10f55dd863a75c22a3e4b110049a65fc1ff8ae93f6a5d67e973a021a5f3c89d069bf77ce5</digest>
+        <digest algorithm="sha512">9e5a585cd72f166b3c52e570c863814cdf7b48223d51dba6858eda188493b4c21d7720798be93d6316d7cfe0586c449c6b4baca843db3c5afe6aa89bcbaba647</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51514002</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2005-10.S_density.nc</path>
+        <digest algorithm="md5">7e1759959d4c1c34bf948c23be21d203</digest>
+        <digest algorithm="sha1">6dfed5c84938652fb961ecf444b97fdd9ec7837b</digest>
+        <digest algorithm="sha256">ff78e1f89e5a049b64756375530bcdcc325d8474e00dd22ec12ed067e1127abc</digest>
+        <digest algorithm="sha384">d7f36a3f8be7ec55a933134e573ed64e51734a1cb08cd3a46950967daa0aa1ff5e092f52e4828f27e3b51e152d7b551b</digest>
+        <digest algorithm="sha512">1e2afb77d0b921144a59281cf28a603b18efade8615bb9c80a1b27bd4c1ef4a67d7dd86dda6fd7698d1eae225b7be4efa3baec8b3a894f6a60d6d582aad2e7d5</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51514003</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2005-11.S_density.nc</path>
+        <digest algorithm="md5">8e1d2a416e7059433714e391ce5c0245</digest>
+        <digest algorithm="sha1">6ed2a7bc2369ca0e7c6df9c990a46a26e7a89925</digest>
+        <digest algorithm="sha256">a06cce16856d157fb81dddd8bc9e336c7b6aeeeef1659e360763b321e455f4cc</digest>
+        <digest algorithm="sha384">2fdf950de0c48b8af01d00e1710afdc949594b9d528e5c435452d66fe4c776a2ef4237999be35d36d222a30755a43a5a</digest>
+        <digest algorithm="sha512">bc727cce62d68f715052de850879c1e3df493d4bcf8c51f0e7efc1341d1270fea398171af7a36ded22c64397008369178d732dc2a777ed45ec6a9322ed304819</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51514004</inode>
+      </file>
+      <file>
+        <path>data/0-data/2001-2005.S_density/Year-2005-12.S_density.nc</path>
+        <digest algorithm="md5">bcb1e1800c764c6726dbe40c44082116</digest>
+        <digest algorithm="sha1">3b58a2750dcdc857a1fb808e9ee92ce3bddaf9d6</digest>
+        <digest algorithm="sha256">067e8a249a7b21552c5b9cccc4bdb90ab95fd64bd94fb4e75ee7910f60136917</digest>
+        <digest algorithm="sha384">e7a86c48149d6670262464ee704d258153e8a85df8702e4959fef7ff48f7254b4b19e0c6f53b76b55e7164474a61e99c</digest>
+        <digest algorithm="sha512">67b99223cf7d202f252c4e60ac02b68df490f8a8e67da8c3e7022399fef3f9cdc064dd96df86bc51cfb731cb9aaaf4f3cdd0ac59217aa977260d512f7c55a97a</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51514005</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density</path>
+        <digest algorithm="md5">d41d8cd98f00b204e9800998ecf8427e</digest>
+        <digest algorithm="sha1">da39a3ee5e6b4b0d3255bfef95601890afd80709</digest>
+        <digest algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</digest>
+        <digest algorithm="sha384">38b060a751ac96384cd9327eb1b1e36a21fdb71114be07434c0cc7bf63f6e1da274edebfe76f65fbd51ad2f14898b95b</digest>
+        <digest algorithm="sha512">cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e</digest>
+        <type_category>irregular</type_category>
+        <type>directory</type>
+        <permissions>drwxrwxr-x</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>4096</size>
+        <blksize>32768</blksize>
+        <blocks>8</blocks>
+        <modtime>2019-06-14 13:14:18+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51552267</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2006-01.S_density.nc</path>
+        <digest algorithm="md5">c1565393ce7a689d38902e2ea5bc4989</digest>
+        <digest algorithm="sha1">b13bac2ac394176d19cf27a5cea9651596b3883b</digest>
+        <digest algorithm="sha256">33d071a69dfc65869104a0f2c86f5956348934476749b219f72ffd8539ffe0ff</digest>
+        <digest algorithm="sha384">bd2de082a0d63c8244f90bf8bf4637b1c22de026e1f2281de4a40fb29858642a4ecda244bd9aaa9eb7a66ec8a64afde0</digest>
+        <digest algorithm="sha512">698c4cf54ffe3c114a7f2bdf84b13134b486f8550f247ed702df9a074ae979b9fc5eff8b525f0d3d3dce3450405b28e68a03bd2e01d3aad947f575330a0bf923</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51514006</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2006-02.S_density.nc</path>
+        <digest algorithm="md5">1da3ac154a69ab9a99b812631f52a677</digest>
+        <digest algorithm="sha1">4aae29b2716395294f5a74a3c6385f9b0fabb81b</digest>
+        <digest algorithm="sha256">47e1d976e85798584a081c5d069261ff2c293e1d038ea0a9c911f48a95797377</digest>
+        <digest algorithm="sha384">89b4c6e78578287611325a73ec013aa0acb171cda57e67a15f0916ae32300abf42990d277c25c3a0004a69749cdcd20b</digest>
+        <digest algorithm="sha512">59e136e4d9a83cd0ba51e9b8791fbc08655078ca6a2ea13dac1d125a35eafac53ea20d0559fc50242212112b39bacd795bfd267d28e27533757a5759582e0b9c</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51514007</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2006-03.S_density.nc</path>
+        <digest algorithm="md5">b67312fd855134959d765e9e5f3a4373</digest>
+        <digest algorithm="sha1">951891159000f1929a8e099687acf1897a5b25de</digest>
+        <digest algorithm="sha256">e03c79a4e04f3ba1bb13c6a9cc91f326645e1e0afded3f2230e81337a5ab943e</digest>
+        <digest algorithm="sha384">499e01a9d119ba731504e7cd2979a1d0086219b96bba9151e836ea793c3ed92c211e29cb8114a760bed7605699a3ca68</digest>
+        <digest algorithm="sha512">c936ccc5f797b3fe3c27f1cc2ef170fcb8e0d5fc8bbf104bc6d9e14b40562ee83ac8f3f4a21b0c1493e3add29e6c78cb6b04fadd95cfa3b310e11822e96906eb</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51514008</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2006-04.S_density.nc</path>
+        <digest algorithm="md5">fedd6d0eb3253c563990cefbdab7948a</digest>
+        <digest algorithm="sha1">5d398a3510638b95f6d66fe9fa62eab662030036</digest>
+        <digest algorithm="sha256">18b88f6d51e09b04adb1cfe5ec26bbfe3d840d54fe7be49eea3ea5509591fbd2</digest>
+        <digest algorithm="sha384">6a843236e887bc30e82ef8867dc707e0455b8478848513bfa0e649aba42db4b8a7e7f8e1557409d5f01815e6491a36a4</digest>
+        <digest algorithm="sha512">e85e4fb6e051bdb8c209ac17b9205505618e136b8b89f26635db6363cbbc0a227444fcce5334b5fadc17df3daa4206042474ef3d8ba67a256bbab891bc917bb3</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51514009</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2006-05.S_density.nc</path>
+        <digest algorithm="md5">0c31d52897234a05924cfb5212589e14</digest>
+        <digest algorithm="sha1">d5b73b6ad7e83a40bbee1dfddf9ddb3e32c88927</digest>
+        <digest algorithm="sha256">776a95e4019013c291bad1a7a981f3dfcf93781a86f7e38ad2ddcc8beb37cf2e</digest>
+        <digest algorithm="sha384">8ff5463fdab74ca786675433ef1c16e8757526fab346ef04b47e04e4dbacf2a81c54f4ea00198194baa00975fcbd7a87</digest>
+        <digest algorithm="sha512">b4939fd94c2631c4c486fa28c2d64b4eec2713d707ef2f6e8baf07ef5f74c118cf744137ff3805881f3189c53adf81f26515361e3207a5e78cddb148c9a6ec34</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51514010</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2006-06.S_density.nc</path>
+        <digest algorithm="md5">78b0f3157dcb1cf014ee82a0137196f0</digest>
+        <digest algorithm="sha1">b23dff2e3d2b3cf0c3cd2a9bac9f563db4b6666e</digest>
+        <digest algorithm="sha256">654b3392e1620a64cd7256f3ce78b9f4082926a794c7073295eb65845168494a</digest>
+        <digest algorithm="sha384">8a9cebf5448187d837d69501885ce487e70502390ecfda4597a863ac475a35f34e7cb7c5c7d54222a6b7859926d811db</digest>
+        <digest algorithm="sha512">bb74ce461920f5333910035cd9c33c390dec1e85994c4595b2d5ce78c61104e4dc756739bf05fbd57a1f50c14e7cd86ee4307115c5d78e2b284b2c10bc323703</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:05+00</sumtime>
+        <inode>51514011</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2006-07.S_density.nc</path>
+        <digest algorithm="md5">1cf84ca5a990d21351185a28ad22797e</digest>
+        <digest algorithm="sha1">5461c662ca61aca66d8feb46c13e1e4a031be3c2</digest>
+        <digest algorithm="sha256">41bdecf2b01f71f812d56f050051e7642bcde9d275fc8014b4b3fbd7d92d43e4</digest>
+        <digest algorithm="sha384">59c1bfe3a344287e1ca13571320f1480c84f4463d2d93ec4ba987f61bb81f42c4d208e0cdce1a7721ced350c40d581d2</digest>
+        <digest algorithm="sha512">5cc9627a8256e9de501f0cef5bd932ac80d8dcb3a81dc99e8f0178739689dcea38d6d3bd5c64d7fdd197f0b482b13ddeea477eab607f45171782ad79d19276f3</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514012</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2006-08.S_density.nc</path>
+        <digest algorithm="md5">95d640233cbae0a026f8616328dc9ca3</digest>
+        <digest algorithm="sha1">49098c5176a0d63376ea18235566d9cdb7fb869d</digest>
+        <digest algorithm="sha256">85c80bc7a033a127ef97db7ae7098bd3035360ad3af00157f5cdedd73bb68433</digest>
+        <digest algorithm="sha384">26e2310ce3d802952d2e0874c66f0f87bf08c449bf9e1886638b9cf269e4af373e1e39b8be1d3e12c3e4c2666e5a10d5</digest>
+        <digest algorithm="sha512">108968f823544162b84dcd629731ac559c7855f0774280a3b0f167848e2ceb0c10987e67726179507a74e4b4ad6cc3f8284fd33dc335fb254f05e60b3cd15e40</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514013</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2006-09.S_density.nc</path>
+        <digest algorithm="md5">a477ded45197694941651c91a64ce67e</digest>
+        <digest algorithm="sha1">5d5f3c68e534a28c34a13aef713a9fc693ea8568</digest>
+        <digest algorithm="sha256">00097e598a2d475a9fec08a79d9171e79326c8217c2b7d7752620936d15a3dbf</digest>
+        <digest algorithm="sha384">c5ba7a5d7c27cb3449a7e8f3b8a494cc15523d5343bf0765dca1842a6daf30a8b1d2eb4e05d4ac98078279b8ee02069a</digest>
+        <digest algorithm="sha512">91eb3d112d84d202fc0415a78c716a8bf49f7469dde288ca9c8692491ac30b19c76c194e82a18a77be88c4172e2d094d4dec1227c77cf82a14846e945feb3b66</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514014</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2006-10.S_density.nc</path>
+        <digest algorithm="md5">42beddf47b6dd36ecde773bcdf6714f0</digest>
+        <digest algorithm="sha1">fb8eea643e9b096f4ff52f137ffb4d427d58ddcc</digest>
+        <digest algorithm="sha256">8ef9a7e28165ade9e3814505df8249a7ed050184fd3eea1f90ca7f2f2e1c1531</digest>
+        <digest algorithm="sha384">8cc37d94fbb454c8d7e0cb77441f010000df6a5e72d67aff49c83790434e5a225f52ead755120e411a9498c7890b930e</digest>
+        <digest algorithm="sha512">58484c8d10cdd2f496637636789ebdc3aaf3a2bf748ded6011f7bd4d62b9a2a96de9759bcf2520a22451238c0a0ff05a4597a95fcdf90f0e869062c58e2b694b</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514015</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2006-11.S_density.nc</path>
+        <digest algorithm="md5">69c86bb437e935f96746c99a325b17a4</digest>
+        <digest algorithm="sha1">461047fbd4852644d6cd07378a536f9e55999665</digest>
+        <digest algorithm="sha256">997957b75c8e5c5013fcd7754ce17d68a63b361be89191645333daeae0c4874b</digest>
+        <digest algorithm="sha384">8474eba9fab6c59619b38c81480883e2f09401526de1dbf09a6cd60b7fa91a65d8e7655af86905ac78b1bb427b59a880</digest>
+        <digest algorithm="sha512">f5992458bba83493aa2cb1b9b0f53a42695498d3df6eebafeb1cf5e8295d3b076251e508f30f8f25fd1d417bbb7fa7f281906a1b7786eae4cb6f50af4748689d</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514016</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2006-12.S_density.nc</path>
+        <digest algorithm="md5">ada70e2430327fe7c02e0cd3d0e8eaf0</digest>
+        <digest algorithm="sha1">32d6aa43232bf3297555c7b5f455d81c78259a30</digest>
+        <digest algorithm="sha256">6b509cf1faeb95e053863bf40ee09237c29bc856a718c668ce568ea6de8acafe</digest>
+        <digest algorithm="sha384">f4ff0a3d7f570818a0ebdaad169b2776e966ceb62fa13c64619ad4a2b10fbce5bb449cfc5606a00e02ad00a8b897844a</digest>
+        <digest algorithm="sha512">f17d4ec5336784026f154d08950e306bf49a1ed97df0d04d90785aa6c5155ea13de9c6dd1ed5549c9ed711e4c95a19c21ce3e30bfc6e6604405c2e5be9baeda8</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514017</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2007-01.S_density.nc</path>
+        <digest algorithm="md5">739ec947b7b1bc34e5023edd93abf75a</digest>
+        <digest algorithm="sha1">cc98a32a19e78a92a52f991dd6d7dbcf8eedc667</digest>
+        <digest algorithm="sha256">69f708af2f5097428a44821a6eb850a7dbf1d3b59a097e30f40b6f6bc8bf554f</digest>
+        <digest algorithm="sha384">fe0feb3ace1fb0e4f1fd7b45cb21979f51635510f76938bf28eb7c64327b31e8cebdbace910aa36b6dc208affe3832b7</digest>
+        <digest algorithm="sha512">7d39e89f5a83b38b1b3f06eebe48d777081f2c4446be635c40197507e3a264f67e783009c1047868bfff98b83a3ee1631af7fb92c7bf96a1da2fc29655641cd0</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514018</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2007-02.S_density.nc</path>
+        <digest algorithm="md5">70afe0a6314107c9169901d651b18a7d</digest>
+        <digest algorithm="sha1">1c4d1b8a85b3f1bb15873decc78c8b4d2fb6d901</digest>
+        <digest algorithm="sha256">aecce66d664754d7f9f859efd4b17fadb7701d6a04a7be3e0b659356bd0160d1</digest>
+        <digest algorithm="sha384">29c88f359e3bde2e6e90ee84cfcf2beb8489515084fdf9e35ebfc43c52f587373e69ef8cec9c28f5382ab4de73b8cda8</digest>
+        <digest algorithm="sha512">3169a6965b5e92ddb24fe5620cec6cdfd7d51ce5a0cc7ca2330815a8ec4f49da3fdc0ccb0e524ca85dbddc29366c6e2957b8d05d226e42eda3cd0139cf79b0bd</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514019</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2007-03.S_density.nc</path>
+        <digest algorithm="md5">637cb049c94ca02281a2371baf3cbad8</digest>
+        <digest algorithm="sha1">e8fe551156c64ba408b1e1a359c54e9a6237c135</digest>
+        <digest algorithm="sha256">0e11c2e84d6023711a11298ce4424a1239c069a3215b59fd84b74109af880da3</digest>
+        <digest algorithm="sha384">21a681c5443a8cb998365d476a125f8910bead4ac38c6283fa9c42c586f72be5f654855ce5ad4a20a950bc46c7556178</digest>
+        <digest algorithm="sha512">cdfa7125368d5fa874257bb48a98112df122b999cfe6d3f05f657b3479cba624f562d45f84cf49dd63bc0a1ad624da354cf3225ddcfb1532fa854a49c66e5155</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514020</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2007-04.S_density.nc</path>
+        <digest algorithm="md5">22f53befe46b51e540ebfdc7d64d5c6a</digest>
+        <digest algorithm="sha1">699459c7b58590a1907b5d4b35fe1dab270face5</digest>
+        <digest algorithm="sha256">d59b1bbcc143089cd04dfbb87c83b40ce8806e115017317b54fb31cfb43207a4</digest>
+        <digest algorithm="sha384">66936ea45342faf83e66827cbad0d7a875a2ddbe926f7b5d2eeab81dd9a8f001ebe189e6ad169264395ffb583f13ddb7</digest>
+        <digest algorithm="sha512">aaea7b2ab19c12c03becd7eac6f027d1ef0d8c44545dca2c590987be6a7be3c6760b4aafcef2452820b86ab10c4bc050a105615f1a1ffb3144537f2271de74a7</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514021</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2007-05.S_density.nc</path>
+        <digest algorithm="md5">3628e95bcda8b1d4d6cf2ff1798a9984</digest>
+        <digest algorithm="sha1">77cd9286e5a3e9398c6e81743291840a35142df7</digest>
+        <digest algorithm="sha256">3dfd50c4294a71943e0b8b522df5703ddcda67c46b98e5b837c7b1ac410628be</digest>
+        <digest algorithm="sha384">7df88f086e400826e4e789f634a7f5fe56f4a941159c4fdc3951923697f5d88b0eb7f395eec7ebd3556d2d76de3866f8</digest>
+        <digest algorithm="sha512">54b70c9c581b84d5da0948da1e3273f929d5c03f71e915072f7ffddbd9b2b2cda2758d5b3b1d4b31abcb7a6c9d1c14417d7fa0c18c3ef42f32c31da17b3e791b</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514022</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2007-06.S_density.nc</path>
+        <digest algorithm="md5">8c6aead2b1c892d00535b5ac56d0169c</digest>
+        <digest algorithm="sha1">bde9dab26bd7d7b436b8935600042b530d276003</digest>
+        <digest algorithm="sha256">d94a845a0561a9ee665726cd65f7d4fa876cfd7b8cc3e8b76a1916d0e88df96b</digest>
+        <digest algorithm="sha384">0b21c8d100296c63d9af4d6557657e57f62944b86fb7cba274aea452901e5452864b68a7d7152e46fdd9fc16bb5ef96d</digest>
+        <digest algorithm="sha512">e545790f9ae7e416a452fd0ea969d4356dfa65dc21631f86f0a5fe6920b6404efdae9982ea4d7211a4e8451f6600de2c6959ccc81be96749cc917b03242a3de3</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514023</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2007-07.S_density.nc</path>
+        <digest algorithm="md5">3076f3ea77030714da22295468ba36e5</digest>
+        <digest algorithm="sha1">9fed23770715442570584285ad3b0cf3a94c1c11</digest>
+        <digest algorithm="sha256">f6c61d9d7c3a6504e7deabc6bcbc5dff5eeb4e665e9a8778c20ca94a4cbdfa5c</digest>
+        <digest algorithm="sha384">d2533884ee647c8ff36c509a5d66e46bae73a319e678c456c97d72718fefabe0f52156aad3a53afb015fd78fe872c1df</digest>
+        <digest algorithm="sha512">15c54461efb016522306e94744f1c79149fd4e56c7f8ea0c1942caaacc1302b18494bcbe056cb499ecd2a5cc75a91389165c53bceb90f40a1ef8b54dc5817554</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514024</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2007-08.S_density.nc</path>
+        <digest algorithm="md5">7caa37dd192b8d93f0b3118589ec73c7</digest>
+        <digest algorithm="sha1">b1300f7c83309c947750453b39981f69597bcd59</digest>
+        <digest algorithm="sha256">67e9a673a8f0f385ba44ee142377d178c1898aa78a6361ff86d4fd52f5c56e31</digest>
+        <digest algorithm="sha384">7c885253534253571de3715725b5dfb527863740052cb5e2676009daa6db8c4a3b55f5cf97fd3f04b8e2fb004774cd87</digest>
+        <digest algorithm="sha512">3689dba2784d2f97060237676c15f2850f93693cf3f8225aaf8144f6112fe83fae60ab26e0a2d26c28aefa00bd254935c02c546d0449d0fbdf21acf896058c6a</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514025</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2007-09.S_density.nc</path>
+        <digest algorithm="md5">de903e440c4292f6b94430e0070b9c35</digest>
+        <digest algorithm="sha1">e81f99f107ec9cb51f825a6a093221026ef57d2d</digest>
+        <digest algorithm="sha256">4999fb196a800592709126f8656a72cfd4d1e0eb8112db2b8291c96f4404572d</digest>
+        <digest algorithm="sha384">cf6d5652594ace8f350c53c4d759bb9e7a818770e00e58e9a497f3a787f1d4ef7042a26e59c1c09fd25068dbc3d7a506</digest>
+        <digest algorithm="sha512">28e899bb67a9c55158b0ee3c9c3707070cc24b312810f4d1e850b05e7db8774a0250816df4ded6fcbd86c2ff4611723de0ecd3a566004b338b8dee2e9a62aee9</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:00+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514026</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2007-10.S_density.nc</path>
+        <digest algorithm="md5">f16abaf8d2c74b7f02d05703f2e40673</digest>
+        <digest algorithm="sha1">a12fc011826193626abc041b55fd4412b3262ef4</digest>
+        <digest algorithm="sha256">102b0b522e4d00fd8423b8640c03773ac9138019f75170ecdd43a28c98d1d1dc</digest>
+        <digest algorithm="sha384">0a26e39f1a8b0411fec0a2f919042a7e2aa49e7ce86a03915f4d2f8d7903705e89cd74c5baf3954a54eecc8c29bddf1b</digest>
+        <digest algorithm="sha512">da2bc7a011762c892fb94ce7318ee14b5a0a48bedc20d61ab86870be90abd15be87b9ab83cf37cc0e5278e37110d35fc2b24cdc5da5579825f416e415beb6a6a</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514027</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2007-11.S_density.nc</path>
+        <digest algorithm="md5">2ad6fefb659c771c9d0db8d9c2d64484</digest>
+        <digest algorithm="sha1">c40f14dcf79ff5af35131b96bf98224cae413077</digest>
+        <digest algorithm="sha256">371f79afc8771aa83ba6a7ba1305558252734f23cea60b6632cf44081e1b1c9d</digest>
+        <digest algorithm="sha384">743df3048c7b29ad8150424b3c5532ec6373a7b2f709d9dc4284afa2cff4950bb9f4e0f2efd984f791f05e3b2665ab8d</digest>
+        <digest algorithm="sha512">f23ddb8bd4b4d54cd03955b7db54df4c99c7b627ebd936707d4258d420f173276a807122a59b1e0495579fa3ae2868799839c6f8c1e8bf6e0f2965d36e312bd1</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514028</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2007-12.S_density.nc</path>
+        <digest algorithm="md5">eb7a0ed369d47e3de9e5012d6ae653bc</digest>
+        <digest algorithm="sha1">556362f93f4e63a5c6d0f0ff4cc90272e5291aa8</digest>
+        <digest algorithm="sha256">a2d6d32baf2067d11d8785a41748cd106178f05c29b31f53b91fafe5d17cb631</digest>
+        <digest algorithm="sha384">477fd8b5c87ec957f0323226ff34d2f74192e2242921c7cfa98ca5dc2d7aab04cbceb1a98296819235bbd0b90868594a</digest>
+        <digest algorithm="sha512">c64f673df2fbfc7a77a04f71bb0f77ddeba9fbc36dcd673f9f5fcee5ab7f3e4d2f06524401a420726fe0f202816b49f353412a22dc1b69d1c9e664ad63df9fbd</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514029</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2008-01.S_density.nc</path>
+        <digest algorithm="md5">910673d5eff437521b78902a49f2576a</digest>
+        <digest algorithm="sha1">74b5b760f390004c07b6ce372862a88898edcc2c</digest>
+        <digest algorithm="sha256">e176ce3d94f25dc607c09d2a6e811817ff16255ef8e5ee38bf529d88abe9bee9</digest>
+        <digest algorithm="sha384">7d5cb1282a27d9013ad5ec4abe5d064a09e6df11919df6fb26d28a412de27e905d86237b4b6ef15547e46eaa7cbf1de9</digest>
+        <digest algorithm="sha512">aecefcb348d29447faaca9363457e7d2b5108b8160638ac790d78864e784f61c704d9e74431d7ee929a1c8f8a5325bd71e8c14ee9762aabca89189937a449367</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514030</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2008-02.S_density.nc</path>
+        <digest algorithm="md5">4c604fc102a3680618d3d03ebb28b1ae</digest>
+        <digest algorithm="sha1">2dedf838fd35f3d1d453ba29b83b57ff34b5d79c</digest>
+        <digest algorithm="sha256">7dde00f01af41c0ba9492bb6c18a0b5d558924691fe50981d359860b351a0469</digest>
+        <digest algorithm="sha384">02da644e1d79565d560d4dadc3036d4d87a7ed55b18bbe359a44149fcd669efd35e2289e9b609c442255b6da6b4eee41</digest>
+        <digest algorithm="sha512">4a797818478eb6ce35fc8ef7261f05bfbecdfefab63855608c42faeca9638fc5d5c14c2e27c90ef84dda30366f885dd8799596ef8e964dbe4f0e32a83fa1816e</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514031</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2008-03.S_density.nc</path>
+        <digest algorithm="md5">ab471a98200e986eef4d4eb2516c6490</digest>
+        <digest algorithm="sha1">93ec6a5b81de022b8ed18cb04cae14cfe2d02113</digest>
+        <digest algorithm="sha256">07e991dfa9aab6999f7b25b432c625390d99707b73cd20542b2389b6b34dc36f</digest>
+        <digest algorithm="sha384">765a23e52bec288d6aa6962e408a72b28eaade425dc17fd3cfd091ee9ffaeb1332dfffbf72240f4446b9611ee0249eea</digest>
+        <digest algorithm="sha512">3cf19de2758854a423979382071b864f4af6c1be99cf0701636eca01538f46ef2fa36a50ab6b8ee0c1bebcb63c9ed12713c91dacc9748f7b94ae71437d4002ab</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514032</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2008-04.S_density.nc</path>
+        <digest algorithm="md5">07b889bed40eb21b21da7ec4bf84db3a</digest>
+        <digest algorithm="sha1">7e77279ea6e6e65ef9fcb30e1ecf149f5d585682</digest>
+        <digest algorithm="sha256">872e8630371fdb36979b6b1f5d792cf0ac354e662da3ef1c33bbc6bf9055c1d5</digest>
+        <digest algorithm="sha384">a1556dd27b9851432cd5f1daa75c0988354f4c9415a05f0d0c6492a12bbac40834295f63ee8ee77b368c1637170dd2a4</digest>
+        <digest algorithm="sha512">88bb9e07c09fb344e43e90a298505406c93f524ac2c30bae5c6432c184295432eda716d2a768f6a645b469a714b5ae329f49aae79d227bc486ab39463f17349e</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514033</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2008-05.S_density.nc</path>
+        <digest algorithm="md5">f20668b5c0f15136ef8b5d499250fbe5</digest>
+        <digest algorithm="sha1">65b127c0e24f55b05de130e44aea1e516287f820</digest>
+        <digest algorithm="sha256">4c403dbcb53ae962c86f43240e25281157183665f937c9e6a977e04861d7a677</digest>
+        <digest algorithm="sha384">fae2e0a53ac2625d5a51c02410d87d5f0484fa117ee3a393fa38d935fed2ebbaa5aab02968dba26f5649cb9e76aa0451</digest>
+        <digest algorithm="sha512">c2cf01ffc016047b0b83ec0c6d86763eee961e230ec458ea7f910acbf71076aee00d5aba5ca513b5d580eef788075e46350b23998e87fe2d337a74d2c3a63357</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514034</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2008-06.S_density.nc</path>
+        <digest algorithm="md5">b11e0d07287ee98efef632eb782cd756</digest>
+        <digest algorithm="sha1">00b8634183c4841d419c79495c5bccc46aa62464</digest>
+        <digest algorithm="sha256">a61bd7a773be86f6085604ba84488d88e9bd6a11610e29d4853b884871ffce14</digest>
+        <digest algorithm="sha384">a33539fb14ae0059523d2b2622ffbcfea147a89c6e8cd5276ae15f5859e85916ba51dffc2d6b6527423e1f1518a6be66</digest>
+        <digest algorithm="sha512">5807b980b27cb5d92117a9cdb691d4ab5270e2c5521514b27314fefb5fefb529b23ff1a0fba25bd506693706b476a9588ff5ba06f6ed4b835b1127edffce2410</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:06+00</sumtime>
+        <inode>51514035</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2008-07.S_density.nc</path>
+        <digest algorithm="md5">54a81bf862a6419cae26fd7c7d6d89bb</digest>
+        <digest algorithm="sha1">73668d4610ac147ec726e1bf615360ae2eb10e13</digest>
+        <digest algorithm="sha256">a236795c29b45ad85f86352bd7c1d09e567687988b8475def132b4c9109e70a5</digest>
+        <digest algorithm="sha384">404e927bdf4e04f9d266d7f6522e88c3b5e4ddcd1662647b4f77089b4449a419980fa33f18f9c25a6ab60161c9ac8ef2</digest>
+        <digest algorithm="sha512">94e4a343bf84bfc52a45a5723f2c84c393c1b2ae4a7366778fcb8f9e4c9a5190948feeb4cdd549b41f8b3c182a32ada670ccb5d7f42ce0f2e263653aac272c98</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514036</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2008-08.S_density.nc</path>
+        <digest algorithm="md5">90b917c7ffa1609df33b1cca26e998b8</digest>
+        <digest algorithm="sha1">a8d2007c1958b7c30de6a72e9b20af703178a90d</digest>
+        <digest algorithm="sha256">fa2ba83a52b6590718f1e3f8ce6cdf4bf545873d2b9a923344cf68d9d057aca7</digest>
+        <digest algorithm="sha384">4b5ee52976df51ab7576df4a513312b650f96c64b41fb8f851c0faa6f33c031696775b702c79d9a8ad55e91e7d6cf0bf</digest>
+        <digest algorithm="sha512">e41918b62eb5728f77c1e93e7416525bf9ef599734a53f2b9633946f1c6aea8b43baf3e7688e98bd568399b48f184ffe037fbf9dc4d8a1742829a6218ba77d07</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514037</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2008-09.S_density.nc</path>
+        <digest algorithm="md5">f855158864699f6044147b438b385d8b</digest>
+        <digest algorithm="sha1">ed299b89b805bda81bdda9cca98e81b08fe88faf</digest>
+        <digest algorithm="sha256">a3ad955f9b6a7ca284d1e6744cbf31168d5d581640653e3a0b3d79ceedfe2ec7</digest>
+        <digest algorithm="sha384">7d4a033989e1bfd0cdbcf3242351c907d1288d8fe3e39512d33d887ecdf4fc4af3689e57e93d5a115da27641ad3aa31d</digest>
+        <digest algorithm="sha512">12ef5bc37f28e728cdc48479bde2a189855d43f062dafcc31a5f438d35b671c48b5dcb98005001974ebe3f072eb984fd5885441863a81e25fc6867866a595e25</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514038</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2008-10.S_density.nc</path>
+        <digest algorithm="md5">f702c62f34ad452b685bcb57f0686d75</digest>
+        <digest algorithm="sha1">125adebdfe77a76b6cdfa7d039be5b0d88052283</digest>
+        <digest algorithm="sha256">07f08e477d8840a0b7aeca762d69cc9d2517bf30bec1f2f83c62c3afd1247a0f</digest>
+        <digest algorithm="sha384">86b767225e5c9d671b3fe3f1a7016e283e56f90908a583b780329a76d7fea43edee24fd65bbca17a6126593f459f6310</digest>
+        <digest algorithm="sha512">f7844447dc5d8e62c4f95646b84e29bb0bcef17c865987ec83e6bc8dd7b3da46978400b8533f7a8d18512c7069f5a77ba3731eb6dd68c2d091d64800286050e0</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514039</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2008-11.S_density.nc</path>
+        <digest algorithm="md5">f328f0615ddeec4311b57b501c784d39</digest>
+        <digest algorithm="sha1">89570f7cb0097dcd43377c3a1de0bab7899114ec</digest>
+        <digest algorithm="sha256">bdaae6329693176832da389dc145f03d0b3bf7583c971fb36cd982208dfb977d</digest>
+        <digest algorithm="sha384">704fb19e3085b9061a4736a8128109f95b31e05e38045a53e1e31c3d7dda5ddee046c0c4ed23194022fd582e33b08f90</digest>
+        <digest algorithm="sha512">194619dbbdb51aeca722cb916fb8deecd5ad72d41ac7e4008af22400fb7cc51238e342903e579408875ba5935e32516d53ae53bc0d595c5fbf0ad2328da4882a</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514040</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2008-12.S_density.nc</path>
+        <digest algorithm="md5">3c23aab7e4ba02dc7daf436217bef504</digest>
+        <digest algorithm="sha1">7afb490c9c2d1a94384953d512fe126d381ca0aa</digest>
+        <digest algorithm="sha256">b8b9035aff2a54d046571d158ee414f23fd59b58719e91e04351d95d760456ff</digest>
+        <digest algorithm="sha384">7a3c7eda318a86f70c73b0f2e2b6ec8f822d28e90f1cda72bb863942d0bc62ae687ae9346e61d6acd268c07b2a7445a9</digest>
+        <digest algorithm="sha512">6c70ecccebeea4a447e34b38fc3ea547037dc00e1b8533ae47387f3249b088111266e2a5f9586fecae7da7cce292d9fe0f8f8f308a6ae5baa91f879ec0e3b586</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514041</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2009-01.S_density.nc</path>
+        <digest algorithm="md5">0026db6ebab4283a8eb956f0193ce835</digest>
+        <digest algorithm="sha1">afaab4e94da648b044ddabb3ef80e422e115f613</digest>
+        <digest algorithm="sha256">6a8c15dcc172166bf72295668da98c8dfc9d76bbe7162c5a387c1c05df146d8d</digest>
+        <digest algorithm="sha384">e88d7f7b5775f5862921154db268cb962fe8f3d2f94b1f02d7a93e40ee6eb16d6e52693db5ae3b391505ae2893e9208a</digest>
+        <digest algorithm="sha512">6f93cfc5fbe32faaf90e72190044754fca7c15c4615a1a9d0b047fdb2cc26d29836c646fa8a01c81bf4ae22961b541184ada65d3a5d8963fc1846e243b982f09</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514042</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2009-02.S_density.nc</path>
+        <digest algorithm="md5">f96101195a19bc6f8d5e98889ea74a1e</digest>
+        <digest algorithm="sha1">343aeff51eb78a1f2397b5c9e7bf8fb0f791d6cb</digest>
+        <digest algorithm="sha256">2b91b1c179dadd026279746a7b3dae680b4e06a4a4185e1d98bade4d2ff40b91</digest>
+        <digest algorithm="sha384">dd5a5eec379a50b076bb84ea79e3ad3c7c51dadcd725fe246d796ec7f1fb69d8684dd8861e89d9887aceb2fb35de9d70</digest>
+        <digest algorithm="sha512">5520e8f4cd6b6d054f05b89e7c43b41090b96674b592be8c5392a4c3430339459964666ccd387192003edfcaa05c3cc8cdbbccb403700c46cd3bc97636bfa5d0</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514043</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2009-03.S_density.nc</path>
+        <digest algorithm="md5">0b833eb81ead1e89ce6569867bd08fe2</digest>
+        <digest algorithm="sha1">a038e6a438f8e31b34d95a841f5fc2c954815bac</digest>
+        <digest algorithm="sha256">9afdf61721c5bb9793ade0a74ff03b53b5aead9fe50cb3c73b7ed90c459f2285</digest>
+        <digest algorithm="sha384">47576a0069c90af0ece7bba1ea563e884f5cd75545ac95e0441425fad67b267883057226a72545fbd3cb00c3fd0c3006</digest>
+        <digest algorithm="sha512">816f6fa622888494da3df8e73c9989115ff59209faeb90b73d0ed17b3c0c218ce2d7168e73fbe424950c57653d2928cf858d2c3011719fe145fbe753828ba265</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514044</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2009-04.S_density.nc</path>
+        <digest algorithm="md5">4d7a4a8bf54e260770077f9fbc48fff4</digest>
+        <digest algorithm="sha1">6e99f964fce4c76f3680d774ada6bde434e14702</digest>
+        <digest algorithm="sha256">be8b0ecd579bc6020a33617de13a5d7d5f5766e239a4f249c32db9ec4bb44c68</digest>
+        <digest algorithm="sha384">e4e796c873c5bfb389d98bb87af65e347fde5dd787632d84ba9a6d67c8c9fcfc257ca359a4fd62d7f604fa054a9ad713</digest>
+        <digest algorithm="sha512">37ccd6686978c5bfdff0d7931ec073a9f128b5433135f56aaf78fa290215a9d94d9bd47eecb6a7d93953cc08b958b1c06445148f8dafc29a2e6425b0f4655c14</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514045</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2009-05.S_density.nc</path>
+        <digest algorithm="md5">7be1535ff207d5f7d922304f3dcdb557</digest>
+        <digest algorithm="sha1">a25913ecdcaeddf6491c718b0ba04d84afc55c54</digest>
+        <digest algorithm="sha256">458e79b06d9711523676dee18108ee87a57d4b34b3d3f8e5d54296e8c240c5c0</digest>
+        <digest algorithm="sha384">ba21a97440527af1f3cfd4449f6425df9dec7423456711aedd2984de6a25d9341fc719454cc06c2504018eef71245546</digest>
+        <digest algorithm="sha512">2baf295c47160f95e48b0353eea0653300631cf569eb6fa5ebe83d2a95f07519896e2ee92ec68f797e6fca9228d87fd176a73d2075c8d479ba44c6b389400996</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514046</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2009-06.S_density.nc</path>
+        <digest algorithm="md5">967cb2c7b87ab8b7b2a4d29b78c31529</digest>
+        <digest algorithm="sha1">fcc79f68e902db130695edf4bf3477f5b7999bf9</digest>
+        <digest algorithm="sha256">264b21fa73ff6b3540ee01492c4a5012b7ef2ebb79b9e71b79d63f15184b977d</digest>
+        <digest algorithm="sha384">f041db417e2e64f2a06c4aee6b3ccddafe7bda444452786a731b381c527d587b269bb5088db34396f31e1902a94e2c3b</digest>
+        <digest algorithm="sha512">8ca28c7ba9d9938e59aea53509ea1ad0d515823e11c217842e2e5cd0795161da297446c9a278d480ea9a32b8b284988b280df4a0584ecf6f5e99aba0c82ed30c</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514047</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2009-07.S_density.nc</path>
+        <digest algorithm="md5">aa852d9aeca6b5ad9fcbe86f2a154e8f</digest>
+        <digest algorithm="sha1">889389afae4938b00058a542cfcd2aa2c0ccb374</digest>
+        <digest algorithm="sha256">5ca8c32a13b7863e9cdb75a7b33975eb43ef874516aa0e321a45c35b4b0bf45f</digest>
+        <digest algorithm="sha384">b0031ba6dee9752efc6cc6b09b041f90a2e1bf24505eb1def328657362a41efa791ede820e978b6dea3a775c0cd7b732</digest>
+        <digest algorithm="sha512">9749a55b5987034a4642697564fe5f3608a484bd9148285c79b93381af37040cd925c00535c8eefbabf0a1efe39decbd3f5c2e76a4c9aed2c2cd984f5cfd79d9</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514048</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2009-08.S_density.nc</path>
+        <digest algorithm="md5">ec9c92cd2b51b32083010c29bc78e150</digest>
+        <digest algorithm="sha1">2184cc7c72acae3e227d019031dd862a06e331ff</digest>
+        <digest algorithm="sha256">aaf5b979329bd281397986eaa1ecbd464b178885d2197de5f99553e214ff8bed</digest>
+        <digest algorithm="sha384">03910cc301207feb7fc91de6c815f45d4199be1dd956555fa0cff879f5f4d909a5986e66182a8520563fd58e9ce5888a</digest>
+        <digest algorithm="sha512">305f2e7a019571e6a4a4fe6d60fc01403e858ca3f2f21d1a1ed51713a19b3e1ebc9fb47a30c0772b948e3d79314dd5e877303bf6d0f29170359ba8e563b898fe</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514049</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2009-09.S_density.nc</path>
+        <digest algorithm="md5">30d56ae1880ca4a44f9ad521d0f496c6</digest>
+        <digest algorithm="sha1">15335632627787cc0cfb5ecffbacd18d3c831386</digest>
+        <digest algorithm="sha256">d129364c6c9f94436eed3f4fa879ba5a9b83b0c1a37530107676d2fd472518c8</digest>
+        <digest algorithm="sha384">0b6636aebc8c3890389a77e435d4bce2cf89401008299a3e44bed50e1f2ded219bf9eb790cc4aade0376fea8ae30481a</digest>
+        <digest algorithm="sha512">edeaadbceae6306c80efb7aafdafeb980ab2c1300962bcf1aa64f380f97c4ca449f6f7626241e6ba8f47df4919c343aae45ade8f685412ef765ffa5b8ffda897</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514050</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2009-10.S_density.nc</path>
+        <digest algorithm="md5">7210b56fe7539c180def092c7af683f3</digest>
+        <digest algorithm="sha1">d541d1da765c8e023f9a6e334093b907cc4b2f3d</digest>
+        <digest algorithm="sha256">c07aba0281ea54e73e498bbe5ec391d3f0b6f15a49ea980cd53b0e6236071bcd</digest>
+        <digest algorithm="sha384">fcd613db99146e66b0d657259f463d887a9273bb122155901bfd0ef3ce2169cec49e451d2b78d1a3e6b07dd82e78ed08</digest>
+        <digest algorithm="sha512">f1b055aca92d69c8f5a91daa8cb6f829a1664c26fcb4f2e59373b078638b77c28ecbaba18042c0c4f17b466750fdb79b7606bcb9975b6d1af0093bfc87820e51</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514051</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2009-11.S_density.nc</path>
+        <digest algorithm="md5">f6177a1d4a0b11f5dfef94ebf31b821f</digest>
+        <digest algorithm="sha1">612f008e77640366a97aa8793be2fb1e27e97e05</digest>
+        <digest algorithm="sha256">a55aa92382fd462d7b069d3988ccc4bd19577a5c5fe91ef6b102fd0de1b52e7c</digest>
+        <digest algorithm="sha384">fc0998173219e91398bc5dbf547fd9de518b2f0c1c52d10a654cb6e5b59755190963242acb59b0d4dda47763558a6778</digest>
+        <digest algorithm="sha512">0fb7704af80a452409cc84d074ff5944b3c50ca0802084885f8b11537f922207bb2521996c961b704b0b3067b0f92212cb0970dd6a879c6090ac88da86f9a4c0</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514052</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2009-12.S_density.nc</path>
+        <digest algorithm="md5">7f8941f31b72ca4e7add027bca35263c</digest>
+        <digest algorithm="sha1">7ad47d943943151e4fc9cf4b2a85bf66a20e1320</digest>
+        <digest algorithm="sha256">f38f3f568eb1156d676c70ee911cc3c685defd7074f22bc0c3090827dd27a570</digest>
+        <digest algorithm="sha384">9dff25d6312ef950cb2896394ad10f9da8a0efce07e5eb0270106d4843c17044c5a7c2c9e0df159c3c564ac0a27bf2de</digest>
+        <digest algorithm="sha512">1251b18576796a72cd03d70229cbfccaf95bfeb57840193e9a3bffb50a47ee3afa7ed0d0ad7abc0fa9e503641ad10999cc516c0cec232dbde3c938e6ef885d7d</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514053</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2010-01.S_density.nc</path>
+        <digest algorithm="md5">32b77372c25f62c826a179170a377aec</digest>
+        <digest algorithm="sha1">976cc9c7832694b0d420faed0f6a884fb1360228</digest>
+        <digest algorithm="sha256">98401a587500943cb21fddfb644ad5527b496e8d9f10802856b25183aa8c2d41</digest>
+        <digest algorithm="sha384">92bc4770b065ab52513dd6de8a62e8de8e06fb52859e75dca00ea1e5d72e3e84434b1e0f56dc6d9f8a18111fe1ae34bb</digest>
+        <digest algorithm="sha512">04410184a8d58cf820f3fa11e4dc3ae29226e62ad9290e3e8ae5733d5e6b4415a14fb8e665d2377b845d53bf47f15e483073390d342264eb86e6cb54a9699850</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514054</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2010-02.S_density.nc</path>
+        <digest algorithm="md5">f93d676883ed8cb0bec591d15c7129fd</digest>
+        <digest algorithm="sha1">da6b56c4bdbd7d5a1246b84eb0ae23bc70a6e2ba</digest>
+        <digest algorithm="sha256">83aeaebf49e998869cd7f52c2482a3c1278a452389cb113cdfd156be7af624e0</digest>
+        <digest algorithm="sha384">3a6242e7816f44c83d6ea24d6a90ff86a894cb713c80ae80cd79e96ce9e788c881b07ef19755327cb1e180818419639d</digest>
+        <digest algorithm="sha512">d55a634de53aab4006a87dbd50cea5e52ea205cac4d48c548fc5cebac6be9b7b76875f14ab577ff327cc13d31f53e5d8e81ccd1590603df875cca2c95fa77654</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514055</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2010-03.S_density.nc</path>
+        <digest algorithm="md5">3263b885d7cecf7b2f2ed6817c615832</digest>
+        <digest algorithm="sha1">4a77b7324e24ca29a18fba306bddedb8e1e3bfd3</digest>
+        <digest algorithm="sha256">a22b5837239c59a1531503322436a0d8cdb6b15901fe7e9e342da20a984abd91</digest>
+        <digest algorithm="sha384">6c9c674fdfaaf6dc1daf1fcfcd5541e59f3b3f039cb7667a36c9e0df629b077223a0e6384ffd37ecdce9feb98a6288bf</digest>
+        <digest algorithm="sha512">618f2587cc1a44a8a48b0c160e60093487fe5e7f6470e7688a585bc4126d16816a8ed9100445e8ba9530711972450fa4645438685693d069f293ac10bf20172a</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514056</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2010-04.S_density.nc</path>
+        <digest algorithm="md5">96dab5f507e6f173c6f9a57318e51e43</digest>
+        <digest algorithm="sha1">154acfe14f5b9cabee0ae180cd07eccdb3f1c2c0</digest>
+        <digest algorithm="sha256">d5b44d20c19a81d6b5049b0e483f1e801216a6cc48eaaddde74c9437ef7b32b5</digest>
+        <digest algorithm="sha384">32f7eaf6e639571b75a663d8272f04e65bbe1083e9641454e725a86533b2f4a22d37f2004ba402b10429723b7110f9b4</digest>
+        <digest algorithm="sha512">fe6e9a5c3aeb54837fd225732243c7dbb742654034625d2643a64b484b250923cd07673ef0bd2c8aa2be78b4cc8a230bb50958bf26498403ea6e44911dbbad96</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:07+00</sumtime>
+        <inode>51514057</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2010-05.S_density.nc</path>
+        <digest algorithm="md5">89673467c89ac8b6905ea8f09459f287</digest>
+        <digest algorithm="sha1">f6c763ee342bbd2836cf186aa7b8621b9e94b840</digest>
+        <digest algorithm="sha256">ca2e917a64f031b0c48159620dfd9f13f5a833b62c9b4609b2d6623e3aa3e614</digest>
+        <digest algorithm="sha384">83448e5a1bc2afdd513ebba7662f9ed2e2e93e5ebb7edce459c8d2b86718c40d3a5a2136498097aa36e819fb8edc44a7</digest>
+        <digest algorithm="sha512">b3e12f3dc0f2c91521103581aaff619c0202508f51091ab65eda678194729fca156ff4182a406642054f355f9226ab0a58bdb7a12281ee9900f676e95b7e32bf</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:01+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51514058</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2010-06.S_density.nc</path>
+        <digest algorithm="md5">4006e06b81a97573a6ade397889699c5</digest>
+        <digest algorithm="sha1">1f34f9084e862f397876b4a6f5a8c3acc5bd69a8</digest>
+        <digest algorithm="sha256">fd0b70414b05f09beef55489b0c8426ac356a7993e2cc969b838e9888c3f1bdc</digest>
+        <digest algorithm="sha384">8028626a6c76fb76faf34704b9260fc2aa839471fc37e7cde20d75075e89bff21c06812319dfd3c79ff891ac782ec443</digest>
+        <digest algorithm="sha512">11fafc8068a2e867cb4f509a4da2ede9c82a3407aea3cda94a0f5a00fd068881fe1b786a0ab35a8de94df4eed194cde21a14123ef6564c78fe9955b498933a21</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51514059</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2010-07.S_density.nc</path>
+        <digest algorithm="md5">acf2e06336366141b05612e30feb9146</digest>
+        <digest algorithm="sha1">6acc6c8a3358514fde7c1be2bf864fd36230ea3d</digest>
+        <digest algorithm="sha256">0f3165c878c089c5dd17936a9e7cf5805dcac54bbebd219468db7fd448e2603d</digest>
+        <digest algorithm="sha384">92e4a697b0e7d7df9f52f5357c5195cb753279304fd138ab7968f22b95e41fe83068262a760b390bd143d0deeb84a2f4</digest>
+        <digest algorithm="sha512">15708ff2ebc7881f7ca14b8a3a15b1dd725f7c62e1b25df3de9abe7cdbcc04f4a563db5368b702b00b1fb74880a098b20bc8f81425c2e86fe0c5c6941e52b32a</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51514060</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2010-08.S_density.nc</path>
+        <digest algorithm="md5">b530e439a62e87e1079836f9e6830a2c</digest>
+        <digest algorithm="sha1">34aca33c9e26416d3429937f6c386c76dafe644e</digest>
+        <digest algorithm="sha256">94396aa282f7e2729b3ee897ae40ac17651ff60ec6d7410d15f4dfcb44e5e99d</digest>
+        <digest algorithm="sha384">f90a5a0eccd8f056359f983de41981f2867973797499d2326780ffef933fe336377f8de82925cb522cfc1c77bb4eada4</digest>
+        <digest algorithm="sha512">d4748b5d473eb23d16578bd435d167b1494fbfc8b4de1695adfb9a1a0ffce5309ec00d5b8bffc6324705445cd092660062fe8141171edaaf52bf9b91fd86e98c</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51514061</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2010-09.S_density.nc</path>
+        <digest algorithm="md5">f7b2243ae252ae798358770f04de7922</digest>
+        <digest algorithm="sha1">ac7258d0895e5bf4fe45df7e76febe2d98b2cb1d</digest>
+        <digest algorithm="sha256">ebda8cfd8f64bcf3972dea022de949f05d5764be8bbfbf91e5e0659aeb0f4d08</digest>
+        <digest algorithm="sha384">b6e6a8745858cbffdf3f8acc38e5e715b9284eea0a1e35beb2a5d0b2579a6d2eeb6d6d7c502958265fcea9a9b5cd5963</digest>
+        <digest algorithm="sha512">44c5fd8775dc357cbdc61e55467aec145bf80f25189a369bd0987efe79c3f222ca72fa14a6fc42b52c2815cb768fd3da782406e9cd72520f563f0d88310c4723</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51514062</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2010-10.S_density.nc</path>
+        <digest algorithm="md5">99cd3564eef659b912a66475251d6591</digest>
+        <digest algorithm="sha1">2068b1d6163747f9b240294040546c688bc806f1</digest>
+        <digest algorithm="sha256">7e0aaeb932b9945f5c12323b662511e75dafa8f3cd5b539adc44d3d42032edb6</digest>
+        <digest algorithm="sha384">a2e4b44bc6c43b322b3a668b90f8b0fa105bcc4c9515a050878c3dd3c03e4e78b6785bf6d357ebb9b6e392762b78a153</digest>
+        <digest algorithm="sha512">45748aad5719909c4cf0ca6ab1133f292ff7cb28f11e9d79acccae3b8b21916c386b6ecfe8c07c8357465204f0c576a6ea4902e56ac04fff13f62185400f0547</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51514063</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2010-11.S_density.nc</path>
+        <digest algorithm="md5">954e3689965e4803aa2215ff0b6eb6be</digest>
+        <digest algorithm="sha1">62349e25f1bd11ac1357a3383ac729736bcbe600</digest>
+        <digest algorithm="sha256">90312702f38d797df116fe42ee3954d507733e040094032d95894b011e1222db</digest>
+        <digest algorithm="sha384">d64ca5d1c1c7f47872e5d3778e0a3caa7f1a2d2122eb6d0d4e1f11c67b8f2dda25e7040fcf11f4c523cd922b777d39bd</digest>
+        <digest algorithm="sha512">a51ef54e7eac6cec85b1e772f341c160add127e0768c58d76a9814cb7c0fdb25c6aa98d6bd5121890145a029bfde67454af4e333daa8046442a9643867b0dcd6</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51514064</inode>
+      </file>
+      <file>
+        <path>data/0-data/2006-2010.S_density/Year-2010-12.S_density.nc</path>
+        <digest algorithm="md5">552d18d0d17a940863235015a5bccbfb</digest>
+        <digest algorithm="sha1">5433b1292f204e21dda62c427160451407b6ce14</digest>
+        <digest algorithm="sha256">24f9dcea24dde16dd4e94584429fbc338f77adbbe61255541186e257ef6d7e67</digest>
+        <digest algorithm="sha384">aae4e2fee28814fde87acf2fc97219ed03c2ca2a5897fa4330ab59813cad487e8ffbb2e03348101d4e0c3b2f9df39681</digest>
+        <digest algorithm="sha512">7b0d3f9a5841a13d7a0f82993cad0a0e04c3931521a3adf635a8ebc2931390e9a64cef2f97ab748fac91805e91679da721c7e476a08eecd9ae6c300865b9825a</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>759704</size>
+        <blksize>32768</blksize>
+        <blocks>1488</blocks>
+        <modtime>2019-05-16 19:31:54+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51514065</inode>
+      </file>
+      <file>
+        <path>data/0-data/GB74EX-ISO-19115-2.xml</path>
+        <digest algorithm="md5">c9dfa7369be3865f0b630a9f1b2c569a</digest>
+        <digest algorithm="sha1">8778a56807fe201b96a6efcb9477e6ecc26b7871</digest>
+        <digest algorithm="sha256">7a95decb3f4874c8f2ae9b220ab2963ee4ce5dcfbced3177c7311082bd886c30</digest>
+        <digest algorithm="sha384">b53e19ef1a9e5a7c8a549fde9805f2ff400c94a9049a4d2a8b608b9a032ce4932f9f41250cd71cc92aa1c25b8b065279</digest>
+        <digest algorithm="sha512">ddcc86be6093040f217a6e701b74d3f2e0a6ba3d5622836215a2f7d212cd89cf9463d7d9d51379f9d927fcedc3899acc41fbe1fb3bd20827da2f123404caa7a5</digest>
+        <type_category>regular</type_category>
+        <type>text</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>17168</size>
+        <blksize>32768</blksize>
+        <blocks>40</blocks>
+        <modtime>2019-05-23 18:00:10+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51513943</inode>
+      </file>
+      <file>
+        <path>data/0-data/Monthly mean Sargassum areal coverage in the Caribbean Sea and Central Atlantic Ocean from 2000 to 2018.txt</path>
+        <digest algorithm="md5">3b3942e2ecc96aa4c875d541191a0dc6</digest>
+        <digest algorithm="sha1">a440e61b5c2bae8172e23f6b230addf1560db94e</digest>
+        <digest algorithm="sha256">1b2610229259388dd9cb4c07d64170fed066d14f4e239e9009fcaede27c350ec</digest>
+        <digest algorithm="sha384">ee354c07d9ac2768e462a9846918e08e9db41eca656b7c9059ff851a0b9caef512938e2d6870776abfc9248116aa885b</digest>
+        <digest algorithm="sha512">e3532c92f8b01ce856a60b195090b35bd22ea0d3f4863e4f3ed8c7d6d51d53cdc99604de162eff3290ffe84efa979cd6631adcb5c2380863a71daadc358194be</digest>
+        <type_category>regular</type_category>
+        <type>text</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>3761</size>
+        <blksize>32768</blksize>
+        <blocks>8</blocks>
+        <modtime>2019-05-23 17:54:58+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51513944</inode>
+      </file>
+      <file>
+        <path>data/0-data/Monthly mean Sargassum biomass in Caribbean Sea and Central Atlantic Ocean from 2011 to 2018.txt</path>
+        <digest algorithm="md5">07f3ae132a43530aa7ca90a465052aae</digest>
+        <digest algorithm="sha1">33d7dbe6ba9a93320e2115a9e3fb585d0c53d498</digest>
+        <digest algorithm="sha256">8873f82c26b7a94f2c33340c4ffb56a1821eb78d47a6af927cec060485215c52</digest>
+        <digest algorithm="sha384">7465902801903fb8eb1a6d0031eacfffa7214da0f2fe9bc82b5f6dfd8ceb4efdc16022c554353d4a03bd0926d33fced7</digest>
+        <digest algorithm="sha512">4a7a4e7fd0ecc43acfbbb195c3e9c59fda381c90431b323fcbc9f3cfaeaec8a6a92bb020feabd8da36579884b9ea9f09531bb140099884daa8a145e2c5e2727f</digest>
+        <type_category>regular</type_category>
+        <type>text</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>1997</size>
+        <blksize>32768</blksize>
+        <blocks>8</blocks>
+        <modtime>2019-05-23 17:54:59+00</modtime>
+        <changetime>2019-10-05 07:48:52+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51513945</inode>
+      </file>
+      <file>
+        <path>data/0-data/Sargassum_areal_coverage_July</path>
+        <digest algorithm="md5">d41d8cd98f00b204e9800998ecf8427e</digest>
+        <digest algorithm="sha1">da39a3ee5e6b4b0d3255bfef95601890afd80709</digest>
+        <digest algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</digest>
+        <digest algorithm="sha384">38b060a751ac96384cd9327eb1b1e36a21fdb71114be07434c0cc7bf63f6e1da274edebfe76f65fbd51ad2f14898b95b</digest>
+        <digest algorithm="sha512">cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e</digest>
+        <type_category>irregular</type_category>
+        <type>directory</type>
+        <permissions>drwxrwxr-x</permissions>
+        <linkcount>3</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>4096</size>
+        <blksize>32768</blksize>
+        <blocks>8</blocks>
+        <modtime>2019-09-24 16:07:13+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51552268</inode>
+      </file>
+      <file>
+        <path>data/0-data/Sargassum_areal_coverage_July/Sargassum_areal_coverage_July</path>
+        <digest algorithm="md5">d41d8cd98f00b204e9800998ecf8427e</digest>
+        <digest algorithm="sha1">da39a3ee5e6b4b0d3255bfef95601890afd80709</digest>
+        <digest algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</digest>
+        <digest algorithm="sha384">38b060a751ac96384cd9327eb1b1e36a21fdb71114be07434c0cc7bf63f6e1da274edebfe76f65fbd51ad2f14898b95b</digest>
+        <digest algorithm="sha512">cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e</digest>
+        <type_category>irregular</type_category>
+        <type>directory</type>
+        <permissions>drwxrwxr-x</permissions>
+        <linkcount>2</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>4096</size>
+        <blksize>32768</blksize>
+        <blocks>8</blocks>
+        <modtime>2019-09-24 16:07:14+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51552269</inode>
+      </file>
+      <file>
+        <path>data/0-data/Sargassum_areal_coverage_July/Sargassum_areal_coverage_July/Year-2011-07.S_coverage.tiff</path>
+        <digest algorithm="md5">9f6fd40e8bc70e93bc7500a9704e3c9c</digest>
+        <digest algorithm="sha1">dc36c45759c77017327e260c2935fcdca9b2772b</digest>
+        <digest algorithm="sha256">f1e957a9f3a69d44fef34f4f182b02de48d4c2969124162646f4d8d61db4c8da</digest>
+        <digest algorithm="sha384">e448d641f2009fbe1ee695c18a1bad045dadc1dc043cb41cb7595027127506c8e5f42cf4269fcf6d736580c172e25b0d</digest>
+        <digest algorithm="sha512">1f5cdfc1ed4d9702205dcca90414fcfaffc1b3bb06ab7a592a9b8102d91aabde8a30c5c3ac3eabb1fde89eb9f01b9ee2d118bf3b7b9213ea46c4513f4d3ce920</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>1</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>164878</size>
+        <blksize>32768</blksize>
+        <blocks>328</blocks>
+        <modtime>2019-05-18 21:54:16+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51546659</inode>
+      </file>
+      <file>
+        <path>data/0-data/Sargassum_areal_coverage_July/Sargassum_areal_coverage_July/Year-2012-07.S_coverage.tiff</path>
+        <digest algorithm="md5">2e881d59414e448e7b1ba8ba93901f33</digest>
+        <digest algorithm="sha1">80af5d2ca3a7ee85ede7942808f80ccb25e0b656</digest>
+        <digest algorithm="sha256">d29dfc9d88ce592c0a3a14c0f09fc8524828d39d4d310b0f00481b1305163fc2</digest>
+        <digest algorithm="sha384">72e3bd52ea2af8f717b92c6a40a84433a664944af7be2829e09f86c0cd02871f0280690e4025a2f5a6e78e1496d35150</digest>
+        <digest algorithm="sha512">40b4746d9b3c761885cd07691855c3b2de51ddd92dedd33cc6a8a82ed86f8da9791b2ee8360b808d3d663b96538cd1a6f4193ad0bf8dad96e700d4f7f29846de</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>1</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>170144</size>
+        <blksize>32768</blksize>
+        <blocks>336</blocks>
+        <modtime>2019-05-18 21:54:16+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51546660</inode>
+      </file>
+      <file>
+        <path>data/0-data/Sargassum_areal_coverage_July/Sargassum_areal_coverage_July/Year-2013-07.S_coverage.tiff</path>
+        <digest algorithm="md5">7cb1930beac9fbe1c7e129ec3a640b40</digest>
+        <digest algorithm="sha1">93b0a32673ec177b210a957aad195d45f0a4ba6a</digest>
+        <digest algorithm="sha256">5236b95e72a3f09778e2501af42292c906a2cff0f4bd933f94d6b4c383f444fe</digest>
+        <digest algorithm="sha384">ac42be334824a79e298edb6b745c3013f9415d782128fc2f57f6e5a5a614be37ca61a6661edf12168cf836990f53fabd</digest>
+        <digest algorithm="sha512">55f2b7216c04e0e571bea4290aa89aed412a4068f732b7fa0fbfe6ddbf02fe951b019fe1dcb89a34bcfae62ad9434cacec23aec0085e0dc8e8fe4c8e3e3e10ac</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>1</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>132802</size>
+        <blksize>32768</blksize>
+        <blocks>264</blocks>
+        <modtime>2019-05-18 21:54:16+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51546661</inode>
+      </file>
+      <file>
+        <path>data/0-data/Sargassum_areal_coverage_July/Sargassum_areal_coverage_July/Year-2014-07.S_coverage.tiff</path>
+        <digest algorithm="md5">a2f3bbeec5a9fc6d97a37bc9803cc008</digest>
+        <digest algorithm="sha1">b0e8396b32183562de15d99f6ff7a7b66ba467f2</digest>
+        <digest algorithm="sha256">94bc5a231cfb0caf6a4f1649b2fd3a7c44df7c0a64f4a370dba6a5ee21e43655</digest>
+        <digest algorithm="sha384">aad2620e8263d1e37a78d6f24b5ca45401feb8e48a5b8d0fa7ee10e2a7392f809492beea5bc1daae95daa5423231e182</digest>
+        <digest algorithm="sha512">ef91c4963b13181c11f921ab8952c8628de51132061afbb5e030123eae2b6b9565c2ad53f16851969b570886dcf80a9360c82f836ca86665846942d6fa164c68</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>1</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>180736</size>
+        <blksize>32768</blksize>
+        <blocks>360</blocks>
+        <modtime>2019-05-18 21:54:18+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51546662</inode>
+      </file>
+      <file>
+        <path>data/0-data/Sargassum_areal_coverage_July/Sargassum_areal_coverage_July/Year-2015-07.S_coverage.tiff</path>
+        <digest algorithm="md5">385bcadd5aeffa57767355cc0b44e997</digest>
+        <digest algorithm="sha1">caec7473b360a1a5f10797eaf3cf174b6f744cca</digest>
+        <digest algorithm="sha256">cfb3187f55a32b845365c4b6dc8ec9fa76456b2b359a48c082cb28257d0560c0</digest>
+        <digest algorithm="sha384">a492a3fe5cdd22253903c6a0e78646c8b8dbb19f9b7a1968c94c8850ff448cc9111a5677084f900c35a017471ab080b8</digest>
+        <digest algorithm="sha512">41cc7a453ab30d8ae4e6d1ee197a72bf37dffa70ea416c2dd131bb132dcafa1c59e52570758099764d9be31ceeed517db2f2caa0fab79f2cee314cf25c8ebdec</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>1</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>199386</size>
+        <blksize>32768</blksize>
+        <blocks>392</blocks>
+        <modtime>2019-05-18 21:54:18+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51546663</inode>
+      </file>
+      <file>
+        <path>data/0-data/Sargassum_areal_coverage_July/Sargassum_areal_coverage_July/Year-2016-07.S_coverage.tiff</path>
+        <digest algorithm="md5">d9f8f14fcae192e52fc7de3059f51662</digest>
+        <digest algorithm="sha1">70211953811510cdc1ad3ed7c79d3bcae345259b</digest>
+        <digest algorithm="sha256">23be2f0cd9b53df9235ad5fa4ce18f6880e3ab11e5e6ff599491895a49bce700</digest>
+        <digest algorithm="sha384">fe82431b8d2e3c096a0b51186b6507f6e7f504ed54bde4cf06deb02fb345b0c4e92763b14d4dcda4b32b2ebe25bf3de2</digest>
+        <digest algorithm="sha512">d2e0b7accc002ac08000f1fa53e36aea0b9db2c89c141a49ee6dd606c0fa7cb4600a39a2c8ec050ac8ea0ff4582cda183e53b88c1e1e5e555cb26d4078b60b04</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>1</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>143694</size>
+        <blksize>32768</blksize>
+        <blocks>288</blocks>
+        <modtime>2019-05-18 21:54:18+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51546664</inode>
+      </file>
+      <file>
+        <path>data/0-data/Sargassum_areal_coverage_July/Sargassum_areal_coverage_July/Year-2017-07.S_coverage.tiff</path>
+        <digest algorithm="md5">0d76b83199fd1e5ac15194c01e362fd4</digest>
+        <digest algorithm="sha1">22a0ff93dfbeaf1a4cd58f0d8d94b7ff427705a2</digest>
+        <digest algorithm="sha256">f524bc4a8813e8a8b93164f3326c4ae9036eda90edbd1caadce77f99c536df13</digest>
+        <digest algorithm="sha384">df9e77b28ae111ba4390dda15dc3c8d4ddcefbdc8d264fc7357342aea6e4de4461995f9fd0248e6c587131ec918adcd7</digest>
+        <digest algorithm="sha512">244cfafcd3fe8cffa2365c0815f7994528cf8731748791f29df2b36547d77891a4bab35a35933d9cd4a3d7d72c711bb1dbcca7d888f3842a29c46d43366e4f07</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>1</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>191658</size>
+        <blksize>32768</blksize>
+        <blocks>376</blocks>
+        <modtime>2019-05-18 21:54:18+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51546665</inode>
+      </file>
+      <file>
+        <path>data/0-data/Sargassum_areal_coverage_July/Sargassum_areal_coverage_July/Year-2018-07.S_coverage.tiff</path>
+        <digest algorithm="md5">db7cace0551f776998f0651eacde1078</digest>
+        <digest algorithm="sha1">3681fe2400c1fb7c30441aab44ab8902f4e32c3f</digest>
+        <digest algorithm="sha256">8757383afb519d7104c5cb900771ff0d48599b5b1221f477108e914f9251a1e1</digest>
+        <digest algorithm="sha384">49523813abba0216ed6bac09895c74e6db803aef57c9e6cf99909958b17c8db339c111dd9f3494ba1b6218d385802182</digest>
+        <digest algorithm="sha512">19c1583ea79155a1b1c1de86e51649bc62de9bf4e06faf3d32eadf1d21469dc510c3a551423f35c57fc86d16890b59e40b81eb660cf2b6324777f962c98d5bca</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>1</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>197896</size>
+        <blksize>32768</blksize>
+        <blocks>392</blocks>
+        <modtime>2019-05-18 21:54:18+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51546666</inode>
+      </file>
+      <file>
+        <path>data/0-data/Sargassum_areal_coverage_July/Sargassum_areal_coverage_July/colorbar_new_sargs_0.0_to_0.1.png</path>
+        <digest algorithm="md5">c30d1b704fae8f82b71ba06084d33311</digest>
+        <digest algorithm="sha1">218ead684b9c29fa792927863c126fa934481857</digest>
+        <digest algorithm="sha256">8ee110ef235fd317ed7ee166fd1bf673d3251fb089d4181e2fae2861b9ce477a</digest>
+        <digest algorithm="sha384">964b572d334a85f9e4e8da075a1047c3de4fb6a0ceb989c5b256222e6afe1f5c4c503f02e41518a48032277309319c2d</digest>
+        <digest algorithm="sha512">99f9c92815af13b34c7174d96a96210eff493ca780355c925d0db07a2fb1dc8810c22d7af7b857da2307f67cee4c047faf61fbfdb899cc63d79dec045c92bc81</digest>
+        <type_category>regular</type_category>
+        <type>binary</type>
+        <permissions>-rw-rw-r--</permissions>
+        <linkcount>1</linkcount>
+        <user>root</user>
+        <group>root</group>
+        <size>2008</size>
+        <blksize>32768</blksize>
+        <blocks>8</blocks>
+        <modtime>2019-01-10 22:29:12+00</modtime>
+        <changetime>2019-10-05 07:48:53+00</changetime>
+        <acctime>2019-10-05 07:49:02+00</acctime>
+        <sumtime>2019-10-05 07:49:08+00</sumtime>
+        <inode>51546667</inode>
+      </file>
+    </files>
+  </body>
+</accession>

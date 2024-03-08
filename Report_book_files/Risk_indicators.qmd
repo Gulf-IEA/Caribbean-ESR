@@ -11,7 +11,7 @@ library(spam)
 
 Indicator 1
 
-DegreeHeatingWeeks.RData doesn't work
+DegreeHeatingWeeks.RData doesn't work. Think it's an issue with the date column. Also called ind not inddata.
 
 ### Ocean acidification via aragonite saturation state
 
@@ -19,7 +19,7 @@ Indicator 2
 
 ```{r, message = FALSE, warnings = FALSE}
 load("../indicator_objects/OA.RData")
-plotIndicatorTimeSeries(inddata, trendAnalysis = F)
+plotIndicatorTimeSeries(inddata, trendAnalysis = T)
 ```
 
 ### Hurricane activity
@@ -28,14 +28,19 @@ Indicator 3
 
 ```{r, message = FALSE, warnings = FALSE}
 load("../indicator_objects/ACEindex.RData")
-plotIndicatorTimeSeries(inddata, trendAnalysis = F)
+plotIndicatorTimeSeries(ind, trendAnalysis = T)
 ```
 
 ### Turbidity
 
 Indicator 4
 
-turbidity.RData doesn't work
+turbidity.RData doesn't work. Again looks like an issue with the date.
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/turbidity.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 2, trendAnalysis = T)
+```
 
 ### Sea surface temperature
 
@@ -66,7 +71,12 @@ Indicator 7
 
 Indicator 8
 
-carib_Chl.RData doesn't work
+carib_Chl.RData doesn't work. Another issue with the date.
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/carib_Chl.RData")
+plotIndicatorTimeSeries(ind, trendAnalysis = F)
+```
 
 ### Coastal development via land cover
 
@@ -78,7 +88,7 @@ Indicator 10
 
 ```{r, message = FALSE, warnings = FALSE}
 load("../indicator_objects/earthquakes.RData")
-plotIndicatorTimeSeries(inddata, trendAnalysis = F)
+plotIndicatorTimeSeries(ind, trendAnalysis = T)
 ```
 
 ### Fishery/market disturbance indicator (maybe belongs in socioeconomic health)
@@ -87,7 +97,7 @@ Indicator 11
 
 ```{r, message = FALSE, warnings = FALSE}
 load("../indicator_objects/disturbance.RData")
-plotIndicatorTimeSeries(inddata, trendAnalysis = F)
+plotIndicatorTimeSeries(inddata, coltoplot = 1:3, trendAnalysis = T, sublabel = T)
 ```
 
 ### Sargassum inundation
