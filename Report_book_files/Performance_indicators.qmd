@@ -65,9 +65,20 @@ plotIndicatorTimeSeries(inddata, coltoplot = 1:8, plotrownum = 2, trendAnalysis 
 
 Indicator 24
 
+```{r}
+load("../indicator_objects/GDP.RData")
+plotIndicatorTimeSeries(inddata, coltoplot = 1:2, trendAnalysis = T, sublabel = T)
+```
+
 ### Unemployment
 
 Indicator 25
+
+```{r}
+load("../indicator_objects/unemployment.RData")
+plotIndicatorTimeSeries(inddata, coltoplot = 1:2, trendAnalysis = T, sublabel = T, dateformat = "%Y%b")
+```
+
 
 ## 5.3 Equity
 
