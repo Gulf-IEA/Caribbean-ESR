@@ -68,23 +68,90 @@ for(j in regions) {
   
     datdata <- species_data$YEAR
     inddata <- data.frame(species_data$density)
-    labs <- c(j, paste("Density", i), "")
-    indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
-    s <- list(labels = indnames, indicators = inddata, datelist = datdata) 
-    class(s) <- "indicatordata"
+    s <- cbind(datdata, inddata) 
    
-    # save and plot -----------------------------------------
-    plotIndicatorTimeSeries(s, trendAnalysis = F)
+    # save -----------------------------------------
   
-    inddata <- s
-    #save(inddata, file = paste("indicator_objects/RUVdensity_", j, "_", i, ".RData", sep = ""))
+    save(s, file = paste("indicator_data/RVC/RUVdensity_", j, "_", i, ".RData", sep = ""))
   }
 }
 
-####### SAVE FILES TO INDICATOR_OBJECTS ONCE ALL PROBLEMS ARE FIXED
+# Set the directory path where the .RData files are located
+folder_path <- "indicator_data/RVC"
+
+# List all the files in the directory
+files <- list.files(path = folder_path, pattern = "\\.RData$", full.names = TRUE)
+
+# Load all .RData files
+for (file in files) {
+  # Replace spaces with underscores in object names
+  object_names <- gsub(" ", "_", gsub(".RData", "", basename(file)))
+  
+  # Load the file
+  loaded_objects <- load(file)
+  
+  # Assign loaded objects to global environment with modified names
+  for (i in seq_along(loaded_objects)) {
+    assign(object_names[i], get(loaded_objects[i]), envir = .GlobalEnv)
+  }
+}
+
+
+
+# format indicator object -----------------------------
+
+# OCY CHRY --> yellowtail snapper
+# LUT ANAL  --> mutton snapper*
+# BAL VETU  --> queen triggerfish
+# EPI GUTT  --> red hind
+# SPA AURO  --> redband parrotfish
+# SPA VIRI  --> stoplight parrotfish
+
+# Puerto Rico
+datdata <- as.integer(RUVdensity_PRICO_BAL_VETU$datdata)
+inddata <- data.frame(cbind(RUVdensity_PRICO_BAL_VETU$species_data.density, RUVdensity_PRICO_EPI_GUTT$species_data.density, RUVdensity_PRICO_LUT_ANAL$species_data.density, RUVdensity_PRICO_OCY_CHRY$species_data.density, RUVdensity_PRICO_SPA_AURO$species_data.density, RUVdensity_PRICO_SPA_VIRI$species_data.density))
+labs <- c("Puerto Rico" , "Density", "queen triggerfish",
+          "Puerto Rico" , "Density", "red hind",
+          "Puerto Rico" , "Density", "mutton snapper*",
+          "Puerto Rico" , "Density", "yellowtail snapper",
+          "Puerto Rico" , "Density", "redband parrotfish",
+          "Puerto Rico" , "Density", "stoplight parrotfish")
+indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
+inddata <- list(labels = indnames, indicators = inddata, datelist = datdata)
+class(inddata) <- "indicatordata"
+save(inddata, file = "indicator_objects/RVC_PR.RData")
+
+# St. Thomas & St. John
+datdata <- as.integer(RUVdensity_PRICO_BAL_VETU$datdata)
+inddata <- data.frame(cbind(RUVdensity_STTSTJ_BAL_VETU$species_data.density, RUVdensity_STTSTJ_EPI_GUTT$species_data.density, RUVdensity_STTSTJ_LUT_ANAL$species_data.density, RUVdensity_STTSTJ_OCY_CHRY$species_data.density, RUVdensity_STTSTJ_SPA_AURO$species_data.density, RUVdensity_STTSTJ_SPA_VIRI$species_data.density))
+labs <- c("St. Thomas & St. John" , "Density", "queen triggerfish",
+          "St. Thomas & St. John" , "Density", "red hind",
+          "St. Thomas & St. John" , "Density", "mutton snapper*",
+          "St. Thomas & St. John" , "Density", "yellowtail snapper",
+          "St. Thomas & St. John" , "Density", "redband parrotfish",
+          "St. Thomas & St. John" , "Density", "stoplight parrotfish")
+indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
+inddata <- list(labels = indnames, indicators = inddata, datelist = datdata)
+class(inddata) <- "indicatordata"
+save(inddata, file = "indicator_objects/RVC_STSJ.RData")
+
+
+# St. Croix
+datdata <- as.integer(RUVdensity_PRICO_BAL_VETU$datdata)
+inddata <- data.frame(cbind(RUVdensity_STX_BAL_VETU$species_data.density, RUVdensity_STX_EPI_GUTT$species_data.density, RUVdensity_STX_LUT_ANAL$species_data.density, RUVdensity_STX_OCY_CHRY$species_data.density, RUVdensity_STX_SPA_AURO$species_data.density, RUVdensity_STX_SPA_VIRI$species_data.density))
+labs <- c("St. Croix" , "Density", "queen triggerfish",
+          "St. Croix" , "Density", "red hind",
+          "St. Croix" , "Density", "mutton snapper*",
+          "St. Croix" , "Density", "yellowtail snapper",
+          "St. Croix" , "Density", "redband parrotfish",
+          "St. Croix" , "Density", "stoplight parrotfish")
+indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
+inddata <- list(labels = indnames, indicators = inddata, datelist = datdata)
+class(inddata) <- "indicatordata"
+save(inddata, file = "indicator_objects/RVC_STX.RData")
 
 
 ### Left to troubleshoot:
 
-# Year is not showing up in the plots. Need to figure out what to label the plots. Need to take out mutton snapper and do that one separately because the data are not calibrated.
+# Need to take out mutton snapper and do that one separately because the data are not calibrated. Need to chop it so only use data from 2017 onward.
 

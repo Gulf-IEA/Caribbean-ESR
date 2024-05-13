@@ -1,8 +1,8 @@
 
-### Unemployment data for PR and USVI from Amy Freitag (manually downloaded from FRED https://fred.stlouisfed.org/)
+### Unemployment data for PR and USVI from Amy Freitag on 3/5/24 (manually downloaded from FRED https://fred.stlouisfed.org/)
 ### latest data run through 12/2023.
 
-# USVI data: DON'T KNOW WHERE THIS CAME FROM, ASK AMY
+# USVI data: https://fred.stlouisfed.org/series/VIRINSUREDUR
 # PR data: https://fred.stlouisfed.org/series/PRUR
 
 

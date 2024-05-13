@@ -1,5 +1,5 @@
 
-### Whole GDP data for PR and USVI from Amy Freitag (manually downloaded from FRED https://fred.stlouisfed.org/)
+### Whole GDP data for PR and USVI from Amy Freitag on 3/5/24 (manually downloaded from FRED https://fred.stlouisfed.org/)
 ### latest data run through 2021 for USVI and 2022 for PR.
 
 # USVI data: https://fred.stlouisfed.org/series/MKTGDPVIA646NWDB

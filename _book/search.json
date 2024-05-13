@@ -14,7 +14,7 @@
     "href": "Report_book_files/Performance_indicators.html#food-production",
     "title": "5. Tracking performance toward fishery management objectives",
     "section": "",
-    "text": "Fishery independent surveys of economically important species\nIndicator 16\n\n\nCommercial landings\nIndicator 17\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMaximum length and size structure\nIndicator 18\n\n\nChanges in target species / landing composition\nIndicator 20",
+    "text": "Fishery independent surveys of economically important species\nIndicator 16 - abundance of economically important fish\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndicator 16.1 - abundance of commercial fish based on TCRMP and PRCRMP Indicator 16.2 - slope of the size spectrum based on TCRMP and PRCRMP\n\n\nCommercial landings\nIndicator 17\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPelagic:demersal ratio\nIndicator 18\n\n\nMaximum length and size structure\nIndicator 19 - Lmax indicator\n\n\nChanges in target species / landing composition\nIndicator 20",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>5. Tracking performance toward fishery management objectives</span>"
     ]
@@ -24,7 +24,7 @@
     "href": "Report_book_files/Performance_indicators.html#socioeconomic-health",
     "title": "5. Tracking performance toward fishery management objectives",
     "section": "5.2 Socioeconomic health",
-    "text": "5.2 Socioeconomic health\n\nTotal, lobster and conch revenues\nIndicator 21\n\n\nTotal, lobster and conch trips\nIndicator 22\n\n\nOcean economy employment and wages\nIndicator 23\n\n\n\n\n\n\n\n\n\n\n\nGDP\nIndicator 24\n\n\nUnemployment\nIndicator 25",
+    "text": "5.2 Socioeconomic health\n\nTotal, lobster and conch revenues\nIndicator 21 - percent revenues by species group\n  \n\n\nTotal, lobster and conch trips\nIndicator 22 - number of trips\n\n\nOcean economy employment and wages\nIndicator 23\n\n\n\n\n\n\n\n\n\n\n\nGDP\nIndicator 24\n\n\n\n\n\n\n\n\n\n\n\nUnemployment\nIndicator 25",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>5. Tracking performance toward fishery management objectives</span>"
     ]
@@ -34,7 +34,7 @@
     "href": "Report_book_files/Performance_indicators.html#equity",
     "title": "5. Tracking performance toward fishery management objectives",
     "section": "5.3 Equity",
-    "text": "5.3 Equity\n\nGini coefficient for distribution of landings and revenue\nIndicator 26\n\n\n\n\n\n\n\n\n\n\n\nCommercial fishing community engegement and reliance\nIndicator 27",
+    "text": "5.3 Equity\n\nGini coefficient for distribution of landings and revenue\nIndicator 26\n\n\n\n\n\n\n\n\n\n\n\nCommercial fishing community engagement and reliance\nIndicator 27 - working with Tarsila on",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>5. Tracking performance toward fishery management objectives</span>"
     ]
@@ -74,7 +74,7 @@
     "href": "Report_book_files/Performance_indicators.html#protection-of-ecosystems",
     "title": "5. Tracking performance toward fishery management objectives",
     "section": "5.6 Protection of ecosystems",
-    "text": "5.6 Protection of ecosystems\n\nPercent coral cover and coral species richness\nIndicator 34\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCoral species diversity\nIndicator 35",
+    "text": "5.6 Protection of ecosystems\n\nPercent coral cover\nIndicator 34\n\n\n\n\n\n\n\n\n\n\n\nCoral species diversity\nIndicator 35",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>5. Tracking performance toward fishery management objectives</span>"
     ]
@@ -124,7 +124,7 @@
     "href": "Report_book_files/Risk_indicators.html",
     "title": "4. Risks to meeting fishery management objectives",
     "section": "",
-    "text": "Degree heating weeks\nIndicator 1\n\n\n\n\n\n\n\n\n\n\n\nOcean acidification via aragonite saturation state\nIndicator 2\n\n\n\n\n\n\n\n\n\n\n\nHurricane activity\nIndicator 3\n\n\n\n\n\n\n\n\n\n\n\nTurbidity\nIndicator 4\n\n\n\n\n\n\n\n\n\n\n\nSea surface temperature\nIndicator 5\n\n\n\n\n\n\n\n\n\n\n\nMarine debris\nIndicator 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIdentified point source pollution sites\nIndicator 7\n\n\nPrimary productivity via ocean color\nIndicator 8\n\n\n\n\n\n\n\n\n\n\n\nCoastal development via land cover\nIndicator 9\n\n\nNumber of major earthquakes\nIndicator 10\n\n\n\n\n\n\n\n\n\n\n\nFishery/market disturbance indicator (maybe belongs in socioeconomic health)\nIndicator 11\n\n\n\n\n\n\n\n\n\n\n\nSargassum inundation\nIndicator 12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTourism via hotel occupancy\nIndicator 13\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPopulation density\nIndicator 14\n\n\nPopulation change\nIndicator 15",
+    "text": "Degree heating weeks\nThe degree heating week (DHW) provides a measure of cumulative temperature anomalies at least 1°C above the maximum monthly mean sea surface temperature over the prior twelve-week period for a given satellite data grid point (5km pixel). Both the intensity and duration of the heat stress impact the DHW, which is measured in units of “degree Celsius-weeks’’ (or °C-weeks). The DHW data presented below is for the Puerto Rico and U.S. Virgin Islands Daily 5km Regional Virtual Stations. The Regional Virtual Stations provide a time series of DHW data that is representative of the whole region’s thermal conditions. Briefly, the reef pixels within a region are identified based on the most updated maps of coral reef locations, and a 20 km buffer around these reef areas is added as a boundary for the virtual station. The DHW value for the virtual station is based on the 90th percentile Coral Bleaching Hotspot value (i.e., the number of degrees Celsius above the maximum monthly mean sea surface temperature). Field observations of coral bleaching have indicated that a DHW value of 4°C-weeks can lead to significant coral bleaching, while a DHW value of 8°C-weeks or above can likely lead to severe, widespread bleaching and substantial mortality. The monthly mean DHW value is plotted below for the Puerto Rico and Virgin Island virtual stations. An increasing trend was seen for both Puerto Rico and the U.S. Virgin Islands in the last five years. Peak number of degree heating weeks with value more than one standard deviation above the mean were seen in late 2005, late 2006, late 2010, and late 2019, reflecting times of most pressure on coral reef resources. Indeed, mass bleaching events were experienced in the U.S. Caribbean region in 2005, 2010 and 2019 (see observed coral bleaching indicator). More information on NOAA Coral Reef Watch’s Methodology can be found at: https://coralreefwatch.noaa.gov/product/5km/methodology.php#dhw Text files of DHW data were downloaded at: (Accessed August 16, 2021) https://coralreefwatch.noaa.gov/product/vs/data.php.\n\n\n\n\n\n\n\n\n\n\n\nOcean acidification via aragonite saturation state\nIndicator 2\n\n\n\n\n\n\n\n\n\n\n\nHurricane activity\nIndicator 3\n\n\n\n\n\n\n\n\n\n\n\nTurbidity\nIndicator 4\n\n\n\n\n\n\n\n\n\n\n\nSea surface temperature\nIndicator 5\n\n\n\n\n\n\n\n\n\n\n\nMarine debris\nIndicator 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIdentified point source pollution sites\n\n\n\n\n\n\n\n\n\n\n\nPrimary productivity via ocean color\nIndicator 8\n\n\n\n\n\n\n\n\n\n\n\nCoastal development via land cover\n\n\n\nNumber of major earthquakes\nIndicator 10\n\n\n\n\n\n\n\n\n\n\n\nFishery/market disturbance indicator (maybe belongs in socioeconomic health)\nIndicator 11\n\n\n\n\n\n\n\n\n\n\n\nSargassum inundation\nIndicator 12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTourism via hotel occupancy\nIndicator 13\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPopulation change\nIndicator 15 - MAPS but also should be census data",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>4. Risks to meeting fishery management objectives</span>"
     ]
