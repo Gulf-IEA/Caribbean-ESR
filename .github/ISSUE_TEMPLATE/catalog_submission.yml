@@ -1,0 +1,292 @@
+name: ESR - Catalog Submission
+description: Use this issue template to submit catalog information for the Ecosystem Status Reports.
+title: "[Submission]: "
+labels: ["submission"]
+assignees: "BBeltz1"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing to an ESR report! Please reach out to mandy.karnauskas@noaa.gov with any questions or concerns.
+  - type: input
+    id: contact1
+    attributes:
+      label: Primary Contact
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@noaa.gov
+    validations:
+      required: true
+  - type: input
+    id: contact2
+    attributes:
+      label: Secondary Contact
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@noaa.gov
+    validations:
+      required: false
+  - type: input
+    id: data_name
+    attributes:
+      label: Data Name (This will be the displayed title in Catalog)
+      description: Enter the name of the data set.
+      placeholder: Ex. Gulf of Mexico Annual Sea Surface Temperature
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: indicator_name
+    attributes:
+      label: Indicator Name (as exists in ecodata)
+      description: Select from the drop down
+      options:
+        - ESP_gsi
+        - ESP_heatwave
+        - ESP_heatwave_cod
+        - ESP_seasonal_chl
+        - ESP_seasonal_oisst_anom
+        - ESP_seasonal_pp
+        - ESP_sf
+        - HMS_species_distribution
+        - SAV
+        - abc.acl
+        - aggregate_biomass
+        - aquaculture
+        - bennet
+        - blue_runner
+        - bottom_temp
+        - bottom_temp_comp
+        - bottom_temp_glorys
+        - bottom_temp_seasonal_gridded
+        - calanus_stage
+        - ch_bay_sal
+        - ch_bay_temp
+        - ches_bay_sf
+        - ches_bay_sst
+        - ches_bay_wq
+        - chl_pp
+        - coast
+        - cold_pool
+        - cold_pool_sf
+        - comdat
+        - commercial_div
+        - condition
+        - energy_density
+        - engagement
+        - epu_sf
+        - exp_n
+        - forage_anomaly
+        - forage_index
+        - grayseal
+        - gsi
+        - gsi_old
+        - habitat_diversity
+        - habitat_occupancy
+        - habitat_vulnerability
+        - habs
+        - harborporpoise
+        - heatwave
+        - heatwave_anom_gridded
+        - heatwave_peak_date
+        - heatwave_year
+        - hms_category
+        - hms_cpue
+        - hms_landings
+        - hms_stock_status
+        - hp_density
+        - hudson_river_flow
+        - ichthyo_diversity
+        - long_line_survey
+        - long_term_sst
+        - longlinesurvey_sf
+        - lps_sharks
+        - mab_inshore_survey
+        - mass_inshore_survey
+        - nao
+        - narw
+        - ne_inshore_survey
+        - ne_inshore_survey_species
+        - observed_sharks
+        - phyto_size
+        - ppr
+        - productivity_anomaly
+        - rec_hms
+        - recdat
+        - sandlance
+        - seabird_mab (seabird_MAB)
+        - seabird_ne
+        - seal_pups
+        - seasonal_bt_anomaly_gridded
+        - seasonal_oisst_anom
+        - seasonal_sst_anomaly_gridded
+        - slopewater
+        - species_dist
+        - species_groupings
+        - stock_status
+        - stom_fullness
+        - storminess
+        - survey_shannon
+        - trans_dates
+        - wcr
+        - wea_landings_rev
+        - wind_dev_speed
+        - wind_occupancy
+        - wind_port
+        - wind_revenue
+        - zoo_abundance_anom
+        - zoo_diversity
+        - zoo_regime
+        - zoo_strat_abun
+    validations:
+      required: true
+        
+  - type: checkboxes
+    id: family_name
+    attributes:
+      label: Family (Which group is this indicator associated with?)
+      description: Please check the group(s) that could apply to your indicator.
+      options:
+        - label: Oceanographic
+        - label: Habitat
+        - label: Lower trophic levels
+        - label: Megafauna
+        - label: Social
+        - label: Economic
+    validations:
+      required: true
+ 
+  - type: textarea
+    id: data_description
+    attributes:
+      label: Data Description
+      description: Briefly describe the data set.
+      value: "Ex: The data presented here are average annual sea-surface temperatures from PSL OISST on the Northeast Continental Shelf."
+    validations:
+      required: true
+  - type: textarea
+    id: indicator_intro
+    attributes:
+      label: Introduction to Indicator (Please explain your indicator)
+      description: Please introduce the indicator within an appropriate context.
+      value: "Proceed as though this were a short summary of a typical introduction section in a paper."
+    validations:
+      required: false
+  - type: textarea
+    id: indicator_results
+    attributes:
+      label: Key Results and Visualization
+      description: Please describe the results and/or visualizations of this indicator.
+      value: "Proceed as though this were a short summary of a typical results section in a paper."
+    validations:
+      required: false
+  - type: textarea
+    id: indicator_implications
+    attributes:
+      label: Implications
+      description: Please describe the implications of this indicator.
+      value: "Proceed as though this were a short summary of a typical discussion section in a paper."
+    validations:
+      required: false
+  - type: input
+    id: spatial_scale
+    attributes:
+      label: Spatial Scale
+      description: Please briefly describe the spatial scale of the indicator.
+      placeholder: ex. by EPU and full shelf.
+    validations:
+      required: false
+  - type: input
+    id: temporal_scale
+    attributes:
+      label: Temporal Scale
+      description: Please briefly describe the temporal scale of the indicator.
+      placeholder: ex. Spring (January-June), Fall (July-December), Annual.
+    validations:
+      required: false      
+  - type: checkboxes
+    id: synthesis_theme
+    attributes:
+      label: Synthesis Theme
+      description: Please check the synthesis theme(s) that could apply to your indicator.
+      options:
+        - label: Multiple System Drivers
+        - label: Regime Shifts
+        - label: Ecosystem Reorganization
+    validations:
+      required: false
+  - type: textarea
+    id: define_variables
+    attributes:
+      label: Define Variables
+      description: Provide definitions for all variable names with units.
+      value: "Ex: 1) Name: piscivore_biomass; Definition: Biomass of piscivores; Units: kg tow^-1. 2) Name: forage_biomass; Definition: Biomass of forage fish; Units: kg tow^-1."
+    validations:
+      required: true
+  - type: checkboxes
+    id: indicator_category
+    attributes:
+      label: Indicator Category
+      description: Select one or more categories that apply to your data set.
+      options:
+        - label: Published Methods
+        - label: Extensive analysis, not yet published
+        - label: Syntheses of published information
+        - label: Database pull
+        - label: Database pull with analysis
+        - label: Other
+          required: false
+  - type: input
+    id: other_indicator_category
+    attributes:
+      label: If other, please specify indicator category
+      description: If you selected Other above, please specify a new indicator category.
+      placeholder: Indicator category other than those above.
+    validations:
+      required: false
+  - type: textarea
+    id: data_contributors
+    attributes:
+      label: Data Contributors
+      description: Enter the names of all contributing persons.
+      value: "Ex: Brandon Beltz, Sarah Gaichas and Sean Lucey."
+    validations:
+      required: true
+  - type: input
+    id: point_contact
+    attributes:
+      label: Point(s) of Contact
+      description: Enter name(s) and email(s) for point(s) of contact.
+      placeholder: Ex. Brandon Beltz (brandon.beltz@noaa.gov)
+    validations:
+      required: true
+      
+      
+  - type: input
+    id: affiliation
+    attributes:
+      label: Affiliation
+      description: Enter the name of your affiliation.
+      placeholder: Ex. NEFSC, GARFO, SMAST, MAFSC etc.
+    validations:
+      required: true
+      
+      
+      
+  - type: dropdown
+    id: public_availability
+    attributes:
+      label: Public Availability
+      description: State public availability of source data for this indicator.
+      multiple: false
+      options:
+        - Source data are publicly available.
+        - Source data are NOT publicly available.
+    validations:
+      required: true
+  - type: input
+    id: accessibility
+    attributes:
+      label: Accessibility and Constraints
+      description: If source data are NOT publicly available, what are the procedures for accessing the data?
+      placeholder: Ex. Please email your.email@noaa.gov for further information and queries of X indicator source data.
+    validations:
+      required: false
