@@ -11,7 +11,8 @@ library(plotTimeSeries)
 library(xml2)
 library(rvest)
 
-load("spec_file.RData")
+load("../spec_file.RData")
+
 
 # download data directly from site -----------------------------
 #options(download.file.method="libcurl")

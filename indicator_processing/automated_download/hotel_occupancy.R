@@ -8,7 +8,7 @@ library(pdftools)
 library(xml2)
 library(rvest)
 
-URL <- "http://usviber.org/hotel-occupancy-rates/"
+URL <- "https://usviber.org/archived-data/"
 pg <- read_html(URL)
 lis <- html_attr(html_nodes(pg, "a"), "href")
 lablis <- lis[9:32]

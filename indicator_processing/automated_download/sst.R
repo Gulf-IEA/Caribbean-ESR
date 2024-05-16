@@ -5,10 +5,13 @@
 rm(list = ls())
 dev.off()
 
+library(maps)
+library(plotTimeSeries)
+
+load("../spec_file.RData")
+
 # devtools::install_github("mdsumner/ncdf4")
 # library(ncdf4)
-
-load("spec_file.RData")
 
 # define years  --------------------------------
 styear <- 1982

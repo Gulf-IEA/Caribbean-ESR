@@ -4,7 +4,10 @@
 rm(list = ls())
 dev.off()
 
-load("spec_file.RData")
+library(maps)
+library(plotTimeSeries)
+
+load("../spec_file.RData")
 
 options(download.file.method="libcurl")
 

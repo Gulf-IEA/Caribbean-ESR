@@ -11,7 +11,7 @@ library(plotTimeSeries)
 library(xml2)
 library(rvest)
 
-load("spec_file.RData")
+load("../spec_file.RData")
 
 # download data directly from site -----------------------------
 
@@ -27,9 +27,10 @@ table <- html_table(page, fill = TRUE) #Parses tables into data frames
 table
 # automated download does not work ############
 
-dat <- read.csv("C:/Users/mandy.karnauskas/Downloads/beach-litter.csv", skip = 0, header = T)
+dat <- read.csv("../../indicator_data/beach-litter.csv", skip = 0, header = T)
 
 d <- dat[which(dat$Entity == "Puerto Rico" | dat$Entity == "United States Virgin Islands"), ]
+d$Entity <- droplevels(d$Entity)
 
 tab <- tapply(d$X14.1.1...Beach.litter.per.square.kilometer..Number....EN_MAR_BEALITSQ, list(d$Year, d$Entity), sum)
 
@@ -46,6 +47,8 @@ class(s) <- "indicatordata"
 # save and plot -----------------------------------------
 plotIndicatorTimeSeries(s, coltoplot = 1:2, plotrownum = 2, sublabel = T)
 
-inddata <- s
-save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/marine_debris.RData")
+ind <- s
+
+save(ind, file = "../../indicator_objects/marine_debris.RData")
+
 

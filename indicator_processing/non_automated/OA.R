@@ -15,8 +15,14 @@
 ##########################################################################
 
 rm(list = ls())
+dev.off()
 
-dat <- read.table("indicator_data/surface_omega_series.txt", skip = 0, header = F)
+library(maps)
+library(plotTimeSeries)
+
+load("../spec_file.RData")
+
+dat <- read.table("../../indicator_data/surface_omega_series.txt", skip = 0, header = F)
 
 head(dat)
 tail(dat)
@@ -35,6 +41,8 @@ class(s) <- "indicatordata"
 # save and plot -----------------------------------------
 plotIndicatorTimeSeries(s)
 
-inddata <- s
-save(inddata, file = "indicator_objects/OA.RData")
+ind <- s
+
+save(ind, file = "../../indicator_objects/OA.RData")
+
 

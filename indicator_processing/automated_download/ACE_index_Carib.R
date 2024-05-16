@@ -18,7 +18,7 @@ dev.off()
 library(maps)
 library(plotTimeSeries)
 
-load("spec_file.RData")
+load("../spec_file.RData")
 
 # define years  --------------------------------
 styear <- 1961

@@ -14,19 +14,36 @@ directory <- rprojroot::find_rstudio_root_file()
 # first process automated downloads --------------
 
 setwd(directory)
-setwd("indicator_processing/automated_download/")
-dir()
+
 
 # run all scripts in folder ---------------------
 
 plot(1)
 
+# fully automated - pull from internet ----------
+
+setwd("indicator_processing/automated_download/")
+dir()
+
 source("ACE_index_Carib.R")       # hurricane energy index
 source("chl_caribbean.R")         # primary productivity
 source("DHW.R")                   # degree heating weeks
 source("earthquakes.R")           # earthquakes
-source("kd490.R")                 # turbidity from Kd490
+source("kd490.R")                 # turbidity from Kd490   
 source("sst.R")                   # sea surface temperature
+
+
+# pull from data in folder ----------------------
+
+setwd("../non_automated")
+dir()
+
+source("marine_debris.R")
+source("OA.R")
+
+source("marine_debris.R")
+source("marine_debris.R")
+source("marine_debris.R")
 
 
 ###############################################################
@@ -42,13 +59,13 @@ dev.off()
 library(maps)
 library(plotTimeSeries)
 
-load("spec_file.RData")
+load("../spec_file.RData")
 
 # define years  --------------------------------
 styear <- 1961
 enyear <- terminal_year
 
-  
+
 #  Bottom: 
 #  save all indicators as "ind" object
 
