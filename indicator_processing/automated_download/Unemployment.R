@@ -13,7 +13,7 @@ dev.off()
 library(maps)
 library(plotTimeSeries)
 
-load("../spec_file.RData")
+load("indicator_processing/spec_file.RData")
 
 
 # load data -------------------------------------
@@ -65,7 +65,7 @@ class(inddata) <- "indicatordata"
 ind <- inddata
 plotIndicatorTimeSeries(ind, plotrownum = 2, coltoplot = 1:2, sublabel = TRUE, dateformat = "%Y%b", trendAnalysis = T)
 
-save(ind, file = "../../indicator_objects/unemployment.RData")
+save(ind, file = "indicator_objects/unemployment.RData")
 
 #############################  END  ####################################
 

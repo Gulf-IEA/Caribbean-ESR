@@ -17,7 +17,7 @@ dev.off()
 library(maps)
 library(plotTimeSeries)
 
-load("../spec_file.RData")
+load("indicator_processing/spec_file.RData")
 
 # download data ------------------------------------------------
 
@@ -63,7 +63,7 @@ class(s) <- "indicatordata"
 # save and plot ------------------------------------------------------
 
 ind <- s
-save(ind, file = "../../indicator_objects/carib_Chl.RData")
+save(ind, file = "indicator_objects/carib_Chl.RData")
 
 plotIndicatorTimeSeries(ind, dateformat = "%m-%Y", sublabel = T, trendAnalysis = T, anom = "mon", 
                         widadj = 0.7, hgtadj = 0.8, type = "allLines")

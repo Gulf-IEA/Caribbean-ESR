@@ -15,7 +15,7 @@ library(maps)
 library(plotTimeSeries)
 library(rvest)
 
-load("../spec_file.RData")
+load("indicator_processing/spec_file.RData")
 
 # data download --------------------------------------------------------
 

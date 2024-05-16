@@ -8,7 +8,7 @@ dev.off()
 library(maps)
 library(plotTimeSeries)
 
-load("../spec_file.RData")
+load("indicator_processing/spec_file.RData")
 
 # devtools::install_github("mdsumner/ncdf4")
 # library(ncdf4)
@@ -81,7 +81,7 @@ ind <- s
 
 # save and plot ---------------------------------------
 
-save(ind, file = "../../indicator_objects/Carib_SST.RData")
+save(ind, file = "indicator_objects/Carib_SST.RData")
 
 plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, dateformat = "%m-%Y", sublabel = T, 
                         trendAnalysis = T, widadj = 0.5, anom = "mon", type = "allLines") #  outtype = "png", hgtadj = 0.8)
