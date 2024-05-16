@@ -6,6 +6,14 @@ install.packages('devtools')
 devtools::install_github('jeremiaheb/rvc')
 library(rvc)
 
+#  find root directory for project ---------------
+
+directory <- rprojroot::find_rstudio_root_file()  # MK - set root path so that all links below work with master file 
+
+# first process automated downloads --------------
+
+setwd(directory)
+
 # The data portal has more information on the data: https://grunt.sefsc.noaa.gov/rvc_analysis20/
 
 # Species of interest:
@@ -119,7 +127,8 @@ labs <- c("Puerto Rico" , "Density", "queen triggerfish",
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 inddata <- list(labels = indnames, indicators = inddata, datelist = datdata)
 class(inddata) <- "indicatordata"
-save(inddata, file = "indicator_objects/RVC_PR.RData")
+ind <- inddata
+save(ind, file = "indicator_objects/RVC_PR.RData")
 
 # St. Thomas & St. John
 datdata <- as.integer(RUVdensity_PRICO_BAL_VETU$datdata)
@@ -133,7 +142,8 @@ labs <- c("St. Thomas & St. John" , "Density", "queen triggerfish",
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 inddata <- list(labels = indnames, indicators = inddata, datelist = datdata)
 class(inddata) <- "indicatordata"
-save(inddata, file = "indicator_objects/RVC_STSJ.RData")
+ind <- inddata
+save(ind, file = "indicator_objects/RVC_STSJ.RData")
 
 
 # St. Croix
@@ -148,7 +158,8 @@ labs <- c("St. Croix" , "Density", "queen triggerfish",
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 inddata <- list(labels = indnames, indicators = inddata, datelist = datdata)
 class(inddata) <- "indicatordata"
-save(inddata, file = "indicator_objects/RVC_STX.RData")
+ind <- inddata
+save(ind, file = "indicator_objects/RVC_STX.RData")
 
 
 ### Left to troubleshoot:

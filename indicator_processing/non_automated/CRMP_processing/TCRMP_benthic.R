@@ -21,7 +21,11 @@ rm(list = ls())
 if(!require(lme4)){install.packages("lme4")}
 library(lme4)
 
-setwd("../../Desktop/Caribbean-ESR/indicator_data/TCRMP")
+directory <- rprojroot::find_rstudio_root_file()
+
+setwd(directory)
+setwd("indicator_data/TCRMP")
+dir()
 
 # read in site data -------------------------------------
 
@@ -167,9 +171,8 @@ lines(2001:2021, mod - modse, col = 2, lty = 2)
 
 cor(ind, mod)
 
-if (varint == "sprich")  {  save(out1, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/TCRMP/coralspprich_USVI.RData")  }
-if (varint == "percov")  {  save(out1, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/TCRMP/percoralcov_USVI.RData")   }
+if (varint == "sprich")  {  save(out1, file = "coralspprich_USVI.RData")  }
+if (varint == "percov")  {  save(out1, file = "percoralcov_USVI.RData")   }
 }
-
 
 ##############################  END ###############################

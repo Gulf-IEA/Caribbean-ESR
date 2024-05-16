@@ -20,6 +20,11 @@
 # fish data analysis
 
 rm(list = ls())
+directory <- rprojroot::find_rstudio_root_file()
+
+setwd(directory)
+setwd("indicator_data/TCRMP/")
+dir()
 
 # get top landed species -----------------
 # using PR data not USVI because need scientific names.  Also this is just a check for major species as TCRMP has its own list of commercial spp. 
@@ -246,7 +251,7 @@ cor(ind, ind_norm)
 findens <- data.frame(cbind(yrs, ind_norm, indse_norm))
 findens
 
-save(findens, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/TCRMP/fish_density_USVI.RData")  
+save(findens, file = "fish_density_USVI.RData")  
 
 # now for slope of the size spectrum ------------------------
 
@@ -285,7 +290,7 @@ cor(ind, stind)
 fin <- data.frame(cbind(yrs, stind, stindse))
 fin
 
-save(fin, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/TCRMP/slopeSizeSpec_USVI.RData") 
+save(fin, file = "slopeSizeSpec_USVI.RData") 
 
 #############################  END  ###############################
 

@@ -29,6 +29,13 @@
 
 rm(list = ls())
 
+directory <- rprojroot::find_rstudio_root_file()
+
+setwd(directory)
+setwd("indicator_data/PRCRMP")
+dir()
+
+
 # download data -------------------------------
 
 urlf <- "https://www.nodc.noaa.gov/archive/arc0147/0204647/5.5/data/0-data/PRCRMP_Fish-Invert_Abundance_data_1999-2023_(updated_11-30-2023).csv"
@@ -38,14 +45,12 @@ urlfi <- "https://www.nodc.noaa.gov/archive/arc0147/0204647/5.5/data/0-data/PRCR
 siz <- read.csv(urlfi, stringsAsFactors = F)
 
 
-fish <- read.csv("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/PRCRMP/PRCRMP_Fish-Invert_Abundance_data_1999-2023_(updated_11-30-2023).csv", 
-            stringsAsFactors = F)
+fish <- read.csv("PRCRMP_Fish-Invert_Abundance_data_1999-2023_(updated_11-30-2023).csv", stringsAsFactors = F)
 
-siz <- read.csv("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/PRCRMP/PRCRMP_Fish-Invert_Size-Freq._data_2004-2023_(updated_11-30-2023).csv", 
-            stringsAsFactors = F)
+siz <- read.csv("PRCRMP_Fish-Invert_Size-Freq._data_2004-2023_(updated_11-30-2023).csv", stringsAsFactors = F)
 
-met <- read.csv("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/PRCRMP/PRCRMP_Site_Classification_Database_(11-25-2023).csv", 
-                stringsAsFactors = F)
+met <- read.csv("PRCRMP_Site_Classification_Database_(11-25-2023).csv", stringsAsFactors = F)
+
 sitelis <- met$Site.Name
 sitelis
 
@@ -225,9 +230,14 @@ points(yrs, tapply(fish$dens, fish$YEAR, mean, na.rm = T), col = 2)
 fin <- data.frame(cbind(yrs, ind_norm, indse_norm))
 fin
 
-save(fin, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/PRCRMP/fish_density_PR.RData")
+save(fin, file = "fish_density_PR.RData")
 
 ###########################  END  ###############################
+
+
+
+
+
 
 ##############   CODE BELOW IS ABORTED   #######################
 # CODE FUNCTIONS BUT NOT SUFFICIENT DATA TO RUN ANALYSIS

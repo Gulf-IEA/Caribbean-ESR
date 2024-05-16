@@ -1,10 +1,19 @@
 
 rm(list = ls())
+dev.off()
+
+library(maps)
+library(plotTimeSeries)
+
+load("../spec_file.RData")
+
+# define years  --------------------------------
+styear <- 1961
+enyear <- terminal_year
 
 # load data -------------------------------------
 
-setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data")
-d <- read.csv("sargassum_innundation_monthly_mean_hu.csv", skip = 2)
+d <- read.csv("../../indicator_data/sargassum_innundation_monthly_mean_hu.csv", skip = 2)
 
 d$yr <- substr(d$X, 1, 4)
 d$vars <- (d$ulim - d$X.1)^2
@@ -24,6 +33,10 @@ inddata <- list(labels = indnames, indicators = inddats, datelist = datdata, uli
 class(inddata) <- "indicatordata"
 
 # plot and save ----------------------------------
-save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/Sargassum.RData")
 
 plotIndicatorTimeSeries(inddata)
+
+ind <- inddata
+
+save(ind, file = "../../indicator_objects/Sargassum.RData")
+

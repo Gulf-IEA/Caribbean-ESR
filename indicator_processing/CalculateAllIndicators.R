@@ -22,6 +22,7 @@ plot(1)
 
 # fully automated - pull from internet ----------
 
+setwd(directory)
 setwd("indicator_processing/automated_download/")
 dir()
 
@@ -31,19 +32,27 @@ source("DHW.R")                   # degree heating weeks
 source("earthquakes.R")           # earthquakes
 source("kd490.R")                 # turbidity from Kd490   
 source("sst.R")                   # sea surface temperature
-
+source("Unemployment.R")          # unemployment rate
+source("GDP.R")                   # Gross Domestic Product
 
 # pull from data in folder ----------------------
 
-setwd("../non_automated")
+setwd(directory)
+setwd("indicator_processing/non_automated")
 dir()
 
-source("marine_debris.R")
-source("OA.R")
+source("marine_debris.R")         # marine debris
+source("OA.R")                    # ocean acidification
+source("CRMP_compile.R")          # fishery-indepenedent fish density, slope of size spectrum, coral cover indicators
 
-source("marine_debris.R")
-source("marine_debris.R")
-source("marine_debris.R")
+source("Sargassum_inundation.R")  # sargassum indicator
+
+
+
+
+source("SAU_recreational_catch.R")
+source("pollution.R")
+source("RVC.R")
 
 
 ###############################################################

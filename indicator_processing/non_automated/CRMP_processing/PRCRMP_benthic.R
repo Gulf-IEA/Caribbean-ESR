@@ -27,6 +27,12 @@ rm(list = ls())
 #if(!require(lme4)){install.packages("lme4")}
 library(lme4)
 
+directory <- rprojroot::find_rstudio_root_file()
+
+setwd(directory)
+setwd("indicator_data/PRCRMP")
+dir()
+
 # download data -------------------------------
 
 url <- "https://www.nodc.noaa.gov/archive/arc0147/0204647/5.5/data/0-data/PRCRMP_Site_Classification_Database_(1-24-2022).csv"
@@ -35,10 +41,8 @@ met <- read.csv(url, stringsAsFactors = F)
 urlb <- "https://www.nodc.noaa.gov/archive/arc0147/0204647/4.4/data/0-data/PRCRMP_Benthic-sessile_data_1999-2021_(updated_12-6-2021).csv"
 ben <- read.csv(urlb, stringsAsFactors = F)
 
-met <- read.csv("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/PRCRMP/PRCRMP_Site_Classification_Database_(11-25-2023).csv", 
-                stringsAsFactors = F)
-ben <- read.csv("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/PRCRMP/PRCRMP_Benthic-sessile_data_1999-2023_(updated_11-30-2023).csv", 
-                stringsAsFactors = F)
+met <- read.csv("PRCRMP_Site_Classification_Database_(11-25-2023).csv", stringsAsFactors = F)
+ben <- read.csv("PRCRMP_Benthic-sessile_data_1999-2023_(updated_11-30-2023).csv", stringsAsFactors = F)
 
 head(met)
 head(ben)
@@ -221,8 +225,8 @@ lines(yrs, mod - modse, col = 2, lty = 2)
 
 cor(ind, mod)
 
-if (varint == "sprich")  {  save(out1, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/PRCRMP/coralspprich_PR.RData")  }
-if (varint == "percov")  {  save(out1, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/PRCRMP/percoralcov_PR.RData")   }
+if (varint == "sprich")  {  save(out1, file = "coralspprich_PR.RData")  }
+if (varint == "percov")  {  save(out1, file = "percoralcov_PR.RData")   }
 
 }
 

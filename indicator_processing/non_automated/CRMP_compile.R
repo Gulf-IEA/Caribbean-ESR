@@ -2,24 +2,30 @@
 ## compile TCRMP and PRCRMP into data plots
 ## M. Karnauskas 2/8/2024
 #
-# run PRCRMP_benthic.R, TCRMP_benthic.R, PRCRMP_fish.R and TCRMP_fish.R first
+# run all codes in 'Caribbean-ESR\indicator_processing\non_automated\CRMP_processing' first
+# PRCRMP_benthic.R, TCRMP_benthic.R, PRCRMP_fish.R and TCRMP_fish.R 
+# these output data objects to Caribbean-ESR\indicator_data\PRCRMP and Caribbean-ESR\indicator_data\TCRMP
 # 
 
 rm(list = ls())
+dev.off()
+
+directory <- rprojroot::find_rstudio_root_file()
+
+setwd(directory)
+dir()
 
 library(plotTimeSeries)
 
 # load coral indicator data -------------------------
 
-setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/")
-
-load("PRCRMP/coralspprich_PR.RData")
+load("indicator_data/PRCRMP/coralspprich_PR.RData")
 PRsr <- out1
-load("PRCRMP/percoralcov_PR.RData") 
+load("indicator_data/PRCRMP/percoralcov_PR.RData") 
 PRcc <- out1
-load("TCRMP/coralspprich_USVI.RData")
+load("indicator_data/TCRMP/coralspprich_USVI.RData")
 VIsr <- out1
-load("TCRMP/percoralcov_USVI.RData") 
+load("indicator_data/TCRMP/percoralcov_USVI.RData") 
 VIcc <- out1
 
 # extract years from linear mixed model ----------------------
@@ -63,13 +69,12 @@ indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 s <- list(labels = indnames, indicators = inddata, datelist = datdata, ulim = ulidata, llim = llidata)
 class(s) <- "indicatordata"
 
-setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/") 
-
 plotIndicatorTimeSeries(s, coltoplot = 1:4, plotrownum = 2, sublabel = T, sameYscale = F, 
-                        widadj = 1, hgtadj = 1, trendAnalysis = T, type = "allLines", CItype = "band", outtype = "png")
+                        widadj = 1, hgtadj = 1, trendAnalysis = T, type = "allLines", CItype = "band")
 
-inddata <- s
-save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/coral_spprichness_cover.RData")
+ind <- s
+
+save(ind, file = "indicator_objects/coral_spprichness_cover.RData")
 
 
 
@@ -81,17 +86,13 @@ save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_
 
 rm(list = ls())
 
-library(plotTimeSeries)
-
 # load fish indicator data -------------------------
 
-setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/")
-
-load("PRCRMP/fish_density_PR.RData")
+load("indicator_data/PRCRMP/fish_density_PR.RData")
 PR <- fin
-load("TCRMP/fish_density_USVI.RData") 
+load("indicator_data/TCRMP/fish_density_USVI.RData") 
 VI <- findens
-load("TCRMP/slopeSizeSpec_USVI.RData") 
+load("indicator_data/TCRMP/slopeSizeSpec_USVI.RData") 
 sl <- fin
 
 # extract years ----------------------
@@ -127,13 +128,13 @@ indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 s <- list(labels = indnames, indicators = inddata, datelist = datdata, ulim = ulidata, llim = llidata)
 class(s) <- "indicatordata"
 
-setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/") 
-
 plotIndicatorTimeSeries(s, coltoplot = 1:3, plotrownum = 3, sublabel = T, sameYscale = F, 
-                        widadj = 1, hgtadj = 1, trendAnalysis = T, type = "allLines", CItype = "band", outtype = "png")
+                        widadj = 1, hgtadj = 1, trendAnalysis = T, type = "allLines", CItype = "band")
 
-inddata <- s
-save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/fish_density.RData")
+ind <- s
+
+save(ind, file = "indicator_objects/fish_density.RData")
+
 
 #########################  END  ############################
 
