@@ -1,5 +1,5 @@
 ```{r, message = FALSE, warnings = FALSE}
-devtools::install_github("https://github.com/MandyKarnauskas-NOAA/plotTimeSeries.git")
+#devtools::install_github("https://github.com/MandyKarnauskas-NOAA/plotTimeSeries.git")
 
 library(plotTimeSeries)
 library(spam)
@@ -36,10 +36,8 @@ Indicator 16.1 - abundance of commercial fish based on TCRMP and PRCRMP Indicato
 
 Indicator 17
 
-#```{r, message = FALSE, warnings = FALSE}
-#load("../indicator_objects/landings.RData")
-#plotIndicatorTimeSeries(inddata, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
-#```
+load("../indicator_objects/landings.RData") 
+plotIndicatorTimeSeries(inddata, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
 
 ```{r}
 load("../indicator_objects/fish_density.RData")
@@ -58,10 +56,8 @@ Indicator 19 - Lmax indicator
 
 Indicator 20
 
-#```{r, message = FALSE, warnings = FALSE}
-#load("../indicator_objects/total_landings.RData")
-#plotIndicatorTimeSeries(inddata, coltoplot = 1:9, plotrownum = 3, plotcolnum = 3, trendAnalysis = T, #sublabel = T)
-#```
+load("../indicator_objects/total_landings.RData") 
+plotIndicatorTimeSeries(inddata, coltoplot = 1:9, plotrownum = 3, plotcolnum = 3, trendAnalysis = T, #sublabel = T) 
 
 ## 5.2 Socioeconomic health
 
@@ -69,7 +65,7 @@ Indicator 20
 
 Indicator 21 - percent revenues by species group
 
-![](/indicator_plots/per_landings_PR.png) ![](/indicator_plots/per_landings_STT.png) ![](/indicator_plots/per_%20landings_STX.png)
+![](/indicator_plots/per_landings_PR.png) ![](/indicator_plots/per_landings_STT.png) ![](/indicator_plots/per_landings_STX.png)
 
 ### Total, lobster and conch trips
 
@@ -79,10 +75,8 @@ Indicator 22 - number of trips
 
 Indicator 23
 
-#```{r}
-#load("../indicator_objects/OceanNAICS.RData")
-#plotIndicatorTimeSeries(inddata, coltoplot = 1:8, plotrownum = 2, trendAnalysis = T, sublabel = T)
-#```
+load("../indicator_objects/OceanNAICS.RData") 
+plotIndicatorTimeSeries(inddata, coltoplot = 1:8, plotrownum = 2, trendAnalysis = T, sublabel = T) 
 
 ### GDP
 
@@ -90,7 +84,7 @@ Indicator 24
 
 ```{r}
 load("../indicator_objects/GDP.RData")
-plotIndicatorTimeSeries(inddata, coltoplot = 1:2, trendAnalysis = T, sublabel = T)
+plotIndicatorTimeSeries(ind, coltoplot = 1:2, trendAnalysis = T, sublabel = T)
 ```
 
 ### Unemployment
@@ -99,7 +93,7 @@ Indicator 25
 
 ```{r}
 load("../indicator_objects/unemployment.RData")
-plotIndicatorTimeSeries(inddata, coltoplot = 1:2, trendAnalysis = T, sublabel = T, dateformat = "%Y%b")
+plotIndicatorTimeSeries(ind, coltoplot = 1:2, trendAnalysis = T, sublabel = T, dateformat = "%Y%b")
 ```
 
 ## 5.3 Equity
@@ -108,10 +102,8 @@ plotIndicatorTimeSeries(inddata, coltoplot = 1:2, trendAnalysis = T, sublabel = 
 
 Indicator 26
 
-#```{r}
-#load("../indicator_objects/gini.RData")
-#plotIndicatorTimeSeries(inddata, coltoplot = 1:3, plotrownum = 2, trendAnalysis = T, sublabel = T)
-#```
+load("../indicator_objects/gini.RData") 
+plotIndicatorTimeSeries(inddata, coltoplot = 1:3, plotrownum = 2, trendAnalysis = T, sublabel = T) 
 
 ### Commercial fishing community engagement and reliance
 
@@ -123,10 +115,8 @@ Indicator 27 - working with Tarsila on
 
 Indicator 28
 
-#```{r, message = FALSE, warnings = FALSE}
-#load("../indicator_objects/total_rec_catch.RData")
-#plotIndicatorTimeSeries(inddata, coltoplot = 1:2, trendAnalysis = T, sublabel = T)
-#```
+load("../indicator_objects/total_rec_catch.RData") 
+plotIndicatorTimeSeries(inddata, coltoplot = 1:2, trendAnalysis = T, sublabel = T) 
 
 ### Commercial fishing engagement and participation
 
@@ -160,10 +150,8 @@ Indicator 33
 
 Indicator 34
 
-#```{r, message = FALSE, warnings = FALSE}
-#load("../indicator_objects/NCRMP_coral_cover_richness.RData")
-#plotIndicatorTimeSeries(inddata, coltoplot = 1:6, sublabel = T, trendAnalysis = F)
-#```
+load("../indicator_objects/NCRMP_coral_cover_richness.RData") 
+plotIndicatorTimeSeries(inddata, coltoplot = 1:6, sublabel = T, trendAnalysis = F) 
 
 ### Coral species diversity
 
