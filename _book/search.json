@@ -14,7 +14,7 @@
     "href": "Report_book_files/Performance_indicators.html#food-production",
     "title": "5. Tracking performance toward fishery management objectives",
     "section": "",
-    "text": "Fishery independent surveys of economically important species\nIndicator 16 - abundance of economically important fish\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndicator 16.1 - abundance of commercial fish based on TCRMP and PRCRMP Indicator 16.2 - slope of the size spectrum based on TCRMP and PRCRMP\n\n\nCommercial landings\nIndicator 17\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPelagic:demersal ratio\nIndicator 18\n\n\nMaximum length and size structure\nIndicator 19 - Lmax indicator\n\n\nChanges in target species / landing composition\nIndicator 20",
+    "text": "Fishery independent surveys of economically important species\nIndicator 16 - abundance of economically important fish\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndicator 16.1 - abundance of commercial fish based on TCRMP and PRCRMP Indicator 16.2 - slope of the size spectrum based on TCRMP and PRCRMP\n\n\nCommercial landings\nIndicator 17\n#{r, message = FALSE, warnings = FALSE} #load(\"../indicator_objects/landings.RData\") #plotIndicatorTimeSeries(inddata, coltoplot = 1:6, trendAnalysis = T, sublabel = T) #\n\n\n\n\n\n\n\n\n\n\n\nPelagic:demersal ratio\nIndicator 18\n\n\nMaximum length and size structure\nIndicator 19 - Lmax indicator\n\n\nChanges in target species / landing composition\nIndicator 20\n#{r, message = FALSE, warnings = FALSE} #load(\"../indicator_objects/total_landings.RData\") #plotIndicatorTimeSeries(inddata, coltoplot = 1:9, plotrownum = 3, plotcolnum = 3, trendAnalysis = T, #sublabel = T) #",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>5. Tracking performance toward fishery management objectives</span>"
     ]
@@ -24,7 +24,7 @@
     "href": "Report_book_files/Performance_indicators.html#socioeconomic-health",
     "title": "5. Tracking performance toward fishery management objectives",
     "section": "5.2 Socioeconomic health",
-    "text": "5.2 Socioeconomic health\n\nTotal, lobster and conch revenues\nIndicator 21 - percent revenues by species group\n  \n\n\nTotal, lobster and conch trips\nIndicator 22 - number of trips\n\n\nOcean economy employment and wages\nIndicator 23\n\n\n\n\n\n\n\n\n\n\n\nGDP\nIndicator 24\n\n\n\n\n\n\n\n\n\n\n\nUnemployment\nIndicator 25",
+    "text": "5.2 Socioeconomic health\n\nTotal, lobster and conch revenues\nIndicator 21 - percent revenues by species group\n  \n\n\nTotal, lobster and conch trips\nIndicator 22 - number of trips\n\n\nOcean economy employment and wages\nIndicator 23\n#{r} #load(\"../indicator_objects/OceanNAICS.RData\") #plotIndicatorTimeSeries(inddata, coltoplot = 1:8, plotrownum = 2, trendAnalysis = T, sublabel = T) #\n\n\nGDP\nIndicator 24\n\n\n\n\n\n\n\n\n\n\n\nUnemployment\nIndicator 25",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>5. Tracking performance toward fishery management objectives</span>"
     ]
@@ -34,7 +34,7 @@
     "href": "Report_book_files/Performance_indicators.html#equity",
     "title": "5. Tracking performance toward fishery management objectives",
     "section": "5.3 Equity",
-    "text": "5.3 Equity\n\nGini coefficient for distribution of landings and revenue\nIndicator 26\n\n\n\n\n\n\n\n\n\n\n\nCommercial fishing community engagement and reliance\nIndicator 27 - working with Tarsila on",
+    "text": "5.3 Equity\n\nGini coefficient for distribution of landings and revenue\nIndicator 26\n#{r} #load(\"../indicator_objects/gini.RData\") #plotIndicatorTimeSeries(inddata, coltoplot = 1:3, plotrownum = 2, trendAnalysis = T, sublabel = T) #\n\n\nCommercial fishing community engagement and reliance\nIndicator 27 - working with Tarsila on",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>5. Tracking performance toward fishery management objectives</span>"
     ]
@@ -44,7 +44,7 @@
     "href": "Report_book_files/Performance_indicators.html#engagement-and-participation",
     "title": "5. Tracking performance toward fishery management objectives",
     "section": "5.4 Engagement and participation",
-    "text": "5.4 Engagement and participation\n\nRecreational fishing engagement and participation\nIndicator 28\n\n\nWarning in summary.lm(lm(last5 ~ last5tim)): essentially perfect fit: summary\nmay be unreliable\n\n\n\n\n\n\n\n\n\n\n\nCommercial fishing engagement and participation\nIndicator 29",
+    "text": "5.4 Engagement and participation\n\nRecreational fishing engagement and participation\nIndicator 28\n#{r, message = FALSE, warnings = FALSE} #load(\"../indicator_objects/total_rec_catch.RData\") #plotIndicatorTimeSeries(inddata, coltoplot = 1:2, trendAnalysis = T, sublabel = T) #\n\n\nCommercial fishing engagement and participation\nIndicator 29",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>5. Tracking performance toward fishery management objectives</span>"
     ]
@@ -74,7 +74,7 @@
     "href": "Report_book_files/Performance_indicators.html#protection-of-ecosystems",
     "title": "5. Tracking performance toward fishery management objectives",
     "section": "5.6 Protection of ecosystems",
-    "text": "5.6 Protection of ecosystems\n\nPercent coral cover\nIndicator 34\n\n\n\n\n\n\n\n\n\n\n\nCoral species diversity\nIndicator 35",
+    "text": "5.6 Protection of ecosystems\n\nPercent coral cover\nIndicator 34\n#{r, message = FALSE, warnings = FALSE} #load(\"../indicator_objects/NCRMP_coral_cover_richness.RData\") #plotIndicatorTimeSeries(inddata, coltoplot = 1:6, sublabel = T, trendAnalysis = F) #\n\n\nCoral species diversity\nIndicator 35",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>5. Tracking performance toward fishery management objectives</span>"
     ]

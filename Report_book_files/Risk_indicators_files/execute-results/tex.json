@@ -1,0 +1,21 @@
+{
+  "hash": "121e0538039519d01584fc6412878b04",
+  "result": {
+    "engine": "knitr",
+    "markdown": "::: {.cell warnings='false'}\n\n:::\n\n\n\n# 4. Risks to meeting fishery management objectives\n\n### Degree heating weeks\n\nIndicator 1\n\n\n\n::: {.cell warnings='false'}\n::: {.cell-output-display}\n![](Risk_indicators_files/figure-pdf/unnamed-chunk-2-1.pdf)\n:::\n:::\n\n\n\n### Ocean acidification via aragonite saturation state\n\nIndicator 2\n\n\n\n::: {.cell warnings='false'}\n::: {.cell-output-display}\n![](Risk_indicators_files/figure-pdf/unnamed-chunk-3-1.pdf)\n:::\n:::\n\n\n\n### Hurricane activity\n\nIndicator 3\n\n\n\n::: {.cell warnings='false'}\n::: {.cell-output-display}\n![](Risk_indicators_files/figure-pdf/unnamed-chunk-4-1.pdf)\n:::\n:::\n\n\n\n### Turbidity\n\nIndicator 4\n\n\n\n::: {.cell warnings='false'}\n::: {.cell-output-display}\n![](Risk_indicators_files/figure-pdf/unnamed-chunk-5-1.pdf)\n:::\n:::\n\n\n\n### Sea surface temperature\n\nIndicator 5\n\n\n\n::: {.cell warnings='false'}\n::: {.cell-output-display}\n![](Risk_indicators_files/figure-pdf/unnamed-chunk-6-1.pdf)\n:::\n:::\n\n\n\n\n### Marine debris\n\nIndicator 6\n\n\n\n::: {.cell warnings='false'}\n::: {.cell-output-display}\n![](Risk_indicators_files/figure-pdf/unnamed-chunk-7-1.pdf)\n:::\n:::\n\n::: {.cell warnings='false'}\n::: {.cell-output-display}\n![](Risk_indicators_files/figure-pdf/unnamed-chunk-8-1.pdf)\n:::\n:::\n\n\n\n### Identified point source pollution sites\n\nIndicator 7\n\n### Primary productivity via ocean color\n\nIndicator 8\n\n\n\n::: {.cell warnings='false'}\n::: {.cell-output-display}\n![](Risk_indicators_files/figure-pdf/unnamed-chunk-9-1.pdf)\n:::\n:::\n\n\n\n### Coastal development via land cover\n\nIndicator 9\n\n### Number of major earthquakes\n\nIndicator 10\n\n\n\n::: {.cell warnings='false'}\n::: {.cell-output-display}\n![](Risk_indicators_files/figure-pdf/unnamed-chunk-10-1.pdf)\n:::\n:::\n\n\n\n### Fishery/market disturbance indicator (maybe belongs in socioeconomic health)\n\nIndicator 11\n\n\n\n::: {.cell warnings='false'}\n::: {.cell-output-display}\n![](Risk_indicators_files/figure-pdf/unnamed-chunk-11-1.pdf)\n:::\n:::\n\n\n\n### Sargassum inundation\n\nIndicator 12\n\n\n\n::: {.cell warnings='false'}\n::: {.cell-output-display}\n![](Risk_indicators_files/figure-pdf/unnamed-chunk-12-1.pdf)\n:::\n:::\n\n::: {.cell warnings='false'}\n::: {.cell-output-display}\n![](Risk_indicators_files/figure-pdf/unnamed-chunk-13-1.pdf)\n:::\n:::\n\n\n\n### Tourism via hotel occupancy\n\nIndicator 13\n\n\n\n::: {.cell warnings='false'}\n::: {.cell-output-display}\n![](Risk_indicators_files/figure-pdf/unnamed-chunk-14-1.pdf)\n:::\n:::\n\n::: {.cell warnings='false'}\n::: {.cell-output-display}\n![](Risk_indicators_files/figure-pdf/unnamed-chunk-15-1.pdf)\n:::\n:::\n\n\n\n\n### Population density\n\nIndicator 14\n\n### Population change\n\nIndicator 15",
+    "supporting": [
+      "Risk_indicators_files\\figure-pdf"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}
