@@ -12,7 +12,7 @@ dev.off()
 library(maps)
 library(plotTimeSeries)
 
-load("../spec_file.RData")
+load("indicator_processing/spec_file.RData")
 
 # define urls  --------------------------------
 
@@ -83,7 +83,7 @@ class(ind) <- "indicatordata"
 
 # save and plot ---------------------------------------
 
-save(ind, file = "../../indicator_objects/turbidity.RData")
+save(ind, file = "indicator_objects/turbidity.RData")
 
 plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, dateformat = "%m-%Y", sublabel = T, trendAnalysis = F, widadj = 1.5)
 plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, dateformat = "%m-%Y", sublabel = T, trendAnalysis = F, widadj = 1.5, anom = "mon")

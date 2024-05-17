@@ -13,9 +13,6 @@ directory <- rprojroot::find_rstudio_root_file()
 
 # first process automated downloads --------------
 
-setwd(directory)
-
-
 # run all scripts in folder ---------------------
 
 plot(1)
@@ -23,36 +20,28 @@ plot(1)
 # fully automated - pull from internet ----------
 
 setwd(directory)
-setwd("indicator_processing/automated_download/")
-dir()
+dir("indicator_processing/automated_download/")
 
-source("ACE_index_Carib.R")       # hurricane energy index
-source("chl_caribbean.R")         # primary productivity
-source("DHW.R")                   # degree heating weeks
-source("earthquakes.R")           # earthquakes
-source("kd490.R")                 # turbidity from Kd490   
-source("sst.R")                   # sea surface temperature
-source("Unemployment.R")          # unemployment rate
-source("GDP.R")                   # Gross Domestic Product
+source("indicator_processing/automated_download/sst.R")                   # sea surface temperature
+source("indicator_processing/automated_download/ACE_index_Carib.R")       # hurricane energy index
+source("indicator_processing/automated_download/chl_caribbean.R")         # primary productivity
+source("indicator_processing/automated_download/DHW.R")                   # degree heating weeks
+source("indicator_processing/automated_download/earthquakes.R")           # earthquakes
+source("indicator_processing/automated_download/kd490.R")                 # turbidity from Kd490   # THIS DOWNLOAD CAN BE FINICKY
+source("indicator_processing/automated_download/Unemployment.R")          # unemployment rate
+source("indicator_processing/automated_download/GDP.R")                   # Gross Domestic Product
 
-# pull from data in folder ----------------------
+# partially automated - pull from data in folder ----------------------
 
-setwd(directory)
-setwd("indicator_processing/non_automated")
-dir()
+dir("indicator_processing/non_automated")
 
-source("marine_debris.R")         # marine debris
-source("OA.R")                    # ocean acidification
-source("CRMP_compile.R")          # fishery-indepenedent fish density, slope of size spectrum, coral cover indicators
+source("indicator_processing/non_automated/marine_debris.R")         # marine debris
+source("indicator_processing/non_automated/OA.R")                    # ocean acidification
+source("indicator_processing/non_automated/CRMP_compile.R")          # fishery-indepenedent fish density, slope of size spectrum, coral cover indicators
+source("indicator_processing/non_automated/Sargassum_inundation.R")  # sargassum indicator
+source("indicator_processing/non_automated/SAU_recreational_catch.R") # recreational catch based on Sea Around Us database
+source("indicator_processing/non_automated/pollution.R")              # reported superfund sites etc. 
 
-source("Sargassum_inundation.R")  # sargassum indicator
-
-
-
-
-source("SAU_recreational_catch.R")
-source("pollution.R")
-source("RVC.R")
 
 
 ###############################################################

@@ -10,10 +10,9 @@
 rm(list = ls())
 dev.off()
 
-directory <- rprojroot::find_rstudio_root_file()
-
-setwd(directory)
-dir()
+#directory <- rprojroot::find_rstudio_root_file()
+#setwd(directory)
+#dir()
 
 library(plotTimeSeries)
 

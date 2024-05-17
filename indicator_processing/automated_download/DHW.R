@@ -7,7 +7,7 @@ dev.off()
 library(maps)
 library(plotTimeSeries)
 
-load("../spec_file.RData")
+load("indicator_processing/spec_file.RData")
 
 options(download.file.method="libcurl")
 
@@ -65,7 +65,7 @@ class(ind) <- "indicatordata"
 
 # save and plot -----------------------------------
 
-save(ind, file = "../../indicator_objects/DegreeHeatingWeeks.RData")
+save(ind, file = "indicator_objects/DegreeHeatingWeeks.RData")
 
 plotIndicatorTimeSeries(ind, coltoplot = 1:2, plotrownum = 2, sublabel = T, dateformat = "%Y%m", yposadj = 0.7,
                         sameYscale = T, type = "allLines")

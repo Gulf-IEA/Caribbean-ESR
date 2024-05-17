@@ -11,7 +11,7 @@ library(plotTimeSeries)
 library(xml2)
 library(rvest)
 
-load("../spec_file.RData")
+load("indicator_processing/spec_file.RData")
 
 
 # download data directly from site -----------------------------
@@ -71,7 +71,7 @@ class(ind) <- "indicatordata"
 
 plotIndicatorTimeSeries(ind)
 
-save(ind, file = "../../indicator_objects/earthquakes.RData")
+save(ind, file = "indicator_objects/earthquakes.RData")
 
 #################################################################################
 

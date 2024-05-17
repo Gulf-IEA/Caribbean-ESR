@@ -9,12 +9,19 @@
 # 
 ####################################################################
 
+# specification file and libraries -----------------------------
 rm(list = ls())
+dev.off()
+
+library(maps)
+library(plotTimeSeries)
+
+load("indicator_processing/spec_file.RData")
 
 styear <- 1995
 
 # load data -------------------------------------
-d <- read.csv("../indicator_data/SAU/SAU EEZ 630,850 v50-1.csv")
+d <- read.csv("indicator_data/SAU/SAU EEZ 630,850 v50-1.csv")
 head(d)
 
 # look at fields ------------------------------
@@ -55,10 +62,10 @@ indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 inddata <- list(labels = indnames, indicators = inddats, datelist = datdata) #, ulim = ulidata, llim = llidata)
 class(inddata) <- "indicatordata"
 
-setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/") 
-plotIndicatorTimeSeries(inddata, coltoplot = 1:2, plotrownum = 2, sublabel = T, sameYscale = F, outtype = "png")
+plotIndicatorTimeSeries(inddata, coltoplot = 1:2, plotrownum = 2, sublabel = T, sameYscale = F)
 
 # plot and save ----------------------------------
-save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/total_rec_catch.RData")
+ind <- inddata
+save(ind, file = "indicator_objects/total_rec_catch.RData")
 
 

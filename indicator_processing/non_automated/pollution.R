@@ -23,13 +23,15 @@ USVI_ind = USVI$sum
 # save as indicator object ----------------------
 datdata <- as.integer(USVI$year)
 inddata <- data.frame(PR_ind, USVI_ind)
-labs <- c("Pollution sites" , "Number added", "Puerto Rico",
-          "Pollution sites" , "Number added", "USVI")
+labs <- c("Pollution sites reported" , "Number added", "Puerto Rico",
+          "Pollution sites reported" , "Number added", "USVI")
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 inddata <- list(labels = indnames, indicators = inddata, datelist = datdata)
 class(inddata) <- "indicatordata"
 
 # plot and save ----------------------------------
-save(inddata, file = "indicator_objects/pollution.RData")
+ind <- inddata
 
-plotIndicatorTimeSeries(inddata, coltoplot = 1:2, sublabel = TRUE)
+plotIndicatorTimeSeries(ind, plotrownum = 2, coltoplot = 1:2, sublabel = TRUE)
+
+save(ind, file = "indicator_objects/pollution.RData")

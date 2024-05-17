@@ -18,7 +18,7 @@ dev.off()
 library(maps)
 library(plotTimeSeries)
 
-load("../spec_file.RData")
+load("indicator_processing/spec_file.RData")
 
 # define years  --------------------------------
 styear <- 1961
@@ -158,7 +158,7 @@ class(s) <- "indicatordata"
 plotIndicatorTimeSeries(s, widadj = 0.5)
 
 ind <- s
-save(ind, file = "../../indicator_objects/ACEindex.RData")
+save(ind, file = "indicator_objects/ACEindex.RData")
 
 #################################################################################
 
