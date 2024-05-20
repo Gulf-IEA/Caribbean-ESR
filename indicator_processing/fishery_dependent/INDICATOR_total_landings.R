@@ -4,7 +4,6 @@
 
 # specification file and libraries -----------------------------
 rm(list = ls())
-setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/")
 
 library(maps)
 library(plotTimeSeries)

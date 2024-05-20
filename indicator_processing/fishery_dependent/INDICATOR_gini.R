@@ -12,14 +12,22 @@ calcGini <- function(vec) {
   return(gini)
 }
 
-# input data for Puerto Rico ---------------------------
-setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/")
+# specification file and libraries -----------------------------
 
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20_wSC_2005cor.csv")
+library(maps)
+library(plotTimeSeries)
+
+load("indicator_processing/spec_file.RData")
+
+confpath <- "C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/MOST_RECENT/"
 
 # define start and end years ---------------------------
-styear <- 2012
-enyear <- 2020
+styear <- 2000
+enyear <- 2022
+
+# input data for Puerto Rico ---------------------------
+
+dat <- read.csv(paste0(confpath, "wrkeithly_pr_com_data_2000_2022_20240501_C.csv"))
 
 d <- dat[which(dat$YEAR_LANDED >= styear & dat$YEAR_LANDED <= enyear), ]
 
@@ -79,13 +87,14 @@ plot(names(gini_rev_pr), gini_rev_pr, type = "b")
 gini_land_pr <- apply(totland, 2, calcGini)
 plot(names(gini_land_pr), gini_land_pr, type = "b", col = 2)
 
-rm(list = ls()[-match(c("gini_land_pr", "gini_rev_pr", "styear", "enyear", "calcGini"), ls())])
+rm(list = ls()[-match(c("gini_land_pr", "gini_rev_pr", "styear", "enyear", "calcGini", "confpath"), ls())])
 
 ######################  END PR  ##############################
 
 # calculate for STT  --------------------------------------
 
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STT_landings.csv")
+dat <- read.csv(paste0(confpath, "STT_2024.csv"))
+
 table(dat$TRIP_YEAR, dat$TRIP_MONTH)
 
 # adjust year to fishing year (Jul 1 - Jun 30) -------------
@@ -96,6 +105,9 @@ dat$TRIP_MONTH[aa] <- dat$TRIP_MONTH[aa] + 12
 table(dat$TRIP_YEAR, dat$TRIP_MONTH)
 
 d <- dat[which(dat$TRIP_YEAR >= styear & dat$TRIP_YEAR <= enyear), ]
+d$TRIP_YEAR <- factor(d$TRIP_YEAR, levels = c(styear: enyear))
+table(d$TRIP_YEAR)
+
 
 # take a look at data fields ----------------------------
 
@@ -151,11 +163,12 @@ cor(gini_land_stt, gini_rev_stt)
 
 ###########################  END STT  ############################
 
-rm(list = ls()[-match(c("gini_land_pr", "gini_rev_pr", "gini_land_stt", "gini_rev_stt", "styear", "enyear", "calcGini"), ls())])
+rm(list = ls()[-match(c("gini_land_pr", "gini_rev_pr", "gini_land_stt", "gini_rev_stt", "styear", "enyear", "calcGini", "confpath"), ls())])
 
 # calculate for STX  --------------------------------------
 
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STX_072011_present_LANDINGS_trip_2021-03-11.csv")
+dat <- read.csv(paste0(confpath, "STX_2024.csv"))
+
 table(dat$TRIP_YEAR, dat$TRIP_MONTH)
 
 # adjust year to fishing year (Jul 1 - Jun 30) -------------
@@ -166,6 +179,8 @@ dat$TRIP_MONTH[aa] <- dat$TRIP_MONTH[aa] + 12
 table(dat$TRIP_YEAR, dat$TRIP_MONTH)
 
 d <- dat[which(dat$TRIP_YEAR >= styear & dat$TRIP_YEAR <= enyear), ]
+d$TRIP_YEAR <- factor(d$TRIP_YEAR, levels = c(styear: enyear))
+table(d$TRIP_YEAR)
 head(d)
 
 # take a look at data fields ----------------------------
@@ -229,7 +244,7 @@ cor(gini_land_stx, gini_rev_stx)
 ls()[grep("gini", ls())]
 
 datdata <- styear:enyear
-inddata <- data.frame(gini_rev_pr, gini_rev_stt, gini_rev_stx)
+inddata <- data.frame(gini_rev_pr, gini_rev_stt, gini_land_stx)
 labs <- c("Inequality in revenues" , "Gini index", "Puerto Rico", 
           "Inequality in revenues" , "Gini index", "St. Thomas and St. John",
           "Inequality in revenues" , "Gini index", "St. Croix")
@@ -237,11 +252,12 @@ indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
 class(s) <- "indicatordata"
 
-plotIndicatorTimeSeries(s, coltoplot = 1:3, plotrownum = 3, sublabel = T, sameYscale = T, 
+ind <- s 
+
+plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, sublabel = T, sameYscale = T, 
                         widadj = 1.3, hgtadj = 1, trendAnalysis = F)
 
-inddata <- s
-save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/gini.RData")
+save(ind, file = "indicator_objects/gini.RData")
 
 
 
