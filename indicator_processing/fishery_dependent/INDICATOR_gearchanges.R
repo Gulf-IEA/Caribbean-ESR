@@ -6,19 +6,27 @@
 
 ##########  NEED TO CHECK ON TRIP IDENTIFIERS  #####################
 
+
+# specification file and libraries -----------------------------
+
 rm(list = ls())
 library(pals)
 library(dplyr)
 library(vegan)
+library(maps)
+library(plotTimeSeries)
 
-
-setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/")
-
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STT_landings.csv")
+load("indicator_processing/spec_file.RData")
 
 # define start and end years ---------------------------
 styear <- 1990
-enyear <- 2020
+enyear <- 2022
+
+
+confpath <- "C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/MOST_RECENT/"
+
+dat <- read.csv(paste0(confpath, "STT_2024.csv"))
+
 table(dat$TRIP_YEAR)
 table(dat$TRIP_YEAR, dat$TRIP_MONTH)
 
@@ -28,6 +36,15 @@ aa <- which(dat$TRIP_MONTH < 7)
 dat$TRIP_YEAR[aa] <- dat$TRIP_YEAR[aa] - 1
 dat$TRIP_MONTH[aa] <- dat$TRIP_MONTH[aa] + 12
 table(dat$TRIP_YEAR, dat$TRIP_MONTH)
+
+# take out incomplete years -----------------------------
+
+tab <- table(dat$TRIP_YEAR, dat$TRIP_MONTH)
+table(dat$TRIP_YEAR)
+lis <- as.numeric(names(which(apply(tab, 1, min) == 0)))
+lis
+dat <- dat[!(dat$TRIP_YEAR %in% lis), ]
+table(dat$TRIP_YEAR)
 
 # subset years------------------------------------------
 
@@ -145,7 +162,7 @@ plot(names(byc), byc, type = "l")
 
 # plot trips and percent bycatch gears -------------------
 
-png(filename = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/gearTypes_STT.png", 
+png(filename = "indicator_plots/gearTypes_STT.png", 
     units="in", width = 6, height = 6, pointsize=12, res=72*2)
 
 par(mfrow = c(2,1), mar = c(2.5, 4, 2, 1))
@@ -189,6 +206,7 @@ plot(pc)
 biplot(pc)
 plot(pc$x[, 1], pc$x[, 2], type = "l")
 text(pc$x[, 1], pc$x[, 2], rownames(pc$x))
+# shift in 2010, likely due to change in reporting form
 
 # trends by area -----------------
 
@@ -241,7 +259,7 @@ z$points[6, 2] <- z$points[6, 2]/3
 #adj <- which(z$points[, 2] > 0 & z$points[, 2] < 0.1)
 #z$points[adj, 2] <- z$points[adj, 2]*1.3
 
-png(filename = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/NMDSgear_STT.png", 
+png(filename = "indicator_plots/NMDSgear_STT.png", 
     units="in", width = 5, height = 5, pointsize=12, res=72*2)
 par(mar = c(2, 2, 3, 2))
 
@@ -258,13 +276,10 @@ dev.off()
 
 ########################### START STX  ################################
 
-rm(list = ls())
+rm(list = ls()[-match(c("styear", "enyear", "confpath"), ls())])
 
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STX_072011_present_LANDINGS_trip_2021-03-11.csv")
+dat <- read.csv(paste0(confpath, "STX_2024.csv"))
 
-# define start and end years ---------------------------
-styear <- 1990
-enyear <- 2020
 table(dat$TRIP_YEAR)
 table(dat$TRIP_YEAR, dat$TRIP_MONTH)
 
@@ -274,6 +289,15 @@ aa <- which(dat$TRIP_MONTH < 7)
 dat$TRIP_YEAR[aa] <- dat$TRIP_YEAR[aa] - 1
 dat$TRIP_MONTH[aa] <- dat$TRIP_MONTH[aa] + 12
 table(dat$TRIP_YEAR, dat$TRIP_MONTH)
+
+# take out incomplete years -----------------------------
+
+tab <- table(dat$TRIP_YEAR, dat$TRIP_MONTH)
+table(dat$TRIP_YEAR)
+lis <- as.numeric(names(which(apply(tab, 1, min) == 0)))
+lis
+dat <- dat[!(dat$TRIP_YEAR %in% lis), ]
+table(dat$TRIP_YEAR)
 
 # subset years------------------------------------------
 
@@ -384,12 +408,13 @@ matp <- t(apply(mat, 1, function(x) x/sum(x)))
 barplot(t(matp), col = cols25(4), args.legend = c(x = 10, y = 0.8), legend.text = colnames(mat))
 
 colnames(mat)
+mat[, c(2, 4)]
 byc <- rowSums(mat[, c(2, 4)]) / rowSums(mat)   # proportion of trips with non-selective gears - nets and traps
 plot(names(byc), byc, type = "l")
 
 # plot trips and percent bycatch gears -------------------
 
-png(filename = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/gearTypes_STX.png", 
+png(filename = "indicator_plots/gearTypes_STX.png", 
     units="in", width = 6, height = 6, pointsize=12, res=72*2)
 
 par(mfrow = c(2,1), mar = c(2.5, 4, 2, 1))
@@ -483,13 +508,13 @@ points(z, display = "sites", cex = 2*gof/mean(gof))
 plot(z$diss, z$dist)
 stressplot(object = z, lwd = 5)
 
-png(filename = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/NMDSgear_STX.png", 
+png(filename = "indicator_plots/NMDSgear_STX.png", 
     units="in", width = 5, height = 5, pointsize=12, res=72*2)
 par(mar = c(2, 2, 3, 2))
 
 z$points[1, 2] <- z$points[1, 2] * 1.1
 z$points[9, 2] <- z$points[9, 2] * 0.95
-plot(z$points[, 1], z$points[, 2], col = 0, axes = F, xlab = "", ylab = "", xlim = c(-1.2, 1.3), 
+plot(z$points[, 1], z$points[, 2], col = 0, axes = F, xlab = "", ylab = "", xlim = c(-1.35, 1.42), 
      main = "Ordination of gear type usage by landing sites\nSt. Croix")
 text(z$points[, 1], z$points[, 2], rownames(z$points), cex = 0.75, col = gray(0.8))
 box()
@@ -501,13 +526,9 @@ dev.off()
 
 
 ###########################  START PR  #################################
-rm(list = ls())
+rm(list = ls()[-match(c("styear", "enyear", "confpath"), ls())])
 
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20_wSC_2005cor.csv")
-
-# define start and end years ---------------------------
-styear <- 1990
-enyear <- 2020
+dat <- read.csv(paste0(confpath, "wrkeithly_pr_com_data_2000_2022_20240501_C.csv"))
 
 # subset years------------------------------------------
 
@@ -528,7 +549,7 @@ table(d$AREA_FISHED2, useNA = "always")
 table(d$AREA_FISHED3, useNA = "always")
 table(d$AREA_FISHED4, useNA = "always")
 table(d$FIN_GEAR_CODE, useNA = "always")
-table(d$FIN_GEAR_NAME, useNA = "always")
+table(d$ERDMAN_GEAR_NAME, useNA = "always")
 table(d$PR_ID_CODE_ED, useNA = "always")
 table(d$NUMBER_OF_TRIPS_ED, useNA = "always")
 table(d$GEAR_QTY_ED, useNA = "always")
@@ -576,6 +597,8 @@ d$ID <- id1  # select way to identify individual trips
 
 # look at gear names -----------------------------------
 
+d$FIN_GEAR_NAME <- d$ERDMAN_GEAR_NAME  # new data 2024 relabel
+
 table(d$FIN_GEAR_NAME)
 par(mar = c(15, 2, 2, 2))
 barplot(table(d$FIN_GEAR_NAME), las = 2)
@@ -589,28 +612,37 @@ d$GEAR[grep("TRAPS", d$FIN_GEAR_NAME)] <- "TRAPS"
 d$GEAR[grep("DIVING", d$FIN_GEAR_NAME)] <- "DIVING"
 d$GEAR[grep("BY HAND", d$FIN_GEAR_NAME)] <- "DIVING"
 d$GEAR[grep("SPEARS", d$FIN_GEAR_NAME)] <- "DIVING"
+d$GEAR[grep("SPEAR", d$FIN_GEAR_NAME)] <- "DIVING"
+d$GEAR[grep("SNARE", d$FIN_GEAR_NAME)] <- "DIVING"
 d$GEAR[grep("TRAP", d$FIN_GEAR_NAME)] <- "TRAPS"
+d$GEAR[grep("POT", d$FIN_GEAR_NAME)] <- "TRAPS"
 d$GEAR[grep("BOTTOM", d$FIN_GEAR_NAME)] <- "BOTTOM LONG LINE"
 d$GEAR[grep("LONG LINE", d$FIN_GEAR_NAME)] <- "BOTTOM LONG LINE"
+d$GEAR[grep("OTHER", d$FIN_GEAR_NAME)] <- "DIVING"
+d$GEAR[grep("SILK", d$FIN_GEAR_NAME)] <- "NETS"
 d$GEAR[grep("COMBINED GEARS", d$FIN_GEAR_NAME)] <- "TRAPS"  # assumed traps based on composition; only 25 obs
 
-table(d$FIN_GEAR_NAME, d$GEAR)
+table(d$FIN_GEAR_NAME, d$GEAR, useNA = "always")
 which(is.na(d$GEAR))
 
 table(d$GEAR)
 
-WEST <- c("AGUADA", "AGUADILLA", "ANASCO", "CABO ROJO", "LAJAS", "MAYAGUEZ", "RINCON")
-EAST <- c("CEIBA", "CULEBRA", "FAJARDO", "HUMACAO", "LUQUILLO", "MAUNABO", "NAGUABO", "RIO GRANDE", "VIEQUES", "YABUCOA")         
-NORTH <- c("ARECIBO", "BARCELONETA", "CAMUY", "CAROLINA", "CATANO", "DORADO", "GUAYNABO", "HATILLO", 
-           "ISABELA", "LOIZA", "MANATI", "QUEBRADILLAS", "SAN JUAN", "TOA BAJA", "VEGA ALTA", "VEGA BAJA")
-SOUTH <- c("AIBONITO", "ARROYO", "GUANICA", "GUAYAMA", "GUAYANILLA", "JUANA DIAZ", "PATILLAS", "PENUELAS", 
-           "PONCE", "SALINAS", "SANTA ISABEL", "VILLALBA")
+#WEST <- c("AGUADA", "AGUADILLA", "ANASCO", "CABO ROJO", "LAJAS", "MAYAGUEZ", "RINCON")
+#EAST <- c("CEIBA", "CULEBRA", "FAJARDO", "HUMACAO", "LUQUILLO", "MAUNABO", "NAGUABO", "RIO GRANDE", "VIEQUES", "YABUCOA")         
+#NORTH <- c("ARECIBO", "BARCELONETA", "CAMUY", "CAROLINA", "CATANO", "DORADO", "GUAYNABO", "HATILLO", 
+#           "ISABELA", "LOIZA", "MANATI", "QUEBRADILLAS", "SAN JUAN", "TOA BAJA", "VEGA ALTA", "VEGA BAJA")
+#SOUTH <- c("AIBONITO", "ARROYO", "GUANICA", "GUAYAMA", "GUAYANILLA", "JUANA DIAZ", "PATILLAS", "PENUELAS", 
+#           "PONCE", "SALINAS", "SANTA ISABEL", "VILLALBA")
+#
+#d$REGION <- NA
+#d$REGION[which(d$MUNICIPALITY %in% WEST)] <- "WEST"
+#d$REGION[which(d$MUNICIPALITY %in% EAST)] <- "EAST"
+#d$REGION[which(d$MUNICIPALITY %in% NORTH)] <- "NORTH"
+#d$REGION[which(d$MUNICIPALITY %in% SOUTH)] <- "SOUTH"
 
-d$REGION <- NA
-d$REGION[which(d$MUNICIPALITY %in% WEST)] <- "WEST"
-d$REGION[which(d$MUNICIPALITY %in% EAST)] <- "EAST"
-d$REGION[which(d$MUNICIPALITY %in% NORTH)] <- "NORTH"
-d$REGION[which(d$MUNICIPALITY %in% SOUTH)] <- "SOUTH"
+table(d$COAST, useNA = "always")
+
+d$REGION <- d$COAST
 
 # calculate main gear, year, region for each trip ---------------------
 
@@ -646,8 +678,8 @@ areas2[1:20]
 table(rownames(tab) == names(years))
 table(rownames(tab) == rownames(tab2))
 
-fin <- data.frame(rownames(tab), years, gears, areas, areas2)
-names(fin) <- c("id", "year", "gear", "area", "municipality")
+fin <- data.frame(rownames(tab), years, gears, areas) #, areas2)
+names(fin) <- c("id", "year", "gear", "area") # , "municipality")
 head(fin)
 
 apply(fin, 2, table, useNA = "always")  # check no NAs
@@ -662,6 +694,7 @@ barplot(t(mat), col = cols25(7), args.legend = c(x = "topright"), legend.text = 
 matp <- t(apply(mat, 1, function(x) x/sum(x)))
 barplot(t(matp), col = cols25(7), args.legend = c(x = "topleft"), legend.text = colnames(matp))
 
+mat
 mat[, c(4, 5)]
 byc <- rowSums(mat[, c(4, 5)]) / rowSums(mat)   # proportion of trips with non-selective gears
 plot(names(byc), byc, type = "l")
@@ -669,7 +702,7 @@ plot(names(byc), byc, type = "l")
 
 # plot trips and percent bycatch gears -------------------
 
-png(filename = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/gearTypes_PR.png", 
+png(filename = "indicator_plots/gearTypes_PR.png", 
     units="in", width = 6, height = 6, pointsize=12, res=72*2)
 
 par(mfrow = c(2,1), mar = c(2.5, 4, 2, 1))
@@ -702,6 +735,7 @@ plot(pc)
 biplot(pc)
 
 # trends by area -----------------
+###########  THIS DOES NOT WORK WITH 2024 DATA PULL -- NEED TO FIX 
 
 fin$municipality <- as.character(fin$municipality)
 table(fin$municipality, useNA = "always")
@@ -756,7 +790,7 @@ lis[which(lis %in% SOUTH)]<- 3
 lis <- as.numeric(lis)
 lis[is.na(lis)] <- 7
 
-png(filename = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/NMDSgear_PR.png", 
+png(filename = "indicator_plots/NMDSgear_PR.png", 
     units="in", width = 5, height = 5, pointsize=12, res=72*2)
 par(mar = c(2, 2, 3, 2))
 

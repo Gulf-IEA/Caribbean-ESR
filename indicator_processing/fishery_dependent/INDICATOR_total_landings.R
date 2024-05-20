@@ -2,21 +2,30 @@
 # code for calculating total landings or revenues
 # uses logbook data for PR and USVI 
 
+# specification file and libraries -----------------------------
 rm(list = ls())
+setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/")
+
+library(maps)
+library(plotTimeSeries)
+
+load("indicator_processing/spec_file.RData")
+
+confpath <- "C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/MOST_RECENT/"
 
 # define start and end years ---------------------------
-styear <- 1990
-enyear <- 2020
+styear <- 2000
+enyear <- 2022
 
 # input data for Puerto Rico ---------------------------
-setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/")
 
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20_wSC_2005cor.csv")
+dat <- read.csv(paste0(confpath, "wrkeithly_pr_com_data_2000_2022_20240501_C.csv"))
 
 table(dat$YEAR_LANDED)
 
 # check multiplier adjustments -------------------------
 
+dat$xADJ <- dat$POUNDS_LANDED * 1/dat$CORRECTION_FACTOR
 summary(dat$xADJ == dat$POUNDS_LANDED * 1/dat$CORRECTION_FACTOR)
 hist(dat$xADJ - (dat$POUNDS_LANDED * 1/dat$CORRECTION_FACTOR))
 max(abs(dat$xADJ - (dat$POUNDS_LANDED * 1/dat$CORRECTION_FACTOR)), na.rm = T)
@@ -56,13 +65,14 @@ dim(totland_pr)
 totland_pr
 matplot(styear:enyear, totland_pr, type = "l", lty = 1, lwd = 2)
 
-rm(list = ls()[-match(c("totland_pr", "styear", "enyear"), ls())])
+rm(list = ls()[-match(c("totland_pr", "styear", "enyear", "confpath"), ls())])
 
 #################     END PR    ########################
 
 # calculate for STT --------------------------------------
 
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STT_landings.csv")
+dat <- read.csv(paste0(confpath, "STT_2024.csv"))
+
 head(dat)
 table(dat$TRIP_YEAR, dat$TRIP_MONTH)
 
@@ -72,58 +82,15 @@ aa <- which(dat$TRIP_MONTH < 7)
 dat$TRIP_YEAR[aa] <- dat$TRIP_YEAR[aa] - 1
 dat$TRIP_MONTH[aa] <- dat$TRIP_MONTH[aa] + 12
 table(dat$TRIP_YEAR, dat$TRIP_MONTH)
+tab <- table(dat$TRIP_YEAR, dat$TRIP_MONTH)
 
-# take a look at data fields ----------------------------
+# take out incomplete years -----------------------------
 
 table(dat$TRIP_YEAR)
-d <- dat[which(dat$TRIP_YEAR >= styear & dat$TRIP_YEAR <= enyear), ]
-
-# check field codes -----------------
-
-table(d$TRIP_YEAR, useNA = "always")
-
-# look at top landings -----------------------
-
-sort(tapply(d$POUNDS_LANDED, d$SPECIES_NM, sum, na.rm = T))
-sort(table(d$SPECIES_NM[grep("LOBSTER", d$SPECIES_NM)]))
-sort(table(d$SPECIES_NM[grep("CONCH", d$SPECIES_NM)]))
-
-d$sppgrp <- "other"
-d$sppgrp[grep("LOBSTER", d$SPECIES_NM)] <- "lobster"
-d$sppgrp[grep("CONCH", d$SPECIES_NM)] <- "conch"
-
-table(d$SPECIES_NM, d$sppgrp)
-
-# check for rule of 3 ------------------------
-
-table(d$TRIP_YEAR, d$sppgrp)
-table(table(d$TRIP_YEAR, d$sppgrp) <= 3)
-
-# sum landings by  year ----------------------
-
-totland_st <- tapply(d$POUNDS_LANDED, list(d$TRIP_YEAR, d$sppgrp), sum, na.rm = T) / 10^3
-totland_st[3, 1] <- NA  # fix confidentiality issue
-dim(totland_st)
-totland_st
-totland_st[is.na(totland_st)] <- 0
-matplot(totland_st, type = "l")
-
-#################     END STT    ########################
-
-# calculate for STX --------------------------------------
-
-rm(list = ls()[-match(c("totland_st", "totland_pr", "styear", "enyear"), ls())])
-
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STX_072011_present_LANDINGS_trip_2021-03-11.csv")
-head(dat)
-table(dat$TRIP_YEAR, dat$TRIP_MONTH)
-
-# adjust year to fishing year (Jul 1 - Jun 30) -------------
-
-aa <- which(dat$TRIP_MONTH < 7)
-dat$TRIP_YEAR[aa] <- dat$TRIP_YEAR[aa] - 1
-dat$TRIP_MONTH[aa] <- dat$TRIP_MONTH[aa] + 12
-table(dat$TRIP_YEAR, dat$TRIP_MONTH)
+lis <- as.numeric(names(which(apply(tab, 1, min) == 0)))
+lis
+dat <- dat[!(dat$TRIP_YEAR %in% lis), ]
+table(dat$TRIP_YEAR)
 
 # take a look at data fields ----------------------------
 
@@ -152,7 +119,72 @@ table(d$SPECIES_NM, d$sppgrp)
 # check for rule of 3 ------------------------
 
 table(d$TRIP_YEAR, d$sppgrp)
-table(table(d$TRIP_YEAR, d$sppgrp) <= 3)
+table(table(d$TRIP_YEAR, d$sppgrp) <= 3 & table(d$TRIP_YEAR, d$sppgrp) > 0)
+
+# sum landings by  year ----------------------
+
+totland_st <- tapply(d$POUNDS_LANDED, list(d$TRIP_YEAR, d$sppgrp), sum, na.rm = T) / 10^3
+dim(totland_st)
+totland_st
+totland_st[21, 1] <- NA  # fix confidentiality issue
+totland_st
+#totland_st[is.na(totland_st)] <- 0
+matplot(totland_st, type = "l")
+
+#################     END STT    ########################
+
+# calculate for STX --------------------------------------
+
+rm(list = ls()[-match(c("totland_st", "totland_pr", "styear", "enyear", "confpath"), ls())])
+
+dat <- read.csv(paste0(confpath, "STX_2024.csv"))
+head(dat)
+table(dat$TRIP_YEAR, dat$TRIP_MONTH)
+
+# adjust year to fishing year (Jul 1 - Jun 30) -------------
+
+aa <- which(dat$TRIP_MONTH < 7)
+dat$TRIP_YEAR[aa] <- dat$TRIP_YEAR[aa] - 1
+dat$TRIP_MONTH[aa] <- dat$TRIP_MONTH[aa] + 12
+table(dat$TRIP_YEAR, dat$TRIP_MONTH)
+tab <- table(dat$TRIP_YEAR, dat$TRIP_MONTH)
+
+# take out incomplete years -----------------------------
+
+table(dat$TRIP_YEAR)
+lis <- as.numeric(names(which(apply(tab, 1, min) == 0)))
+lis
+dat <- dat[!(dat$TRIP_YEAR %in% lis), ]
+table(dat$TRIP_YEAR)
+
+# take a look at data fields ----------------------------
+
+table(dat$LANDING_AREA_NAME)
+table(dat$TRIP_YEAR)
+d <- dat[which(dat$TRIP_YEAR >= styear & dat$TRIP_YEAR <= enyear), ]
+d$TRIP_YEAR <- factor(d$TRIP_YEAR, levels = c(styear: enyear))
+table(d$TRIP_YEAR)
+
+# check field codes -----------------
+
+table(d$TRIP_YEAR, useNA = "always")
+
+# look at top landings -----------------------
+
+sort(tapply(d$POUNDS_LANDED, d$SPECIES_NM, sum, na.rm = T))
+sort(table(d$SPECIES_NM[grep("LOBSTER", d$SPECIES_NM)]))
+sort(table(d$SPECIES_NM[grep("CONCH", d$SPECIES_NM)]))
+
+d$sppgrp <- "other"
+d$sppgrp[grep("LOBSTER", d$SPECIES_NM)] <- "lobster"
+d$sppgrp[grep("CONCH", d$SPECIES_NM)] <- "conch"
+
+table(d$SPECIES_NM, d$sppgrp)
+
+# check for rule of 3 ------------------------
+
+table(d$TRIP_YEAR, d$sppgrp)
+table(table(d$TRIP_YEAR, d$sppgrp) <= 3 & table(d$TRIP_YEAR, d$sppgrp) > 0)
 
 # sum landings by  year ----------------------
 
@@ -187,12 +219,13 @@ indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
 class(s) <- "indicatordata"
 
-setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/")
+ind <- s
 
-plotIndicatorTimeSeries(s, coltoplot = 1:9, plotrownum = 3, plotcolnum = 3, sublabel = T, sameYscale = F, 
+plotIndicatorTimeSeries(ind, coltoplot = 1:9, plotrownum = 3, plotcolnum = 3, sublabel = T, sameYscale = F, 
                         widadj = 0.8, hgtadj = 0.7, trendAnalysis = F)   # outtype = "png")
 
-inddata <- s
-save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/total_landings.RData")
+save(ind, file = "indicator_objects/total_landings.RData")
+
+#####################  END   ##########################
 
 

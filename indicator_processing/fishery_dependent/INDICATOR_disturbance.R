@@ -2,15 +2,24 @@
 # code for calculating "disturbance indicator" based on changes in seasonality of landings
 # uses logbook data for PR and USVI 
 
+# specification file and libraries -----------------------------
 rm(list = ls())
-setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/")
+
+library(maps)
+library(plotTimeSeries)
+
+load("indicator_processing/spec_file.RData")
+
+confpath <- "C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/"
+
+# define years  --------------------------------
 
 styear <- 1985 
 enyear <- 2020
 
 # for PUERTO RICO -----------------------------------------------
 
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20_wSC_2005cor.csv")
+dat <- read.csv(paste0(confpath, "/Jun2022/PR_landings_83_20_wSC_2005cor.csv"))
 
 d <- dat[which(dat$YEAR_LANDED >= styear & dat$YEAR_LANDED <= enyear), ]
 
@@ -111,11 +120,11 @@ names(final_PR) <- c("year", "ind", "lli", "uli")
 
 # for STT --------------------------------------------------------
 
-rm(list = ls()[-match(c("final_PR", "styear", "enyear"), ls())])
+rm(list = ls()[-match(c("final_PR", "styear", "enyear", "confpath"), ls())])
 
 # load data --------------------------------
 
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STT_landings.csv")
+dat <- read.csv(paste0(confpath, "STT_landings.csv"))
 
 
 # adjust to fishing year ---------------------------------------
@@ -184,7 +193,7 @@ plot(styear: enyear, dst, type = "b")
 
 # now for separate species ----------------------------------
 
-ref <- read.csv("spp_ref_STT_manualEdit.csv")
+ref <- read.csv("indicator_processing/fishery_dependent/spp_ref_STT_manualEdit.csv")
 head(ref)
 head(d)
 
@@ -253,11 +262,11 @@ names(final_ST) <- c("ind", "lli", "uli")
 
 # for STX --------------------------------------------------------
 
-rm(list = ls()[-match(c("final_PR", "final_ST", "styear", "enyear"), ls())])
+rm(list = ls()[-match(c("final_PR", "final_ST", "styear", "enyear", "confpath"), ls())])
 
 # load data --------------------------------
 
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STX_072011_present_LANDINGS_trip_2021-03-11.csv")
+dat <- read.csv(paste0(confpath, "STX_072011_present_LANDINGS_trip_2021-03-11.csv"))
 head(dat)
 
 # adjust to fishing year ---------------------------------------
@@ -322,7 +331,7 @@ plot(styear: enyear, dst, type = "b")
 
 # now for separate species ----------------------------------
 
-ref <- read.csv("spp_ref_STX_manualEdit.csv")
+ref <- read.csv("indicator_processing/fishery_dependent/spp_ref_STX_manualEdit.csv")
 head(ref)
 head(d)
 
@@ -406,8 +415,8 @@ class(s) <- "indicatordata"
 plotIndicatorTimeSeries(s, sublabel = T, coltoplot = 1:3, plotrownum = 3, yposadj = 1.2, type = "allLines", 
                         sameYscale = F, trendAnalysis = F)
 
-inddata <- s
-save(inddata, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_objects/disturbance.RData")
+ind <- s
+save(ind, file = "indicator_objects/disturbance.RData")
 
 
 

@@ -42,6 +42,24 @@ source("indicator_processing/non_automated/Sargassum_inundation.R")  # sargassum
 source("indicator_processing/non_automated/SAU_recreational_catch.R") # recreational catch based on Sea Around Us database
 source("indicator_processing/non_automated/pollution.R")              # reported superfund sites etc. 
 
+# fishery indicators - includes confidential data ----------------------
+
+confpath <- "C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/"
+
+dir("indicator_processing/fishery_dependent/")
+
+source("indicator_processing/fishery_dependent/INDICATOR_total_landings.R")   #  calc total landings by group
+source("indicator_processing/fishery_dependent/INDICATOR_gearchanges.R")      #  produces plots but no indicator objects
+
+
+source("indicator_processing/fishery_dependent/INDICATOR_gini.R")                       # 
+source("indicator_processing/fishery_dependent/INDICATOR_disturbance.R")                # 
+source("indicator_processing/fishery_dependent/INDICATOR_fishery_indicators_PR.R")      # 
+source("indicator_processing/fishery_dependent/INDICATOR_fishery_indicators_STT.R")     #  
+source("indicator_processing/fishery_dependent/INDICATOR_fishery_indicators_STX.R")     #  
+
+
+
 
 
 ###############################################################
