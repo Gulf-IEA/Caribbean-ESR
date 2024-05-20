@@ -22,7 +22,7 @@ load("indicator_processing/spec_file.RData")
 confpath <- "C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/MOST_RECENT/"
 
 # define start and end years ---------------------------
-styear <- 2000
+styear <- 2010
 enyear <- 2022
 
 # input data for Puerto Rico ---------------------------
@@ -44,7 +44,7 @@ table(d$PR_ID_CODE_ED, d$YEAR_LANDED)
 # per pound, except those prices for land crabs ("jueyes"), which can fetch up $60 per dozen.
 
 hist(d$PRICE_PER_LB)
-table(d$ITIS_COMMON_NAME[which(d$PRICE_PER_LB > 15)])
+sort(table(d$ITIS_COMMON_NAME[which(d$PRICE_PER_LB > 15)]))
 length(which(d$ITIS_COMMON_NAME != "CRAB,BLUE LAND" & d$PRICE_PER_LB > 15))
 d[(which(d$ITIS_COMMON_NAME != "CRAB,BLUE LAND" & d$PRICE_PER_LB > 15)), ]
 table(d$ITIS_COMMON_NAME[(which(d$ITIS_COMMON_NAME != "CRAB,BLUE LAND" & d$PRICE_PER_LB > 15))])
@@ -153,7 +153,7 @@ dim(totland)
 # calculate gini index --------------------------------
 
 gini_rev_stt <- apply(totrev, 2, calcGini)
-plot(names(gini_rev_stt), gini_rev_stt, type = "b", ylim = c(0.7, 1))
+plot(names(gini_rev_stt), gini_rev_stt, type = "b")
 
 gini_land_stt <- apply(totland, 2, calcGini)
 plot(names(gini_land_stt), gini_land_stt, col = 2)
@@ -209,7 +209,7 @@ totrev[is.na(totrev)] <- 0
 totrev
 rowSums(totrev, na.rm = T)
 which(rowSums(totrev, na.rm = T) == 0)
-totrev <- totrev[-which(rowSums(totrev, na.rm = T) == 0), ]
+#totrev <- totrev[-which(rowSums(totrev, na.rm = T) == 0), ]
 dim(totrev)
 
 # sum landings by permit and year ----------------------
@@ -255,7 +255,7 @@ class(s) <- "indicatordata"
 ind <- s 
 
 plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, sublabel = T, sameYscale = T, 
-                        widadj = 1.3, hgtadj = 1, trendAnalysis = F)
+                        widadj = 1.3, hgtadj = 1, trendAnalysis = T)
 
 save(ind, file = "indicator_objects/gini.RData")
 
