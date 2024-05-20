@@ -51,6 +51,7 @@ dir("indicator_processing/fishery_dependent/")
 source("indicator_processing/fishery_dependent/INDICATOR_total_landings.R")   #  calc total landings by group
 source("indicator_processing/fishery_dependent/INDICATOR_gearchanges.R")      #  produces plots but no indicator objects
 
+# not done below
 
 source("indicator_processing/fishery_dependent/INDICATOR_gini.R")                       # 
 source("indicator_processing/fishery_dependent/INDICATOR_disturbance.R")                # 

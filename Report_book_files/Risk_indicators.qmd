@@ -22,7 +22,7 @@ Indicator 2
 
 ```{r, message = FALSE, warnings = FALSE}
 load("../indicator_objects/OA.RData")
-plotIndicatorTimeSeries(inddata, trendAnalysis = T)
+plotIndicatorTimeSeries(ind, trendAnalysis = T)
 ```
 
 ### Hurricane activity
@@ -38,39 +38,30 @@ plotIndicatorTimeSeries(ind, trendAnalysis = T)
 
 Indicator 4
 
-```{r, message = FALSE, warnings = FALSE}
 load("../indicator_objects/turbidity.RData")
-plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 2, trendAnalysis = T, dateformat = "%m-%Y", sublabel = T)
-```
+plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 2, trendAnalysis = T, #dateformat = "%m-%Y", sublabel = T)
 
 ### Sea surface temperature
 
 Indicator 5
 
-```{r, message = FALSE, warnings = FALSE}
 load("../indicator_objects/Carib_SST.RData")
-plotIndicatorTimeSeries(ind, coltoplot = 1:3, trendAnalysis = T, sublabel = T, dateformat = "%m-%Y")
-```
+plotIndicatorTimeSeries(ind, coltoplot = 1:3, trendAnalysis = T, sublabel = T, #dateformat = "%m-%Y")
 
 ### Marine debris
 
 Indicator 6
 
 ```{r, message = FALSE, warnings = FALSE}
-load("../indicator_objects/beach_litter_un_carib.RData")
-plotIndicatorTimeSeries(inddata, trendAnalysis = F)
-```
-
-```{r, message = FALSE, warnings = FALSE}
 load("../indicator_objects/marine_debris.RData")
-plotIndicatorTimeSeries(inddata, trendAnalysis = F)
+plotIndicatorTimeSeries(ind, trendAnalysis = F)
 ```
 
 ### Identified point source pollution sites
 
 ```{r, message = FALSE, warnings = FALSE}
 load("../indicator_objects/pollution.RData")
-plotIndicatorTimeSeries(inddata, coltoplot = 1:2, trendAnalysis = F, sublabel = T)
+plotIndicatorTimeSeries(ind, coltoplot = 1:2, trendAnalysis = F, sublabel = T)
 ```
 
 ### Primary productivity via ocean color
@@ -99,10 +90,8 @@ plotIndicatorTimeSeries(ind, trendAnalysis = T)
 
 Indicator 11
 
-```{r, message = FALSE, warnings = FALSE}
 load("../indicator_objects/disturbance.RData")
 plotIndicatorTimeSeries(inddata, coltoplot = 1:3, trendAnalysis = T, sublabel = T)
-```
 
 ### Sargassum inundation
 
@@ -110,27 +99,21 @@ Indicator 12
 
 ```{r, message = FALSE, warnings = FALSE}
 load("../indicator_objects/Sargassum.RData")
-plotIndicatorTimeSeries(inddata, trendAnalysis = T)
+plotIndicatorTimeSeries(ind, trendAnalysis = T)
 ```
 
-```{r, message = FALSE, warnings = FALSE}
 load("../indicator_objects/sargassum_innundation_monthly_mean_hu.RData")
-plotIndicatorTimeSeries(inddata, coltoplot = 1:3, sublabel = T, trendAnalysis = T, dateformat = "%Y%b")
-```
+plotIndicatorTimeSeries(inddata, coltoplot = 1:3, sublabel = T, trendAnalysis = T, #dateformat = "%Y%b")
 
 ### Tourism via hotel occupancy
 
 Indicator 13
 
-```{r, message = FALSE, warnings = FALSE}
 load("../indicator_objects/hotel_occupancy_rates_USVI_and_PR.RData")
-plotIndicatorTimeSeries(inddata, coltoplot = 1:2, sublabel = T, trendAnalysis = T, dateformat = "%Y%b")
-```
+plotIndicatorTimeSeries(inddata, coltoplot = 1:2, sublabel = T, trendAnalysis = T, #dateformat = "%Y%b")
 
-```{r, message = FALSE, warnings = FALSE}
 load("../indicator_objects/hotel_occupancy.RData")
-plotIndicatorTimeSeries(inddata, coltoplot = 1:2, sublabel = T, trendAnalysis = T, dateformat = "%Y%b")
-```
+plotIndicatorTimeSeries(inddata, coltoplot = 1:2, sublabel = T, trendAnalysis = T, #dateformat = "%Y%b")
 
 ### Population change
 
