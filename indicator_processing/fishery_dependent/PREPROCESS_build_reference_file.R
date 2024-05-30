@@ -2,8 +2,89 @@
 rm(list = ls())
 
 library(rfishbase)
+library(dplyr)
 
-setwd("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/")
+setwd("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/")
+
+##################################################################################################
+# most recent 
+# May 20 2024 - new data pull for 2000+ sent by Kevin McCarthy -----------------------------------
+
+confpath <- "C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/"
+setwd(confpath)
+dir()
+
+# compare data sets  ---------------------------
+# PR ----------------------------------
+newdat <- read.csv(paste0(confpath, "May2024/wrkeithly_pr_com_data_2000_2022_20240501_C.csv"))
+olddat <- read.csv(paste0(confpath, "Jun2022/PR_landings_83_20_wSC.csv"))
+
+table(newdat$YEAR_LANDED)
+table(olddat$YEAR_LANDED)
+
+# use only most recent pull b/c most indicators only are good back to 2020
+# updated pull has higher sample numbers in recent years. 
+
+
+# STT ---------------------------------
+
+rm(list = ls())
+confpath <- "C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/"
+
+newdat <- read.csv(paste0(confpath, "May2024/wrkeithly_sttj_com_data_2012_2022_20240501_C.csv"))
+olddat <- read.csv(paste0(confpath, "STT_landings.csv"))
+table(newdat$TRIP_YEAR)
+table(olddat$TRIP_YEAR)
+
+olddat1 <- olddat[which(olddat$TRIP_YEAR > 2011), ]
+table(newdat$TRIP_YEAR)
+table(olddat1$TRIP_YEAR)
+
+olddat <- olddat[which(olddat$TRIP_YEAR <= 2011), ]
+newdat <- newdat[which(newdat$TRIP_YEAR >= 2012), ]
+table(olddat$TRIP_YEAR)
+table(newdat$TRIP_YEAR)
+
+newdat$REGION_PERMIT_NUM_PARTNER2 <- as.integer(newdat$REGION_PERMIT_NUM_PARTNER2)
+
+dat <- full_join(olddat, newdat)
+table(newdat$TRIP_YEAR)
+table(olddat$TRIP_YEAR)
+table(dat$TRIP_YEAR)
+
+write.table(dat, file = paste0(confpath, "MOST_RECENT/STT_2024.csv"), sep = ",", col.names = T, row.names = F)
+
+# combine because new data set is missing 2010 and 2011 but adds many more samples to 2021 and 2022
+
+
+# STX -----------------------------------------
+rm(list = ls())
+confpath <- "C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/"
+
+newdat <- read.csv(paste0(confpath, "May2024/wrkeithly_stx_com_data_2012_2022_20240501_C.csv"))
+olddat <- read.csv(paste0(confpath, "STX_072011_present_LANDINGS_trip_2021-03-11.csv"))
+
+table(newdat$TRIP_YEAR)
+table(olddat$TRIP_YEAR)
+
+olddat <- olddat[which(olddat$TRIP_YEAR <= 2011), ]
+newdat <- newdat[which(newdat$TRIP_YEAR >= 2012), ]
+table(olddat$TRIP_YEAR)
+table(newdat$TRIP_YEAR)
+
+newdat$REGION_PERMIT_NUM_PARTNER1 <- as.integer(newdat$REGION_PERMIT_NUM_PARTNER1)
+
+dat <- full_join(olddat, newdat)
+table(newdat$TRIP_YEAR)
+table(olddat$TRIP_YEAR)
+table(dat$TRIP_YEAR)
+
+write.table(dat, file = paste0(confpath, "MOST_RECENT/STX_2024.csv"), sep = ",", col.names = T, row.names = F)
+
+# combine because new data set is missing 2010 and 2011 but adds many more samples to 2021 and 2022
+
+########################  END MAY 2024  ############################
+
 
 # concatenate PR logbook data files  -----------------------
 # ONLY NEED TO DO THIS ONCE! 

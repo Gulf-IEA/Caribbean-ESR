@@ -35,3 +35,5 @@ ind <- inddata
 plotIndicatorTimeSeries(ind, plotrownum = 2, coltoplot = 1:2, sublabel = TRUE)
 
 save(ind, file = "indicator_objects/pollution.RData")
+
+###############  END  #######################

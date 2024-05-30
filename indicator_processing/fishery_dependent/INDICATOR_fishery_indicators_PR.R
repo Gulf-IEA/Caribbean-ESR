@@ -2,13 +2,21 @@
 # code for calculating pelagic:demersal ratio and Lmax indicators
 # uses logbook data for PR and USVI 
 
+# specification file and libraries -----------------------------
 rm(list = ls())
-library(pals)
+
+library(maps)
+library(plotTimeSeries)
+
+load("indicator_processing/spec_file.RData")
+
+confpath <- "C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/MOST_RECENT/"
+
 
 # input data for Puerto Rico ---------------------------
 setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/")
 
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/Jun2022/PR_landings_83_20_wSC_2005cor.csv")
+dat <- read.csv(paste0(confpath, "Jun2022/PR_landings_83_20_wSC_2005cor.csv"))
 
 # define start and end years ---------------------------
 styear <- 1990
@@ -93,7 +101,7 @@ table(is.na(d$PRICE), d$ITIS_COMMON_NAME)
 
 # pull in reference file and merge ------------------------------------
 
-ref <- read.csv("spp_ref_manualEdit.csv")
+ref <- read.csv("indicator_processing/fishery_dependent/spp_ref_manualEdit.csv")
 head(ref)
 head(d)
 tail(d)
@@ -166,7 +174,7 @@ rownames(tab2)[nsp] <- "other"
 
 tabr <- apply(tab2, 2, function(x) x/sum(x))
 
-colgd <- read.csv("cols.csv", header = F) 
+colgd <- read.csv("indicator_processing/fishery_dependent/cols.csv", header = F) 
 
 barplot(tabr, col = as.character(colgd$V2[match(rownames(tabr), colgd$V1)]), 
         xlim = c(0, ncol(tabr)*1.8), legend.text = rownames(tabr), args.legend = c(x = "right"), las = 2)
@@ -211,7 +219,7 @@ matplot(pd)
 pdrat <- pd[, 2] / pd[, 1]
 plot(styear:enyear, pdrat, type = "b")
 
-save(pdrat, file = "C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_data/PDRatioPR.RData")
+save(pdrat, file = "indicator_data/PDRatioPR.RData")
 
 # make indicator object and plot P:D ratio ------------------
 datdata <- styear:enyear
