@@ -24,6 +24,8 @@ table(olddat$YEAR_LANDED)
 
 # use only most recent pull b/c most indicators only are good back to 2020
 # updated pull has higher sample numbers in recent years. 
+# it appears that issue with 2005 expansion factor has been resolved?  - check
+# does this new data set include shell catch? 
 
 
 # STT ---------------------------------

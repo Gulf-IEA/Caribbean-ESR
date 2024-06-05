@@ -12,15 +12,14 @@ load("indicator_processing/spec_file.RData")
 
 confpath <- "C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/MOST_RECENT/"
 
+# define start and end years ---------------------------
+styear <- 2000
+enyear <- 2022
 
 # input data for Puerto Rico ---------------------------
-setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/")
 
-dat <- read.csv(paste0(confpath, "Jun2022/PR_landings_83_20_wSC_2005cor.csv"))
+dat <- read.csv(paste0(confpath, "wrkeithly_pr_com_data_2000_2022_20240501_C.csv"))
 
-# define start and end years ---------------------------
-styear <- 1990
-enyear <- 2020
 table(dat$YEAR_LANDED)
 
 # subset years------------------------------------------

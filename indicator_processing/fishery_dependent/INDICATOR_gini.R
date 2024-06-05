@@ -260,4 +260,5 @@ plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, sublabel = T, same
 save(ind, file = "indicator_objects/gini.RData")
 
 
-
+# hurricane Maria - 2017 - STX and PR
+# hurricane Irma - 2017 - STT
