@@ -2,16 +2,27 @@
 # code for calculating pelagic:demersal ratio and Lmax indicators
 # uses logbook data for PR and USVI 
 
+# specification file and libraries -----------------------------
 rm(list = ls())
+
+library(maps)
+library(plotTimeSeries)
 library(pals)
 
-setwd("C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_processing/fishery_dependent/")
+load("indicator_processing/spec_file.RData")
 
-dat <- read.csv("C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/STT_landings.csv")
+confpath <- "C:/Users/mandy.karnauskas/Desktop/CONFIDENTIAL/CaribbeanData/MOST_RECENT/"
 
 # define start and end years ---------------------------
-styear <- 1990
-enyear <- 2020
+styear <- 2000
+enyear <- 2022
+
+dat <- read.csv(paste0(confpath, "STT_2024.csv"))
+
+head(dat)
+
+# define start and end years ---------------------------
+
 table(dat$TRIP_YEAR)
 table(dat$TRIP_YEAR, dat$TRIP_MONTH)
 
@@ -22,10 +33,21 @@ dat$TRIP_YEAR[aa] <- dat$TRIP_YEAR[aa] - 1
 dat$TRIP_MONTH[aa] <- dat$TRIP_MONTH[aa] + 12
 table(dat$TRIP_YEAR, dat$TRIP_MONTH)
 
+# take out incomplete years -----------------------------
+
+tab <- table(dat$TRIP_YEAR, dat$TRIP_MONTH)
+lis <- as.numeric(names(which(apply(tab, 1, min) == 0)))
+lis
+dat <- dat[!(dat$TRIP_YEAR %in% lis), ]
+table(dat$TRIP_YEAR)
+
 # subset years------------------------------------------
 
 d <- dat[which(dat$TRIP_YEAR >= styear & dat$TRIP_YEAR <= enyear), ]
 table(d$TRIP_YEAR)
+table(d$TRIP_YEAR, d$TRIP_MONTH)
+
+enyear <- max(d$TRIP_YEAR)
 
 # look at main species landed --------------------------------
 tab <- sort(tapply(d$POUNDS_LANDED, d$SPECIES_NM, sum, na.rm = T), decreasing = T)
@@ -69,7 +91,7 @@ table(is.na(d$PRICE), d$SPECIES_NM)
 
 # pull in reference file and merge ------------------------------------
 
-ref <- read.csv("spp_ref_STT_manualEdit.csv")
+ref <- read.csv("indicator_processing/fishery_dependent/spp_ref_STT_manualEdit.csv")
 head(ref)
 head(d)
 
@@ -81,6 +103,8 @@ db <- merge(d, ref, by.x = "SPECIES_NM", by.y = "COMname", all.x = TRUE)
 dim(d)
 dim(db)
 which(is.na(db$SPECIES_NM))
+table(as.character(db$ITIS_SCIENTIFICNAME) == as.character(db$SCIname))
+which(as.character(db$ITIS_SCIENTIFICNAME) != as.character(db$SCIname))
 head(db)
 
 # insert missing prices -------------------------------
@@ -89,8 +113,9 @@ par(mar = c(8, 1, 1, 1)+2)
 barplot(sort(tapply(db$PRICE, db$famcode, mean, na.rm = T), decreasing = T), las = 2, 
         main = "average price by family")
 
-table(is.na(db$PRICE), db$SPECIES_NM)
-table(is.na(db$PRICE), db$famcode)
+table(db$SPECIES_NM, is.na(db$PRICE))
+table(db$famcode, is.na(db$PRICE))
+db$TRIP_YEAR[which(db$famcode == "lobsters" & is.na(db$PRICE))]
 
 for (i in unique(db$famcode))  {
   m <- mean(db$PRICE[which(db$famcode == i)], na.rm = T)
@@ -101,7 +126,7 @@ table(is.na(db$PRICE), db$famcode)
 barplot(sort(tapply(db$PRICE, db$famcode, mean, na.rm = T), decreasing = T), las = 2, 
         main = "average price by family")
 
-mean(db$PRICE[which(db$famcode == "lobsters")])  # lobster price: 7.026267 - for imputing into STX
+mean(db$PRICE[which(db$famcode == "lobsters")])  # lobster price: 9.016 - for imputing into STX
 
 db$REV <- db$POUNDS_LANDED * db$PRICE
 
@@ -141,14 +166,14 @@ rownames(tab2)[nsp] <- "other"
 
 tabr <- apply(tab2, 2, function(x) x/sum(x))
 
-colgd <- read.csv("cols.csv", header = F) 
+colgd <- read.csv("indicator_processing/fishery_dependent/cols.csv", header = F) 
 
 barplot(tabr, col = as.character(colgd$V2[match(rownames(tabr), colgd$V1)]), 
         xlim = c(0, ncol(tabr)*1.8), legend.text = rownames(tabr), args.legend = c(x = "right"), las = 2)
 
 plot(tab3, tabr)
 
-png(filename="C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/per_landings_STT.png", 
+png(filename="indicator_plots/per_landings_STT.png", 
     units="in", width=7, height=4.5, pointsize=12, res=72*10)
 
 barplot(tabr, col = as.character(colgd$V2[match(rownames(tabr), colgd$V1)]), 
@@ -187,8 +212,11 @@ dbf$PD2[grep("pelagic", dbf$PD)] <- "pelagic"
 table(dbf$PD, dbf$PD2)
 
 pd <- tapply(dbf$POUNDS_LANDED, list(dbf$TRIP_YEAR, dbf$PD2), sum, na.rm = T)
-pdrat <- pd[, 2] / pd[, 1]
+pd
+pdrat <- pd[, 2] / pd[, 1]    # pdrat is pelagic divided by benthic
 plot(yrs, pdrat, type = "b")
+
+save(pdrat, file = "indicator_data/fish-dep-indicators/PDRatioSTT.RData")
 
 # make indicator object and plot P:D ratio ------------------
 datdata <- yrs
@@ -204,6 +232,8 @@ class(s) <- "indicatordata"
 plotIndicatorTimeSeries(s, coltoplot = 1:3, plotrownum = 3, sublabel = T, trendAnalysis = F) #, outtype = "png")
 
 ############################  END PD ratio  #######################################
+
+dev.off()
 
 # Lmax calculations -----------------------------------------
 
@@ -236,7 +266,7 @@ barplot(t(Lmaxcl2), col = 1:6, las = 2, main = "Distribution of catch in Lmax si
         ylab = "proportion", xlim = c(1, 30), 
         legend = c("<40 cm", "40-60 cm", "60-100 cm", "100-200 cm", ">200 cm"), args.legend = c(x = "right", bty = "n"))
 
-# format indicator objects and plot ---------------------------------------
+# format indicator objects and plot by total catch ----------------------------
 datdata <- yrs
 inddata <- data.frame(Lmaxcl/10^6)
 labs <- c(rep("Total landings in Lmax class", 5), 
@@ -247,6 +277,7 @@ s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim =
 class(s) <- "indicatordata"
 plotIndicatorTimeSeries(s, coltoplot = 1:5, plotrownum = 5, sublabel = T, widadj = 1.5, trendAnalysis = F) #, outtype = "png")
 
+# plot based on proportion of catch in each size class -------------------------
 inddata <- data.frame(Lmaxcl2)
 labs <- c(rep("Proportion of landings in Lmax class",5), 
           rep("proportion", 5),
@@ -255,6 +286,11 @@ indnames <- data.frame(matrix(labs, nrow = 3, byrow = T))
 s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
 class(s) <- "indicatordata"
 plotIndicatorTimeSeries(s, coltoplot = 1:5, plotrownum = 5, sublabel = T, widadj = 1.5, hgtadj = 0.6, trendAnalysis = F) # outtype = "png", sameYscale = F)
+
+ind <- s
+
+save(ind, file = "indicator_objects/STT_Lmax_classes.RData")
+
 
 # understand what is driving the trends -------------------------------------------
 
@@ -266,11 +302,17 @@ sort(table(splisref$famcode[which(splisref$Lmax_cat == "(100,200]")]))
 
 splisref$recLand <- rowSums(tab)
 
+sm <- splisref[which(splisref$Lmax_cat == "(0,40]"), ]
+head(sm[order(sm$recLand, decreasing = T), ], 15)
+#majorly dominated by surgeonfishes, also some longspine squirrelfish
+
 plate <- splisref[which(splisref$Lmax_cat == "(60,100]"), ]
 head(plate[order(plate$recLand, decreasing = T), ], 15)
+# mainly red hind, yellowtail, and blue runner.  
 
 big <- splisref[which(splisref$Lmax_cat == "(100,200]"), ]
 head(big[order(big$recLand, decreasing = T), ], 15)
+# mainly tunas and mackerels, also red grouper
 
 # calculate average Lmax indicator -----------------------------------------------
 
@@ -285,6 +327,21 @@ summary(out)
 abline(out)
 
 plot(yrs, tapply(dbf$Lmax, dbf$TRIP_YEAR, mean, na.rm = T), type = "l")
+
+datdata <- styear:enyear
+inddata <- data.frame(lmax)
+labs <- c("Average maximum length of catch", "length (cm)" , "St. Thomas and St. John")
+indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
+s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
+class(s) <- "indicatordata"
+
+plotIndicatorTimeSeries(s, coltoplot = 1, sublabel = T) #, outtype = "png")
+
+dev.off()
+
+findat <- data.frame(cbind(yrs, lmax))
+
+save(findat, file = "indicator_data/fish-dep-indicators/Lmax_STT.RData")
 
 # figure out what is going on in 2018 with spike in pelagics -------------------
 
@@ -304,4 +361,5 @@ tabd <- tabd[order(rowSums(tabd), decreasing = T), ]
 matplot(yrs, t(tabd[1:20, ]), type = "b", col = glasbey(10), lwd = 2, lty = 1, pch = 19, las = 2)
 legend("topright", rownames(tabd)[1:20], col = glasbey(10), lwd = 2, lty = 1)
 
+##############  END  ########################
 

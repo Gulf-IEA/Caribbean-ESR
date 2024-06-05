@@ -373,11 +373,11 @@ plotIndicatorTimeSeries(s, coltoplot = 1, sublabel = T) #, outtype = "png")
 
 dev.off()
 
-ind <- s
+findat <- data.frame(cbind(styear:enyear, lmax))
 
-save(ind, file = "indicator_objects/PR_mean_Lmax.RData")
+save(findat, file = "indicator_data/fish-dep-indicators/Lmax_PR.RData")
 
-dev.off()
+
 
 # figure out what is going on in 2018 with spike in pelagics -------------------
 
