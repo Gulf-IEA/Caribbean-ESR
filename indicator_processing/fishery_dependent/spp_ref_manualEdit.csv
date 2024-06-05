@@ -25,6 +25,7 @@ Xiphiidae,SWORDFISH,Swordfish,NA,Xiphiidae,billfishes,pelagic,455,
 Albulidae,BONEFISH,NA,NA,Albulidae,bonefish,reef-associated,104,1
 Albula vulpes,BONEFISH,Bonefish,1008,Albulinae,bonefish,reef-associated,104,
 Lactophrys,"TRUNKFISH,UNSPECIFIED",Spotted trunkfish,NA,Lactophrys,boxfishes,reef-associated,48,1
+Lactophrys bicaudalis,"TRUNKFISH, SPOTTED",Spotted trunkfish,NA,Lactophrys,boxfishes,reef-associated,48,
 Ostraciidae,"BOXFISH,UNSPECIFIED",Honeycomb cowfish,NA,Ostraciidae,boxfishes,reef-associated,50,1
 Acanthostracion polygonius,"COWFISH,HONEYCOMBED",Honeycomb cowfish,4119,NA,boxfishes,reef-associated,50,
 Acanthostracion quadricornis,SCRAWLED COWFISH,Scrawled cowfish,4119,NA,boxfishes,reef-associated,55,
@@ -132,6 +133,7 @@ Harengula clupeola,FALSE PLICHARD,False herring,6654,Dorosomatinae,herrings,reef
 Opisthonema oglinum,"HERRING,ATLANTIC THREAD",Atlantic thread herring,5705,Dorosomatinae,herrings,reef-associated,38,
 Chirocentrodon bleekerianus,"HERRING,DOGTOOTH",Dogtooth herring,4436,NA,herrings,pelagic-neritic,16.10000038,
 Jenkinsia lamprotaenia,"HERRING,DWARF",Dwarf round herring,7908,NA,herrings,reef-associated,7.5,
+Clupeidae,HERRINGS,herrings,,Clupeidae,herrings,reef-associated,21.2,
 Sardinella,"HERRING,SARDINELLA",NA,NA,Sardinella,herrings,reef-associated,20.5,1
 Carangidae,JACKS,NA,NA,Carangidae,jacks,reef-associated,82.4,1
 Selene setapinnis,"MOONFISH,ATLANTIC",Atlantic moonfish,3554,Caranginae,jacks,benthopelagic,60,
@@ -253,6 +255,7 @@ Gempylus serpens,SNAKE MACKERELS,Snake mackerel,1960,NA,snake mackerels,pelagic-
 Apsilus dentatus,"SNAPPER,BLACK",Black snapper,1343,Apsilinae,snappers,reef-associated,65,
 Etelis oculatus,"SNAPPER,QUEEN",Queen snapper,9802,Etelinae,snappers,bathydemersal,100,
 Pristipomoides macropthalmus,"SNAPPER,CARDINAL",Cardinal snapper,NA,Lutjanidae,snappers,demersal,50,
+Pristipomoides aquilonaris,WENCHMAN                 ,Wenchman,NA,Lutjanidae,snappers,demersal,56,
 Lutjanidae,"SNAPPER,UNSPECIFIED",NA,NA,Lutjanidae,snappers,demersal,88.53,1
 Rhomboplites aurorubens,"SNAPPER,VERMILION",Vermilion snapper,6165,Lutjaninae,snappers,demersal,60,
 Lutjanus purpureus,"SNAPPER,CARIBBEAN RED",Southern red snapper,1202,Lutjaninae,snappers,demersal,100,

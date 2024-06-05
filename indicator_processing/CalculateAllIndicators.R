@@ -52,10 +52,12 @@ source("indicator_processing/fishery_dependent/INDICATOR_total_landings.R")   # 
 source("indicator_processing/fishery_dependent/INDICATOR_gearchanges.R")      #  produces plots but no indicator objects
 source("indicator_processing/fishery_dependent/INDICATOR_gini.R")             #  calculate gini index based on revenues
 source("indicator_processing/fishery_dependent/INDICATOR_disturbance.R")      #  calculate fishery disturbances based on distribution of landings over year
+source("indicator_processing/fishery_dependent/INDICATOR_fishery_indicators_PR.R")      # % revenue, 
+
 # not done below
 
 
-source("indicator_processing/fishery_dependent/INDICATOR_fishery_indicators_PR.R")      # 
+
 source("indicator_processing/fishery_dependent/INDICATOR_fishery_indicators_STT.R")     #  
 source("indicator_processing/fishery_dependent/INDICATOR_fishery_indicators_STX.R")     #  
 
@@ -86,6 +88,6 @@ enyear <- terminal_year
 #  Bottom: 
 #  save all indicators as "ind" object
 
-save(ind, file = "../../indicator_objects/INDICATOR_NAME.RData")
+save(ind, file = "indicator_objects/INDICATOR_NAME.RData")
 
 ##

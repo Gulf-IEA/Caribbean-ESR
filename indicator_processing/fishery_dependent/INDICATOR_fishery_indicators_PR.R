@@ -7,6 +7,7 @@ rm(list = ls())
 
 library(maps)
 library(plotTimeSeries)
+library(pals)
 
 load("indicator_processing/spec_file.RData")
 
@@ -25,7 +26,7 @@ table(dat$YEAR_LANDED)
 # subset years------------------------------------------
 
 d <- dat[which(dat$YEAR_LANDED >= styear & dat$YEAR_LANDED <= enyear), ]
-table(d$YEAR_LANDED)
+table(d$YEAR_LANDED, useNA = "always")
 
 # look at main species landed --------------------------------
 tab <- sort(tapply(d$ADJUSTED_POUNDS, d$ITIS_COMMON_NAME, sum, na.rm = T), decreasing = T)
@@ -42,17 +43,19 @@ matplot(styear:enyear, t(tab[1:10, ]), type = "l", col = 1:10, lty = c(1, 1, 1, 
 legend("topright", rownames(tab)[1:10], col = 1:10, lty = c(1, 1, 1, 1, 1, 2, 2, 2, 2, 2), lwd = 2)
 
 tab2 <- apply(tab[1:10, ], 2, function(x) x/sum(x))
+
+# note - is this spp composition plot possibly useful for the report??? ----------------------
 barplot(tab2, col = glasbey(10), xlim = c(0, 56), legend.text = rownames(tab2), args.legend = c(x = "right"), las = 2)
 
 j <- grep("FISHES,BONY,UNSPEC", rownames(tab)); rownames(tab)[j]
 plot(styear:enyear, tab[j, ]/colSums(tab, na.rm = T), main = "proportion of unidentified landings by year", type = "b")
 abline(h = 0.02)
-abline(v = 2005) # 2000 and on is 'data rich' period
+abline(v = 2005) # 2005 and on is 'data rich' period
 abline(h = 0.1)
 abline(v = 2000)
 
 # redo starting year cutoff based on data avail --------------------------
-styear <- 2000
+styear <- 2005
 d <- d[which(d$YEAR_LANDED >= styear), ]
 
 # add missing scientific names
@@ -62,22 +65,26 @@ lis <- as.data.frame(unique(d$ITIS_SCIENTIFIC_NAME))
 names(lis) = "sci"
 lis$com <- NA
 head(lis)
-lis <- lis[1:(nrow(lis)-1), ]
+#lis <- lis[1:(nrow(lis)-1), ]
 lis
 
 for (i in 1:nrow(lis))  { 
   n <- sort(table(d$ITIS_COMMON_NAME[which(d$ITIS_SCIENTIFIC_NAME == lis$sci[i])]), decreasing = T)
   lis$com[i] <- names(n[1])    }
 
+lis
+
 table(d$YEAR_LANDED[which(is.na(d$ITIS_SCIENTIFIC_NAME))])
 
 mis <- which(is.na(d$ITIS_SCIENTIFIC_NAME))
+d[mis, ]
 missci <- as.character(lis$sci[match(d$ITIS_COMMON_NAME[mis], lis$com)])
 d$ITIS_SCIENTIFIC_NAME[which(is.na(d$ITIS_SCIENTIFIC_NAME))] <- missci
 dim(table(d$ITIS_SCIENTIFIC_NAME))
 
 mis <- which(is.na(d$ITIS_SCIENTIFIC_NAME))
 d[mis, ]   # still some missing but not going to fix until new data pull
+unique(d$ERDMAN_COMMON_NAME[mis])
 
 # remove bad price values ------------------------------
 #Notes from Juan: 
@@ -109,11 +116,29 @@ hist(ref$Lmax)
 table(cut(ref$Lmax, breaks = c(0, 40, 60, 100, 200, 2000)))
 ref$Lmax_cat <- cut(ref$Lmax, breaks = c(0, 40, 60, 100, 200, 2000))
 
+ref$SCIname <- toupper(ref$SCIname)
+
+ref$SCIname[30]
+d$ITIS_SCIENTIFIC_NAME[which(d$ITIS_SCIENTIFIC_NAME == "ACANTHOSTRACION QUADRICORNIS")] <- ref$SCIname[30]
+ref$SCIname[196]
+d$ITIS_SCIENTIFIC_NAME[which(d$ITIS_SCIENTIFIC_NAME == "SCARUS TAENIOPTERUS")] <- ref$SCIname[196]
+ref$SCIname[197]
+d$ITIS_SCIENTIFIC_NAME[which(d$ITIS_SCIENTIFIC_NAME == "SPARISOMA RUBRIPINNE")] <- ref$SCIname[197]
+ref$SCIname[257]
+d$ITIS_SCIENTIFIC_NAME[which(d$ITIS_SCIENTIFIC_NAME == "PRISTIPOMOIDES AQUILONARIS")] <- ref$SCIname[257]
+ref$SCIname[27]
+d$ITIS_SCIENTIFIC_NAME[which(d$ITIS_SCIENTIFIC_NAME == "LACTOPHRYS BICAUDALIS")] <- ref$SCIname[27]
+
+# merge trip ticket data with reference file to get spp info --------------------------
+
 db <- merge(d, ref, by.x = "ITIS_SCIENTIFIC_NAME", by.y = "SCIname", all.x = TRUE)
 dim(ref)
 dim(d)
 dim(db)
 head(db)
+
+unique(db$ITIS_SCIENTIFIC_NAME[which(is.na(db$COMname))])
+unique(db$ITIS_COMMON_NAME[which(is.na(db$COMname))])
 
 # insert missing prices -------------------------------
 
@@ -146,6 +171,7 @@ cols <- glasbey(nsp)
 
 tab <- tapply(db$ADJUSTED_POUNDS, list(db$famcode, db$YEAR_LANDED), sum, na.rm = T)
 tab <- tab[order(rowSums(tab, na.rm = T), decreasing = T), ]
+tab
 
 par(mar = c(4, 4, 1, 1)+1)
 matplot(styear:enyear, t(tab[1:nsp, ]), type = "l", col = cols, lty = rep(1:3, (nsp/3)), lwd = 2)
@@ -159,7 +185,7 @@ tab3 <- apply(tab2, 2, function(x) x/sum(x))
 #cols[which(rownames(tab3) == "UNID")] <- "white"
 barplot(tab3, col = cols, xlim = c(0,ncol(tab3)*1.8), legend.text = rownames(tab3), args.legend = c(x = "right"), las = 2)
 
-# by revenue 
+# by revenue ---------------------------------
 
 tab <- tapply(db$REV, list(db$famcode, db$YEAR_LANDED), sum, na.rm = T)
 tab <- tab[order(rowSums(tab, na.rm = T), decreasing = T), ]
@@ -173,6 +199,7 @@ rownames(tab2)[nsp] <- "other"
 
 tabr <- apply(tab2, 2, function(x) x/sum(x))
 
+# plot of proportion revenue by year and species group ------------------------
 colgd <- read.csv("indicator_processing/fishery_dependent/cols.csv", header = F) 
 
 barplot(tabr, col = as.character(colgd$V2[match(rownames(tabr), colgd$V1)]), 
@@ -180,7 +207,7 @@ barplot(tabr, col = as.character(colgd$V2[match(rownames(tabr), colgd$V1)]),
 
 plot(tab3, tabr)
 
-png(filename="C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/per_landings_PR.png", 
+png(filename="indicator_plots/per_landings_PR.png", 
     units="in", width=7, height=4.5, pointsize=12, res=72*10)
 
 barplot(tabr, col = as.character(colgd$V2[match(rownames(tabr), colgd$V1)]),
@@ -192,9 +219,14 @@ abline(h = 0)
 
 dev.off()
 
-# calcuate P:D ratio and Lmax  -----------------------------------
+# end plot 
+
+# calcuate P:D ratio and Lmax  -------------------------------------
 
 table(as.character(db$ITIS_COMMON_NAME) == as.character(db$COMname))
+which(as.character(db$ITIS_COMMON_NAME) != as.character(db$COMname))
+db[which(as.character(db$ITIS_COMMON_NAME) != as.character(db$COMname)), c(31, 42)]
+
 length(which(db$ITIS_COMMON_NAME == "FISHES,BONY,UNSPECIFIED"))
 table(db$PD, useNA = "always")
 table(db$Lmax, useNA = "always")
@@ -215,10 +247,10 @@ table(dbf$PD, dbf$PD2)
 pd <- tapply(dbf$ADJUSTED_POUNDS, list(dbf$YEAR_LANDED, dbf$PD2), sum, na.rm = T)
 pd
 matplot(pd)
-pdrat <- pd[, 2] / pd[, 1]
+pdrat <- pd[, 2] / pd[, 1]  # pdrat is pelagic divided by benthic
 plot(styear:enyear, pdrat, type = "b")
 
-save(pdrat, file = "indicator_data/PDRatioPR.RData")
+save(pdrat, file = "indicator_data/fish-dep-indicators/PDRatioPR.RData")
 
 # make indicator object and plot P:D ratio ------------------
 datdata <- styear:enyear
@@ -248,6 +280,7 @@ names(splis) <- "SCIname"
 
 splisref <- merge(splis, ref, by = "SCIname", all.x = TRUE)
 table(rownames(tab) == splisref$SCIname)
+splisref
 
 llis <- levels(splisref$Lmax_cat)
 Lmax1 <- colSums(tab[which(splisref$Lmax_cat == llis[1]), ])
@@ -264,10 +297,10 @@ for (i in 1:nrow(Lmaxcl)) {  Lmaxcl2[i, ] <- Lmaxcl[i, ] / sum(Lmaxcl[i, ], na.r
 
 matplot(Lmaxcl)
 barplot(t(Lmaxcl2), col = 1:6, las = 2, main = "Distribution of catch in Lmax size classes                      ", 
-        ylab = "proportion", xlim = c(1, 24), 
+        ylab = "proportion", xlim = c(1, 28), 
 legend = c("<40 cm", "40-60 cm", "60-100 cm", "100-200 cm", ">200 cm"), args.legend = c(x = "right", bty = "n"))
 
-# format indicator objects and plot ---------------------------------------
+# format indicator objects and plot by total catch ----------------------------
 datdata <- styear:enyear
 inddata <- data.frame(Lmaxcl/10^6)
 labs <- c(rep("Total landings in Lmax class", 5), 
@@ -278,6 +311,7 @@ s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim =
 class(s) <- "indicatordata"
 plotIndicatorTimeSeries(s, coltoplot = 1:5, plotrownum = 5, sublabel = T, widadj = 1.5, trendAnalysis = F) #, outtype = "png")
 
+# plot based on proportion of catch in each size class -------------------------
 inddata <- data.frame(Lmaxcl2)
 labs <- c(rep("Proportion of landings in Lmax class",5), 
           rep("proportion", 5),
@@ -286,6 +320,10 @@ indnames <- data.frame(matrix(labs, nrow = 3, byrow = T))
 s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
 class(s) <- "indicatordata"
 plotIndicatorTimeSeries(s, coltoplot = 1:5, plotrownum = 5, sublabel = T, widadj = 1.5, hgtadj = 0.6, trendAnalysis = F) # outtype = "png", sameYscale = F)
+
+ind <- s
+
+save(ind, file = "indicator_objects/PR_Lmax_classes.RData")
 
 # understand what is driving the trends -------------------------------------------
 
@@ -299,9 +337,16 @@ splisref$recLand <- rowSums(tab)
 
 plate <- splisref[which(splisref$Lmax_cat == "(60,100]"), ]
 head(plate[order(plate$recLand, decreasing = T), ], 15)
+# the 60-100cm category is mostly driven by deepwater snapper species, also yellowtail, hogfish and red hind
 
 big <- splisref[which(splisref$Lmax_cat == "(100,200]"), ]
 head(big[order(big$recLand, decreasing = T), ], 15)
+# the 100-200 group is driven by mackerels, large rare parrotfishes, tunas and snook.  Also some large groupers
+
+xtra <- splisref[which(splisref$Lmax_cat == "(200,2e+03]"), ]
+head(xtra[order(xtra$recLand, decreasing = T), ], 15)
+# 200+ group is very heavily driven by dolphinfish.  also some sharks
+
 
 # calculate average Lmax indicator -----------------------------------------------
 
@@ -325,6 +370,12 @@ s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim =
 class(s) <- "indicatordata"
  
 plotIndicatorTimeSeries(s, coltoplot = 1, sublabel = T) #, outtype = "png")
+
+dev.off()
+
+ind <- s
+
+save(ind, file = "indicator_objects/PR_mean_Lmax.RData")
 
 dev.off()
 
