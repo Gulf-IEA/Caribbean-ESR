@@ -8,6 +8,7 @@ rm(list = ls())
 library(maps)
 library(plotTimeSeries)
 library(pals)
+library(Hmisc)
 
 load("indicator_processing/spec_file.RData")
 

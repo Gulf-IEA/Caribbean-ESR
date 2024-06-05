@@ -8,6 +8,7 @@ rm(list = ls())
 library(maps)
 library(plotTimeSeries)
 library(pals)
+library(Hmisc)
 
 load("indicator_processing/spec_file.RData")
 
@@ -175,7 +176,7 @@ barplot(tabr, col = as.character(colgd$V2[match(rownames(tabr), colgd$V1)]),
 
 plot(tab3, tabr)
 
-png(filename="C:/Users/mandy.karnauskas/Desktop/Caribbean-ESR/indicator_plots/per_landings_STX.png", 
+png(filename="indicator_plots/per_landings_STX.png", 
     units="in", width=7, height=4.5, pointsize=12, res=72*10)
 
 barplot(tabr, col = as.character(colgd$V2[match(rownames(tabr), colgd$V1)]), 

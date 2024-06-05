@@ -55,9 +55,7 @@ source("indicator_processing/fishery_dependent/INDICATOR_disturbance.R")      # 
 source("indicator_processing/fishery_dependent/INDICATOR_fishery_indicators_PR.R")      # % revenue, pelagic:demersal ratio, and Lmax indicators for Puerto Rico
 source("indicator_processing/fishery_dependent/INDICATOR_fishery_indicators_STT.R")     # % revenue, pelagic:demersal ratio, and Lmax indicators for STT/STJ
 source("indicator_processing/fishery_dependent/INDICATOR_fishery_indicators_STX.R")     # % revenue, pelagic:demersal ratio, and Lmax indicators for STX 
-
-
-
+source("indicator_processing/fishery_dependent/compile_indicators.R")         # compile Lmax and P:D indicators for all islands
 
 
 ###############################################################

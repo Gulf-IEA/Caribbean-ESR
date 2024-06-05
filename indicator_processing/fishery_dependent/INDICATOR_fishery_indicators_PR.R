@@ -8,6 +8,7 @@ rm(list = ls())
 library(maps)
 library(plotTimeSeries)
 library(pals)
+library(Hmisc)
 
 load("indicator_processing/spec_file.RData")
 
@@ -200,6 +201,7 @@ rownames(tab2)[nsp] <- "other"
 tabr <- apply(tab2, 2, function(x) x/sum(x))
 
 # plot of proportion revenue by year and species group ------------------------
+
 colgd <- read.csv("indicator_processing/fishery_dependent/cols.csv", header = F) 
 
 barplot(tabr, col = as.character(colgd$V2[match(rownames(tabr), colgd$V1)]), 
