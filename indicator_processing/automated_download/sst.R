@@ -3,7 +3,7 @@
 # https://stackoverflow.com/questions/68666187/internetopenurl-failed-a-connection-with-the-server-could-not-be-established
 
 rm(list = ls())
-# dev.off()
+dev.off()
 
 library(lubridate)
 library(maps)
