@@ -3,7 +3,7 @@
 # https://stackoverflow.com/questions/68666187/internetopenurl-failed-a-connection-with-the-server-could-not-be-established
 
 rm(list = ls())
-dev.off()
+# dev.off()
 
 library(lubridate)
 library(maps)
@@ -20,7 +20,6 @@ styear <- 1982
 enyear <- terminal_year
 
 # get ERDDAP info  --------------------------------
-sst <- info('ncdcOisst21Agg')
 sst <- info('ncdcOisst21Agg_LonPM180') # this may work better
 
 # empty data  -------------------------------------------------
@@ -37,11 +36,6 @@ for (yr in styear:enyear) {
   ### BDT rERDDAP fix
   sst_grab <- griddap(sst, fields = 'sst', 
                       time = c(paste0(yr,'-01-01'), paste0(yr,'-12-31')), 
-                      longitude = c(360 + min_lon, 360 + max_lon), 
-                      latitude = c(min_lat, max_lat))
-  
-  sst_grab <- griddap(sst, fields = 'sst', 
-                      time = c(paste0(yr,'-01-01'), paste0(yr,'-12-31')), 
                       longitude = c(min_lon, max_lon), 
                       latitude = c(min_lat, max_lat))
   
@@ -53,7 +47,6 @@ for (yr in styear:enyear) {
   dat[m:n,] <- data.frame(sst_agg[,1:2], unlist(sst_agg[,3]))
   m <- n + 1
   
-#   
 # # url from ERDDAP for OISST, download and read ----------------
 #   url <- paste0("https://coastwatch.pfeg.noaa.gov/erddap/griddap/ncdcOisst21Agg.csv?sst[(", yr, "-01-01T12:00:00Z):1:(", yr, "-12-31T12:00:00Z)][(0.0):1:(0.0)][(17):1:(19)][(292):1:(296)]")
 # 
@@ -81,7 +74,7 @@ for (yr in styear:enyear) {
 # file.remove("st.csv")
 
 # add row names and yearmonth column --------------------------
-names(dat) <- c("year", "mon", "mean", "min", "max")
+# names(dat) <- c("year", "mon", "mean", "min", "max")
 dat$yrmon <- paste0(dat$mon, "-", dat$year)
 dat
 head(dat)
