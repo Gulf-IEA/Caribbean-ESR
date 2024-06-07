@@ -7,7 +7,7 @@
 # specification file and libraries -----------------------------
 
 rm(list = ls())
-# dev.off()
+dev.off()
 
 library(lubridate)
 library(maps)
