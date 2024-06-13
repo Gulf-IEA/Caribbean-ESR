@@ -8,7 +8,7 @@ There are several folders in this repository.
 3. indicator_objects --> houses all of the .RData outputs from the R scripts used to create each indicator. These are tables all in a standardized format with each indicator variable and a time column.
 4. indicator_plots --> houses all the output plots from the PlotAllIndicators.R script as well as any additional plots that are created separately to be used in the report.
 5. Report_book_files --> houses the quarto book document and associated files needed to create the ESR report.
-6. _book --> contains the renderd pdf version of the ESR report. This again is a work in progress.
+6. _book --> contains the rendered pdf version of the ESR report. This again is a work in progress.
 
 
 _____________________________________________________________________
