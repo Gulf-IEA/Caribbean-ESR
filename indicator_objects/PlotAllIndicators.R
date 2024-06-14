@@ -54,8 +54,8 @@ load("indicator_objects/carib_Chl.RData")
 plotIndicatorTimeSeries(ind, trendAnalysis = T, dateformat = "%m-%Y")
                                               
 ### 9. Coastal development via land cover
-                                                
-# Just a figure
+
+# This is just a figure so skip
                                                 
 ### 10. Number of major earthquakes
                                                 
@@ -65,7 +65,7 @@ plotIndicatorTimeSeries(ind, trendAnalysis = T)
 ### 11. Fishery/market disturbance indicator 
 
 load("indicator_objects/disturbance.RData")
-plotIndicatorTimeSeries(inddata, coltoplot = 1:3, trendAnalysis = T, sublabel = T)
+plotIndicatorTimeSeries(ind, coltoplot = 1:3, trendAnalysis = T, sublabel = T)
                                                 
 ### 12. Sargassum inundation
                                                 
@@ -81,51 +81,53 @@ load("indicator_objects/hotel_occupancy.RData")
 plotIndicatorTimeSeries(inddata, coltoplot = 1:2, sublabel = T, trendAnalysis = T,dateformat = "%Y%b")
                                                                                           ### 14. Population change
 
-#14 - MAPS but also should be census data
+# still working on this (census data plus maps?)
 
 ### 15. Fishery independent surveys of economically important species
 
-load("../indicator_objects/RVC_PR.RData")
+load("indicator_objects/RVC_PR.RData")
 plotIndicatorTimeSeries(ind, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
 
-load("../indicator_objects/RVC_STSJ.RData")
+load("indicator_objects/RVC_STSJ.RData")
 plotIndicatorTimeSeries(ind, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
 
-load("../indicator_objects/RVC_STX.RData")
+load("indicator_objects/RVC_STX.RData")
 plotIndicatorTimeSeries(ind, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
 
-#Indicator 16.1 - abundance of commercial fish based on TCRMP and PRCRMP 
+### 16. Fish density 
 
-#Indicator 16.2 - slope of the size spectrum based on TCRMP and PRCRMP
+load("indicator_objects/fish_density.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:2, trendAnalysis = T, sublabel = T)
 
-### 17. Commercial landings
+### 17. Slope of the size spectrum
 
-load("../indicator_objects/landings.RData") 
-plotIndicatorTimeSeries(inddata, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
-
-load("../indicator_objects/fish_density.RData")
-plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 2, trendAnalysis = T, sublabel = T)
+# missing
 
 ### 18. Pelagic:demersal ratio
 
-#Indicator 18
+load("indicator_objects/PD_ratio.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:3, trendAnalysis = T, sublabel = T)
 
 ### 19 Maximum length and size structure
 
-#Indicator 19 - Lmax indicator
+load("indicator_objects/PR_Lmax_classes.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:5, trendAnalysis = T, sublabel = T)
 
-### 20. Changes in target species / landing composition
+load("indicator_objects/STT_Lmax_classes.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:5, trendAnalysis = T, sublabel = T)
 
-load("../indicator_objects/total_landings.RData") 
-plotIndicatorTimeSeries(inddata, coltoplot = 1:9, plotrownum = 3, plotcolnum = 3, trendAnalysis = T, sublabel = T)
+### 20. Total landings
+
+load("indicator_objects/total_landings.RData") 
+plotIndicatorTimeSeries(ind, coltoplot = 1:9, plotrownum = 3, plotcolnum = 3, trendAnalysis = T, sublabel = T)
                         
-### 21. Total, lobster and conch revenues
+### 21. Percent revenues by species group
                         
-# Just figures
+# Just figures - per_landings_<island>
                         
-### 22. Total, lobster and conch trips
+### 22. Number of trips
                         
-# Indicator 22 - number of trips
+# Just figures - gear_types_<island> 
                         
 ### 23. Ocean economy employment and wages
                         
@@ -134,35 +136,35 @@ plotIndicatorTimeSeries(inddata, coltoplot = 1:8, plotrownum = 2, trendAnalysis 
                         
 ### 24. GDP
 
-load("../indicator_objects/GDP.RData")
+load("indicator_objects/GDP.RData")
 plotIndicatorTimeSeries(ind, coltoplot = 1:2, trendAnalysis = T, sublabel = T)
                     
 ### 25. Unemployment
 
-load("../indicator_objects/unemployment.RData")
+load("indicator_objects/unemployment.RData")
 plotIndicatorTimeSeries(ind, coltoplot = 1:2, trendAnalysis = T, sublabel = T, dateformat = "%Y%b")
                         
 ### 26. Gini coefficient for distribution of landings and revenue
 
-load("../indicator_objects/gini.RData") 
-plotIndicatorTimeSeries(inddata, coltoplot = 1:3, plotrownum = 2, trendAnalysis = T, sublabel = T) 
+load("indicator_objects/gini.RData") 
+plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 2, trendAnalysis = T, sublabel = T) 
                         
 ### 27. Commercial fishing community engagement and reliance
                         
-# Indicator 27 - working with Tarsila on
+# Think this should be the EJ, Economic, & gentrification pressure indicators
                         
-### 28. Recreational fishing engagement and participation
+### 28. Recreational landings
                         
-load("../indicator_objects/total_rec_catch.RData") 
-plotIndicatorTimeSeries(inddata, coltoplot = 1:2, trendAnalysis = T, sublabel = T) 
+load("indicator_objects/total_rec_catch.RData") 
+plotIndicatorTimeSeries(ind, coltoplot = 1:2, trendAnalysis = T, sublabel = T) 
                         
 ### 29. Commercial fishing engagement and participation
-                        
-# Indicator 29
+
+# Maps from Tarsila - <island>_comm_fishing_engagement and <island>_comm_fishing_reliance
                         
 ### 30. Changes in gear type
                         
-# Just plots
+# Just plots - gear_types_<island>;  NMDSgear_<island>
 
 ### 31. Number of seasonal closures implemented
                         
@@ -178,12 +180,12 @@ plotIndicatorTimeSeries(inddata, coltoplot = 1:2, trendAnalysis = T, sublabel = 
                         
 ### 34 Percent coral cover
                       
-load("../indicator_objects/NCRMP_coral_cover_richness.RData") 
-plotIndicatorTimeSeries(inddata, coltoplot = 1:6, sublabel = T, trendAnalysis = F) 
+load("indicator_objects/coral_spprichness_cover.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:4, sublabel = T, trendAnalysis = T)
                         
 ### 35. Coral species diversity
 
-load("../indicator_objects/coral_spprichness_cover.RData")
+load("indicator_objects/coral_spprichness_cover.RData")
 plotIndicatorTimeSeries(ind, coltoplot = 1:4, sublabel = T, trendAnalysis = T)
                         
                           
