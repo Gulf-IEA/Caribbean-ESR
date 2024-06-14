@@ -4,8 +4,8 @@ The list of indicators included in the 2024 ESR can be found in this [table](htt
 
 There are several folders in this repository.
 1. indicator_data --> houses all the non-confidential data needed to create each indicator. Confidential data are stored elsewhere.
-2. indicator_processing --> houses all the code (R scripts) for creating each indicator. The CalculateAllIndicators.R file runs all of the R scripts for all indicators. This should be run anytime the report needs to be updated. Similarly, the PlotAllIndicators.R file creates all of the plots for the ESR and saves them to the indicator_plots folder. This script is a work in process, it does not yet run.
-3. indicator_objects --> houses all of the .RData outputs from the R scripts used to create each indicator. These are tables all in a standardized format with each indicator variable and a time column.
+2. indicator_processing --> houses all the code (R scripts) for creating each indicator. The CalculateAllIndicators.R file runs all of the R scripts for all indicators. This should be run anytime the report needs to be updated. 
+3. indicator_objects --> houses all of the .RData outputs from the R scripts used to create each indicator. These are tables all in a standardized format with each indicator variable and a time column. This folder also contains the PlotAllIndicators.R file, which creates all of the plots for the ESR and saves them to the indicator_plots folder. This script is a work in process, it does not yet run.
 4. indicator_plots --> houses all the output plots from the PlotAllIndicators.R script as well as any additional plots that are created separately to be used in the report.
 5. Report_book_files --> houses the quarto book document and associated files needed to create the ESR report.
 6. _book --> contains the rendered pdf version of the ESR report. This again is a work in progress.
