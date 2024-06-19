@@ -30,6 +30,7 @@ source("indicator_processing/automated_download/earthquakes.R")           # eart
 source("indicator_processing/automated_download/kd490.R")                 # turbidity from Kd490   # THIS DOWNLOAD CAN BE FINICKY
 source("indicator_processing/automated_download/Unemployment.R")          # unemployment rate
 source("indicator_processing/automated_download/GDP.R")                   # Gross Domestic Product
+source("indicator_processing/automated_download/cruise_visitors.R")                   # Cruise visitors
 
 # partially automated - pull from data in folder ----------------------
 
@@ -41,6 +42,7 @@ source("indicator_processing/non_automated/CRMP_compile.R")          # fishery-i
 source("indicator_processing/non_automated/Sargassum_inundation.R")  # sargassum indicator
 source("indicator_processing/non_automated/SAU_recreational_catch.R") # recreational catch based on Sea Around Us database
 source("indicator_processing/non_automated/pollution.R")              # reported superfund sites etc. 
+source("indicator_processing/non_automated/tier_designation.R")      # ABC control rule Tier designation
 
 # fishery indicators - includes confidential data ----------------------
 

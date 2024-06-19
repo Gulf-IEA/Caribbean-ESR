@@ -15,8 +15,10 @@ library(spam)
 
 ### 1. Degree heating weeks
 
+png(file="indicator_plots/DegreeHeatingWeeks.png", width=5, height=4, units="in", res=250)
 load("indicator_objects/DegreeHeatingWeeks.RData")
 plotIndicatorTimeSeries(ind, coltoplot = 1:2, trendAnalysis = T, sublabel = T, dateformat = "%Y%m", plotrownum = 2, plotcolnum = 1)
+dev.off()
 
 ### 2. Ocean acidification via aragonite saturation state
 
