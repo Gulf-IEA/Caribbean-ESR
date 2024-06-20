@@ -26,10 +26,11 @@ inddata <- data.frame(cbind(PR, USVI))
 labs <- c("Stocks/complexes with Tier 3 designation" , "Percent", "Puerto Rico",
           "Stocks/complexes with Tier 3 designation" , "Percent", "USVI")
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
-ind <- list(labels = indnames, indicators = inddata, datelist = datdata)
+inddata <- list(labels = indnames, indicators = inddata, datelist = datdata)
 class(inddata) <- "indicatordata"
 
 # plot and save ----------------------------------
+ind <- inddata
 plotIndicatorTimeSeries(ind, plotrownum = 2, coltoplot = 1:2, sublabel = TRUE, dateformat = "%Y%b", trendAnalysis = T)
 
 save(ind, file = "indicator_objects/tier3.RData")

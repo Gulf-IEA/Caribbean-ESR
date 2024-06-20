@@ -171,21 +171,27 @@ plotIndicatorTimeSeries(ind, coltoplot = 1:2, trendAnalysis = T, sublabel = T)
 ### 31. Number of seasonal closures implemented
                         
 #Indicator 31
+
+### 32. Number of seasonal closures implemented
+
+load("indicator_objects/tier3.RData")
+plotIndicatorTimeSeries(ind, plotrownum = 2, coltoplot = 1:2, sublabel = TRUE, dateformat = "%Y%b", trendAnalysis = T)
                         
-### 32. Number of education and outreach events
+### 33. Number of education and outreach events
                         
-#Indicator 32
+load("indicator_objects/outreach.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:2, plotrownum = 2, trendAnalysis = T)
                         
-### 33. Number of enforcement actions
+### 34. Number of enforcement actions
                         
 #Indicator 33
                         
-### 34 Percent coral cover
+### 35. Percent coral cover
                       
 load("indicator_objects/coral_spprichness_cover.RData")
 plotIndicatorTimeSeries(ind, coltoplot = 1:4, sublabel = T, trendAnalysis = T)
                         
-### 35. Coral species diversity
+### 36. Coral species diversity
 
 load("indicator_objects/coral_spprichness_cover.RData")
 plotIndicatorTimeSeries(ind, coltoplot = 1:4, sublabel = T, trendAnalysis = T)
