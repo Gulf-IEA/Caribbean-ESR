@@ -30,7 +30,8 @@ source("indicator_processing/automated_download/earthquakes.R")           # eart
 source("indicator_processing/automated_download/kd490.R")                 # turbidity from Kd490   # THIS DOWNLOAD CAN BE FINICKY
 source("indicator_processing/automated_download/Unemployment.R")          # unemployment rate
 source("indicator_processing/automated_download/GDP.R")                   # Gross Domestic Product
-source("indicator_processing/automated_download/cruise_visitors.R")                   # Cruise visitors
+source("indicator_processing/automated_download/cruise_visitors.R")       # Cruise visitors
+source("indicator_processing/automated_download/population.R")            #Human population
 
 # partially automated - pull from data in folder ----------------------
 
