@@ -46,7 +46,7 @@ ind <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim
 class(ind) <- "indicatordata"
 plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, sublabel = T, sameYscale = F)
 
-save(ind, file = "indicator_objects/mean_Lmax.RData")
+# save(ind, file = "indicator_objects/mean_Lmax.RData")
 
 Lmax <- mat
 

@@ -147,6 +147,7 @@ for (j in sitelis) {
     mat[i, 3:12] <- c(su2, su[3:length(su)])
     mat[i, 13] <- sum(f1$Total, na.rm = T)  }
 } 
+
 dim(mat)
 mat <- mat[-which(rowSums(mat[3:ncol(mat)]) == 0), ]
 dim(mat)
