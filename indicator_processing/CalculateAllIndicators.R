@@ -44,6 +44,7 @@ source("indicator_processing/non_automated/Sargassum_inundation.R")  # sargassum
 source("indicator_processing/non_automated/SAU_recreational_catch.R") # recreational catch based on Sea Around Us database
 source("indicator_processing/non_automated/pollution.R")              # reported superfund sites etc. 
 source("indicator_processing/non_automated/tier_designation.R")      # ABC control rule Tier designation
+source("indicator_processing/non_automated/oceanNAICS.R")      # Ocean economy
 
 # fishery indicators - includes confidential data ----------------------
 
