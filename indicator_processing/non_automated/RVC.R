@@ -2,8 +2,8 @@
 # The indicator of interest is the abundance of economically important fish.
 # Identified target species for the Caribbean region: yellowtail snapper, queen triggerfish, red hind, redband parrotfish, stoplight parrotfish, mutton snapper.
 
-install.packages('devtools')
-devtools::install_github('jeremiaheb/rvc')
+#install.packages('devtools')
+#devtools::install_github('jeremiaheb/rvc')
 library(rvc)
 
 #  find root directory for project ---------------
@@ -71,6 +71,11 @@ for(j in regions) {
   for (i in species) {
     # Subset data for the current species
     species_data <- filter(ddens, SPECIES_CD == i)
+    
+    # If the species is mutton snapper (LUT ANAL), change density values to NA before 2017
+    if (i == "LUT ANAL") {
+      species_data$density[species_data$YEAR < 2017] <- NA
+    }
   
     # format indicator object -----------------------------
   
@@ -160,6 +165,17 @@ inddata <- list(labels = indnames, indicators = inddata, datelist = datdata)
 class(inddata) <- "indicatordata"
 ind <- inddata
 save(ind, file = "indicator_objects/RVC_STX.RData")
+
+
+load("indicator_objects/RVC_PR.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
+
+load("indicator_objects/RVC_STSJ.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
+
+load("indicator_objects/RVC_STX.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
+
 
 
 ### Left to troubleshoot:
