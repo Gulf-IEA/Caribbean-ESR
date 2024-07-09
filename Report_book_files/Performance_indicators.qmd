@@ -24,8 +24,7 @@ Indicator 18
 
 Indicator 19 - Lmax indicator
 
-![](/indicator_plots/PR_Lmax_classes_plot.png){fig-alt="Plot showing a time series of an indicator"}
-![](/indicator_plots/STT_Lmax_classes_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![](/indicator_plots/PR_Lmax_classes_plot.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/STT_Lmax_classes_plot.png){fig-alt="Plot showing a time series of an indicator"}
 
 ### Commercial landings
 
@@ -45,9 +44,7 @@ Indicator 21 - percent revenues by species group
 
 Indicator 22 - number of trips
 
-![](/indicator_plots/gearTypes_PR.png){fig-alt="Plot showing a time series of an indicator"}
-![](/indicator_plots/gearTypes_STT.png){fig-alt="Plot showing a time series of an indicator"}
-![](/indicator_plots/gearTypes_STX.png){fig-alt="Plot showing a time series of an indicator"}
+![](/indicator_plots/gearTypes_PR.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/gearTypes_STT.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/gearTypes_STX.png){fig-alt="Plot showing a time series of an indicator"}
 
 ### Ocean economy employment and wages
 
@@ -77,12 +74,9 @@ Indicator 26
 
 ### Environmental justice, economic, and gentrification pressure
 
-Indicator 27 
+Indicator 27
 
-![](/indicator_plots/CSVI_plots/Faceted_Bar_Plot_Puerto Rico East.png){fig-alt="Plot showing a time series of an indicator"}
-![](/indicator_plots/CSVI_plots/Faceted_Bar_Plot_Puerto Rico West.png){fig-alt="Plot showing a time series of an indicator"}
-![](/indicator_plots/CSVI_plots/Faceted_Bar_Plot_St. Croix.png){fig-alt="Plot showing a time series of an indicator"}
-![](/indicator_plots/CSVI_plots/Faceted_Bar_Plot_St. Thomas & St. John.png){fig-alt="Plot showing a time series of an indicator"}
+![](/indicator_plots/CSVI_plots/Faceted_Bar_Plot_Puerto%20Rico%20East.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/CSVI_plots/Faceted_Bar_Plot_Puerto%20Rico%20West.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/CSVI_plots/Faceted_Bar_Plot_St.%20Croix.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/CSVI_plots/Faceted_Bar_Plot_St.%20Thomas%20&%20St.%20John.png){fig-alt="Plot showing a time series of an indicator"}
 
 ## 5.4 Engagement and participation
 
@@ -96,10 +90,7 @@ Indicator 28
 
 Indicator 29
 
-![](/indicator_plots/PR_comm_fishing_engagement.png){fig-alt="Plot showing a time series of an indicator"}
-![](/indicator_plots/PR_comm_fishing_reliance.png){fig-alt="Plot showing a time series of an indicator"}
-![](/indicator_plots/USVI_comm_fishing_engagement.png){fig-alt="Plot showing a time series of an indicator"}
-![](/indicator_plots/USVI_comm_fishing_reliance.png){fig-alt="Plot showing a time series of an indicator"}
+![](/indicator_plots/PR_comm_fishing_engagement.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/PR_comm_fishing_reliance.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/USVI_comm_fishing_engagement.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/USVI_comm_fishing_reliance.png){fig-alt="Plot showing a time series of an indicator"}
 
 ## 5.5 Bycatch reduction
 
