@@ -133,7 +133,7 @@ plotIndicatorTimeSeries(ind, coltoplot = 1:9, plotrownum = 3, plotcolnum = 3, tr
                         
 ### 23. Ocean economy employment and wages
                         
-load("../indicator_objects/OceanNAICS.RData")
+load("indicator_objects/oceanNAICS.RData")
 plotIndicatorTimeSeries(inddata, coltoplot = 1:8, plotrownum = 2, trendAnalysis = T, sublabel = T)
                         
 ### 24. GDP

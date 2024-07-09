@@ -1,0 +1,3 @@
+Error with dataset: indicator_objects/hotel_occupancy.RData 
+ Error in readChar(con, 5L, useBytes = TRUE): cannot open the connection
+
