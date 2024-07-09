@@ -1,0 +1,114 @@
+```{r, message = FALSE, warnings = FALSE}
+#devtools::install_github("https://github.com/MandyKarnauskas-NOAA/plotTimeSeries.git")
+
+library(plotTimeSeries)
+library(spam)
+```
+
+# 4. Risks to meeting fishery management objectives
+
+### Degree heating weeks
+
+The degree heating week (DHW) provides a measure of cumulative temperature anomalies at least 1°C above the maximum monthly mean sea surface temperature over the prior twelve-week period for a given satellite data grid point (5km pixel). Both the intensity and duration of the heat stress impact the DHW, which is measured in units of “degree Celsius-weeks'' (or °C-weeks). The DHW data presented below is for the Puerto Rico and U.S. Virgin Islands Daily 5km Regional Virtual Stations. The Regional Virtual Stations provide a time series of DHW data that is representative of the whole region’s thermal conditions. Briefly, the reef pixels within a region are identified based on the most updated maps of coral reef locations, and a 20 km buffer around these reef areas is added as a boundary for the virtual station. The DHW value for the virtual station is based on the 90th percentile Coral Bleaching Hotspot value (i.e., the number of degrees Celsius above the maximum monthly mean sea surface temperature). Field observations of coral bleaching have indicated that a DHW value of 4°C-weeks can lead to significant coral bleaching, while a DHW value of 8°C-weeks or above can likely lead to severe, widespread bleaching and substantial mortality. The monthly mean DHW value is plotted below for the Puerto Rico and Virgin Island virtual stations. An increasing trend was seen for both Puerto Rico and the U.S. Virgin Islands in the last five years. Peak number of degree heating weeks with value more than one standard deviation above the mean were seen in late 2005, late 2006, late 2010, and late 2019, reflecting times of most pressure on coral reef resources. Indeed, mass bleaching events were experienced in the U.S. Caribbean region in 2005, 2010 and 2019 (see observed coral bleaching indicator). More information on NOAA Coral Reef Watch’s Methodology can be found at: https://coralreefwatch.noaa.gov/product/5km/methodology.php#dhw Text files of DHW data were downloaded at: (Accessed August 16, 2021) https://coralreefwatch.noaa.gov/product/vs/data.php.
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/DegreeHeatingWeeks.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:2, trendAnalysis = T, sublabel = T, dateformat = "%Y%m", plotrownum = 2, plotcolnum = 1)
+```
+
+### Ocean acidification via aragonite saturation state
+
+Indicator 2
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/OA.RData")
+plotIndicatorTimeSeries(ind, trendAnalysis = T)
+```
+
+### Hurricane activity
+
+Indicator 3
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/ACEindex.RData")
+plotIndicatorTimeSeries(ind, trendAnalysis = T)
+```
+
+### Turbidity
+
+Indicator 4
+
+load("../indicator_objects/turbidity.RData") plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 2, trendAnalysis = T, #dateformat = "%m-%Y", sublabel = T)
+
+### Sea surface temperature
+
+Indicator 5
+
+load("../indicator_objects/Carib_SST.RData") plotIndicatorTimeSeries(ind, coltoplot = 1:3, trendAnalysis = T, sublabel = T, #dateformat = "%m-%Y")
+
+### Marine debris
+
+Indicator 6
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/marine_debris.RData")
+plotIndicatorTimeSeries(ind, trendAnalysis = F)
+```
+
+### Identified point source pollution sites
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/pollution.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:2, trendAnalysis = F, sublabel = T)
+```
+
+### Primary productivity via ocean color
+
+Indicator 8
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/carib_Chl.RData")
+plotIndicatorTimeSeries(ind, trendAnalysis = T, dateformat = "%m-%Y")
+```
+
+### Coastal development via land cover
+
+![](/indicator_plots/Land_Use_Land_Cover_2024.jpg)
+
+### Number of major earthquakes
+
+Indicator 10
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/earthquakes.RData")
+plotIndicatorTimeSeries(ind, trendAnalysis = T)
+```
+
+### Fishery/market disturbance indicator (maybe belongs in socioeconomic health)
+
+Indicator 11
+
+load("../indicator_objects/disturbance.RData") plotIndicatorTimeSeries(inddata, coltoplot = 1:3, trendAnalysis = T, sublabel = T)
+
+### Sargassum inundation
+
+Indicator 12
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/Sargassum.RData")
+plotIndicatorTimeSeries(ind, trendAnalysis = T)
+```
+
+load("../indicator_objects/sargassum_innundation_monthly_mean_hu.RData") plotIndicatorTimeSeries(inddata, coltoplot = 1:3, sublabel = T, trendAnalysis = T, #dateformat = "%Y%b")
+
+### Tourism via hotel occupancy
+
+Indicator 13
+
+load("../indicator_objects/hotel_occupancy_rates_USVI_and_PR.RData") plotIndicatorTimeSeries(inddata, coltoplot = 1:2, sublabel = T, trendAnalysis = T, #dateformat = "%Y%b")
+
+load("../indicator_objects/hotel_occupancy.RData") plotIndicatorTimeSeries(inddata, coltoplot = 1:2, sublabel = T, trendAnalysis = T, #dateformat = "%Y%b")
+
+### Population change
+
+Indicator 15 - MAPS but also should be census data

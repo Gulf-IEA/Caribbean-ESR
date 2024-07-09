@@ -1,10 +1,3 @@
-```{r, message = FALSE, warnings = FALSE}
-#devtools::install_github("https://github.com/MandyKarnauskas-NOAA/plotTimeSeries.git")
-
-library(plotTimeSeries)
-library(spam)
-```
-
 # 5. Tracking performance toward fishery management objectives
 
 In this section, we examine indicators related to broad, ecosystem-level fishery management objectives.
@@ -13,51 +6,32 @@ In this section, we examine indicators related to broad, ecosystem-level fishery
 
 ### Fishery independent surveys of economically important species
 
-Indicator 16 - abundance of economically important fish
+Indicator 15 - abundance of economically important fish
 
-```{r, message = FALSE, warnings = FALSE}
-load("../indicator_objects/RVC_PR.RData")
-plotIndicatorTimeSeries(ind, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
-```
+![](/indicator_plots/RVC_PR_plot.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/RVC_STSJ_plot.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/RVC_STX_plot.png){fig-alt="Plot showing a time series of an indicator"}
 
-```{r, message = FALSE, warnings = FALSE}
-load("../indicator_objects/RVC_STSJ.RData")
-plotIndicatorTimeSeries(ind, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
-```
+Indicator 16 - abundance of commercial fish and slope of the size spectrum based on TCRMP and PRCRMP
 
-```{r, message = FALSE, warnings = FALSE}
-load("../indicator_objects/RVC_STX.RData")
-plotIndicatorTimeSeries(ind, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
-```
-
-Indicator 16.1 - abundance of commercial fish based on TCRMP and PRCRMP Indicator 16.2 - slope of the size spectrum based on TCRMP and PRCRMP
-
-### Commercial landings
-
-Indicator 17
-
-load("../indicator_objects/landings.RData") 
-plotIndicatorTimeSeries(inddata, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
-
-```{r}
-load("../indicator_objects/fish_density.RData")
-plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 2, trendAnalysis = T, sublabel = T)
-```
+![](/indicator_plots/fish_density_plot.png){fig-alt="Plot showing a time series of an indicator"}
 
 ### Pelagic:demersal ratio
 
 Indicator 18
 
+![](/indicator_plots/PD_ratio_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
 ### Maximum length and size structure
 
 Indicator 19 - Lmax indicator
 
-### Changes in target species / landing composition
+![](/indicator_plots/PR_Lmax_classes_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![](/indicator_plots/STT_Lmax_classes_plot.png){fig-alt="Plot showing a time series of an indicator"}
 
-Indicator 20
+### Commercial landings
 
-load("../indicator_objects/total_landings.RData") 
-plotIndicatorTimeSeries(inddata, coltoplot = 1:9, plotrownum = 3, plotcolnum = 3, trendAnalysis = T, #sublabel = T) 
+Indicator 20 - total landings
+
+![](/indicator_plots/total_landings_plot.png){fig-alt="Plot showing a time series of an indicator"}
 
 ## 5.2 Socioeconomic health
 
@@ -71,30 +45,27 @@ Indicator 21 - percent revenues by species group
 
 Indicator 22 - number of trips
 
+![](/indicator_plots/gearTypes_PR.png){fig-alt="Plot showing a time series of an indicator"}
+![](/indicator_plots/gearTypes_STT.png){fig-alt="Plot showing a time series of an indicator"}
+![](/indicator_plots/gearTypes_STX.png){fig-alt="Plot showing a time series of an indicator"}
+
 ### Ocean economy employment and wages
 
 Indicator 23
 
-load("../indicator_objects/OceanNAICS.RData") 
-plotIndicatorTimeSeries(inddata, coltoplot = 1:8, plotrownum = 2, trendAnalysis = T, sublabel = T) 
+![](/indicator_plots/oceanNAICS_plot.png){fig-alt="Plot showing a time series of an indicator"}
 
 ### GDP
 
 Indicator 24
 
-```{r}
-load("../indicator_objects/GDP.RData")
-plotIndicatorTimeSeries(ind, coltoplot = 1:2, trendAnalysis = T, sublabel = T)
-```
+![](/indicator_plots/GDP_plot.png){fig-alt="Plot showing a time series of an indicator"}
 
 ### Unemployment
 
 Indicator 25
 
-```{r}
-load("../indicator_objects/unemployment.RData")
-plotIndicatorTimeSeries(ind, coltoplot = 1:2, trendAnalysis = T, sublabel = T, dateformat = "%Y%b")
-```
+![](/indicator_plots/unemployment_plot.png){fig-alt="Plot showing a time series of an indicator"}
 
 ## 5.3 Equity
 
@@ -102,25 +73,33 @@ plotIndicatorTimeSeries(ind, coltoplot = 1:2, trendAnalysis = T, sublabel = T, d
 
 Indicator 26
 
-load("../indicator_objects/gini.RData") 
-plotIndicatorTimeSeries(inddata, coltoplot = 1:3, plotrownum = 2, trendAnalysis = T, sublabel = T) 
+![](/indicator_plots/gini_plot.png){fig-alt="Plot showing a time series of an indicator"}
 
-### Commercial fishing community engagement and reliance
+### Environmental justice, economic, and gentrification pressure
 
-Indicator 27 - working with Tarsila on
+Indicator 27 
+
+![](/indicator_plots/CSVI_plots/Faceted_Bar_Plot_Puerto Rico East.png){fig-alt="Plot showing a time series of an indicator"}
+![](/indicator_plots/CSVI_plots/Faceted_Bar_Plot_Puerto Rico West.png){fig-alt="Plot showing a time series of an indicator"}
+![](/indicator_plots/CSVI_plots/Faceted_Bar_Plot_St. Croix.png){fig-alt="Plot showing a time series of an indicator"}
+![](/indicator_plots/CSVI_plots/Faceted_Bar_Plot_St. Thomas & St. John.png){fig-alt="Plot showing a time series of an indicator"}
 
 ## 5.4 Engagement and participation
 
-### Recreational fishing engagement and participation
+### Recreational landings
 
 Indicator 28
 
-load("../indicator_objects/total_rec_catch.RData") 
-plotIndicatorTimeSeries(inddata, coltoplot = 1:2, trendAnalysis = T, sublabel = T) 
+![](/indicator_plots/total_rec_catch_plot.png){fig-alt="Plot showing a time series of an indicator"}
 
-### Commercial fishing engagement and participation
+### Commercial fishing engagement and reliance
 
 Indicator 29
+
+![](/indicator_plots/PR_comm_fishing_engagement.png){fig-alt="Plot showing a time series of an indicator"}
+![](/indicator_plots/PR_comm_fishing_reliance.png){fig-alt="Plot showing a time series of an indicator"}
+![](/indicator_plots/USVI_comm_fishing_engagement.png){fig-alt="Plot showing a time series of an indicator"}
+![](/indicator_plots/USVI_comm_fishing_reliance.png){fig-alt="Plot showing a time series of an indicator"}
 
 ## 5.5 Bycatch reduction
 
@@ -132,32 +111,30 @@ Indicator 30
 
 ## 5.5 Governance
 
-### Number of seasonal closures implemented
+### Number of amendments implemented
 
 Indicator 31
 
-### Number of education and outreach events
+### Percent of species with informative catch limits
 
 Indicator 32
 
-### Number of enforcement actions
+![](/indicator_plots/tier3_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+### Number of education and outreach events
 
 Indicator 33
 
-## 5.6 Protection of ecosystems
+![](/indicator_plots/outreach_plot.png){fig-alt="Plot showing a time series of an indicator"}
 
-### Percent coral cover
+### Number of enforcement actions
 
 Indicator 34
 
-load("../indicator_objects/NCRMP_coral_cover_richness.RData") 
-plotIndicatorTimeSeries(inddata, coltoplot = 1:6, sublabel = T, trendAnalysis = F) 
+## 5.6 Protection of ecosystems
 
-### Coral species diversity
+### Percent coral cover and coral species diversity
 
 Indicator 35
 
-```{r, message = FALSE, warnings = FALSE}
-load("../indicator_objects/coral_spprichness_cover.RData")
-plotIndicatorTimeSeries(ind, coltoplot = 1:4, sublabel = T, trendAnalysis = T)
-```
+![](/indicator_plots/coral_spprichness_cover_plot.png){fig-alt="Plot showing a time series of an indicator"}

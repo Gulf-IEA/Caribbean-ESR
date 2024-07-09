@@ -4,13 +4,14 @@ project:
 book:
   title: "Ecosystem Status Report for the U.S. Caribbean"
   date: "2/21/24"
+  language: en
 
   chapters:
     - index.qmd
     - Report_book_files/Intro_text.qmd
     - Report_book_files/FMP_objectives.qmd
-    - Report_book_files/Performance_indicators.qmd
     - Report_book_files/Risk_indicators.qmd
+    - Report_book_files/Performance_indicators.qmd
     - Report_book_files/Discussion_material.qmd
 
 format:

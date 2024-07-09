@@ -1,0 +1,157 @@
+```{r, message = FALSE, warnings = FALSE}
+#devtools::install_github("https://github.com/MandyKarnauskas-NOAA/plotTimeSeries.git")
+
+library(plotTimeSeries)
+library(spam)
+```
+
+# 5. Tracking performance toward fishery management objectives
+
+In this section, we examine indicators related to broad, ecosystem-level fishery management objectives.
+
+## 5.1 Food production
+
+### Fishery independent surveys of economically important species
+
+Indicator 16 - abundance of economically important fish
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/RVC_PR.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
+```
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/RVC_STSJ.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
+```
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/RVC_STX.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
+```
+
+Indicator 16.1 - abundance of commercial fish based on TCRMP and PRCRMP Indicator 16.2 - slope of the size spectrum based on TCRMP and PRCRMP
+
+### Commercial landings
+
+Indicator 17
+
+load("../indicator_objects/landings.RData") plotIndicatorTimeSeries(inddata, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
+
+```{r}
+load("../indicator_objects/fish_density.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 2, trendAnalysis = T, sublabel = T)
+```
+
+### Pelagic:demersal ratio
+
+Indicator 18
+
+### Maximum length and size structure
+
+Indicator 19 - Lmax indicator
+
+### Changes in target species / landing composition
+
+Indicator 20
+
+load("../indicator_objects/total_landings.RData") plotIndicatorTimeSeries(inddata, coltoplot = 1:9, plotrownum = 3, plotcolnum = 3, trendAnalysis = T, #sublabel = T)
+
+## 5.2 Socioeconomic health
+
+### Total, lobster and conch revenues
+
+Indicator 21 - percent revenues by species group
+
+![](/indicator_plots/per_landings_PR.png) ![](/indicator_plots/per_landings_STT.png) ![](/indicator_plots/per_landings_STX.png)
+
+### Total, lobster and conch trips
+
+Indicator 22 - number of trips
+
+### Ocean economy employment and wages
+
+Indicator 23
+
+load("../indicator_objects/OceanNAICS.RData") plotIndicatorTimeSeries(inddata, coltoplot = 1:8, plotrownum = 2, trendAnalysis = T, sublabel = T)
+
+### GDP
+
+Indicator 24
+
+```{r}
+load("../indicator_objects/GDP.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:2, trendAnalysis = T, sublabel = T)
+```
+
+### Unemployment
+
+Indicator 25
+
+```{r}
+load("../indicator_objects/unemployment.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:2, trendAnalysis = T, sublabel = T, dateformat = "%Y%b")
+```
+
+## 5.3 Equity
+
+### Gini coefficient for distribution of landings and revenue
+
+Indicator 26
+
+load("../indicator_objects/gini.RData") plotIndicatorTimeSeries(inddata, coltoplot = 1:3, plotrownum = 2, trendAnalysis = T, sublabel = T)
+
+### Commercial fishing community engagement and reliance
+
+Indicator 27 - working with Tarsila on
+
+## 5.4 Engagement and participation
+
+### Recreational fishing engagement and participation
+
+Indicator 28
+
+load("../indicator_objects/total_rec_catch.RData") plotIndicatorTimeSeries(inddata, coltoplot = 1:2, trendAnalysis = T, sublabel = T)
+
+### Commercial fishing engagement and participation
+
+Indicator 29
+
+## 5.5 Bycatch reduction
+
+### Changes in gear type
+
+Indicator 30
+
+![](/indicator_plots/gearTypes_PR.png) ![](/indicator_plots/gearTypes_STT.png) ![](/indicator_plots/gearTypes_STX.png)
+
+## 5.5 Governance
+
+### Number of seasonal closures implemented
+
+Indicator 31
+
+### Number of education and outreach events
+
+Indicator 32
+
+### Number of enforcement actions
+
+Indicator 33
+
+## 5.6 Protection of ecosystems
+
+### Percent coral cover
+
+Indicator 34
+
+load("../indicator_objects/NCRMP_coral_cover_richness.RData") plotIndicatorTimeSeries(inddata, coltoplot = 1:6, sublabel = T, trendAnalysis = F)
+
+### Coral species diversity
+
+Indicator 35
+
+```{r, message = FALSE, warnings = FALSE}
+load("../indicator_objects/coral_spprichness_cover.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:4, sublabel = T, trendAnalysis = T)
+```
