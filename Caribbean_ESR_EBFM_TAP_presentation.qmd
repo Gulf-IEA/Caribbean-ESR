@@ -1,0 +1,225 @@
+---
+title: "Caribbean ESR EBFM TAP presentation"
+author: "Mandy Karnauskas"
+format: revealjs
+self-contained: true
+---
+
+# 4. Risks to meeting fishery management objectives
+
+In this section, we examine indicators...
+
+## Degree heating weeks
+
+Indicator 1 
+
+![](/indicator_plots/DegreeHeatingWeeks_plot.png){fig-alt="Plot showing a time series of an indicator"} 
+
+## Ocean acidification via aragontite saturation state
+
+Indicator 2
+
+![](/indicator_plots/OA_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Hurricane activity
+
+Indicator 3
+
+![](/indicator_plots/ACEindex_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Turbidity
+
+Indicator 4
+
+![](/indicator_plots/turbidity_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Sea surface temperature
+
+Indicator 5
+
+![](/indicator_plots/Carib_SST_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Marine debris
+
+Indicator 6
+
+![](/indicator_plots/marine_debris_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Identified point source pollution sites
+
+Indicator 7
+
+![](/indicator_plots/pollution_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Primary productivty via ocean color
+
+Indicator 8
+
+![](/indicator_plots/carib_Chl_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Coastal development
+
+Indicator 9
+
+![](/indicator_plots/Land_Use_Land_Cover_2024.jpg){fig-alt="Plot showing a time series of an indicator"}
+
+## Number of major earthquakes
+
+Indicator 10
+
+![](/indicator_plots/earthquakes_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Market disturbances
+
+Indicator 11 
+
+![](/indicator_plots/disturbance_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Sargassum innundation
+
+Indicator 12
+
+![](/indicator_plots/Sargassum_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Tourism 
+
+Indicator 13
+
+## Human population
+
+Indicator 14
+
+![](/indicator_plots/population_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+# 5. Tracking performance toward fishery management objectives
+
+In this section, we examine indicators related to broad, ecosystem-level fishery management objectives.
+
+# 5.1 Food production
+
+## Fishery independent surveys of economically important species
+
+Indicator 15 - abundance of economically important fish
+
+![](/indicator_plots/RVC_PR_plot.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/RVC_STSJ_plot.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/RVC_STX_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+Indicator 16 - abundance of commercial fish and slope of the size spectrum based on TCRMP and PRCRMP
+
+![](/indicator_plots/fish_density_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Pelagic:demersal ratio
+
+Indicator 18
+
+![](/indicator_plots/PD_ratio_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Maximum length and size structure
+
+Indicator 19 - Lmax indicator
+
+![](/indicator_plots/PR_Lmax_classes_plot.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/STT_Lmax_classes_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Commercial landings
+
+Indicator 20 - total landings
+
+![](/indicator_plots/total_landings_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+# 5.2 Socioeconomic health
+
+## Total, lobster and conch revenues
+
+Indicator 21 - percent revenues by species group
+
+![](/indicator_plots/per_landings_PR.png) ![](/indicator_plots/per_landings_STT.png) ![](/indicator_plots/per_landings_STX.png)
+
+## Total, lobster and conch trips
+
+Indicator 22 - number of trips
+
+![](/indicator_plots/gearTypes_PR.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/gearTypes_STT.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/gearTypes_STX.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Ocean economy employment and wages
+
+Indicator 23
+
+![](/indicator_plots/oceanNAICS_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## GDP
+
+Indicator 24
+
+![](/indicator_plots/GDP_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Unemployment
+
+Indicator 25
+
+![](/indicator_plots/unemployment_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+# 5.3 Equity
+
+## Gini coefficient for distribution of landings and revenue
+
+Indicator 26
+
+![](/indicator_plots/gini_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Environmental justice, economic, and gentrification pressure
+
+Indicator 27
+
+![](/indicator_plots/CSVI_plots/Faceted_Bar_Plot_Puerto%20Rico%20East.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/CSVI_plots/Faceted_Bar_Plot_Puerto%20Rico%20West.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/CSVI_plots/Faceted_Bar_Plot_St.%20Croix.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/CSVI_plots/Faceted_Bar_Plot_St.%20Thomas%20&%20St.%20John.png){fig-alt="Plot showing a time series of an indicator"}
+
+# 5.4 Engagement and participation
+
+## Recreational landings
+
+Indicator 28
+
+![](/indicator_plots/total_rec_catch_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Commercial fishing engagement and reliance
+
+Indicator 29
+
+![](/indicator_plots/PR_comm_fishing_engagement.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/PR_comm_fishing_reliance.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/USVI_comm_fishing_engagement.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/USVI_comm_fishing_reliance.png){fig-alt="Plot showing a time series of an indicator"}
+
+# 5.5 Bycatch reduction
+
+## Changes in gear type
+
+Indicator 30
+
+![](/indicator_plots/gearTypes_PR.png) ![](/indicator_plots/gearTypes_STT.png) ![](/indicator_plots/gearTypes_STX.png)
+
+# 5.5 Governance
+
+## Number of amendments implemented
+
+Indicator 31
+
+## Percent of species with informative catch limits
+
+Indicator 32
+
+![](/indicator_plots/tier3_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Number of education and outreach events
+
+Indicator 33
+
+![](/indicator_plots/outreach_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
+## Number of enforcement actions
+
+Indicator 34
+
+# 5.6 Protection of ecosystems
+
+## Percent coral cover and coral species diversity
+
+Indicator 35
+
+![](/indicator_plots/coral_spprichness_cover_plot.png){fig-alt="Plot showing a time series of an indicator"}
+
