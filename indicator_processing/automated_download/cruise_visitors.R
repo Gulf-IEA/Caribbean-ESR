@@ -112,7 +112,7 @@ class(inddata) <- "indicatordata"
 # plot and save ----------------------------------
 
 ind <- inddata
-plotIndicatorTimeSeries(ind, coltoplot = 1:2, plotrownum = 2, sublabel = TRUE)
+plotIndicatorTimeSeries(ind, coltoplot = 1:2, plotrownum = 2, plotcolnum = 1, trendAnalysis = TRUE, dateformat = "%b%Y", sublabel = TRUE, widadj = 1, hgtadj = 0.7, anom = "none", yposadj = 1)
 
 save(ind, file = "indicator_objects/cruise.RData")
 

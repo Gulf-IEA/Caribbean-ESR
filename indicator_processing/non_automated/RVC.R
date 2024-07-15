@@ -101,7 +101,7 @@ stx = readRDS("indicator_data/RVC/combined_stx_2001_2023.rds")
 spcs = c("OCY CHRY", "LUT ANAL", "BAL VETU", "EPI GUTT", "SPA AURO", "SPA VIRI")
 
 
-
+#test = getDomainDensity(prico, species = "OCY CHRY")
 
 
 # Extract the time series for each species and each area
@@ -134,11 +134,13 @@ for(j in regions) {
   
     datdata <- species_data$YEAR
     inddata <- data.frame(species_data$density)
-    s <- cbind(datdata, inddata) 
+    vardata <- data.frame(species_data$var)
+    s1 <- cbind(datdata, inddata)
+    s2 <- cbind(s1, vardata)
    
     # save -----------------------------------------
   
-    save(s, file = paste("indicator_data/RVC/RUVdensity_", j, "_", i, ".RData", sep = ""))
+    save(s2, file = paste("indicator_data/RVC/RUVdensity_", j, "_", i, ".RData", sep = ""))
   }
 }
 

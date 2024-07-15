@@ -80,7 +80,7 @@ for (yr in styear:enyear) {
 
 datdata <- paste(sprintf('%02d',pr_dat$mon),pr_dat$year,sep='-')
 inddata <- data.frame(cbind(pr_dat$mean, st_dat$mean, sc_dat$mean), row.names = datdata)
-labs <- c(rep("Turbidity from ocean color data", 3), rep("Diffuse attenuation coefficient at 490 nm (m^-1)", 3), 
+labs <- c(rep("Turbidity from ocean color data", 3), rep("Diffuse attenuation coefficient\n at 490 nm (m^-1)", 3), 
           "Puerto Rico", "St. Thomas", "St. Croix")
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = T))
 
@@ -91,6 +91,6 @@ class(ind) <- "indicatordata"
 
 save(ind, file = "indicator_objects/turbidity.RData")
 
-plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, dateformat = "%m-%Y", sublabel = T, trendAnalysis = F, widadj = 1.5)
+plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, dateformat = "%m-%Y", sublabel = T, trendAnalysis = F, widadj = 1.5, yposadj = 1.3)
 plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, dateformat = "%m-%Y", sublabel = T, trendAnalysis = F, widadj = 1.5, anom = "mon")
 

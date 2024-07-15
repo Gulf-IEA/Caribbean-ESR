@@ -23,8 +23,8 @@ USVI = c(0,0,0,0,0,0,0,0,0,0,0,0,USVI_perc)
 # save as indicator object ----------------------
 datdata <- 2011:2023
 inddata <- data.frame(cbind(PR, USVI))
-labs <- c("Stocks/complexes with Tier 3 designation" , "Percent", "Puerto Rico",
-          "Stocks/complexes with Tier 3 designation" , "Percent", "USVI")
+labs <- c("Stocks/complexes with ACLs derived from stock assessments" , "Percent", "Puerto Rico",
+          "Stocks/complexes with ACLs derived from stock assessments" , "Percent", "USVI")
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 inddata <- list(labels = indnames, indicators = inddata, datelist = datdata)
 class(inddata) <- "indicatordata"
