@@ -8,7 +8,7 @@ rm(list = ls())
 library(maps)
 library(plotTimeSeries)
 library(pals)
-library(Hmisc)
+library(modi)
 
 load("indicator_processing/spec_file.RData")
 
@@ -44,6 +44,22 @@ matplot(styear:enyear, t(tab[1:10, ]), type = "l", col = 1:10, lty = c(1, 1, 1, 
 legend("topright", rownames(tab)[1:10], col = 1:10, lty = c(1, 1, 1, 1, 1, 2, 2, 2, 2, 2), lwd = 2)
 
 tab2 <- apply(tab[1:10, ], 2, function(x) x/sum(x))
+
+# remove land crab trips -------------------
+
+sort(table(d$ITIS_COMMON_NAME[grep("CRAB", d$ITIS_COMMON_NAME)]))
+sort(table(d$ERDMAN_GEAR_NAME[grep("CRAB,BLUE", d$ITIS_COMMON_NAME)]))
+sort(table(d$FAMILY[grep("CRAB,BLUE", d$ITIS_COMMON_NAME)]))
+sort(table(d$ERDMAN_GEAR_NAME[which(d$FAMILY == "LAND CRABS")]))
+par(mar = c(12, 4, 1, 1))
+barplot(sort(table(d$ERDMAN_GEAR_NAME[which(d$FAMILY == "LAND CRABS")])), las = 2)
+sort(table(d$ITIS_COMMON_NAME[which(d$ERDMAN_GEAR_NAME == "BY HAND")]))  # don't remove, contains conch as well
+# filtering by LAND CRAB TRAP gear takes out vast majority (96%) of land crab trips
+
+d[which(d$ERDMAN_GEAR_NAME == "LAND CRAB TRAP"), ]
+dim(d)
+d <- d[which(d$ERDMAN_GEAR_NAME != "LAND CRAB TRAP"), ]
+dim(d)
 
 # note - is this spp composition plot possibly useful for the report??? ----------------------
 barplot(tab2, col = glasbey(10), xlim = c(0, 56), legend.text = rownames(tab2), args.legend = c(x = "right"), las = 2)
@@ -94,7 +110,7 @@ unique(d$ERDMAN_COMMON_NAME[mis])
 # per pound, except those prices for land crabs ("jueyes"), which can fetch up $60 per dozen.
 
 hist(d$PRICE_PER_LB)
-table(d$ITIS_COMMON_NAME[which(d$PRICE_PER_LB > 15)])
+sort(table(d$ITIS_COMMON_NAME[which(d$PRICE_PER_LB > 15)]))
 length(which(d$ITIS_COMMON_NAME != "CRAB,BLUE LAND" & d$PRICE_PER_LB > 15))
 d[(which(d$ITIS_COMMON_NAME != "CRAB,BLUE LAND" & d$PRICE_PER_LB > 15)), ]
 table(d$ITIS_COMMON_NAME[(which(d$ITIS_COMMON_NAME != "CRAB,BLUE LAND" & d$PRICE_PER_LB > 15))])
@@ -149,6 +165,7 @@ barplot(sort(tapply(db$PRICE_PER_LB, db$famcode, mean, na.rm = T), decreasing = 
 
 table(is.na(db$PRICE_PER_LB), db$ITIS_COMMON_NAME)
 table(is.na(db$PRICE_PER_LB), db$famcode)
+table(is.na(db$PRICE_PER_LB))
 
 for (i in unique(db$famcode))  {
   m <- mean(db$PRICE_PER_LB[which(db$famcode == i)], na.rm = T)
@@ -160,7 +177,6 @@ table(is.na(db$PRICE_PER_LB))
 barplot(sort(tapply(db$PRICE_PER_LB, db$famcode, mean, na.rm = T), decreasing = T), las = 2, 
         main = "average price by family")
 
-#d$REV <- d$POUNDS_LANDED * d$PRICE_PER_LB
 db$REV <- db$ADJUSTED_POUNDS * db$PRICE_PER_LB
 
 # plot % landings and % revenue ----------------------
@@ -192,7 +208,7 @@ tab <- tapply(db$REV, list(db$famcode, db$YEAR_LANDED), sum, na.rm = T)
 tab <- tab[order(rowSums(tab, na.rm = T), decreasing = T), ]
 
 matplot(styear:enyear, t(tab[1:nsp, ]), type = "l", col = cols, lty = rep(1:3, (nsp/3)), lwd = 2)
-legend("topright", rownames(tab)[1:nsp], col = cols, lty = rep(1:3, (nsp/3)), lwd = 2)
+legend("topright", rownames(tab)[1:nsp], col = cols, lty = rep(1:3, (nsp/3)), lwd = 2, ncol = 2)
 
 tab2 <- tab[1:(nsp - 1), ]
 tab2 <- rbind(tab2, colSums(tab[nsp:nrow(tab), ], na.rm = T))
@@ -352,8 +368,23 @@ head(xtra[order(xtra$recLand, decreasing = T), ], 15)
 
 # calculate average Lmax indicator -----------------------------------------------
 
+# formula from https://www.sciencedirect.com/science/article/pii/135223109400210C
+weighted.var.se <- function(x, w, na.rm=FALSE)   #  Computes the variance of a weighted mean following Cochran 1977 definition
+{
+  if (na.rm) { w <- w[i <- !is.na(x)]; x <- x[i] }
+  n = length(w)
+  xWbar = weighted.mean(x,w,na.rm=na.rm)
+  wbar = mean(w)
+  out = n/((n-1)*sum(w)^2)*(sum((w*x-wbar*xWbar)^2)-2*xWbar*sum((w-wbar)*(w*x-wbar*xWbar))+xWbar^2*sum((w-wbar)^2))
+  return(out)
+}
+
 lmax <- rep(NA, ncol(tab))
-for (i in 1:ncol(tab))  {  lmax[i] <- weighted.mean(splisref$Lmax, tab[, i])  }
+lmax_sem <- rep(NA, ncol(tab))
+for (i in 1:ncol(tab))  {  
+  lmax[i] <- weighted.mean(splisref$Lmax, tab[, i], na.rm = TRUE)  
+  lmax_sem[i] <- sqrt(weighted.var.se(splisref$Lmax, tab[, i], na.rm = TRUE))
+  }
 
 plot(styear:enyear, lmax)
 plot(styear:enyear, lmax, type = "b", las = 2)
@@ -368,10 +399,11 @@ datdata <- styear:enyear
 inddata <- data.frame(lmax)
 labs <- c("Average maximum length of catch", "length (cm)" , "Puerto Rico")
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
-s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
+s <- list(labels = indnames, indicators = inddata, datelist = datdata, ulim = inddata + lmax_sem, llim = inddata - lmax_sem)
 class(s) <- "indicatordata"
  
 plotIndicatorTimeSeries(s, coltoplot = 1, sublabel = T) #, outtype = "png")
+#plotIndicatorTimeSeries(s, coltoplot = 1, sublabel = T, outtype = "png", widadj = 1.3, hgtadj = 0.6)
 
 dev.off()
 
@@ -392,7 +424,7 @@ tabp <- tabp[order(rowSums(tabp), decreasing = T), ]
 
 matplot(styear:enyear, t(tabp[1:10, ]), type = "l", col = glasbey(10), lwd = 2, lty = 1)
 legend("topright", rownames(tabp)[1:10], col = glasbey(10), lwd = 2, lty = 1)
-abline(v = c(2008, 2019))
+abline(v = c(2008, 2019))  # driven ~50% by dolphinfish catch
 
 tabd <- tab[-grep("pelagic", splisref$PD), ]
 tabd <- tabd[order(rowSums(tabd), decreasing = T), ]

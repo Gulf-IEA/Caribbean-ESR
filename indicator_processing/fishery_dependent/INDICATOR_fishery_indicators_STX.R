@@ -8,7 +8,6 @@ rm(list = ls())
 library(maps)
 library(plotTimeSeries)
 library(pals)
-library(Hmisc)
 
 load("indicator_processing/spec_file.RData")
 
@@ -51,7 +50,6 @@ table(d$TRIP_YEAR, d$TRIP_MONTH)
 styear <- min(d$TRIP_YEAR)
 enyear <- max(d$TRIP_YEAR)
 
-
 # look at main species landed --------------------------------
 tab <- sort(tapply(d$POUNDS_LANDED, d$SPECIES_NM, sum, na.rm = T), decreasing = T)
 par(mar = c(15, 5, 2, 2))
@@ -81,6 +79,13 @@ legend("topright", rownames(tab)[1:10], col = 1:10, lty = c(1, 1, 1, 1, 1, 2, 2,
 
 tab2 <- apply(tab[1:10, ], 2, function(x) x/sum(x))
 barplot(tab2, col = glasbey(10), xlim = c(0, ncol(tab2)*2), legend.text = rownames(tab2), args.legend = c(x = "right"))
+
+# remove land crab trips -------------------
+
+sort(table(d$SPECIES_NM[grep("CRAB", d$SPECIES_NM)]))
+sort(table(d$GEAR_NM[grep("CRAB", d$SPECIES_NM)]))
+d$GEAR_NM[grep("CRAB", d$GEAR_NM)]
+# no land crab traps in USVI?  
 
 # remove bad price values and calculate revenue  ------------------------------
 
@@ -320,8 +325,23 @@ dev.off()
 
 # calculate average Lmax indicator -----------------------------------------------
 
+# formula from https://www.sciencedirect.com/science/article/pii/135223109400210C
+weighted.var.se <- function(x, w, na.rm=FALSE)   #  Computes the variance of a weighted mean following Cochran 1977 definition
+{
+  if (na.rm) { w <- w[i <- !is.na(x)]; x <- x[i] }
+  n = length(w)
+  xWbar = weighted.mean(x,w,na.rm=na.rm)
+  wbar = mean(w)
+  out = n/((n-1)*sum(w)^2)*(sum((w*x-wbar*xWbar)^2)-2*xWbar*sum((w-wbar)*(w*x-wbar*xWbar))+xWbar^2*sum((w-wbar)^2))
+  return(out)
+}
+
 lmax <- rep(NA, ncol(tab))
-for (i in 1:ncol(tab))  {  lmax[i] <- weighted.mean(splisref$Lmax, tab[, i])  }
+lmax_sem <- rep(NA, ncol(tab))
+for (i in 1:ncol(tab))  {  
+  lmax[i] <- weighted.mean(splisref$Lmax, tab[, i], na.rm = TRUE)  
+  lmax_sem[i] <- sqrt(weighted.var.se(splisref$Lmax, tab[, i], na.rm = TRUE))
+}
 
 plot(yrs, lmax)
 plot(yrs, lmax, type = "b", las = 2)
@@ -336,10 +356,11 @@ datdata <- styear:enyear
 inddata <- data.frame(lmax)
 labs <- c("Average maximum length of catch", "length (cm)" , "St. Croix")
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
-s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
+s <- list(labels = indnames, indicators = inddata, datelist = datdata, ulim = inddata + lmax_sem, llim = inddata - lmax_sem)
 class(s) <- "indicatordata"
 
 plotIndicatorTimeSeries(s, coltoplot = 1, sublabel = T)
+plotIndicatorTimeSeries(s, coltoplot = 1, sublabel = T, outtype = "png", widadj = 1.65, hgtadj = 0.6)
 
 dev.off()
 
