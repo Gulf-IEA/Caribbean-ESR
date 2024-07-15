@@ -150,28 +150,38 @@ apply(fin, 2, table, useNA = "always")  # check no NAs
 
 # plot results -----------------------
 
+par(mfrow = c(2, 1))
 mat <- table(fin$year, fin$gear)
 barplot(t(mat), col = cols25(7), args.legend = c(x = "topright"), legend.text = colnames(mat))
+matplot(mat, type = "b", pch = 19, col = cols25(7))
 
 matp <- t(apply(mat, 1, function(x) x/sum(x)))
 barplot(t(matp), col = cols25(7), args.legend = c(x = 34, y = 0.9), legend.text = colnames(mat))
+matplot(matp, type = "b", pch = 19, col = cols25(7))
 
+mat[, c(3, 5)]
 byc <- rowSums(mat[, c(3, 5)]) / rowSums(mat)   # proportion of trips with non-selective gears - nets and traps
-plot(names(byc), byc, type = "l")
+plot(names(byc), byc, type = "b")
 
+matp
+plot(names(byc), matp[, 4], type = "b")
+div <- matp[, 4]
+
+save(div, file ="indicator_data/prop_trips_diving_STT.RData")
+save(byc, file ="indicator_data/prop_trips_nonselective_STT.RData")
 
 # plot trips and percent bycatch gears -------------------
 
 png(filename = "indicator_plots/gearTypes_STT.png", 
-    units="in", width = 6, height = 6, pointsize=12, res=72*2)
+    units="in", width = 6, height = 3, pointsize=12, res=72*2)
 
-par(mfrow = c(2,1), mar = c(2.5, 4, 2, 1))
+par(mar = c(3, 4, 2, 1))
 barplot(t(mat), col = cols25(7), args.legend = list(x = "topright", bty = "n", y.intersp = 0.8), legend.text = colnames(mat), las = 2, 
         main = "Number of trips per year by gear type\nSt. Thomas and St. John", ylim = c(0, 8000))
 abline(h=0)
-plot(as.numeric(names(byc)), byc, type = "l", las = 2, xlab = "", ylab = "proportion", main = "Proportion of trips with nets and traps", axes = F)
-axis(1); axis(2, las = 2); box()
-points(as.numeric(names(byc)), byc, pch = 20, cex = 1.2)
+#plot(as.numeric(names(byc)), byc, type = "l", las = 2, xlab = "", ylab = "proportion", main = "Proportion of trips with nets and traps", axes = F)
+#axis(1); axis(2, las = 2); box()
+#points(as.numeric(names(byc)), byc, pch = 20, cex = 1.2)
 
 dev.off()
 
@@ -410,21 +420,30 @@ barplot(t(matp), col = cols25(4), args.legend = c(x = 10, y = 0.8), legend.text 
 colnames(mat)
 mat[, c(2, 4)]
 byc <- rowSums(mat[, c(2, 4)]) / rowSums(mat)   # proportion of trips with non-selective gears - nets and traps
-plot(names(byc), byc, type = "l")
+plot(names(byc), byc, type = "b")
+
+plot(names(byc), matp[, 3], type = "b")
+
+div <- matp[, 3]
+
+save(div, file ="indicator_data/prop_trips_diving_STX.RData")
+save(byc, file ="indicator_data/prop_trips_nonselective_STX.RData")
 
 # plot trips and percent bycatch gears -------------------
 
-png(filename = "indicator_plots/gearTypes_STX.png", 
-    units="in", width = 6, height = 6, pointsize=12, res=72*2)
+cols <- cols25(7)
+cols <- cols[c(2:5)]
 
-par(mfrow = c(2,1), mar = c(2.5, 4, 2, 1))
-barplot(t(mat), col = cols25(7), args.legend = list(x = "topright", bty = "n", y.intersp = 0.9), legend.text = colnames(mat), las = 2, 
+png(filename = "indicator_plots/gearTypes_STX.png", 
+    units="in", width = 4.75, height = 3, pointsize=12, res=72*2)
+
+par(mar = c(3, 4, 2, 1))
+barplot(t(mat), col = cols, args.legend = list(x = "topright", bty = "n", y.intersp = 0.9), legend.text = colnames(mat), las = 2, 
         main = "Number of trips per year by gear type\nSt. Croix")
 abline(h=0)
-plot(as.numeric(names(byc)), byc, type = "l", las = 2, xlab = "", ylab = "proportion", main = "Proportion of trips with nets and traps", axes = F)
-axis(1); axis(2, las = 2); box()
-points(as.numeric(names(byc)), byc, pch = 20, cex = 1.2)
-
+#plot(as.numeric(names(byc)), byc, type = "l", las = 2, xlab = "", ylab = "proportion", main = "Proportion of trips with nets and traps", axes = F)
+#axis(1); axis(2, las = 2); box()
+#points(as.numeric(names(byc)), byc, pch = 20, cex = 1.2)
 dev.off()
 
 par(mfrow = c(2,2), mar = c(20, 3, 1, 0))
@@ -567,6 +586,20 @@ table(d$DISTANCE, useNA = "always")
 table(d$DISTANCE_DESCRIBE, useNA = "always")
 table(d$TRIP_TICKET_NUMBER_ED, useNA = "always")
 
+# remove land crab trips -------------------
+
+sort(table(d$ITIS_COMMON_NAME[grep("CRAB", d$ITIS_COMMON_NAME)]))
+sort(table(d$ERDMAN_GEAR_NAME[grep("CRAB,BLUE", d$ITIS_COMMON_NAME)]))
+sort(table(d$FAMILY[grep("CRAB,BLUE", d$ITIS_COMMON_NAME)]))
+sort(table(d$ERDMAN_GEAR_NAME[which(d$FAMILY == "LAND CRABS")]))
+# filtering by LAND CRAB TRAP gear takes out vast majority (96%) of land crab trips
+
+d[which(d$ERDMAN_GEAR_NAME == "LAND CRAB TRAP"), ]
+dim(d)
+d <- d[which(d$ERDMAN_GEAR_NAME != "LAND CRAB TRAP"), ]
+dim(d)
+
+# develop trip ID ---------------------------
 table(d$YEAR_LANDED, is.na(d$TRIP_TICKET_NUMBER_ED))  # no NAs after 2000
 table(d$YEAR_LANDED, d$TRIP_TICKET_NUMBER_ED == "")   # no empties after 2002
 
@@ -591,7 +624,7 @@ n_distinct(id2)
 mn <- tapply(id2, d$TRIP_TICKET_NUMBER_ED, mean)
 table(mn - round(mn))
 
-table(tapply(d$YEAR_LANDED, d$TRIP_TICKET_NUMBER_ED, sd, na.rm = T))
+#table(tapply(d$YEAR_LANDED, d$TRIP_TICKET_NUMBER_ED, sd, na.rm = T))
 
 d$ID <- id1  # select way to identify individual trips
 
@@ -668,12 +701,11 @@ areas <- colnames(tab2)[co]
 head(tab2, 20)        # check to see if correct
 areas[1:20]
 
-tab3 <- table(d$ID, d$MUNICIPALITY)
-co <- apply(tab3, 1, which.max)
-areas2 <- colnames(tab3)[co]
-
-head(tab3, 20)        # check to see if correct
-areas2[1:20]
+#tab3 <- table(d$ID, d$MUNICIPALITY)
+#co <- apply(tab3, 1, which.max)
+#areas2 <- colnames(tab3)[co]
+#head(tab3, 20)        # check to see if correct
+#areas2[1:20]
 
 table(rownames(tab) == names(years))
 table(rownames(tab) == rownames(tab2))
@@ -696,22 +728,34 @@ barplot(t(matp), col = cols25(7), args.legend = c(x = "topleft"), legend.text = 
 
 mat
 mat[, c(4, 5)]
-byc <- rowSums(mat[, c(4, 5)]) / rowSums(mat)   # proportion of trips with non-selective gears
-plot(names(byc), byc, type = "l")
+mat[, c(2)]
 
+byc <- rowSums(mat[, c(4, 5)]) / rowSums(mat)   # proportion of trips with non-selective gears
+plot(names(byc), byc, type = "b")
+
+plot(names(byc), matp[, 2], type = "b"); abline(v = 2017)
+
+div <- matp[, 2]
+
+save(div, file ="indicator_data/prop_trips_diving_PR.RData")
+save(byc, file ="indicator_data/prop_trips_nonselective_PR.RData")
 
 # plot trips and percent bycatch gears -------------------
 
-png(filename = "indicator_plots/gearTypes_PR.png", 
-    units="in", width = 6, height = 6, pointsize=12, res=72*2)
+mat <- mat[, c(1, 3, 4, 2, 5)]
+cols <- cols25(7)
+cols <- cols[c(7, 2:5)]
 
-par(mfrow = c(2,1), mar = c(2.5, 4, 2, 1))
-barplot(t(mat), col = cols25(7), args.legend = list(x = "topright", bty = "n", y.intersp = 0.8, ncol = 2), legend.text = colnames(mat), las = 2, 
-        main = "Number of trips per year by gear type\nPuerto Rico", ylim = c(0, 40000))
+png(filename = "indicator_plots/gearTypes_PR.png", 
+    units="in", width = 5.5, height = 3, pointsize=12, res=72*2)
+
+par(mar = c(3, 4, 2, 1))
+barplot(t(mat), col = cols, args.legend = list(x = "topright", bty = "n", x.intersp = 0.5, ncol = 2), legend.text = colnames(mat), las = 2, 
+        main = "Number of trips per year by gear type\nPuerto Rico", ylim = c(0, 44000))
 abline(h=0)
-plot(as.numeric(names(byc)), byc, type = "l", las = 2, xlab = "", ylab = "proportion", main = "Proportion of trips with nets and traps", axes = F)
-axis(1); axis(2, las = 2); box()
-points(as.numeric(names(byc)), byc, pch = 20, cex = 1.2)
+#plot(as.numeric(names(byc)), byc, type = "l", las = 2, xlab = "", ylab = "proportion", main = "Proportion of trips with nets and traps", axes = F)
+#axis(1); axis(2, las = 2); box()
+#points(as.numeric(names(byc)), byc, pch = 20, cex = 1.2)
 
 dev.off()
 
@@ -823,5 +867,105 @@ dev.off()
 #  print(pc$x)
 #}
 
+###################  SYNTHESIZE GEAR INDICATORS   ########################
 
+rm(list = ls())
 
+load("indicator_data/prop_trips_diving_STT.RData")
+divSTT <- div
+load("indicator_data/prop_trips_diving_STX.RData")
+divSTX <- div
+load("indicator_data/prop_trips_diving_PR.RData")
+divPR <- div
+
+# extract years ----------------------
+
+names(divSTT) == names(divSTX)
+names(divSTX) == names(divPR)
+yrs <- (min(c(names(divSTX), names(divSTT), names(divPR)))) : (max(c(names(divSTX), names(divSTT), names(divPR))))
+yrs
+
+# put data together in single matrix ----------------------
+
+mat <- data.frame(matrix(data = NA, nrow = length(yrs), ncol = 4))
+rownames(mat) <- yrs
+mat[match(names(divPR), yrs), 1] <- divPR
+mat[match(names(divSTT), yrs), 2] <- divSTT
+mat[match(names(divSTX), yrs), 3] <- divSTX
+mat[, 4] <- yrs
+mat
+mat <- mat[which(rownames(mat) == 2000):nrow(mat), ]
+names(mat) <- c("PR", "STT", "STX", "yrs")
+mat
+
+# format indicator object --------------------
+
+datdata <- mat$yrs
+inddata <- data.frame(mat[, 1:3])
+labs <- c("Proportion of diving trips", "proportion", "Puerto Rico",
+          "Proportion of diving trips", "proportion", "St. Thomas and St. John", 
+          "Proportion of diving trips", "proportion", "St. Croix")
+indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
+ind <- list(labels = indnames, indicators = inddata, datelist = datdata)
+class(ind) <- "indicatordata"
+
+plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, sublabel = T, sameYscale = F, 
+                        widadj = 1, hgtadj = 1, trendAnalysis = T)
+
+save(ind, file = "indicator_objects/prop_diving_trips.RData")
+
+plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, sublabel = T, sameYscale = F, 
+     widadj = 1, hgtadj = 0.6, trendAnalysis = T, outtype = "png")
+                        
+
+# bycatch gears ----------------------------
+
+rm(list = ls())
+
+load("indicator_data/prop_trips_nonselective_STT.RData")
+divSTT <- byc
+load("indicator_data/prop_trips_nonselective_STX.RData")
+divSTX <- byc
+load("indicator_data/prop_trips_nonselective_PR.RData")
+divPR <- byc
+
+# extract years ----------------------
+
+names(divSTT) == names(divSTX)
+names(divSTX) == names(divPR)
+yrs <- (min(c(names(divSTX), names(divSTT), names(divPR)))) : (max(c(names(divSTX), names(divSTT), names(divPR))))
+yrs
+
+# put data together in single matrix ----------------------
+
+mat <- data.frame(matrix(data = NA, nrow = length(yrs), ncol = 4))
+rownames(mat) <- yrs
+mat[match(names(divPR), yrs), 1] <- divPR
+mat[match(names(divSTT), yrs), 2] <- divSTT
+mat[match(names(divSTX), yrs), 3] <- divSTX
+mat[, 4] <- yrs
+mat
+mat <- mat[which(rownames(mat) == 2000):nrow(mat), ]
+names(mat) <- c("PR", "STT", "STX", "yrs")
+mat
+
+# format indicator object --------------------
+
+datdata <- mat$yrs
+inddata <- data.frame(mat[, 1:3])
+labs <- c("Proportion of trips using non-selective gears", "proportion", "Puerto Rico",
+          "Proportion of trips using non-selective gears", "proportion", "St. Thomas and St. John", 
+          "Proportion of trips using non-selective gears", "proportion", "St. Croix")
+indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
+ind <- list(labels = indnames, indicators = inddata, datelist = datdata)
+class(ind) <- "indicatordata"
+
+plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, sublabel = T, sameYscale = F, 
+                        widadj = 1, hgtadj = 1, trendAnalysis = T)
+
+save(ind, file = "indicator_objects/prop_trips_bycatch.RData")
+
+# plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, sublabel = T, sameYscale = F, 
+#                        widadj = 1, hgtadj = 0.6, trendAnalysis = T, outtype = "png")
+
+##########################   END   ############################
