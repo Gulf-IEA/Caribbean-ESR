@@ -396,3 +396,8 @@ load("indicator_objects/tier3.RData")
 plotIndicatorTimeSeries(ind, coltoplot = 1:2, plotrownum = 2, plotcolnum = 1, trendAnalysis = TRUE, dateformat = "%b%Y", sublabel = TRUE, widadj = 1, hgtadj = 0.4, anom = "none", yposadj = 1.2, sameYscale = F, cex.axis = 1.3, cex.lab = 1.5, cex.main = 1.5)
 dev.off()
 
+
+png(filename = "indicator_plots/total_landings_plot_TAP.png", width = 9, height = 8, units = "in", res = 300)
+load("indicator_objects/total_landings.RData")
+plotIndicatorTimeSeries(ind, coltoplot = 1:9, plotrownum = 3, plotcolnum = 3, trendAnalysis = TRUE, dateformat = "%b%Y", sublabel = TRUE, widadj = 0.9, hgtadj = 0.5, anom = "none", yposadj = 1, cex.axis = 1.2, cex.lab = 1.4, cex.main = 1.3)
+dev.off()
