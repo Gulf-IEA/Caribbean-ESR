@@ -28,6 +28,12 @@ GDP.RData,X2,GDP_VI
 gini.RData,gini_rev_pr,GINI_PR
 gini.RData,gini_rev_stt,GINI_STT
 gini.RData,gini_land_stx,GINI_STX
+gini_landings.RData,gini_land_pr,GINI_L_PR
+gini_landings.RData,gini_land_stt,GINI_L_STT
+gini_landings.RData,gini_land_stx,GINI_L_STX
+gini_revenue.RData,gini_rev_pr,GINI_R_PR
+gini_revenue.RData,gini_rev_stt,GINI_R_STT
+gini_revenue.RData,gini_rev_stx,GINI_R_STX
 marine_debris.RData,Puerto.Rico,DEB_PR
 marine_debris.RData,United.States.Virgin.Islands,DEB_VI
 mean_Lmax.RData,X1,MLMAX_PR
@@ -60,6 +66,9 @@ PR_mean_Lmax.RData,lmax,MLMAX_PR2
 prop_diving_trips.RData,PR,DIV_PR
 prop_diving_trips.RData,STT,DIV_STT
 prop_diving_trips.RData,STX,DIV_STX
+prop_trips_bycatch.RData,PR,BYCAT_PR
+prop_trips_bycatch.RData,STT,BYCAT_STT
+prop_trips_bycatch.RData,STX,BYCAT_STX
 regulations.RData,dat.amendments,REGS
 RVC_PR.RData,X1,VETU_PR
 RVC_PR.RData,X2,GUTT_PR
