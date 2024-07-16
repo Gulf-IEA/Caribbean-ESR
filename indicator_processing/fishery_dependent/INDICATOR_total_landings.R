@@ -183,7 +183,8 @@ table(d$SPECIES_NM, d$sppgrp)
 # check for rule of 3 ------------------------
 
 table(d$TRIP_YEAR, d$sppgrp)
-table(table(d$TRIP_YEAR, d$sppgrp) <= 3 & table(d$TRIP_YEAR, d$sppgrp) > 0)
+table(table(d$TRIP_YEAR, d$sppgrp) <= 3 & table(d$TRIP_YE
+                                                AR, d$sppgrp) > 0)
 
 # sum landings by  year ----------------------
 
