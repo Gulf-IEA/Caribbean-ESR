@@ -27,7 +27,7 @@ enyear <- 2022
 
 # input data for Puerto Rico ---------------------------
 
-dat <- read.csv(paste0(confpath, "wrkeithly_pr_com_data_2000_2022_20240501_C.csv"))
+dat <- read.csv(paste0(confpath, "wrkeithly_pr_com_data_2000_2022_20240625_C.csv"))
 
 d <- dat[which(dat$YEAR_LANDED >= styear & dat$YEAR_LANDED <= enyear), ]
 
@@ -36,6 +36,22 @@ d <- dat[which(dat$YEAR_LANDED >= styear & dat$YEAR_LANDED <= enyear), ]
 table(d$YEAR_LANDED, useNA = "always")
 table(d$PR_ID_CODE_ED, useNA = "always")
 table(d$PR_ID_CODE_ED, d$YEAR_LANDED)
+
+# remove land crab trips -------------------
+
+sort(table(d$ITIS_COMMON_NAME[grep("CRAB", d$ITIS_COMMON_NAME)]))
+sort(table(d$ERDMAN_GEAR_NAME[grep("CRAB,BLUE", d$ITIS_COMMON_NAME)]))
+sort(table(d$FAMILY[grep("CRAB,BLUE", d$ITIS_COMMON_NAME)]))
+sort(table(d$ERDMAN_GEAR_NAME[which(d$FAMILY == "LAND CRABS")]))
+par(mar = c(12, 4, 1, 1))
+barplot(sort(table(d$ERDMAN_GEAR_NAME[which(d$FAMILY == "LAND CRABS")])), las = 2)
+sort(table(d$ITIS_COMMON_NAME[which(d$ERDMAN_GEAR_NAME == "BY HAND")]))  # don't remove, contains conch as well
+# filtering by LAND CRAB TRAP gear takes out vast majority (96%) of land crab trips
+
+d[which(d$ERDMAN_GEAR_NAME == "LAND CRAB TRAP"), ]
+dim(d)
+d <- d[which(d$ERDMAN_GEAR_NAME != "LAND CRAB TRAP"), ]
+dim(d)
 
 # remove bad price values ------------------------------
 #Notes from Juan: 
@@ -54,9 +70,21 @@ d$PRICE_PER_LB[(which(d$ITIS_COMMON_NAME != "CRAB,BLUE LAND" & d$PRICE_PER_LB > 
 hist(d$PRICE_PER_LB[(which(d$ITIS_COMMON_NAME == "CRAB,BLUE LAND"))])
 max(d$PRICE_PER_LB[(which(d$ITIS_COMMON_NAME == "CRAB,BLUE LAND"))])
 
+# insert missing prices -------------------------------
+
+table(is.na(d$PRICE_PER_LB), d$ITIS_COMMON_NAME)
+table(is.na(d$PRICE_PER_LB))
+
+for (i in unique(d$ITIS_COMMON_NAME))  {
+  m <- mean(d$PRICE_PER_LB[which(d$ITIS_COMMON_NAME == i)], na.rm = T)
+  d$PRICE_PER_LB[which(d$ITIS_COMMON_NAME == i & is.na(d$PRICE_PER_LB))] <- m
+}
+
+table(is.na(d$PRICE_PER_LB), d$ITIS_COMMON_NAME)
+table(is.na(d$PRICE_PER_LB))
+
 # calculate revenue, sum by permit and year ------------
 
-#d$REV <- d$POUNDS_LANDED * d$PRICE_PER_LB
 d$REV <- d$ADJUSTED_POUNDS * d$PRICE_PER_LB
 totrev <- tapply(d$REV, list(d$PR_ID_CODE_ED, d$YEAR_LANDED), sum, na.rm = T)
 dim(totrev)
@@ -118,6 +146,13 @@ table(d$FISHER_PERMIT, useNA = "always")
 table(d$FISHER_FIRST_NAME, useNA = "always")
 table(d$FISHER_LAST_NAME, useNA = "always")
 table(d$CHARTER_TRIP, useNA = "always")
+table(d$TRIP_MAY_BE_DUPLICATE, useNA = "always")
+
+dim(d)
+d <- d[-which(d$TRIP_MAY_BE_DUPLICATE == "Y"), ]
+dim(d)
+d <- d[-which(d$CHARTER_TRIP == "Y"), ]
+dim(d)
 
 # remove bad price values ------------------------------
 
@@ -126,6 +161,28 @@ which(d$PRICE > 15)
 d$SPECIES_NM[which(d$PRICE > 15)]
 hist(d$PRICE[which(d$PRICE > 15)])
 d$PRICE[which(d$PRICE > 15)] <- NA
+
+# insert missing prices -------------------------------
+
+table(is.na(d$PRICE), d$SPECIES_NM)
+table(is.na(d$PRICE))
+
+for (i in unique(d$SPECIES_NM))  {
+  m <- mean(d$PRICE[which(d$SPECIES_NM == i)], na.rm = T)
+  d$PRICE[which(d$SPECIES_NM == i & is.na(d$PRICE))] <- m
+}
+
+table(is.na(d$PRICE))
+table(d$SPECIES_NM, is.na(d$PRICE))
+table(d$FAMILY, is.na(d$PRICE))
+
+for (i in unique(d$FAMILY))  {
+  m <- mean(d$PRICE[which(d$FAMILY == i)], na.rm = T)
+  d$PRICE[which(d$FAMILY == i & is.na(d$PRICE))] <- m
+}
+
+table(is.na(d$PRICE))
+table(d$FAMILY, is.na(d$PRICE))
 
 # calculate revenue, sum by permit and year ------------
 
@@ -152,11 +209,12 @@ dim(totland)
 
 # calculate gini index --------------------------------
 
+par(mfrow = c(2, 1))
 gini_rev_stt <- apply(totrev, 2, calcGini)
 plot(names(gini_rev_stt), gini_rev_stt, type = "b")
 
 gini_land_stt <- apply(totland, 2, calcGini)
-plot(names(gini_land_stt), gini_land_stt, col = 2)
+plot(names(gini_land_stt), gini_land_stt, col = 2, type = "b")
 
 plot(gini_land_stt, gini_rev_stt)
 cor(gini_land_stt, gini_rev_stt)
@@ -192,8 +250,35 @@ table(d$FISHER_PERMIT, useNA = "always")
 table(d$FISHER_FIRST_NAME, useNA = "always")
 table(d$FISHER_LAST_NAME, useNA = "always")
 table(d$CHARTER_TRIP, useNA = "always")
+table(d$TRIP_MAY_BE_DUPLICATE, useNA = "always")
 
-#d <- d[which(d$CHARTER_TRIP == "Y"), ]
+dim(d)
+#d <- d[-which(d$TRIP_MAY_BE_DUPLICATE == "Y"), ]
+#dim(d)
+d <- d[-which(d$CHARTER_TRIP == "Y"), ]
+dim(d)
+
+# insert missing prices -------------------------------
+
+table(is.na(d$PRICE), d$SPECIES_NM)
+table(is.na(d$PRICE))
+
+for (i in unique(d$SPECIES_NM))  {
+  m <- mean(d$PRICE[which(d$SPECIES_NM == i)], na.rm = T)
+  d$PRICE[which(d$SPECIES_NM == i & is.na(d$PRICE))] <- m
+}
+
+table(is.na(d$PRICE))
+table(d$SPECIES_NM, is.na(d$PRICE))
+table(d$FAMILY, is.na(d$PRICE))
+
+for (i in unique(d$FAMILY))  {
+  m <- mean(d$PRICE[which(d$FAMILY == i)], na.rm = T)
+  d$PRICE[which(d$FAMILY == i & is.na(d$PRICE))] <- m
+}
+
+table(is.na(d$PRICE))
+table(d$FAMILY, is.na(d$PRICE))
 
 # remove bad price values ------------------------------
 
@@ -244,7 +329,7 @@ cor(gini_land_stx, gini_rev_stx)
 ls()[grep("gini", ls())]
 
 datdata <- styear:enyear
-inddata <- data.frame(gini_rev_pr, gini_rev_stt, gini_land_stx)
+inddata <- data.frame(gini_rev_pr, gini_rev_stt, gini_rev_stx)
 labs <- c("Inequality in revenues" , "Gini index", "Puerto Rico", 
           "Inequality in revenues" , "Gini index", "St. Thomas and St. John",
           "Inequality in revenues" , "Gini index", "St. Croix")
@@ -255,9 +340,28 @@ class(s) <- "indicatordata"
 ind <- s 
 
 plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, sublabel = T, sameYscale = T, 
-                        widadj = 1.3, hgtadj = 1, trendAnalysis = T)
+                        widadj = 1.5, hgtadj = 0.8, trendAnalysis = T, outtype = "png")
 
-save(ind, file = "indicator_objects/gini.RData")
+save(ind, file = "indicator_objects/gini_revenue.RData")
+
+
+ls()[grep("gini", ls())]
+
+datdata <- styear:enyear
+inddata <- data.frame(gini_land_pr, gini_land_stt, gini_land_stx)
+labs <- c("Inequality in landings" , "Gini index", "Puerto Rico", 
+          "Inequality in landings" , "Gini index", "St. Thomas and St. John",
+          "Inequality in landings" , "Gini index", "St. Croix")
+indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
+s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
+class(s) <- "indicatordata"
+
+ind <- s 
+
+plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, sublabel = T, sameYscale = T, 
+                        widadj = 1.3, hgtadj = 0.8, trendAnalysis = T)
+
+save(ind, file = "indicator_objects/gini_landings.RData")
 
 
 # hurricane Maria - 2017 - STX and PR

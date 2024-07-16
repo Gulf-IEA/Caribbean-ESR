@@ -11,7 +11,7 @@ load("indicator_processing/spec_file.RData")
 
 options(download.file.method="libcurl")
 
-styear <- 2012
+styear <- 1980
 enyear <- terminal_year
 
 # download data and calculate mean -------------------
