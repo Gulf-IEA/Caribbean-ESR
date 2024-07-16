@@ -19,7 +19,7 @@ enyear <- 2022
 
 # input data for Puerto Rico ---------------------------
 
-dat <- read.csv(paste0(confpath, "wrkeithly_pr_com_data_2000_2022_20240501_C.csv"))
+dat <- read.csv(paste0(confpath, "wrkeithly_pr_com_data_2000_2022_20240625_C.csv"))
 
 d <- dat[which(dat$YEAR_LANDED >= styear & dat$YEAR_LANDED <= enyear), ]
 
@@ -319,19 +319,19 @@ av <- apply(an2, 1, mean, na.rm = T)
 er <- apply(an2, 1, sd, na.rm = T)*1.96
 
 # identify anomalous years and highlight -----------------------
-anomlis <- c(2017, 2020)
+anomlis <- c(2017, 2019)
 cols <- rep("#00000060", dim(an)[2])
 cols[which(colnames(an2) == 2017)] <- 3
-cols[which(colnames(an2) == 2020)] <- 4
+cols[which(colnames(an2) == 2019)] <- 4
 lwds <- rep(1, dim(an)[2])
 lwds[which(colnames(an2) == 2017)] <- 3
-lwds[which(colnames(an2) == 2020)] <- 3
+lwds[which(colnames(an2) == 2019)] <- 3
 
 matplot(an2, col = cols, type = "l", lty = 1, lwd = lwds, axes = F, ylab = "proportion of landings", 
         main = "Distribution of landings throughout the year")
 axis(1, at = 1:12, lab = month.abb[c(7:12, 1:6)])
 axis(2, las = 2); box()
-text(2, 0.11, col = 4, "2020", cex = 1.2, font = 2)
+text(2, 0.11, col = 4, "2019", cex = 1.2, font = 2)
 text(8, 0.025, col = 3, "2017", cex = 1.2, font = 2)
 
 # calculate disturbance indicator ---------------------------

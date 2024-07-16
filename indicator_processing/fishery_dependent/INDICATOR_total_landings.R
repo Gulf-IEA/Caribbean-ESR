@@ -18,7 +18,7 @@ enyear <- 2022
 
 # input data for Puerto Rico ---------------------------
 
-dat <- read.csv(paste0(confpath, "wrkeithly_pr_com_data_2000_2022_20240501_C.csv"))
+dat <- read.csv(paste0(confpath, "wrkeithly_pr_com_data_2000_2022_20240625_C.csv"))
 
 table(dat$YEAR_LANDED)
 
@@ -36,6 +36,22 @@ d <- dat[which(dat$YEAR_LANDED >= styear & dat$YEAR_LANDED <= enyear), ]
 
 table(d$YEAR_LANDED, useNA = "always")
 table(d$CORRECTION_FACTOR, d$YEAR_LANDED)
+
+# remove land crab trips -------------------
+
+sort(table(d$ITIS_COMMON_NAME[grep("CRAB", d$ITIS_COMMON_NAME)]))
+sort(table(d$ERDMAN_GEAR_NAME[grep("CRAB,BLUE", d$ITIS_COMMON_NAME)]))
+sort(table(d$FAMILY[grep("CRAB,BLUE", d$ITIS_COMMON_NAME)]))
+sort(table(d$ERDMAN_GEAR_NAME[which(d$FAMILY == "LAND CRABS")]))
+par(mar = c(12, 4, 1, 1))
+barplot(sort(table(d$ERDMAN_GEAR_NAME[which(d$FAMILY == "LAND CRABS")])), las = 2)
+sort(table(d$ITIS_COMMON_NAME[which(d$ERDMAN_GEAR_NAME == "BY HAND")]))  # don't remove, contains conch as well
+# filtering by LAND CRAB TRAP gear takes out vast majority (96%) of land crab trips
+
+d[which(d$ERDMAN_GEAR_NAME == "LAND CRAB TRAP"), ]
+dim(d)
+d <- d[which(d$ERDMAN_GEAR_NAME != "LAND CRAB TRAP"), ]
+dim(d)
 
 # look at top landings -------------------------------
 
@@ -221,7 +237,7 @@ class(s) <- "indicatordata"
 ind <- s
 
 plotIndicatorTimeSeries(ind, coltoplot = 1:9, plotrownum = 3, plotcolnum = 3, sublabel = T, sameYscale = F, 
-                        widadj = 0.8, hgtadj = 0.7, trendAnalysis = F)   # outtype = "png")
+                        widadj = 0.8, hgtadj = 0.7, trendAnalysis = T) #, outtype = "png")
 
 save(ind, file = "indicator_objects/total_landings.RData")
 

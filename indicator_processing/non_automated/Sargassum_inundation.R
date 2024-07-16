@@ -37,8 +37,11 @@ res <- griddap(afai, fields = 'AFAI',
                     longitude = c(min_lon, max_lon), 
                     latitude = c(min_lat, max_lat))
 
+hist(res$data$AFAI)
+quantile(res$data$AFAI, na.rm = T, probs = 0.95)
+
 res$data$lim <- 0
-res$data$lim [which(res$data$AFAI > 0.002)] <- 1
+res$data$lim[which(res$data$AFAI > 0.00063)] <- 1
 
 res$data$year <- substr(res$data$time, 1, 4)
 res$data$tim <- substr(res$data$time, 1, 7)
@@ -49,8 +52,7 @@ mon_afai <- tapply(res$data$lim, res$data$tim, sum, na.rm = T)
 yr_afai <- tapply(res$data$lim, res$data$year, sum, na.rm = T)
 
 plot(mon_afai, type = "l")
-plot(2017:2023, 
-     yr_afai, type = "l")
+plot(2017:2023, yr_afai, type = "l")
 
 # create indicator object --------------
 

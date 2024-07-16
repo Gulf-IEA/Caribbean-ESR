@@ -7,8 +7,20 @@ rm(list = ls())
 library(pdftools)
 library(xml2)
 library(rvest)
+library(tidyverse)
+library(stringr)
+library(purrr)
 
 URL <- "https://usviber.org/archived-data/"
+
+page <- read_html(URL)
+  
+raw_list <- page %>% # takes the page above for which we've read the html
+html_nodes("a") %>%  # find all links in the page
+html_attr("href") %>% # get the url for these links
+str_subset("\\.pdf") %>% # find those that end in pdf only
+  
+
 pg <- read_html(URL)
 lis <- html_attr(html_nodes(pg, "a"), "href")
 lablis <- lis[9:32]

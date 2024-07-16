@@ -547,7 +547,7 @@ dev.off()
 ###########################  START PR  #################################
 rm(list = ls()[-match(c("styear", "enyear", "confpath"), ls())])
 
-dat <- read.csv(paste0(confpath, "wrkeithly_pr_com_data_2000_2022_20240501_C.csv"))
+dat <- read.csv(paste0(confpath, "wrkeithly_pr_com_data_2000_2022_20240625_C.csv"))
 
 # subset years------------------------------------------
 
@@ -742,6 +742,7 @@ save(byc, file ="indicator_data/prop_trips_nonselective_PR.RData")
 
 # plot trips and percent bycatch gears -------------------
 
+mat
 mat <- mat[, c(1, 3, 4, 2, 5)]
 cols <- cols25(7)
 cols <- cols[c(7, 2:5)]
