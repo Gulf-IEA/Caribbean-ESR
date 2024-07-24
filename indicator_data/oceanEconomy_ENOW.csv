@@ -1,0 +1,61 @@
+geoid,geoName,year,sector,establishments,employment,wages,gdp
+72000,Puerto Rico,2019,Government,NA,ND,ND,ND
+72000,Puerto Rico,2020,Government,NA,ND,ND,ND
+72000,Puerto Rico,2021,Government,NA,ND,ND,ND
+72000,Puerto Rico,2019,Living Resources,10,134,5255000,14000000
+72000,Puerto Rico,2020,Living Resources,9,136,3605000,9700000
+72000,Puerto Rico,2021,Living Resources,10,147,5828000,15600000
+72000,Puerto Rico,2019,Marine Construction,14,152,3461000,5400000
+72000,Puerto Rico,2020,Marine Construction,15,174,4488000,6300000
+72000,Puerto Rico,2021,Marine Construction,15,355,7352000,9600000
+72000,Puerto Rico,2019,Marine Transportation,89,4594,155527000,290800000
+72000,Puerto Rico,2020,Marine Transportation,84,4278,132108000,320200000
+72000,Puerto Rico,2021,Marine Transportation,95,3841,144916000,352500000
+72000,Puerto Rico,2019,Ocean Economy,3072,53699,895344000,1639900000
+72000,Puerto Rico,2020,Ocean Economy,3115,54694,746315000,1437700000
+72000,Puerto Rico,2021,Ocean Economy,3607,53736,1014456000,1914300000
+72000,Puerto Rico,2019,Offshore Mineral Resources,17,198,4482000,8300000
+72000,Puerto Rico,2020,Offshore Mineral Resources,15,209,4594000,9000000
+72000,Puerto Rico,2021,Offshore Mineral Resources,20,296,7521000,14900000
+72000,Puerto Rico,2019,Research and Education,ND,ND,ND,ND
+72000,Puerto Rico,2020,Research and Education,ND,ND,ND,ND
+72000,Puerto Rico,2021,Research and Education,ND,ND,ND,ND
+72000,Puerto Rico,2019,Ship and Boat Building,NA,NA,NA,NA
+72000,Puerto Rico,2020,Ship and Boat Building,NA,NA,NA,NA
+72000,Puerto Rico,2021,Ship and Boat Building,NA,NA,NA,NA
+72000,Puerto Rico,2019,Tourism and Recreation,2941,48620,726575000,1321400000
+72000,Puerto Rico,2020,Tourism and Recreation,2990,49895,601483000,1092500000
+72000,Puerto Rico,2021,Tourism and Recreation,3464,49096,848788000,1521700000
+72000,Puerto Rico,2019,Utilities,9,233,18349776,95631717
+72000,Puerto Rico,2020,Utilities,9,258,18740176,88717101
+72000,Puerto Rico,2021,Utilities,14,252,19083604,106510188
+78000,U.S. Virgin Islands,2019,Government,NA,128,5896526,8425316
+78000,U.S. Virgin Islands,2020,Government,NA,148,6033590,8667984
+78000,U.S. Virgin Islands,2021,Government,NA,104,6243744,9293810
+78000,U.S. Virgin Islands,2019,Living Resources,NA,NA,NA,NA
+78000,U.S. Virgin Islands,2020,Living Resources,NA,NA,NA,NA
+78000,U.S. Virgin Islands,2021,Living Resources,NA,NA,NA,NA
+78000,U.S. Virgin Islands,2019,Marine Construction,3,62,2494000,4117341
+78000,U.S. Virgin Islands,2020,Marine Construction,4,19,587000,958924
+78000,U.S. Virgin Islands,2021,Marine Construction,NA,NA,NA,NA
+78000,U.S. Virgin Islands,2019,Marine Transportation,14,410,13077000,28298204
+78000,U.S. Virgin Islands,2020,Marine Transportation,16,474,16246000,28739403
+78000,U.S. Virgin Islands,2021,Marine Transportation,17,427,14954000,29612398
+78000,U.S. Virgin Islands,2019,Ocean Economy,300,5882,174698000,443380724
+78000,U.S. Virgin Islands,2020,Ocean Economy,309,6286,142127000,311563380
+78000,U.S. Virgin Islands,2021,Ocean Economy,303,5372,166226000,467645267
+78000,U.S. Virgin Islands,2019,Offshore Mineral Resources,NA,NA,NA,NA
+78000,U.S. Virgin Islands,2020,Offshore Mineral Resources,NA,NA,NA,NA
+78000,U.S. Virgin Islands,2021,Offshore Mineral Resources,NA,NA,NA,NA
+78000,U.S. Virgin Islands,2019,Research and Education,NA,62,1953146,2809067
+78000,U.S. Virgin Islands,2020,Research and Education,NA,178,5350517,6840404
+78000,U.S. Virgin Islands,2021,Research and Education,ND,ND,ND,ND
+78000,U.S. Virgin Islands,2019,Ship and Boat Building,NA,NA,NA,NA
+78000,U.S. Virgin Islands,2020,Ship and Boat Building,NA,NA,NA,NA
+78000,U.S. Virgin Islands,2021,Ship and Boat Building,NA,NA,NA,NA
+78000,U.S. Virgin Islands,2019,Tourism and Recreation,279,5315,152024000,296169289
+78000,U.S. Virgin Islands,2020,Tourism and Recreation,285,5713,121293000,216980238
+78000,U.S. Virgin Islands,2021,Tourism and Recreation,280,4836,145723000,310810246
+78000,U.S. Virgin Islands,2019,Utilities,ND,ND,ND,ND
+78000,U.S. Virgin Islands,2020,Utilities,ND,ND,ND,ND
+78000,U.S. Virgin Islands,2021,Utilities,ND,ND,ND,ND

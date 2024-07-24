@@ -1,4 +1,76 @@
-## Ocean economy indicators from NAICS
+## Ocean economy indicators from NAICS. There is an API, but it is not working. Instead, the data were downloaded manually from here: https://coast.noaa.gov/quickreport/#/index.html
+
+
+rm(list = ls())
+dev.off()
+
+
+library(plotTimeSeries)
+
+
+dat = read.csv("indicator_data/oceanEconomy_ENOW.csv")
+head(dat)
+
+yrs = as.integer(dat$year)
+
+styear = min(yrs)
+enyear = max(yrs)
+
+PR = subset(dat, dat$geoName == "Puerto Rico" & dat$sector == "Ocean Economy")
+USVI = subset(dat, dat$geoName == "U.S. Virgin Islands" & dat$sector == "Ocean Economy")
+
+GDP.PR = as.numeric(PR$gdp)/1000000000
+est.PR = as.numeric(PR$establishments)
+emp.PR = as.numeric(PR$employment)/1000
+wag.PR = as.numeric(PR$wages)/1000000000
+
+GDP.USVI = as.numeric(USVI$gdp)/1000000000
+est.USVI = as.numeric(USVI$establishments)
+emp.USVI = as.numeric(USVI$employment)/1000
+wag.USVI = as.numeric(USVI$wages)/1000000000
+
+
+
+# save as indicator object ----------------------
+datdata <- styear:enyear
+inddata <- data.frame(cbind(GDP.PR,GDP.USVI,est.PR,est.USVI,emp.PR,emp.USVI,wag.PR,wag.USVI))
+labs <- c("Gross domestic product" , "Billions of dollars", "Puerto Rico",
+          "Gross domestic product" , "Billions of dollars", "USVI",
+          "Ocean economy establishments" , "Number of places of work", "Puerto Rico",
+          "Ocean economy establishments" , "Number of places of work", "USVI",
+          "Ocean economy employees" , "People (thousands)" , "Puerto Rico",
+          "Ocean economy employees" , "People (thousands)" , "USVI",
+          "Ocean economy wages" , "Billions of dollars", "Puerto Rico",
+          "Ocean economy wages" , "Billions of dollars", "USVI")
+indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
+inddata <- list(labels = indnames, indicators = inddata, datelist = datdata)
+class(inddata) <- "indicatordata"
+
+# plot and save ----------------------------------
+ind <- inddata
+plotIndicatorTimeSeries(ind, plotrownum = 4, coltoplot = 1:8, sublabel = TRUE, trendAnalysis = T)
+
+save(ind, file = "indicator_objects/oceanNAICS.RData")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+########################################################################################
+
+##### Below code is old, do not use ####################################################
+
+########################################################################################
 
 
 #### ************ As of 7/5/24, can't get the API for this working. For now, will just plot the data Seann uploaded to Github. At the end of this script is some code to work with the API but it isn't yet working.

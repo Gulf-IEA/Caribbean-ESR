@@ -401,3 +401,33 @@ png(filename = "indicator_plots/total_landings_plot_TAP.png", width = 9, height 
 load("indicator_objects/total_landings.RData")
 plotIndicatorTimeSeries(ind, coltoplot = 1:9, plotrownum = 3, plotcolnum = 3, trendAnalysis = TRUE, dateformat = "%b%Y", sublabel = TRUE, widadj = 0.9, hgtadj = 0.5, anom = "none", yposadj = 1, cex.axis = 1.2, cex.lab = 1.4, cex.main = 1.3)
 dev.off()
+
+
+
+png(filename = "indicator_plots/RVC_PR_plot_TAP.png", width = 7, height = 6, units = "in", res = 300)
+load("indicator_objects/RVC_PR.RData") 
+plotIndicatorTimeSeries(ind, coltoplot = 1:6, plotrownum = 3, plotcolnum = 2, trendAnalysis = TRUE, dateformat = "%b%Y", sublabel = TRUE, widadj = 1, hgtadj = 0.5, anom = "none", yposadj = 1, cex.axis = 1.2, cex.lab = 1.4, cex.main = 1.3)
+dev.off()
+
+png(filename = "indicator_plots/RVC_STSJ_plot_TAP.png", width = 7, height = 6, units = "in", res = 300)
+load("indicator_objects/RVC_STSJ.RData") 
+plotIndicatorTimeSeries(ind, coltoplot = 1:6, plotrownum = 3, plotcolnum = 2, trendAnalysis = TRUE, dateformat = "%b%Y", sublabel = TRUE, widadj = 1, hgtadj = 0.4, anom = "none", yposadj = 1, cex.axis = 1.2, cex.lab = 1.4, cex.main = 1.3)
+dev.off()
+
+png(filename = "indicator_plots/RVC_STX_plot_TAP.png", width = 7, height = 6, units = "in", res = 300)
+load("indicator_objects/RVC_STX.RData") 
+plotIndicatorTimeSeries(ind, coltoplot = 1:6, plotrownum = 3, plotcolnum = 2, trendAnalysis = TRUE, dateformat = "%b%Y", sublabel = TRUE, widadj = 1, hgtadj = 0.5, anom = "none", yposadj = 1, cex.axis = 1.2, cex.lab = 1.4, cex.main = 1.3)
+dev.off()
+
+
+png(filename = "indicator_plots/FRsection_plot_TAP.png", width = 10, height = 4, units = "in", res = 300)
+load("indicator_objects/FRsection.RData") 
+plotIndicatorTimeSeries(ind,coltoplot = 1, plotrownum = 1, plotcolnum = 1, trendAnalysis = TRUE, dateformat = "%b%Y", sublabel = F, widadj = 1, hgtadj = 1, anom = "none", yposadj = 1, cex.lab = 1, type = "allLines")
+dev.off()
+
+
+
+png(filename = "indicator_plots/oceanNAICS_plot_TAP.png", width = 6, height = 7, units = "in", res = 300)
+load("indicator_objects/oceanNAICS.RData") 
+plotIndicatorTimeSeries(ind, coltoplot = 1:8, plotrownum = 4, plotcolnum = 2, trendAnalysis = TRUE, dateformat = "%b%Y", sublabel = TRUE, widadj = 5, hgtadj = 1, anom = "none", yposadj = 1.2, cex.axis = 1, cex.lab = 1.1, cex.main = 1.3)
+dev.off()

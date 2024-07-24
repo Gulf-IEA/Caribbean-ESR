@@ -41,6 +41,11 @@ enyear = 2023 #to update the plots when new data are added to the online portal,
 
 # Define the regions and corresponding file paths
 regions <- c("prico", "sttstj", "stx")
+
+
+# Run this code if you need to pull more data from the server
+##########
+
 data_2001_2021_paths <- c("indicator_data/RVC/prico_2001_2021_calibrated.rds", 
                           "indicator_data/RVC/sttstj_2001_2021_calibrated.rds", 
                           "indicator_data/RVC/stx_2001_2021_calibrated.rds")
@@ -88,7 +93,8 @@ for (i in seq_along(regions)) {
   saveRDS(combined_data, paste0("indicator_data/RVC/combined_", region, "_2001_2023.rds"))
 }
 
-
+#########
+# Start here if you don't need to pull new data from the server
 
 prico = readRDS("indicator_data/RVC/combined_prico_2001_2023.rds")
 sttstj = readRDS("indicator_data/RVC/combined_sttstj_2001_2023.rds")
@@ -119,7 +125,7 @@ for(j in regions) {
   
   # Convert SPECIES_CD to factor to ensure correct ordering in plots
   ddens$SPECIES_CD <- factor(ddens$SPECIES_CD)
-  
+
   species <- unique(ddens$SPECIES_CD)
   for (i in species) {
     # Subset data for the current species
@@ -133,14 +139,15 @@ for(j in regions) {
     # format indicator object -----------------------------
   
     datdata <- species_data$YEAR
-    inddata <- data.frame(species_data$density)
-    vardata <- data.frame(species_data$var)
-    s1 <- cbind(datdata, inddata)
-    s2 <- cbind(s1, vardata)
+    inddata <- data.frame(density = species_data$density)
+    vardata <- data.frame(var = species_data$var)
+    ulidata <- data.frame(uli = species_data$density + sqrt(species_data$var))
+    llidata <- data.frame(lli = species_data$density - sqrt(species_data$var))
+    s <- cbind(datdata, inddata, vardata, ulidata, llidata)
    
     # save -----------------------------------------
   
-    save(s2, file = paste("indicator_data/RVC/RUVdensity_", j, "_", i, ".RData", sep = ""))
+    save(s, file = paste("indicator_data/RVC/RUVdensity_", j, "_", i, ".RData", sep = ""))
   }
 }
 
@@ -177,7 +184,24 @@ for (file in files) {
 
 # Puerto Rico
 datdata <- as.integer(RUVdensity_PRICO_BAL_VETU$datdata)
-inddata <- data.frame(cbind(RUVdensity_PRICO_BAL_VETU$species_data.density, RUVdensity_PRICO_EPI_GUTT$species_data.density, RUVdensity_PRICO_LUT_ANAL$species_data.density, RUVdensity_PRICO_OCY_CHRY$species_data.density, RUVdensity_PRICO_SPA_AURO$species_data.density, RUVdensity_PRICO_SPA_VIRI$species_data.density))
+inddata <- data.frame(cbind(RUVdensity_PRICO_BAL_VETU$density,
+                            RUVdensity_PRICO_EPI_GUTT$density,
+                            RUVdensity_PRICO_LUT_ANAL$density,
+                            RUVdensity_PRICO_OCY_CHRY$density,
+                            RUVdensity_PRICO_SPA_AURO$density,
+                            RUVdensity_PRICO_SPA_VIRI$density))
+ulidata <- data.frame(cbind(RUVdensity_PRICO_BAL_VETU$uli,
+                            RUVdensity_PRICO_EPI_GUTT$uli,
+                            RUVdensity_PRICO_LUT_ANAL$uli,
+                            RUVdensity_PRICO_OCY_CHRY$uli,
+                            RUVdensity_PRICO_SPA_AURO$uli,
+                            RUVdensity_PRICO_SPA_VIRI$uli))
+llidata <- data.frame(cbind(RUVdensity_PRICO_BAL_VETU$lli,
+                            RUVdensity_PRICO_EPI_GUTT$lli,
+                            RUVdensity_PRICO_LUT_ANAL$lli,
+                            RUVdensity_PRICO_OCY_CHRY$lli,
+                            RUVdensity_PRICO_SPA_AURO$lli,
+                            RUVdensity_PRICO_SPA_VIRI$lli))
 labs <- c("Puerto Rico" , "Density", "queen triggerfish",
           "Puerto Rico" , "Density", "red hind",
           "Puerto Rico" , "Density", "mutton snapper*",
@@ -185,14 +209,31 @@ labs <- c("Puerto Rico" , "Density", "queen triggerfish",
           "Puerto Rico" , "Density", "redband parrotfish",
           "Puerto Rico" , "Density", "stoplight parrotfish")
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
-inddata <- list(labels = indnames, indicators = inddata, datelist = datdata)
+inddata <- list(labels = indnames, indicators = inddata, datelist = datdata, ulim = ulidata, llim = llidata)
 class(inddata) <- "indicatordata"
 ind <- inddata
 save(ind, file = "indicator_objects/RVC_PR.RData")
 
 # St. Thomas & St. John
 datdata <- as.integer(RUVdensity_PRICO_BAL_VETU$datdata)
-inddata <- data.frame(cbind(RUVdensity_STTSTJ_BAL_VETU$species_data.density, RUVdensity_STTSTJ_EPI_GUTT$species_data.density, RUVdensity_STTSTJ_LUT_ANAL$species_data.density, RUVdensity_STTSTJ_OCY_CHRY$species_data.density, RUVdensity_STTSTJ_SPA_AURO$species_data.density, RUVdensity_STTSTJ_SPA_VIRI$species_data.density))
+inddata <- data.frame(cbind(RUVdensity_STTSTJ_BAL_VETU$density,
+                            RUVdensity_STTSTJ_EPI_GUTT$density,
+                            RUVdensity_STTSTJ_LUT_ANAL$density,
+                            RUVdensity_STTSTJ_OCY_CHRY$density,
+                            RUVdensity_STTSTJ_SPA_AURO$density,
+                            RUVdensity_STTSTJ_SPA_VIRI$density))
+ulidata <- data.frame(cbind(RUVdensity_STTSTJ_BAL_VETU$uli,
+                            RUVdensity_STTSTJ_EPI_GUTT$uli,
+                            RUVdensity_STTSTJ_LUT_ANAL$uli,
+                            RUVdensity_STTSTJ_OCY_CHRY$uli,
+                            RUVdensity_STTSTJ_SPA_AURO$uli,
+                            RUVdensity_STTSTJ_SPA_VIRI$uli))
+llidata <- data.frame(cbind(RUVdensity_STTSTJ_BAL_VETU$lli,
+                            RUVdensity_STTSTJ_EPI_GUTT$lli,
+                            RUVdensity_STTSTJ_LUT_ANAL$lli,
+                            RUVdensity_STTSTJ_OCY_CHRY$lli,
+                            RUVdensity_STTSTJ_SPA_AURO$lli,
+                            RUVdensity_STTSTJ_SPA_VIRI$lli))
 labs <- c("St. Thomas & St. John" , "Density", "queen triggerfish",
           "St. Thomas & St. John" , "Density", "red hind",
           "St. Thomas & St. John" , "Density", "mutton snapper*",
@@ -200,7 +241,7 @@ labs <- c("St. Thomas & St. John" , "Density", "queen triggerfish",
           "St. Thomas & St. John" , "Density", "redband parrotfish",
           "St. Thomas & St. John" , "Density", "stoplight parrotfish")
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
-inddata <- list(labels = indnames, indicators = inddata, datelist = datdata)
+inddata <- list(labels = indnames, indicators = inddata, datelist = datdata, ulim = ulidata, llim = llidata)
 class(inddata) <- "indicatordata"
 ind <- inddata
 save(ind, file = "indicator_objects/RVC_STSJ.RData")
@@ -208,7 +249,24 @@ save(ind, file = "indicator_objects/RVC_STSJ.RData")
 
 # St. Croix
 datdata <- as.integer(RUVdensity_PRICO_BAL_VETU$datdata)
-inddata <- data.frame(cbind(RUVdensity_STX_BAL_VETU$species_data.density, RUVdensity_STX_EPI_GUTT$species_data.density, RUVdensity_STX_LUT_ANAL$species_data.density, RUVdensity_STX_OCY_CHRY$species_data.density, RUVdensity_STX_SPA_AURO$species_data.density, RUVdensity_STX_SPA_VIRI$species_data.density))
+inddata <- data.frame(cbind(RUVdensity_STX_BAL_VETU$density,
+                            RUVdensity_STX_EPI_GUTT$density,
+                            RUVdensity_STX_LUT_ANAL$density,
+                            RUVdensity_STX_OCY_CHRY$density,
+                            RUVdensity_STX_SPA_AURO$density,
+                            RUVdensity_STX_SPA_VIRI$density))
+ulidata <- data.frame(cbind(RUVdensity_STX_BAL_VETU$uli,
+                            RUVdensity_STX_EPI_GUTT$uli,
+                            RUVdensity_STX_LUT_ANAL$uli,
+                            RUVdensity_STX_OCY_CHRY$uli,
+                            RUVdensity_STX_SPA_AURO$uli,
+                            RUVdensity_STX_SPA_VIRI$uli))
+llidata <- data.frame(cbind(RUVdensity_STX_BAL_VETU$lli,
+                            RUVdensity_STX_EPI_GUTT$lli,
+                            RUVdensity_STX_LUT_ANAL$lli,
+                            RUVdensity_STX_OCY_CHRY$lli,
+                            RUVdensity_STX_SPA_AURO$lli,
+                            RUVdensity_STX_SPA_VIRI$lli))
 labs <- c("St. Croix" , "Density", "queen triggerfish",
           "St. Croix" , "Density", "red hind",
           "St. Croix" , "Density", "mutton snapper*",
@@ -216,7 +274,7 @@ labs <- c("St. Croix" , "Density", "queen triggerfish",
           "St. Croix" , "Density", "redband parrotfish",
           "St. Croix" , "Density", "stoplight parrotfish")
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
-inddata <- list(labels = indnames, indicators = inddata, datelist = datdata)
+inddata <- list(labels = indnames, indicators = inddata, datelist = datdata, ulim = ulidata, llim = llidata)
 class(inddata) <- "indicatordata"
 ind <- inddata
 save(ind, file = "indicator_objects/RVC_STX.RData")
@@ -233,7 +291,4 @@ plotIndicatorTimeSeries(ind, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
 
 
 
-### Left to troubleshoot:
-
-# Need to take out mutton snapper and do that one separately because the data are not calibrated. Need to chop it so only use data from 2017 onward.
 
