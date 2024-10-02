@@ -1,6 +1,6 @@
 # Script to pull all the indicators from the indicator_objects folder and merge the data into a matrix that can be used for stoplight plots.
 
-# For the monthly indicators we need to just average those into annual time steps. (Not yet included)
+# For the monthly indicators we need to just average those into annual time steps.
 
 
 rm(list = ls())
