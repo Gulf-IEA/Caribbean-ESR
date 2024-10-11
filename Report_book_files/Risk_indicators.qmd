@@ -2,84 +2,90 @@
 
 In this section, we examine indicators...
 
-### Degree heating weeks
+### Coral bleaching stress
 
-Indicator 1 
+Accumulated heat stress, which can lead to coral bleaching and death, is measured by summing degree heating weeks for the most recent 12-week period from sea surface temperature data (cite). Bleaching stress was generally below average until the mid-2000s, until a sudden bleaching event in 2005 which is now the second most severe event in history. In 2024, and unprecedented bleaching event occurred across the U.S. Caribbean and beyond (fig).
 
-![](/indicator_plots/DegreeHeatingWeeks_plot.png){fig-alt="Plot showing a time series of an indicator"} 
+![Degree heating weeks plot](/indicator_plots/DegreeHeatingWeeks_plot_final.png){fig-alt="A plot showing the indicator" fig-align="center"}
 
 ### Ocean acidification via aragontite saturation state
 
-Indicator 2
+Ocean and coastal acidification can impact organisms directly or indirectly; a decrease in aragonite saturation state can weaken the structure of coral reefs and other calcifying organisms. In-situ measurements of aragonite saturation states are scarce and a synoptic, long-term view is only available from modeled products. Aragonite saturation state was derived for the U.S. Caribbean region from the MOM-TOPAZ hindcast (cite). An overall negative trend occurs, with an acceleration of this trend apparent after 2008 (Fig).
 
-![](/indicator_plots/OA_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![Ocean acidification plot](/indicator_plots/OA_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ### Hurricane activity
 
-Indicator 3
+Hurricane activity can be captured by the accumulated cyclone energy index which is calculated as the sum of squared wind speeds for storms tracking through the U.S. Caribbean region, as documented by the International Best Track Archive for Climate Stewardship database (cite). The index has fluctuated throughout the past seven decades, with multiple notable peaks (Fig). The year 2017 hurricane activity was at an unprecedented high, due to two major hurricanes that struck the islands: Irma and Maria.
 
-![](/indicator_plots/ACEindex_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![Hurricane activity](/indicator_plots/ACEindex_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ### Turbidity
 
-Indicator 4
+Coastal pollution, runoff, and water quality issues are of major concern to fishing-dependent communities in the U.S. Caribbean (Seara et al. 2024). Water clarity can be measured by the diffuse attenuation coefficient which indicates how strongly light intensity is attenuated within the water column; however, satellite sensors cannot differentiate between organic and inorganic water particles contributing to water clarity. NOAA’s Coastwatch program provides estimates of the attenuation coefficient for penetration of light at 490nm (Wang et al. 2009) based on multiple satellite sensors. \[sentence on trends\]
 
-![](/indicator_plots/turbidity_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![Turbidity plot](/indicator_plots/turbidity_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ### Sea surface temperature
 
-Indicator 5
+Ocean temperatures affect species distributions and other aspects of population dynamics and have impacts on habitats such as coral reefs. Monthly mean, minimum, and maximum sea surface temperatures were calculated based on the 1/4 Degree Daily Optimum Interpolation Sea Surface Temperature (OISST) Analysis (cite). Mean temperatures in the U.S. Caribbean region have been increasing at an average rate of 0.25 degrees C per decade. In the last five years, minimum temperatures have been well above average (Fig), while there has been no long-term or recent trend in maximum temperatures experienced.
 
-![](/indicator_plots/Carib_SST_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![SST plot](/indicator_plots/Carib_SST_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ### Marine debris
 
 Indicator 6
 
-![](/indicator_plots/marine_debris_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![Marine debris plot](/indicator_plots/marine_debris_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ### Identified point source pollution sites
 
-Indicator 7
+Impacts from terrestrial pollution can be captured from several databases maintained by the Environmental Protection Agency, which provide information on companies that have been issued permits to discharge wastewater into rivers, release of toxic chemicals and waste management activities at facilities, and declaration of Superfund sites. The number of pollution sites reported increased in the 2000s, but has decreased slightly in both Puerto Rico and USVI in recent years (Fig). Note that this indicator does not represent the timing of when pollution was impacting the ecosystem, but rather the timing of political action or attention on the environmental impacts of pollution.
 
-![](/indicator_plots/pollution_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![Pollution plot](/indicator_plots/pollution_plot_final.png){fig-alt="a plot" fig-align="center"}
+
+### Water quality
+
+Indicator 8 - not done yet
 
 ### Primary productivty via ocean color
 
-Indicator 8
+Primary productivity is a measure of the total energy available in an ecosystem and is closely correlated with chlorophyll a concentrations. Average chlorophyll a concentrations are derived from the European Space Agency Climate Change Initiative’s Ocean Colour product which provides a bias-corrected composite of measurements merged from multiple satellite sensors (cite). Concentrations are plotted as standardized monthly anomalies as there is a seasonal signal that could mask long-term trends. Estimates show a decadal cyclical pattern, with no overall or recent trend apparent (Fig).
 
-![](/indicator_plots/carib_Chl_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![PP plot](/indicator_plots/carib_Chl_plot_final.png){fig-alt="a plot" fig-align="center"}
 
-### Coastal development
+### Coastal development and land use change
 
-Indicator 9
+Indicator 10
 
 ![](/indicator_plots/Land_Use_Land_Cover_2024.jpg){fig-alt="Plot showing a time series of an indicator"}
 
 ### Number of major earthquakes
 
-Indicator 10
+Earthquakes in Puerto Rico can induce landslides and cause impacts to infrastructure including homes and the electrical grid, and can be a source of stress in the affected human population (Agar et al. 2022 NOAA Technical Memorandum NMFS-SEFSC-759). Seismic events are reported by the USGS in near real-time (cite). A major earthquake swarm occurred in Southwest Puerto Rico in early 2020; in this year there were over 400 events of greater than 3.5 magnitude on the Richter scale (Fig).
 
-![](/indicator_plots/earthquakes_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![Earthquakes plot](/indicator_plots/earthquakes_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ### Market disturbances
 
-Indicator 11 
+Alterations to typical fishing patterns can be quantified by analyzing the seasonality of how fishing activity is distributed throughout the year and detecting deviations from average patterns. A market disturbance indicator was developed by calculating the proportion of landings in each month of the year, and summing the square of deviations between those monthly proportions from the mean proportions across all years. In Puerto Rico there is little trend in the indicator; however there were disturbances in 2005 and 2020-2021. In St. Thomas, the indicator increases throughout time and detects a major disturbance in the 2017-18 fishing season. In St. Croix, disturbance levels were high in 2017-18 and also 2019-20.
 
-![](/indicator_plots/disturbance_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![Disturbance plot](/indicator_plots/disturbance_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ### Sargassum innundation
 
-Indicator 12
+Sargassum (brown macroalgae S. Fluitains and S. natans) is a designated essential fish habitat important for many pelagic fish and protected species; however, when large blooms collect in nearshore environments the mats can reduce oxygen, suffocate beaches and have detrimental impacts on marine species. Mean monthly Sargassum wet biomass is estimated from satellite measurements using the algorithm of Wang et al. (2018). Sargassum blooms were largely absent from the U.S. Caribbean prior to 2011, but bloom activity has been generally increasing since that year (Fig). Major inundation events occurred in 2018 and 2021.
 
-![](/indicator_plots/Sargassum_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![Sargassum plot](/indicator_plots/Sargassum_plot_final.png){fig-alt="a plot" fig-align="center"}
 
-### Tourism 
+### Tourism (air arrivals and cruise passengers)
 
-Indicator 13
+Human activity has an impact on the marine ecosystem indirectly through its influence on coastal development and pollution, as well as directly through marine tourism, fishing and demand for seafood. Human activity is exerted by the local population as well as the extensive tourism industry that exists in the U.S. Caribbean. Total population estimates are reported by the U.S. Census (??) and tourism activity can be measured through hotel occupancy rates (cite) and the number of cruise passengers (cite). Human population in the U.S. Caribbean has been declining gradually since 2000. Tourism was relatively stable until recent years, with major decreases in 2017 and 2020.
+
+![Cruise passengers plot](/indicator_plots/cruise_plot_final.png){fig-alt="A plot" fig-align="center"}
 
 ### Human population
 
-Indicator 14
+Indicator 15
 
-![](/indicator_plots/population_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![Population plot](/indicator_plots/population_plot_final.png){fig-alt="A plot" fig-align="center"}

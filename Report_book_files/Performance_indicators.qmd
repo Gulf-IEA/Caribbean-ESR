@@ -6,31 +6,39 @@ In this section, we examine indicators related to broad, ecosystem-level fishery
 
 ### Fishery independent surveys of economically important species
 
-Indicator 15 - abundance of economically important fish
+Indicator 16 - abundance of economically important fish
 
-![](/indicator_plots/RVC_PR_plot.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/RVC_STSJ_plot.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/RVC_STX_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![RVC PR](/indicator_plots/RVC_PR_plot_final.png){fig-alt="A plot showing the indicator" fig-align="center"}
 
-Indicator 16 - abundance of commercial fish and slope of the size spectrum based on TCRMP and PRCRMP
+![RVC STSJ](/indicator_plots/RVC_STSJ_plot_final.png){fig-alt="a plot" fig-align="center"}
 
-![](/indicator_plots/fish_density_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![RVC STX](/indicator_plots/RVC_STX_plot_final.png){fig-alt="a plot" fig-align="center"}
+
+Indicator 17 - abundance of commercial fish and slope of the size spectrum based on TCRMP and PRCRMP
+
+![fish density](/indicator_plots/fish_density_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ### Pelagic:demersal ratio
 
 Indicator 18
 
-![](/indicator_plots/PD_ratio_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![PD ratio](/indicator_plots/PD_ratio_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ### Maximum length and size structure
 
 Indicator 19 - Lmax indicator
 
-![](/indicator_plots/PR_Lmax_classes_plot.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/STT_Lmax_classes_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![PR Lmax](/indicator_plots/PR_Lmax_classes_plot_final.png){fig-alt="a plot" fig-align="center"}
+
+![STT Lmax](/indicator_plots/STT_Lmax_classes_plot_final.png){fig-alt="a plot" fig-align="center"}
+
+![STX Lmax](/indicator_plots/STX_Lmax_classes_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ### Commercial landings
 
 Indicator 20 - total landings
 
-![](/indicator_plots/total_landings_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![Total landings](/indicator_plots/total_landings_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ## 5.2 Socioeconomic health
 
@@ -46,23 +54,23 @@ Indicator 22 - number of trips
 
 ![](/indicator_plots/gearTypes_PR.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/gearTypes_STT.png){fig-alt="Plot showing a time series of an indicator"} ![](/indicator_plots/gearTypes_STX.png){fig-alt="Plot showing a time series of an indicator"}
 
-### Ocean economy employment and wages
+### Ocean economy establishments, employment, and wages
 
 Indicator 23
 
-![](/indicator_plots/oceanNAICS_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![Ocean economy](/indicator_plots/oceanNAICS_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ### GDP
 
 Indicator 24
 
-![](/indicator_plots/GDP_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![GDP](/indicator_plots/GDP_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ### Unemployment
 
 Indicator 25
 
-![](/indicator_plots/unemployment_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![Unemployment](/indicator_plots/unemployment_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ## 5.3 Equity
 
@@ -70,7 +78,7 @@ Indicator 25
 
 Indicator 26
 
-![](/indicator_plots/gini_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![Gini coefficient](/indicator_plots/gini_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ### Environmental justice, economic, and gentrification pressure
 
@@ -84,7 +92,7 @@ Indicator 27
 
 Indicator 28
 
-![](/indicator_plots/total_rec_catch_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![Rec catch](/indicator_plots/total_rec_catch_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ### Commercial fishing engagement and reliance
 
@@ -100,27 +108,35 @@ Indicator 30
 
 ![](/indicator_plots/gearTypes_PR.png) ![](/indicator_plots/gearTypes_STT.png) ![](/indicator_plots/gearTypes_STX.png)
 
+![diving trips](/indicator_plots/prop_diving_trips_plot_final.png){fig-alt="a plot" fig-align="center"}
+
+![Non-selective gears](/indicator_plots/Proportion of trips using non-selective gears.png){fig-alt="a plot" fig-align="center"}
+
 ## 5.5 Governance
 
-### Number of amendments implemented
+### Number of new regulations
 
 Indicator 31
+
+![Regulations](/indicator_plots/FRsection_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ### Percent of species with informative catch limits
 
 Indicator 32
 
-![](/indicator_plots/tier3_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![Tier 3 plot](/indicator_plots/tier3_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ### Number of education and outreach events
 
 Indicator 33
 
-![](/indicator_plots/outreach_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![Outreach](/indicator_plots/outreach_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ### Number of enforcement actions
 
 Indicator 34
+
+![Enforcement](/indicator_plots/enforcement_plot_final.png){fig-alt="a plot" fig-align="center"}
 
 ## 5.6 Protection of ecosystems
 
@@ -128,4 +144,4 @@ Indicator 34
 
 Indicator 35
 
-![](/indicator_plots/coral_spprichness_cover_plot.png){fig-alt="Plot showing a time series of an indicator"}
+![Coral](/indicator_plots/coral_spprichness_cover_plot_final.png){fig-alt="a plot" fig-align="center"}
