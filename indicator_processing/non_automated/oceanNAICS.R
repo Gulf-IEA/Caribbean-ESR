@@ -73,7 +73,7 @@ save(ind, file = "indicator_objects/oceanNAICS.RData")
 ########################################################################################
 
 
-#### ************ As of 7/5/24, can't get the API for this working. For now, will just plot the data Seann uploaded to Github. At the end of this script is some code to work with the API but it isn't yet working.
+#### ************ As of 7/5/24, can't get the API for this working. For now, will just plot the data downloaded from the data portal. At the end of this script is some code to work with the API but it isn't yet working.
 
 rm(list = ls())
 dev.off()
@@ -199,7 +199,7 @@ print(naics_df)
 ## Access the API
 
 library(devtools)
-#install_github('mikeasilva/blsAPI')
+install_github('mikeasilva/blsAPI')
 library(blsAPI)
 library(jsonlite)
 

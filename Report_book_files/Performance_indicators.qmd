@@ -110,7 +110,7 @@ Indicator 30
 
 ![diving trips](/indicator_plots/prop_diving_trips_plot_final.png){fig-alt="a plot" fig-align="center"}
 
-![Non-selective gears](/indicator_plots/Proportion of trips using non-selective gears.png){fig-alt="a plot" fig-align="center"}
+![Non-selective gears](/indicator_plots/Proportion%20of%20trips%20using%20non-selective%20gears.png){fig-alt="a plot" fig-align="center"}
 
 ## 5.5 Governance
 

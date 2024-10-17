@@ -1,10 +1,12 @@
-# Code to plot number of cruise ship visitors Puerto Rico & USVI 
+# Code to plot number of cruise ship visitors and air passengers Puerto Rico & USVI 
 
-# Last updated 6/19/2024 by Carissa Gervasi
+# Last updated 10/17/2024 by Carissa Gervasi
 
 rm(list = ls())
 dev.off()
 
+
+# Puerto Rico - cruise passengers
 
 url1<-'https://www.bde.pr.gov/BDE/PREDDOCS/I_CRUISE.XLS'
 
@@ -29,6 +31,34 @@ cruise_PR = as.numeric(df2t$V2)
 
 # Create a data frame
 PR_cruise <- data.frame(Year = yrs_PR, Cruise_passengers = cruise_PR)
+
+
+
+# Puerto Rico - air passengers (source = PR ports authority)
+
+url1<-'https://www.bde.pr.gov/BDE/PREDDOCS/I_CARGO.XLS'
+
+library(readxl)
+library(httr)
+packageVersion("readxl")
+
+GET(url1, write_disk(tf <- tempfile(fileext = ".xls")))
+df <- read_excel(tf, 2L)
+str(df)
+
+
+df2 = df[c(52,63),]
+
+df2t = as.data.frame(t(df2))
+
+df2t = df2t[-c(1,2,12),]
+
+
+yrs_PR = as.integer(df2t$V1)
+air_PR = as.numeric(df2t$V2)
+
+# Create a data frame
+PR_air <- data.frame(Year = yrs_PR, Air_passengers = air_PR)
 
 
 ############################
@@ -78,14 +108,20 @@ table_data <- strsplit(table_text, " +")[[1]]
 years <- c(2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022)
 
 # Extract and clean the total visitors data by removing commas
-passengers <- gsub(",", "", table_data[87:101])
-passengers <- as.numeric(passengers)
+cruise_passengers <- gsub(",", "", table_data[87:101])
+cruise_passengers <- as.numeric(cruise_passengers)
+
+# Extract and clean the total visitors data by removing commas
+air_passengers <- gsub(",", "", table_data[66:80])
+air_passengers <- as.numeric(air_passengers)
 
 # Create a data frame
-USVI_cruise <- data.frame(Year = years, Cruise_passengers = passengers)
+USVI_cruise <- data.frame(Year = years, Cruise_passengers = cruise_passengers)
+USVI_air <- data.frame(Year = years, Air_passengers = air_passengers)
 
 # Print the data frame
 print(USVI_cruise)
+print(USVI_air)
 
 
 
