@@ -11,6 +11,10 @@
 # specification file and libraries -----------------------------
 rm(list = ls())
 
+
+plot.new()
+dev.off()
+
 library(maps)
 library(plotTimeSeries)
 
@@ -108,4 +112,4 @@ cor.test(Lmax[, 3], mat[, 3], na.action=na.omit)
 # indicators are very highly correlated 
 # use P:D ratio only as it is more direct indicator of what is going on
 
-
+print("PD and LMax -- SUCCESSFULLY RUN")

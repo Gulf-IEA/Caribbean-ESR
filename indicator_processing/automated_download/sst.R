@@ -2,6 +2,8 @@
 # https://stackoverflow.com/questions/68666187/internetopenurl-failed-a-connection-with-the-server-could-not-be-established
 
 rm(list = ls())
+
+plot.new()
 dev.off()
 
 library(lubridate)
@@ -77,4 +79,10 @@ save(ind, file = "indicator_objects/Carib_SST.RData")
 
 plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, dateformat = "%m-%Y", sublabel = T, 
                         trendAnalysis = T, widadj = 0.5, anom = "mon", type = "allLines") #  outtype = "png", hgtadj = 0.8)
+
+
+
+print("SST -- SUCCESSFULLY RUN")
+
+
 

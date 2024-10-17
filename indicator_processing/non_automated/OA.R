@@ -15,6 +15,8 @@
 ##########################################################################
 
 rm(list = ls())
+
+plot.new()
 dev.off()
 
 library(maps)
@@ -22,7 +24,7 @@ library(plotTimeSeries)
 
 load("indicator_processing/spec_file.RData")
 
-dat <- read.table("indicator_data/surface_omega_series.txt", skip = 0, header = F)
+dat <- read.table("indicator_data/inputsToBeUpdatedAnnually/surface_omega_series.txt", skip = 0, header = F)
 
 head(dat)
 tail(dat)
@@ -45,4 +47,6 @@ ind <- s
 
 save(ind, file = "indicator_objects/OA.RData")
 
+
+print("OA -- SUCCESSFULLY RUN")
 

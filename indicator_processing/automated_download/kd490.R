@@ -6,6 +6,8 @@
 # specification file and libraries -----------------------------
 
 rm(list = ls())
+
+plot.new()
 dev.off()
 
 library(lubridate)
@@ -94,3 +96,4 @@ save(ind, file = "indicator_objects/turbidity.RData")
 plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, dateformat = "%m-%Y", sublabel = T, trendAnalysis = F, widadj = 1.5, yposadj = 1.3)
 plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, dateformat = "%m-%Y", sublabel = T, trendAnalysis = F, widadj = 1.5, anom = "mon")
 
+print("KD490 turbidity -- SUCCESSFULLY RUN")

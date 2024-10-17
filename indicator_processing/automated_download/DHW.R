@@ -2,6 +2,8 @@
 # Degree Heating Weeks indicators
 
 rm(list = ls())
+
+plot.new()
 dev.off()
 
 library(maps)
@@ -72,4 +74,5 @@ plotIndicatorTimeSeries(ind, coltoplot = 1:2, plotrownum = 2, sublabel = T, date
 
 # END ---------------
 
+print("DHW -- SUCCESSFULLY RUN")
 

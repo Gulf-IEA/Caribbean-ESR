@@ -12,6 +12,8 @@
 ############################################################################################
 
 rm(list = ls())
+
+plot.new()
 dev.off()
 
 library(maps)
@@ -89,5 +91,5 @@ plotIndicatorTimeSeries(ind, dateformat = "%m-%Y", sublabel = T, trendAnalysis =
 #  image(lon, lat[length(lat):1], chl[, length(lat):1, i], breaks = c(seq(0, 2, 0.25), 7), col = cols, main = tim[i])
 #}
 
-
+print("primary productivity -- SUCCESSFULLY RUN")
 

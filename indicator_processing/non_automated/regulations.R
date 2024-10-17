@@ -53,6 +53,8 @@
 
 
 rm(list = ls())
+
+plot.new()
 dev.off()
 
 library(dplyr)
@@ -93,3 +95,7 @@ ind <- inddata
 plotIndicatorTimeSeries(ind, coltoplot = 1, plotrownum = 1, plotcolnum = 1, trendAnalysis = TRUE, dateformat = "%b%Y", sublabel = TRUE, widadj = 1, hgtadj = 0.7, anom = "none", yposadj = 1, type = "allLines")
 
 save(ind, file = "indicator_objects/FRsection.RData")
+
+
+print("regulations -- SUCCESSFULLY RUN")
+

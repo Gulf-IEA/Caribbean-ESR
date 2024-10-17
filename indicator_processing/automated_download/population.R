@@ -7,8 +7,9 @@
 ## NOTE: 2023 and 2024 are projections. Do we want to use these?
 
 rm(list = ls())
-dev.off()
 
+plot.new()
+dev.off()
 
 library(jsonlite)
 library(httr)
@@ -228,3 +229,7 @@ ind <- inddata
 plotIndicatorTimeSeries(ind, plotrownum = 2, coltoplot = 1:2, sublabel = TRUE, trendAnalysis = T)
 
 save(ind, file = "indicator_objects/population.RData")
+
+############  END  ################33
+
+print("population -- SUCCESSFULLY RUN")

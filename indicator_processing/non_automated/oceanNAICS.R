@@ -2,8 +2,9 @@
 
 
 rm(list = ls())
-dev.off()
 
+plot.new()
+dev.off()
 
 library(plotTimeSeries)
 
@@ -53,7 +54,7 @@ plotIndicatorTimeSeries(ind, plotrownum = 4, coltoplot = 1:8, sublabel = TRUE, t
 save(ind, file = "indicator_objects/oceanNAICS.RData")
 
 
-
+print("ocean NAICS -- SUCCESSFULLY RUN")
 
 ########################################################################################
 

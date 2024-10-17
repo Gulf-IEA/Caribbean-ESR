@@ -11,6 +11,8 @@
 
 # specification file and libraries -----------------------------
 rm(list = ls())
+
+plot.new()
 dev.off()
 
 library(maps)
@@ -21,7 +23,7 @@ load("indicator_processing/spec_file.RData")
 styear <- 1995
 
 # load data -------------------------------------
-d <- read.csv("indicator_data/SAU/SAU EEZ 630,850 v50-1.csv")
+d <- read.csv("indicator_data/inputsToBeUpdatedAnnually/SAU/SAU EEZ 630,850 v50-1.csv")
 head(d)
 
 # look at fields ------------------------------
@@ -68,4 +70,4 @@ plotIndicatorTimeSeries(inddata, coltoplot = 1:2, plotrownum = 2, sublabel = T, 
 ind <- inddata
 save(ind, file = "indicator_objects/total_rec_catch.RData")
 
-
+print("recreational catch -- SUCCESSFULLY RUN")

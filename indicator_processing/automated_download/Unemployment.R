@@ -8,6 +8,8 @@
 
 
 rm(list = ls())
+
+plot.new()
 dev.off()
 
 library(maps)
@@ -68,4 +70,7 @@ plotIndicatorTimeSeries(ind, plotrownum = 2, coltoplot = 1:2, sublabel = TRUE, d
 save(ind, file = "indicator_objects/unemployment.RData")
 
 #############################  END  ####################################
+
+print("unemployment -- SUCCESSFULLY RUN")
+
 

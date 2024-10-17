@@ -27,6 +27,8 @@ calibrated = read.csv("indicator_data/intermediateFiles/RVC/calibrated_species.c
 
 
 rm(list = ls())
+
+plot.new()
 dev.off()
 
 
@@ -289,6 +291,7 @@ plotIndicatorTimeSeries(ind, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
 load("indicator_objects/RVC_STX.RData")
 plotIndicatorTimeSeries(ind, coltoplot = 1:6, trendAnalysis = T, sublabel = T)
 
+print("RVC abundances -- SUCCESSFULLY RUN")
 
 
 

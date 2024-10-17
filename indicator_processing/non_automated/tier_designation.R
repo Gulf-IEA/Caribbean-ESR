@@ -5,9 +5,9 @@
 # All stocks/complexes have been Tier 4 up until 2023, when spiny lobster were designated as Tier 3.
 
 rm(list = ls())
+
+plot.new()
 dev.off()
-
-
 
 # Tally number of stocks from Maria's table:
 PR_stocks = 34
@@ -34,3 +34,5 @@ ind <- inddata
 plotIndicatorTimeSeries(ind, plotrownum = 2, coltoplot = 1:2, sublabel = TRUE, dateformat = "%Y%b", trendAnalysis = T)
 
 save(ind, file = "indicator_objects/tier3.RData")
+
+print("tier1 stocks -- SUCCESSFULLY RUN")

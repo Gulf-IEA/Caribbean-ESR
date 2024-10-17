@@ -1,6 +1,11 @@
 
 ### Pollution indicator: Industrially zoned spaces data from Amy Freitag. Amy chatted with EPA and the data represent compliance/attention and not actual time of pollution. More of an indicator of political attention pollution than pollution itself.
 
+rm(list = ls())
+
+plot.new()
+dev.off()
+
 dat = read.csv("indicator_data/inputsToBeUpdatedAnnually/pollution_sites.csv")
 head(dat)
 
@@ -37,3 +42,5 @@ plotIndicatorTimeSeries(ind, plotrownum = 2, coltoplot = 1:2, sublabel = TRUE)
 save(ind, file = "indicator_objects/pollution.RData")
 
 ###############  END  #######################
+
+print("pollution -- SUCCESSFULLY RUN")

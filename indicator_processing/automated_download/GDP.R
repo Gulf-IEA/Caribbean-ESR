@@ -9,6 +9,8 @@
 ##########################################################
 
 rm(list = ls())
+
+plot.new()
 dev.off()
 
 library(maps)
@@ -27,14 +29,19 @@ url <- page %>%
 
 url[grep("data/", url)]
 
-url2 <- paste0("https://fred.stlouisfed.org", url[grep("data/", url)])
-pr_info <- read.csv(url(url2), header = F)
+#url2 <- paste0("https://fred.stlouisfed.org", url[grep("data/", url)])
+#pr_info <- read.csv(url(url2), header = F)
+#pr <- pr_info[24:nrow(pr_info), ]
 
-pr <- pr_info[24:nrow(pr_info), ]
+url2 <- "https://fred.stlouisfed.org/graph/fredgraph.csv?bgcolor=%23e1e9f0&chart_type=line&drp=0&fo=open%20sans&graph_bgcolor=%23ffffff&height=450&mode=fred&recession_bars=off&txtcolor=%23444444&ts=12&tts=12&width=1140&nt=0&thu=0&trc=0&show_legend=yes&show_axis_titles=yes&show_tooltip=yes&id=NYGDPMKTPCDPRI&scale=left&cosd=1960-01-01&coed=2023-01-01&line_color=%234572a7&link_values=false&line_style=solid&mark_type=none&mw=3&lw=2&ost=-99999&oet=99999&mma=0&fml=a&fq=Annual&fam=avg&fgst=lin&fgsnd=2020-02-01&line_index=1&transformation=lin&vintage_date=2024-10-17&revision_date=2024-10-17&nd=1960-01-01"
+pr <- read.csv(url2)
+names(pr) <- c("date", "gdp")
 
-prtab <- data.frame(cbind(substr(pr$V1, 1, 4), substr(pr$V1, 11, 50)))
-prtab$X1 <- as.numeric(as.vector(prtab$X1))
-prtab$X2 <- as.numeric(as.vector(prtab$X2))
+#prtab <- data.frame(cbind(substr(pr$date, 1, 4), substr(pr$date, 11, 50)))
+#prtab$X1 <- as.numeric(as.vector(prtab$X1))
+#prtab$X2 <- as.numeric(as.vector(prtab$X2))
+
+pr$year <- substr(pr$date, 1, 4)
 
 
 # USVI
@@ -45,23 +52,21 @@ url <- page %>%
 
 url[grep("data/", url)]
 
-url2 <- paste0("https://fred.stlouisfed.org", url[grep("data/", url)])
-vi_info <- read.csv(url(url2), header = F)
+url2 <- "https://fred.stlouisfed.org/graph/fredgraph.csv?bgcolor=%23e1e9f0&chart_type=line&drp=0&fo=open%20sans&graph_bgcolor=%23ffffff&height=450&mode=fred&recession_bars=off&txtcolor=%23444444&ts=12&tts=12&width=1140&nt=0&thu=0&trc=0&show_legend=yes&show_axis_titles=yes&show_tooltip=yes&id=MKTGDPVIA646NWDB&scale=left&cosd=2002-01-01&coed=2021-01-01&line_color=%234572a7&link_values=false&line_style=solid&mark_type=none&mw=3&lw=2&ost=-99999&oet=99999&mma=0&fml=a&fq=Annual&fam=avg&fgst=lin&fgsnd=2020-02-01&line_index=1&transformation=lin&vintage_date=2024-10-17&revision_date=2024-10-17&nd=2002-01-01"
+vi <- read.csv(url2)
+names(vi) <- c("date", "gdp")
+vi$year <- substr(vi$date, 1, 4)
+vi
 
-vi <- vi_info[24:nrow(vi_info), ]
-
-vitab <- data.frame(cbind(substr(vi$V1, 1, 4), substr(vi$V1, 11, 50)))
-vitab$X1 <- as.numeric(as.vector(vitab$X1))
-vitab$X2 <- as.numeric(as.vector(vitab$X2))
 
 # merge data 
 
-yrs <- min(vitab$X1, prtab$X1) : max(vitab$X1, prtab$X1)
+yrs <- min(vi$year, pr$year) : max(vi$year, pr$year)
 mat <- data.frame(matrix(data = NA, nrow = length(yrs), ncol = 2))
 rownames(mat) <- yrs 
 
-mat[which(yrs %in% prtab$X1), 1] <- prtab[, 2]
-mat[which(yrs %in% vitab$X1), 2] <- vitab[, 2]
+mat[which(yrs %in% pr$year), 1] <- pr$gdp
+mat[which(yrs %in% vi$year), 2] <- vi$gdp
 mat <- mat / 10^9
 mat
 
@@ -82,3 +87,5 @@ plotIndicatorTimeSeries(ind, coltoplot = 1:2, plotrownum = 2, sublabel = TRUE)
 save(ind, file = "indicator_objects/GDP.RData")
 
 ###############################  END  #############################
+
+print("GDP -- SUCCESSFULLY RUN")

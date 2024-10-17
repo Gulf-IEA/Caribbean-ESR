@@ -3,8 +3,9 @@
 # Last updated 10/17/2024 by Carissa Gervasi
 
 rm(list = ls())
-dev.off()
 
+plot.new()
+dev.off()
 
 # Puerto Rico - cruise passengers
 

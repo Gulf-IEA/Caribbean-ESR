@@ -4,6 +4,8 @@
 
 # specification file and libraries -----------------------------
 rm(list = ls())
+
+plot.new()
 dev.off()
 
 library(maps)
@@ -75,6 +77,6 @@ save(ind, file = "indicator_objects/earthquakes.RData")
 
 #################################################################################
 
-
+print("earthquakes -- SUCCESSFULLY RUN")
 
 

@@ -3,6 +3,8 @@
 # Last updated 6/20/2024 by Carissa Gervasi
 
 rm(list = ls())
+
+plot.new()
 dev.off()
 
 library(pdftools)
@@ -88,3 +90,5 @@ plotIndicatorTimeSeries(ind, coltoplot = 1:2, plotrownum = 2)
 save(ind, file = "indicator_objects/outreach.RData")
 
 ###############################  END  #############################
+
+print("outreach -- SUCCESSFULLY RUN")

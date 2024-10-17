@@ -8,6 +8,8 @@
 # 
 
 rm(list = ls())
+
+plot.new()
 dev.off()
 
 #directory <- rprojroot::find_rstudio_root_file()
@@ -18,13 +20,13 @@ library(plotTimeSeries)
 
 # load coral indicator data -------------------------
 
-load("indicator_data/PRCRMP/coralspprich_PR.RData")
+load("indicator_data/intermediateFiles/PRCRMP/coralspprich_PR.RData")
 PRsr <- out1
-load("indicator_data/PRCRMP/percoralcov_PR.RData") 
+load("indicator_data/intermediateFiles/PRCRMP/percoralcov_PR.RData") 
 PRcc <- out1
-load("indicator_data/TCRMP/coralspprich_USVI.RData")
+load("indicator_data/intermediateFiles/TCRMP/coralspprich_USVI.RData")
 VIsr <- out1
-load("indicator_data/TCRMP/percoralcov_USVI.RData") 
+load("indicator_data/intermediateFiles/TCRMP/percoralcov_USVI.RData") 
 VIcc <- out1
 
 # extract years from linear mixed model ----------------------
@@ -87,11 +89,11 @@ rm(list = ls())
 
 # load fish indicator data -------------------------
 
-load("indicator_data/PRCRMP/fish_density_PR.RData")
+load("indicator_data/intermediateFiles/PRCRMP/fish_density_PR.RData")
 PR <- fin
-load("indicator_data/TCRMP/fish_density_USVI.RData") 
+load("indicator_data/intermediateFiles/TCRMP/fish_density_USVI.RData") 
 VI <- findens
-load("indicator_data/TCRMP/slopeSizeSpec_USVI.RData") 
+load("indicator_data/intermediateFiles/TCRMP/slopeSizeSpec_USVI.RData") 
 sl <- fin
 
 # extract years ----------------------
@@ -137,4 +139,4 @@ save(ind, file = "indicator_objects/fish_density.RData")
 
 #########################  END  ############################
 
-
+print("CRMP fishery-dependent -- SUCCESSFULLY RUN")

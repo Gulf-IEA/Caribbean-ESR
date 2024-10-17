@@ -3,6 +3,9 @@
 
 rm(list = ls())
 
+plot.new()
+dev.off()
+
 # Gini function ----------------------------------------
 
 calcGini <- function(vec) {
@@ -193,7 +196,7 @@ totrev[is.na(totrev)] <- 0
 totrev
 rowSums(totrev, na.rm = T)
 which(rowSums(totrev, na.rm = T) == 0)
-totrev <- totrev[-which(rowSums(totrev, na.rm = T) == 0), ]
+#totrev <- totrev[-which(rowSums(totrev, na.rm = T) == 0), ]
 dim(totrev)
 
 # sum landings by permit and year ----------------------
@@ -344,25 +347,29 @@ plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, sublabel = T, same
 
 save(ind, file = "indicator_objects/gini_revenue.RData")
 
-
-ls()[grep("gini", ls())]
-
-datdata <- styear:enyear
-inddata <- data.frame(gini_land_pr, gini_land_stt, gini_land_stx)
-labs <- c("Inequality in landings" , "Gini index", "Puerto Rico", 
-          "Inequality in landings" , "Gini index", "St. Thomas and St. John",
-          "Inequality in landings" , "Gini index", "St. Croix")
-indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
-s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
-class(s) <- "indicatordata"
-
-ind <- s 
-
-plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, sublabel = T, sameYscale = T, 
-                        widadj = 1.3, hgtadj = 0.8, trendAnalysis = T)
-
-save(ind, file = "indicator_objects/gini_landings.RData")
-
+####### only use revenue because landings gini indicator is highly correlated
+# 
+# ls()[grep("gini", ls())]
+# 
+# datdata <- styear:enyear
+# inddata <- data.frame(gini_land_pr, gini_land_stt, gini_land_stx)
+# labs <- c("Inequality in landings" , "Gini index", "Puerto Rico", 
+#           "Inequality in landings" , "Gini index", "St. Thomas and St. John",
+#           "Inequality in landings" , "Gini index", "St. Croix")
+# indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
+# s <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim = ulidata, llim = llidata)
+# class(s) <- "indicatordata"
+# 
+# ind <- s 
+# 
+# plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, sublabel = T, sameYscale = T, 
+#                         widadj = 1.3, hgtadj = 0.8, trendAnalysis = T)
+# 
+# save(ind, file = "indicator_objects/gini_landings.RData")
+# 
 
 # hurricane Maria - 2017 - STX and PR
 # hurricane Irma - 2017 - STT
+
+print("gini -- SUCCESSFULLY RUN")
+

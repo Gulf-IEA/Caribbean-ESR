@@ -5,6 +5,9 @@
 # specification file and libraries -----------------------------
 rm(list = ls())
 
+plot.new()
+dev.off()
+
 library(maps)
 library(plotTimeSeries)
 library(pals)
@@ -21,6 +24,12 @@ enyear <- 2022
 # input data for Puerto Rico ---------------------------
 
 dat <- read.csv(paste0(confpath, "wrkeithly_pr_com_data_2000_2022_20240625_C.csv"))
+
+dat[which(is.na(dat$ITIS_SCIENTIFIC_NAME)), ]
+summary(is.na(dat$ITIS_SCIENTIFIC_NAME))
+dim(dat)
+dat <- dat[which(!is.na(dat$ITIS_SCIENTIFIC_NAME)), ]
+dim(dat)
 
 table(dat$YEAR_LANDED)
 
@@ -128,6 +137,8 @@ ref <- read.csv("indicator_processing/fishery_dependent/spp_ref_manualEdit.csv")
 head(ref)
 head(d)
 tail(d)
+
+ref$SCIname <- str_replace(ref$SCIname, "\xa0", " ")
 
 hist(ref$Lmax)
 table(cut(ref$Lmax, breaks = c(0, 40, 60, 100, 200, 2000)))
@@ -268,7 +279,7 @@ matplot(pd)
 pdrat <- pd[, 2] / pd[, 1]  # pdrat is pelagic divided by benthic
 plot(styear:enyear, pdrat, type = "b")
 
-save(pdrat, file = "indicator_data/fish-dep-indicators/PDRatioPR.RData")
+save(pdrat, file = "indicator_data/intermediateFiles/fish-dep-indicators/PDRatioPR.RData")
 
 # make indicator object and plot P:D ratio ------------------
 datdata <- styear:enyear
@@ -409,7 +420,7 @@ dev.off()
 
 findat <- data.frame(cbind(styear:enyear, lmax))
 
-save(findat, file = "indicator_data/fish-dep-indicators/Lmax_PR.RData")
+save(findat, file = "indicator_data/intermediateFiles/fish-dep-indicators/Lmax_PR.RData")
 
 
 
@@ -433,3 +444,4 @@ matplot(styear:enyear, t(tabd[1:10, ]), type = "b", col = glasbey(10), lwd = 2, 
 legend("topright", rownames(tabd)[1:10], col = glasbey(10), lwd = 2, lty = 1)
 abline(v = c(2008, 2019))
 
+print("PR indicators -- SUCCESSFULLY RUN")

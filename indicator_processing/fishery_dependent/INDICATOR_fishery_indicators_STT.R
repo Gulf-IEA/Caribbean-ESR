@@ -5,6 +5,9 @@
 # specification file and libraries -----------------------------
 rm(list = ls())
 
+plot.new()
+dev.off()
+
 library(maps)
 library(plotTimeSeries)
 library(pals)
@@ -223,7 +226,7 @@ pd
 pdrat <- pd[, 2] / pd[, 1]    # pdrat is pelagic divided by benthic
 plot(yrs, pdrat, type = "b")
 
-save(pdrat, file = "indicator_data/fish-dep-indicators/PDRatioSTT.RData")
+save(pdrat, file = "indicator_data/intermediateFiles/fish-dep-indicators/PDRatioSTT.RData")
 
 # make indicator object and plot P:D ratio ------------------
 datdata <- yrs
@@ -363,7 +366,7 @@ dev.off()
 
 findat <- data.frame(cbind(yrs, lmax))
 
-save(findat, file = "indicator_data/fish-dep-indicators/Lmax_STT.RData")
+save(findat, file = "indicator_data/intermediateFiles/fish-dep-indicators/Lmax_STT.RData")
 
 # figure out what is going on in 2018 with spike in pelagics -------------------
 
@@ -374,7 +377,7 @@ axis(1, at = yrs, las = 2)
 tabp <- tab[grep("pelagic", splisref$PD), ]
 tabp <- tabp[order(rowSums(tabp), decreasing = T), ]
 
-matplot(yrs, t(tabp[1:20, ]), type = "l", col = glasbey(10), lwd = 2, lty = 1)
+matplot(yrs, t(tabp[1:10, ]), type = "l", col = glasbey(10), lwd = 2, lty = 1)
 legend("topleft", rownames(tabp)[1:20], col = glasbey(10), lwd = 2, lty = 1, cex = 0.7)
 # pelagic catch influenced by dolphinfish and tunas
 
@@ -385,4 +388,6 @@ matplot(yrs, t(tabd[1:20, ]), type = "b", col = glasbey(10), lwd = 2, lty = 1, p
 legend("topright", rownames(tabd)[1:20], col = glasbey(10), lwd = 2, lty = 1)
 
 ##############  END  ########################
+
+print("STT fishery indicators -- DONE")
 

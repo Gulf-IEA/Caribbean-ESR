@@ -13,6 +13,8 @@
 
 # specification file and libraries -----------------------------
 rm(list = ls())
+
+plot.new()
 dev.off()
 
 library(maps)
@@ -64,7 +66,7 @@ d <- d[which(d$NATURE=="TS"), ]
 dim(d)
 
 # standardize time format -------------------------------------
-d$tim <- as.vector(strptime(d$ISO_TIME, format="%Y-%m-%d %H:%M:%S"))
+d$tim <- strptime(d$ISO_TIME, format="%Y-%m-%d %H:%M:%S")
 
 # use only obs after 1960 - see Wang paper - not reliable beforehand -------
 d <- d[which(d$SEASON >= styear & d$SEASON <= enyear), ]
@@ -162,7 +164,7 @@ save(ind, file = "indicator_objects/ACEindex.RData")
 
 #################################################################################
 
-
+print("ACE index -- SUCCESSFULLY RUN")
 
 
 

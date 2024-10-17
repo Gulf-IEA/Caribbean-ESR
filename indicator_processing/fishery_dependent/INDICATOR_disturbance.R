@@ -6,6 +6,9 @@
 
 rm(list = ls())
 
+plot.new()
+dev.off()
+
 library(maps)
 library(plotTimeSeries)
 
@@ -433,4 +436,4 @@ save(ind, file = "indicator_objects/disturbance.RData")
 
 ##########################  END  #############################
 
-
+print("disturbance -- SUCCESSFULLY RUN")

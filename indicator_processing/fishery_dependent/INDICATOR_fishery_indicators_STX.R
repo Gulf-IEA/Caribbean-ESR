@@ -5,6 +5,9 @@
 # specification file and libraries -----------------------------
 rm(list = ls())
 
+plot.new()
+dev.off()
+
 library(maps)
 library(plotTimeSeries)
 library(pals)
@@ -223,7 +226,7 @@ pd <- tapply(dbf$POUNDS_LANDED, list(dbf$TRIP_YEAR, dbf$PD2), sum, na.rm = T)
 pdrat <- pd[, 2] / pd[, 1]    # pdrat is pelagic divided by benthic
 plot(yrs, pdrat, type = "b")
 
-save(pdrat, file = "indicator_data/fish-dep-indicators/PDRatioSTX.RData")
+save(pdrat, file = "indicator_data/intermediateFiles/fish-dep-indicators/PDRatioSTX.RData")
 
 
 # make indicator object and plot P:D ratio ------------------
@@ -366,7 +369,7 @@ dev.off()
 
 findat <- data.frame(cbind(yrs, lmax))
 
-save(findat, file = "indicator_data/fish-dep-indicators/Lmax_STX.RData")
+save(findat, file = "indicator_data/intermediateFiles/fish-dep-indicators/Lmax_STX.RData")
 
 
 # look at what is driving PD ratio  -------------------
@@ -387,4 +390,4 @@ tabd <- tabd[order(rowSums(tabd), decreasing = T), ]
 matplot(yrs, t(tabd[1:20, ]), type = "b", col = glasbey(10), lwd = 2, lty = 1, pch = 19, las = 2)
 legend("topright", rownames(tabd)[1:20], col = glasbey(10), lwd = 2, lty = 1)
 
-
+print("STX indicators -- SUCCESSFULLY RUN")
