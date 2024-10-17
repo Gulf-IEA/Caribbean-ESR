@@ -2,7 +2,7 @@
 
 library(plotTimeSeries)
 
-dat2 = conv2indicatordata("indicator_data/NEIS law enforcement incidents.csv", default = T)
+dat2 = conv2indicatordata("indicator_data/inputsToBeUpdatedAnnually/NEIS law enforcement incidents.csv", default = T)
 dat2
 
 

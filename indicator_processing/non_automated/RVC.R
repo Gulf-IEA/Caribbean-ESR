@@ -22,7 +22,7 @@
 # NOTE: as of 3/1/2024 calibrations have not been completed for all species. This means the data on the portal only go back to 2016. To get the full time series (2001 onward) we needed to get the calibrated data from Jeremiah Blondeau (jeremiah.blondeau@noaa.gov). Species specific calibrations were done. The calibrated_species.csv file is a list of all the species that have thus far been calibrated. All species of interest have been calibrated except for mutton snapper. For mutton snapper we can only use data from 2017 onward.
 
 #This is the list of calibrated species as of 2024. 
-calibrated = read.csv("indicator_data/RVC/calibrated_species.csv")
+calibrated = read.csv("indicator_data/intermediateFiles/RVC/calibrated_species.csv")
 
 
 
@@ -46,9 +46,9 @@ regions <- c("prico", "sttstj", "stx")
 # Run this code if you need to pull more data from the server
 ##########
 
-data_2001_2021_paths <- c("indicator_data/RVC/prico_2001_2021_calibrated.rds", 
-                          "indicator_data/RVC/sttstj_2001_2021_calibrated.rds", 
-                          "indicator_data/RVC/stx_2001_2021_calibrated.rds")
+data_2001_2021_paths <- c("indicator_data/intermediateFiles/RVC/prico_2001_2021_calibrated.rds", 
+                          "indicator_data/intermediateFiles/RVC/sttstj_2001_2021_calibrated.rds", 
+                          "indicator_data/intermediateFiles/RVC/stx_2001_2021_calibrated.rds")
 
 # Function to combine data for a given region
 combine_data <- function(region, data_2001_2021_path) {
@@ -90,15 +90,15 @@ for (i in seq_along(regions)) {
   combined_data <- combine_data(region, data_2001_2021_path)
   
   # Save the combined dataset
-  saveRDS(combined_data, paste0("indicator_data/RVC/combined_", region, "_2001_2023.rds"))
+  saveRDS(combined_data, paste0("indicator_data/intermediateFiles/RVC/combined_", region, "_2001_2023.rds"))
 }
 
 #########
 # Start here if you don't need to pull new data from the server
 
-prico = readRDS("indicator_data/RVC/combined_prico_2001_2023.rds")
-sttstj = readRDS("indicator_data/RVC/combined_sttstj_2001_2023.rds")
-stx = readRDS("indicator_data/RVC/combined_stx_2001_2023.rds")
+prico = readRDS("indicator_data/intermediateFiles/RVC/combined_prico_2001_2023.rds")
+sttstj = readRDS("indicator_data/intermediateFiles/RVC/combined_sttstj_2001_2023.rds")
+stx = readRDS("indicator_data/intermediateFiles/RVC/combined_stx_2001_2023.rds")
 
 ## Make a list of species
 ## You can use full scientific names, common names, or
@@ -147,12 +147,12 @@ for(j in regions) {
    
     # save -----------------------------------------
   
-    save(s, file = paste("indicator_data/RVC/RUVdensity_", j, "_", i, ".RData", sep = ""))
+    save(s, file = paste("indicator_data/intermediateFiles/RVC/RUVdensity_", j, "_", i, ".RData", sep = ""))
   }
 }
 
 # Set the directory path where the .RData files are located
-folder_path <- "indicator_data/RVC"
+folder_path <- "indicator_data/intermediateFiles/RVC"
 
 # List all the files in the directory
 files <- list.files(path = folder_path, pattern = "\\.RData$", full.names = TRUE)

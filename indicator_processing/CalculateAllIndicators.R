@@ -23,28 +23,34 @@ setwd(directory)
 dir("indicator_processing/automated_download/")
 
 source("indicator_processing/automated_download/sst.R")                   # sea surface temperature
-source("indicator_processing/automated_download/ACE_index_Carib.R")       # hurricane energy index
-source("indicator_processing/automated_download/chl_caribbean.R")         # primary productivity
 source("indicator_processing/automated_download/DHW.R")                   # degree heating weeks
+source("indicator_processing/automated_download/ACE_index_Carib.R")       # hurricane energy index
 source("indicator_processing/automated_download/earthquakes.R")           # earthquakes
 source("indicator_processing/automated_download/kd490.R")                 # turbidity from Kd490   # THIS DOWNLOAD CAN BE FINICKY
+source("indicator_processing/automated_download/chl_caribbean.R")         # primary productivity
+
 source("indicator_processing/automated_download/Unemployment.R")          # unemployment rate
 source("indicator_processing/automated_download/GDP.R")                   # Gross Domestic Product
-source("indicator_processing/automated_download/cruise_visitors.R")       # Cruise visitors
+source("indicator_processing/automated_download/cruise_air_visitors.R")       # Cruise visitors
 source("indicator_processing/automated_download/population.R")            #Human population
 
 # partially automated - pull from data in folder ----------------------
 
 dir("indicator_processing/non_automated")
 
-source("indicator_processing/non_automated/marine_debris.R")         # marine debris
+#  source("indicator_processing/non_automated/marine_debris.R")         # marine debris
 source("indicator_processing/non_automated/OA.R")                    # ocean acidification
 source("indicator_processing/non_automated/CRMP_compile.R")          # fishery-indepenedent fish density, slope of size spectrum, coral cover indicators
-source("indicator_processing/non_automated/Sargassum_inundation.R")  # sargassum indicator
+#source("indicator_processing/non_automated/Sargassum_inundation.R")  # sargassum indicator
 source("indicator_processing/non_automated/SAU_recreational_catch.R") # recreational catch based on Sea Around Us database
 source("indicator_processing/non_automated/pollution.R")              # reported superfund sites etc. 
 source("indicator_processing/non_automated/tier_designation.R")      # ABC control rule Tier designation
 source("indicator_processing/non_automated/oceanNAICS.R")      # Ocean economy
+source("indicator_processing/non_automated/RVC.R")             # RVC
+source("indicator_processing/non_automated/regulations.R")     # number of new regulations   # might not be updates
+source("indicator_processing/non_automated/enforcement.R")    # enforcement stats
+source("indicator_processing/non_automated/outreach.R")       # outreach stats
+source("indicator_processing/non_automated/social_vulnerability.R")   # Tarsila social indicators
 
 # fishery indicators - includes confidential data ----------------------
 
