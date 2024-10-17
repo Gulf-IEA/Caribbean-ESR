@@ -1,7 +1,7 @@
 
 ### Pollution indicator: Industrially zoned spaces data from Amy Freitag. Amy chatted with EPA and the data represent compliance/attention and not actual time of pollution. More of an indicator of political attention pollution than pollution itself.
 
-dat = read.csv("indicator_data/pollution_sites.csv")
+dat = read.csv("indicator_data/inputsToBeUpdatedAnnually/pollution_sites.csv")
 head(dat)
 
 # make sure columns are numeric

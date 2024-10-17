@@ -41,7 +41,7 @@ extract_year <- function(filename) {
 }
 
 # Set the directory containing the PDF files
-pdf_directory <- "indicator_data/outreach/"
+pdf_directory <- "indicator_data/inputsToBeUpdatedAnnually/outreach/"
 
 # Get a list of all PDF files in the directory
 pdf_files <- list.files(pdf_directory, pattern = "\\.pdf$", full.names = TRUE)
