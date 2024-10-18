@@ -296,9 +296,38 @@ plotIndicatorTimeSeries(s, coltoplot = 1:3,plotrownum = 3, sublabel = T, widadj 
 
 dev.off()
 
+# figure out what is going on in 2018 with spike in pelagics -------------------
+
+# plot(styear:enyear, pdrat, type = "b", las = 2, pch = 19)
+# matplot(styear:enyear, pd, axes = F, type = "b", pch = 19)
+# axis(1, at = styear:enyear, las = 2)
+# 
+# tabp <- tab[grep("pelagic", splisref$PD), ]
+# tabp <- tabp[order(rowSums(tabp), decreasing = T), ]
+# 
+# matplot(styear:enyear, t(tabp[1:10, ]), type = "l", col = glasbey(10), lwd = 2, lty = 1)
+# legend("topright", rownames(tabp)[1:10], col = glasbey(10), lwd = 2, lty = 1)
+# abline(v = c(2008, 2019))  # driven ~50% by dolphinfish catch
+# 
+# tabd <- tab[-grep("pelagic", splisref$PD), ]
+# tabd <- tabd[order(rowSums(tabd), decreasing = T), ]
+# 
+# matplot(styear:enyear, t(tabd[1:10, ]), type = "b", col = glasbey(10), lwd = 2, lty = 1, pch = 19, las = 2)
+# legend("topright", rownames(tabd)[1:10], col = glasbey(10), lwd = 2, lty = 1)
+# abline(v = c(2008, 2019))
+# 
+
 #######################  END P:D ratio  ################################
 
 # Lmax calculations -----------------------------------------
+
+# based on feedback from seminar -- calculate Lmax based on demersals only
+
+table(dbf$PD, useNA = "always")
+table(dbf$PD2, useNA = "always")
+dbf <- dbf[which(dbf$PD2 == "demersal"), ]
+dim(dbf)
+head(dbf)
 
 tab <- tapply(dbf$ADJUSTED_POUNDS, list(dbf$ITIS_SCIENTIFIC_NAME, dbf$YEAR_LANDED), sum, na.rm = T)
 tab[is.na(tab)] <- 0
@@ -364,6 +393,9 @@ sort(table(splisref$famcode[which(splisref$Lmax_cat == "(100,200]")]))
 
 splisref$recLand <- rowSums(tab)
 
+sm <- splisref[which(splisref$Lmax_cat == "(40,60]"), ]
+head(sm[order(sm$recLand, decreasing = T), ], 15)
+
 plate <- splisref[which(splisref$Lmax_cat == "(60,100]"), ]
 head(plate[order(plate$recLand, decreasing = T), ], 15)
 # the 60-100cm category is mostly driven by deepwater snapper species, also yellowtail, hogfish and red hind
@@ -422,26 +454,6 @@ findat <- data.frame(cbind(styear:enyear, lmax))
 
 save(findat, file = "indicator_data/intermediateFiles/fish-dep-indicators/Lmax_PR.RData")
 
-
-
-# figure out what is going on in 2018 with spike in pelagics -------------------
-
-plot(styear:enyear, pdrat, type = "b", las = 2, pch = 19)
-matplot(styear:enyear, pd, axes = F, type = "b", pch = 19)
-axis(1, at = styear:enyear, las = 2)
-
-tabp <- tab[grep("pelagic", splisref$PD), ]
-tabp <- tabp[order(rowSums(tabp), decreasing = T), ]
-
-matplot(styear:enyear, t(tabp[1:10, ]), type = "l", col = glasbey(10), lwd = 2, lty = 1)
-legend("topright", rownames(tabp)[1:10], col = glasbey(10), lwd = 2, lty = 1)
-abline(v = c(2008, 2019))  # driven ~50% by dolphinfish catch
-
-tabd <- tab[-grep("pelagic", splisref$PD), ]
-tabd <- tabd[order(rowSums(tabd), decreasing = T), ]
-
-matplot(styear:enyear, t(tabd[1:10, ]), type = "b", col = glasbey(10), lwd = 2, lty = 1, pch = 19, las = 2)
-legend("topright", rownames(tabd)[1:10], col = glasbey(10), lwd = 2, lty = 1)
-abline(v = c(2008, 2019))
+#############  END  ######################
 
 print("PR indicators -- SUCCESSFULLY RUN")

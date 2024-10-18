@@ -18,15 +18,15 @@ dev.off()
 library(maps)
 library(plotTimeSeries)
 
-dir("indicator_data/fish-dep-indicators/")
+dir("indicator_data/intermediateFiles/fish-dep-indicators/")
 
-load("indicator_data/fish-dep-indicators/Lmax_PR.RData")
+load("indicator_data/intermediateFiles/fish-dep-indicators/Lmax_PR.RData")
 pr <- findat
 
-load("indicator_data/fish-dep-indicators/Lmax_STT.RData")
+load("indicator_data/intermediateFiles/fish-dep-indicators/Lmax_STT.RData")
 st <- findat
 
-load("indicator_data/fish-dep-indicators/Lmax_STX.RData")
+load("indicator_data/intermediateFiles/fish-dep-indicators/Lmax_STX.RData")
 sx <- findat
 
 yrs <- (min(c(pr$V1, st$yrs, sx$yrs))) : (max(c(pr$V1, st$yrs, sx$yrs)))
@@ -50,7 +50,7 @@ ind <- list(labels = indnames, indicators = inddata, datelist = datdata) #, ulim
 class(ind) <- "indicatordata"
 plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, sublabel = T, sameYscale = F)
 
-# save(ind, file = "indicator_objects/mean_Lmax.RData")
+save(ind, file = "indicator_objects/mean_Lmax.RData")
 
 Lmax <- mat
 
@@ -59,15 +59,15 @@ Lmax <- mat
 
 rm(list = ls()[-match(c("Lmax"), ls())])
 
-dir("indicator_data/fish-dep-indicators/")
+dir("indicator_data/intermediateFiles/fish-dep-indicators/")
 
-load("indicator_data/fish-dep-indicators/PDRatioPR.RData")
+load("indicator_data/intermediateFiles/fish-dep-indicators/PDRatioPR.RData")
 pr <- pdrat
 
-load("indicator_data/fish-dep-indicators/PDRatioSTT.RData")
+load("indicator_data/intermediateFiles/fish-dep-indicators/PDRatioSTT.RData")
 st <- pdrat
 
-load("indicator_data/fish-dep-indicators/PDRatioSTX.RData")
+load("indicator_data/intermediateFiles/fish-dep-indicators/PDRatioSTX.RData")
 sx <- pdrat
 
 yrspr <- as.numeric(names(pr))
@@ -101,7 +101,7 @@ save(ind, file = "indicator_objects/PD_ratio.RData")
 # compare indicators --------------------------------
 
 plot(Lmax[, 1], mat[, 1])
-tecor.test(Lmax[, 1], mat[, 1], na.action=na.omit)
+cor.test(Lmax[, 1], mat[, 1], na.action=na.omit)
 
 plot(Lmax[, 2], mat[, 2])
 cor.test(Lmax[, 2], mat[, 2], na.action=na.omit)

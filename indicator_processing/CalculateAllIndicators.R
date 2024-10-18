@@ -5,7 +5,27 @@
 # load libraries ---------------------------------
 rm(list = ls())
 
+packages = c("data.table", "dplyr", "ggplot2", "ggrepel", "httr", "jsonlite", "lubridate", 
+             "maps", "pals", "pdftools", "plotTimeSeries", "readr", "readxl", "rerddap", "rvest", 
+              "stringr", "tidyr", "vegan", "xml2", "modi", "devtools")
+
+## Now load or install & load all
+package.check <- lapply(
+  packages,
+  FUN = function(x) {
+    if (!require(x, character.only = TRUE)) {
+      install.packages(x, dependencies = TRUE)
+      library(x, character.only = TRUE)
+    }
+  }
+)
+
+devtools::install_github('jeremiaheb/rvc')
+library(rvc)
+install_github("MandyKarnauskas-NOAA/plotTimeSeries")
 library(plotTimeSeries)
+
+search()
 
 #  find root directory for project ---------------
 

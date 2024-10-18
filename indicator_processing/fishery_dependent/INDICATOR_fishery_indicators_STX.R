@@ -248,6 +248,14 @@ dev.off()
 
 # Lmax calculations -----------------------------------------
 
+# based on feedback from seminar -- calculate Lmax based on demersals only
+
+table(dbf$PD, useNA = "always")
+table(dbf$PD2, useNA = "always")
+dbf <- dbf[which(dbf$PD2 == "demersal"), ]
+dim(dbf)
+head(dbf)
+
 tab <- tapply(dbf$POUNDS_LANDED, list(dbf$SPECIES_NM, dbf$TRIP_YEAR), sum, na.rm = T)
 tab[is.na(tab)] <- 0
 
@@ -316,7 +324,7 @@ small <- splisref[which(splisref$Lmax_cat == "(0,40]"), ]
 head(small[order(small$recLand, decreasing = T), ], 15)
 #driven by redband parrotfish and princess parrotfish.  also herrings and surgeonfishes
 
-plate <- splisref[which(splisref$Lmax_cat == "(60,100]"), ]
+plate <- splisref[which(splisref$Lmax_cat == "(40,60]"), ]
 head(plate[order(plate$recLand, decreasing = T), ], 15)
 # mainly stoplight and queen parrotfishes.  Also blackfin and silk snapper and red hind
 
@@ -374,20 +382,20 @@ save(findat, file = "indicator_data/intermediateFiles/fish-dep-indicators/Lmax_S
 
 # look at what is driving PD ratio  -------------------
 
-plot(yrs, pdrat, type = "b", las = 2)
-matplot(yrs, pd, axes = F, type = "b")
-axis(1, at = yrs, las = 2)
-
-tabp <- tab[grep("pelagic", splisref$PD), ]
-tabp <- tabp[order(rowSums(tabp), decreasing = T), ]
-
-matplot(yrs, t(tabp), type = "l", col = glasbey(10), lwd = 2, lty = 1)
-legend("topleft", rownames(tabp), col = glasbey(10), lwd = 2, lty = 1, cex = 0.7)
-
-tabd <- tab[-grep("pelagic", splisref$PD), ]
-tabd <- tabd[order(rowSums(tabd), decreasing = T), ]
-
-matplot(yrs, t(tabd[1:20, ]), type = "b", col = glasbey(10), lwd = 2, lty = 1, pch = 19, las = 2)
-legend("topright", rownames(tabd)[1:20], col = glasbey(10), lwd = 2, lty = 1)
+# plot(yrs, pdrat, type = "b", las = 2)
+# matplot(yrs, pd, axes = F, type = "b")
+# axis(1, at = yrs, las = 2)
+# 
+# tabp <- tab[grep("pelagic", splisref$PD), ]
+# tabp <- tabp[order(rowSums(tabp), decreasing = T), ]
+# 
+# matplot(yrs, t(tabp), type = "l", col = glasbey(10), lwd = 2, lty = 1)
+# legend("topleft", rownames(tabp), col = glasbey(10), lwd = 2, lty = 1, cex = 0.7)
+# 
+# tabd <- tab[-grep("pelagic", splisref$PD), ]
+# tabd <- tabd[order(rowSums(tabd), decreasing = T), ]
+# 
+# matplot(yrs, t(tabd[1:20, ]), type = "b", col = glasbey(10), lwd = 2, lty = 1, pch = 19, las = 2)
+# legend("topright", rownames(tabd)[1:20], col = glasbey(10), lwd = 2, lty = 1)
 
 print("STX indicators -- SUCCESSFULLY RUN")

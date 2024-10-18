@@ -45,10 +45,10 @@ dev.off()
 
 ### 6 - marine debris
 
-png(filename = "indicator_plots/marine_debris_plot_final.png", width = 10, height = 4, units = "in", res = 300)
-load("indicator_objects/marine_debris.RData")
-plotIndicatorTimeSeries(ind, coltoplot = 1, plotrownum = 1, plotcolnum = 1, trendAnalysis = FALSE, dateformat = "%b%Y", sublabel = F, widadj = 1, hgtadj = 1, anom = "none", yposadj = 1, cex.axis = 1, cex.lab = 1, cex.main = 1)
-dev.off()
+#png(filename = "indicator_plots/marine_debris_plot_final.png", width = 10, height = 4, units = "in", res = 300)
+#load("indicator_objects/marine_debris.RData")
+#plotIndicatorTimeSeries(ind, coltoplot = 1, plotrownum = 1, plotcolnum = 1, trendAnalysis = FALSE, dateformat = "%b%Y", sublabel = F, widadj = 1, hgtadj = 1, anom = "none", yposadj = 1, cex.axis = 1, cex.lab = 1, cex.main = 1)
+#dev.off()
 
 ### 7 - identified point source pollution sites
 
@@ -141,7 +141,7 @@ dev.off()
 ### 19 - Lmax indicator
 
 png(filename = "indicator_plots/avgLmax_plot_final.png", width = 7, height = 6, units = "in", res = 300)
-load("indicator_objects/avgLmax.RData")
+load("indicator_objects/mean_Lmax.RData")
 plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, plotcolnum = 1, trendAnalysis = TRUE, dateformat = "%b%Y", sublabel = TRUE, widadj = 1, hgtadj = 0.5, anom = "none", yposadj = 1, sameYscale = TRUE, cex.axis = 1.2, cex.lab = 1.4, cex.main = 1.5)
 dev.off()
 
@@ -199,7 +199,7 @@ dev.off()
 ### 26 - Gini coefficient
 
 png(filename = "indicator_plots/gini_plot_final.png", width = 7, height = 8, units = "in", res = 300)
-load("indicator_objects/gini.RData")
+load("indicator_objects/gini_revenue.RData")
 plotIndicatorTimeSeries(ind, coltoplot = 1:3, plotrownum = 3, plotcolnum = 1, trendAnalysis = TRUE, dateformat = "%b%Y", sublabel = TRUE, widadj = 1, hgtadj = 0.5, anom = "none", yposadj = 1.2, cex.axis = 1.2, cex.lab = 1.5, cex.main = 1.6, sameYscale = TRUE)
 dev.off()
 
