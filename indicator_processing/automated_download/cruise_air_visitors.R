@@ -126,6 +126,7 @@ print(USVI_air)
 
 
 
+
 ##########
 
 all_years <- data.frame(Year = min(PR_cruise$Year, USVI_cruise$Year) : max(PR_cruise$Year, USVI_cruise$Year))
@@ -133,15 +134,19 @@ all_years <- data.frame(Year = min(PR_cruise$Year, USVI_cruise$Year) : max(PR_cr
 # Merge the data frames with the complete data frame to fill in missing years with NA
 combined_df <- merge(all_years, PR_cruise, by = "Year", all.x = TRUE)
 combined_df <- merge(combined_df, USVI_cruise, by = "Year", all.x = TRUE)
+combined_df <- merge(combined_df, PR_air, by = "Year", all.x = TRUE)
+combined_df <- merge(combined_df, USVI_air, by = "Year", all.x = TRUE)
 
 
 
 
 # save as indicator object ----------------------
 datdata <- all_years$Year
-inddata <- data.frame(cbind(combined_df$Cruise_passengers.x, combined_df$Cruise_passengers.y))
+inddata <- data.frame(cbind(combined_df$Cruise_passengers.x, combined_df$Cruise_passengers.y, combined_df$Air_passengers.x, combined_df$Air_passengers.y))
 labs <- c("Cruise passengers" , "thousands of people", "Puerto Rico",
-          "Cruise passengers" , "thousands of people", "USVI")
+          "Cruise passengers" , "thousands of people", "USVI",
+          "Air passengers" , "thousands of people", "Puerto Rico",
+          "Air passengers" , "thousands of people", "USVI")
 indnames <- data.frame(matrix(labs, nrow = 3, byrow = F))
 inddata <- list(labels = indnames, indicators = inddata, datelist = datdata)
 class(inddata) <- "indicatordata"
@@ -149,8 +154,8 @@ class(inddata) <- "indicatordata"
 # plot and save ----------------------------------
 
 ind <- inddata
-plotIndicatorTimeSeries(ind, coltoplot = 1:2, plotrownum = 2, plotcolnum = 1, trendAnalysis = TRUE, dateformat = "%b%Y", sublabel = TRUE, widadj = 1, hgtadj = 0.7, anom = "none", yposadj = 1)
+plotIndicatorTimeSeries(ind, coltoplot = 1:4, plotrownum = 2, plotcolnum = 2, trendAnalysis = TRUE, dateformat = "%b%Y", sublabel = TRUE, widadj = 1, hgtadj = 0.7, anom = "none", yposadj = 1)
 
-save(ind, file = "indicator_objects/cruise.RData")
+save(ind, file = "indicator_objects/cruise_air_visitors.RData")
 
 ###############################  END  #############################

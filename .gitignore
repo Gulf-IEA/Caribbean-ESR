@@ -1,6 +1,10 @@
-
 .Rproj.user
-
 /.quarto/
-
 .Rhistory
+index.aux
+index.lof
+index.log
+index.lot
+index.pdf
+index.tex
+index.toc
