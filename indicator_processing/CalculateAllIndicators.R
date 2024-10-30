@@ -48,8 +48,8 @@ source("indicator_processing/automated_download/kd490.R")                 # turb
 source("indicator_processing/automated_download/chl_caribbean.R")         # primary productivity
 source("indicator_processing/automated_download/Unemployment.R")          # unemployment rate
 source("indicator_processing/automated_download/GDP.R")                   # Gross Domestic Product
-source("indicator_processing/automated_download/cruise_air_visitors.R")       # Cruise visitors
-source("indicator_processing/automated_download/population.R")            #Human population
+source("indicator_processing/automated_download/cruise_air_visitors.R")   # Cruise visitors
+source("indicator_processing/automated_download/population.R")            # Human population
 
 # partially automated - pull from data in folder ----------------------
 
