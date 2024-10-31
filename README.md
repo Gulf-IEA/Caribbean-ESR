@@ -1,3 +1,6 @@
+THIS REPOSITORY IS DEPRECIATED. DO NOT USE. THE UPDATED REPOSITORY CAN BE FOUND AT https://github.com/Gulf-IEA/Caribbean-ESR-2.git
+
+
 This repository houses data, code, documentation, and report files for the Caribbean Ecosystem Status Report created by the NOAA Fisheries Southeast Fisheries Science Center. We are currently working on the 2024 ESR.
 
 The list of indicators included in the 2024 ESR can be found in this [table](https://docs.google.com/spreadsheets/d/1WZtclTkyLzTAARKTIa69AiEVWsXMuG2K/edit?usp=sharing&ouid=103178636955659669576&rtpof=true&sd=true). This table also includes information about data sources, indicator status, and automation level. Eventually all of this information will be migrated to an indicator [catalog](https://github.com/Gulf-IEA/ESR-indicator-catalog.git). The catalog is still a work in progress.
